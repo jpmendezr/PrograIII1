@@ -159,5 +159,8 @@
   <ItemGroup>
     <None Include="Resources\eliminar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -23,9 +23,9 @@ Partial Class PacienteBuscarFiltros
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TextBuscar = New System.Windows.Forms.TextBox()
-        Me.BTNbuscar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.BTNbuscar = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -35,15 +35,6 @@ Partial Class PacienteBuscarFiltros
         Me.TextBuscar.Name = "TextBuscar"
         Me.TextBuscar.Size = New System.Drawing.Size(100, 20)
         Me.TextBuscar.TabIndex = 0
-        '
-        'BTNbuscar
-        '
-        Me.BTNbuscar.Location = New System.Drawing.Point(136, 51)
-        Me.BTNbuscar.Name = "BTNbuscar"
-        Me.BTNbuscar.Size = New System.Drawing.Size(75, 23)
-        Me.BTNbuscar.TabIndex = 1
-        Me.BTNbuscar.Text = "Buscar"
-        Me.BTNbuscar.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -61,6 +52,16 @@ Partial Class PacienteBuscarFiltros
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(600, 186)
         Me.DataGridView1.TabIndex = 3
+        '
+        'BTNbuscar
+        '
+        Me.BTNbuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BTNbuscar.Image = Global.Proyecto._1Medico.My.Resources.Resources.lupa
+        Me.BTNbuscar.Location = New System.Drawing.Point(136, 51)
+        Me.BTNbuscar.Name = "BTNbuscar"
+        Me.BTNbuscar.Size = New System.Drawing.Size(75, 23)
+        Me.BTNbuscar.TabIndex = 1
+        Me.BTNbuscar.UseVisualStyleBackColor = False
         '
         'PacienteBuscarFiltros
         '
