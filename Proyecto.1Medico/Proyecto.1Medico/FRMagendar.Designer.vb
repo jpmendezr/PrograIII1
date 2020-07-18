@@ -33,15 +33,23 @@ Partial Class FRMagendar
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.ListBox3 = New System.Windows.Forms.ListBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(392, 415)
+        Me.Button1.Location = New System.Drawing.Point(713, 415)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(120, 23)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Eliminar Citas"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label1
@@ -125,11 +133,88 @@ Partial Class FRMagendar
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 10
         '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(16, 143)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(120, 264)
+        Me.ListBox1.TabIndex = 11
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(16, 108)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(87, 13)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "Citas Disponibles"
+        '
+        'ListBox2
+        '
+        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.Location = New System.Drawing.Point(247, 143)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.Size = New System.Drawing.Size(403, 264)
+        Me.ListBox2.TabIndex = 13
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(247, 108)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(79, 13)
+        Me.Label7.TabIndex = 14
+        Me.Label7.Text = "Actualizar Citas"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(392, 415)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 15
+        Me.Button2.Text = "Actualizar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(16, 415)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(120, 23)
+        Me.Button3.TabIndex = 16
+        Me.Button3.Text = "Citas Disponibles"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'ListBox3
+        '
+        Me.ListBox3.FormattingEnabled = True
+        Me.ListBox3.Location = New System.Drawing.Point(713, 143)
+        Me.ListBox3.Name = "ListBox3"
+        Me.ListBox3.Size = New System.Drawing.Size(120, 264)
+        Me.ListBox3.TabIndex = 17
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(713, 108)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(67, 13)
+        Me.Label8.TabIndex = 18
+        Me.Label8.Text = "Elminar Citas"
+        '
         'FRMagendar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(861, 450)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.ListBox3)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.ListBox2)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
@@ -142,7 +227,7 @@ Partial Class FRMagendar
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "FRMagendar"
-        Me.Text = "Form1"
+        Me.Text = "Agendar Citas"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -159,4 +244,12 @@ Partial Class FRMagendar
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents ListBox3 As ListBox
+    Friend WithEvents Label8 As Label
 End Class
