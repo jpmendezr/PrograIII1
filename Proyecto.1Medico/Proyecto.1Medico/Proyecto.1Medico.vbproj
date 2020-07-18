@@ -91,6 +91,12 @@
     <Compile Include="FormPaciente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_ConsultorioEnfermera.Designer.vb">
+      <DependentUpon>Form_ConsultorioEnfermera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ConsultorioEnfermera.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPaciente.resx">
       <DependentUpon>FormPaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ConsultorioEnfermera.resx">
+      <DependentUpon>Form_ConsultorioEnfermera.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
