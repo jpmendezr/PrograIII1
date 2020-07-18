@@ -139,4 +139,28 @@
             Medicamentos = value
         End Set
     End Property
+
+    Public Function Registrar() As Boolean
+
+
+    End Function
+
+    Public Function FichaEmergencia() As String
+
+
+    End Function
+
+    Public Function Actualizar() As Boolean
+
+    End Function
+    Public Function Eliminar() As Boolean
+
+    End Function
+
+    Public Function Buscar() As Boolean
+
+    End Function
+
+
+
 End Class
