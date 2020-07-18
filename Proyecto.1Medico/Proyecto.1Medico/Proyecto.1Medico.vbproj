@@ -78,11 +78,11 @@
     <Compile Include="ConsultorioEnfermera.vb" />
     <Compile Include="ConsultorioMedico.vb" />
     <Compile Include="Examenes.vb" />
-    <Compile Include="Form1.vb">
+    <Compile Include="FRMagendar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="FRMagendar.Designer.vb">
+      <DependentUpon>FRMagendar.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPaciente.Designer.vb">
@@ -116,8 +116,8 @@
     <Compile Include="Reporteria.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="FRMagendar.resx">
+      <DependentUpon>FRMagendar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPaciente.resx">
       <DependentUpon>FormPaciente.vb</DependentUpon>
