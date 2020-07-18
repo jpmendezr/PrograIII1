@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgendarCita.vb" />
+    <Compile Include="Autenticacion.vb" />
     <Compile Include="ConsultorioMedico.vb" />
     <Compile Include="Examenes.vb" />
     <Compile Include="Form1.vb">
