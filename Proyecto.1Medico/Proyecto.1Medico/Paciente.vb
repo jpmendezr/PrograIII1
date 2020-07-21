@@ -1,5 +1,7 @@
 ﻿Public Class Paciente
     Dim enfermedad As New Enfermedades()
+    Dim medicamentos As New enlaceMedicamentos()
+
     Private cedula As String
     Private NombreP As String
     Private Apellidos As String
@@ -12,7 +14,7 @@
     Private TipoFamiliar As String
     Private Telefono As Integer
     Private Direccion As String
-    Private Medicamentos As String
+
 
     Public Property pro_Cedula1 As String
         Get
@@ -123,14 +125,7 @@
         End Set
     End Property
 
-    Public Property pro_Medicamentos1 As String
-        Get
-            Return Medicamentos
-        End Get
-        Set(value As String)
-            Medicamentos = value
-        End Set
-    End Property
+
 
     Public Function Registrar() As Boolean
 
