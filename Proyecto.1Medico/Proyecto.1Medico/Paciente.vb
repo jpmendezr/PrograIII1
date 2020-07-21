@@ -1,11 +1,11 @@
 ﻿Public Class Paciente
+    Dim enfermedad As New Enfermedades()
     Private cedula As String
     Private NombreP As String
     Private Apellidos As String
     Private Peso As Double
     Private Edad As Integer
     Private Altura As Double
-    Private Enfermedades As String
     Private TipoSangre As String
     Private MedicamentosAlergicos As String
     Private NombreFamiliar As String
@@ -68,14 +68,6 @@
         End Set
     End Property
 
-    Public Property pro_Enfermedades1 As String
-        Get
-            Return Enfermedades
-        End Get
-        Set(value As String)
-            Enfermedades = value
-        End Set
-    End Property
 
     Public Property pro_TipoSangre1 As String
         Get
