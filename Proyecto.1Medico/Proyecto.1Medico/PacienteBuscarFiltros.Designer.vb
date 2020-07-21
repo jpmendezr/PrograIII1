@@ -22,10 +22,12 @@ Partial Class PacienteBuscarFiltros
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim BtnMostrar As System.Windows.Forms.Button
         Me.TextBuscar = New System.Windows.Forms.TextBox()
-        Me.BTNbuscar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.BTNbuscar = New System.Windows.Forms.Button()
+        BtnMostrar = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -35,15 +37,6 @@ Partial Class PacienteBuscarFiltros
         Me.TextBuscar.Name = "TextBuscar"
         Me.TextBuscar.Size = New System.Drawing.Size(100, 20)
         Me.TextBuscar.TabIndex = 0
-        '
-        'BTNbuscar
-        '
-        Me.BTNbuscar.Location = New System.Drawing.Point(136, 51)
-        Me.BTNbuscar.Name = "BTNbuscar"
-        Me.BTNbuscar.Size = New System.Drawing.Size(75, 23)
-        Me.BTNbuscar.TabIndex = 1
-        Me.BTNbuscar.Text = "Buscar"
-        Me.BTNbuscar.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -62,11 +55,32 @@ Partial Class PacienteBuscarFiltros
         Me.DataGridView1.Size = New System.Drawing.Size(600, 186)
         Me.DataGridView1.TabIndex = 3
         '
+        'BTNbuscar
+        '
+        Me.BTNbuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BTNbuscar.Image = Global.Proyecto._1Medico.My.Resources.Resources.lupa
+        Me.BTNbuscar.Location = New System.Drawing.Point(132, 51)
+        Me.BTNbuscar.Name = "BTNbuscar"
+        Me.BTNbuscar.Size = New System.Drawing.Size(75, 23)
+        Me.BTNbuscar.TabIndex = 1
+        Me.BTNbuscar.UseVisualStyleBackColor = False
+        '
+        'BtnMostrar
+        '
+        BtnMostrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        BtnMostrar.Location = New System.Drawing.Point(237, 51)
+        BtnMostrar.Name = "BtnMostrar"
+        BtnMostrar.Size = New System.Drawing.Size(75, 23)
+        BtnMostrar.TabIndex = 4
+        BtnMostrar.Text = "Mostrar"
+        BtnMostrar.UseVisualStyleBackColor = False
+        '
         'PacienteBuscarFiltros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(624, 307)
+        Me.Controls.Add(BtnMostrar)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BTNbuscar)

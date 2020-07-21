@@ -120,6 +120,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reporteria.vb" />
+    <Compile Include="ReporteriaForm.Designer.vb">
+      <DependentUpon>ReporteriaForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteriaForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FRMagendar.resx">
@@ -140,6 +146,9 @@
     <EmbeddedResource Include="PacienteBuscarFiltros.resx">
       <DependentUpon>PacienteBuscarFiltros.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteriaForm.resx">
+      <DependentUpon>ReporteriaForm.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -158,6 +167,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
