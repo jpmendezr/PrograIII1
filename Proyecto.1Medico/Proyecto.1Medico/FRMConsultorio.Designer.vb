@@ -23,28 +23,28 @@ Partial Class FRMConsultorio
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnEnviar = New System.Windows.Forms.Button()
+        Me.TxtSintomas = New System.Windows.Forms.RichTextBox()
+        Me.TxtAltura = New System.Windows.Forms.TextBox()
+        Me.TxtPeso = New System.Windows.Forms.TextBox()
+        Me.TxtPresion = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtDiagnostico = New System.Windows.Forms.RichTextBox()
+        Me.TxtMedicamentosRece = New System.Windows.Forms.RichTextBox()
+        Me.txtMedicamentosAdmi = New System.Windows.Forms.RichTextBox()
+        Me.txtDescripcion = New System.Windows.Forms.RichTextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ListSintomas = New System.Windows.Forms.ListBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.ListSintomas = New System.Windows.Forms.ListBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtDescripcion = New System.Windows.Forms.RichTextBox()
-        Me.txtMedicamentosAdmi = New System.Windows.Forms.RichTextBox()
-        Me.TxtMedicamentosRece = New System.Windows.Forms.RichTextBox()
-        Me.txtDiagnostico = New System.Windows.Forms.RichTextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TxtPresion = New System.Windows.Forms.TextBox()
-        Me.TxtPeso = New System.Windows.Forms.TextBox()
-        Me.TxtAltura = New System.Windows.Forms.TextBox()
-        Me.TxtSintomas = New System.Windows.Forms.RichTextBox()
-        Me.BtnEnviar = New System.Windows.Forms.Button()
         Me.BtnRegistrar = New System.Windows.Forms.Button()
         Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -70,6 +70,81 @@ Partial Class FRMConsultorio
         Me.Panel1.Size = New System.Drawing.Size(417, 332)
         Me.Panel1.TabIndex = 0
         '
+        'BtnEnviar
+        '
+        Me.BtnEnviar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnEnviar.Location = New System.Drawing.Point(277, 231)
+        Me.BtnEnviar.Name = "BtnEnviar"
+        Me.BtnEnviar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEnviar.TabIndex = 8
+        Me.BtnEnviar.Text = "Enviar"
+        Me.BtnEnviar.UseVisualStyleBackColor = False
+        '
+        'TxtSintomas
+        '
+        Me.TxtSintomas.Location = New System.Drawing.Point(6, 197)
+        Me.TxtSintomas.Name = "TxtSintomas"
+        Me.TxtSintomas.Size = New System.Drawing.Size(233, 103)
+        Me.TxtSintomas.TabIndex = 7
+        Me.TxtSintomas.Text = ""
+        '
+        'TxtAltura
+        '
+        Me.TxtAltura.Location = New System.Drawing.Point(3, 132)
+        Me.TxtAltura.Name = "TxtAltura"
+        Me.TxtAltura.Size = New System.Drawing.Size(112, 20)
+        Me.TxtAltura.TabIndex = 6
+        '
+        'TxtPeso
+        '
+        Me.TxtPeso.Location = New System.Drawing.Point(3, 75)
+        Me.TxtPeso.Name = "TxtPeso"
+        Me.TxtPeso.Size = New System.Drawing.Size(112, 20)
+        Me.TxtPeso.TabIndex = 5
+        '
+        'TxtPresion
+        '
+        Me.TxtPresion.Location = New System.Drawing.Point(3, 25)
+        Me.TxtPresion.Name = "TxtPresion"
+        Me.TxtPresion.Size = New System.Drawing.Size(112, 20)
+        Me.TxtPresion.TabIndex = 4
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(92, 169)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(52, 13)
+        Me.Label6.TabIndex = 3
+        Me.Label6.Text = "Síntomas"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(13, 107)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(34, 13)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "Altura"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(13, 59)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(31, 13)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Peso"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(13, 9)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(42, 13)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Presión"
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveBorder
@@ -88,6 +163,91 @@ Partial Class FRMConsultorio
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(444, 332)
         Me.Panel2.TabIndex = 1
+        '
+        'txtDiagnostico
+        '
+        Me.txtDiagnostico.Location = New System.Drawing.Point(251, 38)
+        Me.txtDiagnostico.Name = "txtDiagnostico"
+        Me.txtDiagnostico.Size = New System.Drawing.Size(186, 62)
+        Me.txtDiagnostico.TabIndex = 9
+        Me.txtDiagnostico.Text = ""
+        '
+        'TxtMedicamentosRece
+        '
+        Me.TxtMedicamentosRece.Location = New System.Drawing.Point(251, 157)
+        Me.TxtMedicamentosRece.Name = "TxtMedicamentosRece"
+        Me.TxtMedicamentosRece.Size = New System.Drawing.Size(186, 62)
+        Me.TxtMedicamentosRece.TabIndex = 8
+        Me.TxtMedicamentosRece.Text = ""
+        '
+        'txtMedicamentosAdmi
+        '
+        Me.txtMedicamentosAdmi.Location = New System.Drawing.Point(6, 247)
+        Me.txtMedicamentosAdmi.Name = "txtMedicamentosAdmi"
+        Me.txtMedicamentosAdmi.Size = New System.Drawing.Size(186, 62)
+        Me.txtMedicamentosAdmi.TabIndex = 7
+        Me.txtMedicamentosAdmi.Text = ""
+        '
+        'txtDescripcion
+        '
+        Me.txtDescripcion.Location = New System.Drawing.Point(6, 157)
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(186, 62)
+        Me.txtDescripcion.TabIndex = 6
+        Me.txtDescripcion.Text = ""
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(291, 132)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(131, 13)
+        Me.Label12.TabIndex = 5
+        Me.Label12.Text = "Medicamentos Recetados"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(3, 231)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(144, 13)
+        Me.Label11.TabIndex = 4
+        Me.Label11.Text = "Medicamentos Administrados"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(333, 9)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(63, 13)
+        Me.Label10.TabIndex = 3
+        Me.Label10.Text = "Diagnóstico"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(3, 132)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(63, 13)
+        Me.Label9.TabIndex = 2
+        Me.Label9.Text = "Descripción"
+        '
+        'ListSintomas
+        '
+        Me.ListSintomas.FormattingEnabled = True
+        Me.ListSintomas.Location = New System.Drawing.Point(3, 25)
+        Me.ListSintomas.Name = "ListSintomas"
+        Me.ListSintomas.Size = New System.Drawing.Size(120, 95)
+        Me.ListSintomas.TabIndex = 1
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(3, 9)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(102, 13)
+        Me.Label8.TabIndex = 0
+        Me.Label8.Text = "Sintomas Mostrados"
         '
         'Label1
         '
@@ -108,166 +268,6 @@ Partial Class FRMConsultorio
         Me.Label2.Size = New System.Drawing.Size(88, 25)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Medico"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(3, 9)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(102, 13)
-        Me.Label8.TabIndex = 0
-        Me.Label8.Text = "Sintomas Mostrados"
-        '
-        'ListSintomas
-        '
-        Me.ListSintomas.FormattingEnabled = True
-        Me.ListSintomas.Location = New System.Drawing.Point(3, 25)
-        Me.ListSintomas.Name = "ListSintomas"
-        Me.ListSintomas.Size = New System.Drawing.Size(120, 95)
-        Me.ListSintomas.TabIndex = 1
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(3, 132)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(63, 13)
-        Me.Label9.TabIndex = 2
-        Me.Label9.Text = "Descripción"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(333, 9)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(63, 13)
-        Me.Label10.TabIndex = 3
-        Me.Label10.Text = "Diagnóstico"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(3, 231)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(144, 13)
-        Me.Label11.TabIndex = 4
-        Me.Label11.Text = "Medicamentos Administrados"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(291, 132)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(131, 13)
-        Me.Label12.TabIndex = 5
-        Me.Label12.Text = "Medicamentos Recetados"
-        '
-        'txtDescripcion
-        '
-        Me.txtDescripcion.Location = New System.Drawing.Point(6, 157)
-        Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(186, 62)
-        Me.txtDescripcion.TabIndex = 6
-        Me.txtDescripcion.Text = ""
-        '
-        'txtMedicamentosAdmi
-        '
-        Me.txtMedicamentosAdmi.Location = New System.Drawing.Point(6, 247)
-        Me.txtMedicamentosAdmi.Name = "txtMedicamentosAdmi"
-        Me.txtMedicamentosAdmi.Size = New System.Drawing.Size(186, 62)
-        Me.txtMedicamentosAdmi.TabIndex = 7
-        Me.txtMedicamentosAdmi.Text = ""
-        '
-        'TxtMedicamentosRece
-        '
-        Me.TxtMedicamentosRece.Location = New System.Drawing.Point(251, 157)
-        Me.TxtMedicamentosRece.Name = "TxtMedicamentosRece"
-        Me.TxtMedicamentosRece.Size = New System.Drawing.Size(186, 62)
-        Me.TxtMedicamentosRece.TabIndex = 8
-        Me.TxtMedicamentosRece.Text = ""
-        '
-        'txtDiagnostico
-        '
-        Me.txtDiagnostico.Location = New System.Drawing.Point(251, 38)
-        Me.txtDiagnostico.Name = "txtDiagnostico"
-        Me.txtDiagnostico.Size = New System.Drawing.Size(186, 62)
-        Me.txtDiagnostico.TabIndex = 9
-        Me.txtDiagnostico.Text = ""
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(13, 9)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(42, 13)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Presión"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(13, 59)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(31, 13)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Peso"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(13, 107)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(34, 13)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Altura"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(92, 169)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(52, 13)
-        Me.Label6.TabIndex = 3
-        Me.Label6.Text = "Síntomas"
-        '
-        'TxtPresion
-        '
-        Me.TxtPresion.Location = New System.Drawing.Point(3, 25)
-        Me.TxtPresion.Name = "TxtPresion"
-        Me.TxtPresion.Size = New System.Drawing.Size(112, 20)
-        Me.TxtPresion.TabIndex = 4
-        '
-        'TxtPeso
-        '
-        Me.TxtPeso.Location = New System.Drawing.Point(3, 75)
-        Me.TxtPeso.Name = "TxtPeso"
-        Me.TxtPeso.Size = New System.Drawing.Size(112, 20)
-        Me.TxtPeso.TabIndex = 5
-        '
-        'TxtAltura
-        '
-        Me.TxtAltura.Location = New System.Drawing.Point(3, 132)
-        Me.TxtAltura.Name = "TxtAltura"
-        Me.TxtAltura.Size = New System.Drawing.Size(112, 20)
-        Me.TxtAltura.TabIndex = 6
-        '
-        'TxtSintomas
-        '
-        Me.TxtSintomas.Location = New System.Drawing.Point(6, 197)
-        Me.TxtSintomas.Name = "TxtSintomas"
-        Me.TxtSintomas.Size = New System.Drawing.Size(233, 103)
-        Me.TxtSintomas.TabIndex = 7
-        Me.TxtSintomas.Text = ""
-        '
-        'BtnEnviar
-        '
-        Me.BtnEnviar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnEnviar.Location = New System.Drawing.Point(277, 231)
-        Me.BtnEnviar.Name = "BtnEnviar"
-        Me.BtnEnviar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnEnviar.TabIndex = 8
-        Me.BtnEnviar.Text = "Enviar"
-        Me.BtnEnviar.UseVisualStyleBackColor = False
         '
         'BtnRegistrar
         '
