@@ -22,40 +22,44 @@ Partial Class FRMautenticacion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TexCedula = New System.Windows.Forms.TextBox()
+        Me.txtContraseña = New System.Windows.Forms.TextBox()
         Me.BtnIngresar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'TexCedula
         '
-        Me.TextBox1.Location = New System.Drawing.Point(322, 120)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(136, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.TexCedula.Location = New System.Drawing.Point(207, 49)
+        Me.TexCedula.Name = "TexCedula"
+        Me.TexCedula.Size = New System.Drawing.Size(304, 20)
+        Me.TexCedula.TabIndex = 0
         '
-        'TextBox2
+        'txtContraseña
         '
-        Me.TextBox2.Location = New System.Drawing.Point(322, 239)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(136, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.txtContraseña.Location = New System.Drawing.Point(234, 115)
+        Me.txtContraseña.Name = "txtContraseña"
+        Me.txtContraseña.Size = New System.Drawing.Size(259, 20)
+        Me.txtContraseña.TabIndex = 1
         '
         'BtnIngresar
         '
-        Me.BtnIngresar.Location = New System.Drawing.Point(348, 316)
+        Me.BtnIngresar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnIngresar.Location = New System.Drawing.Point(348, 340)
         Me.BtnIngresar.Name = "BtnIngresar"
         Me.BtnIngresar.Size = New System.Drawing.Size(75, 23)
         Me.BtnIngresar.TabIndex = 2
         Me.BtnIngresar.Text = "Ingresar"
-        Me.BtnIngresar.UseVisualStyleBackColor = True
+        Me.BtnIngresar.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(364, 75)
+        Me.Label1.Location = New System.Drawing.Point(343, 23)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 3
@@ -64,32 +68,56 @@ Partial Class FRMautenticacion
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(362, 200)
+        Me.Label2.Location = New System.Drawing.Point(336, 84)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Contraseña"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(253, 45)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(276, 39)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Inicio de Sesión"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.TexCedula)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.txtContraseña)
+        Me.Panel1.Location = New System.Drawing.Point(26, 87)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(750, 210)
+        Me.Panel1.TabIndex = 6
+        '
         'FRMautenticacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(800, 391)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnIngresar)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
         Me.Name = "FRMautenticacion"
         Me.Text = "FRMautenticacion"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TexCedula As TextBox
+    Friend WithEvents txtContraseña As TextBox
     Friend WithEvents BtnIngresar As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel1 As Panel
 End Class
