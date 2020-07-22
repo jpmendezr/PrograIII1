@@ -137,18 +137,18 @@ Partial Class FRMagendar
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(16, 108)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(87, 13)
+        Me.Label6.Size = New System.Drawing.Size(90, 13)
         Me.Label6.TabIndex = 12
-        Me.Label6.Text = "Citas Disponibles"
+        Me.Label6.Text = "Citas Disponibles:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(388, 108)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(79, 13)
+        Me.Label7.Size = New System.Drawing.Size(82, 13)
         Me.Label7.TabIndex = 14
-        Me.Label7.Text = "Actualizar Citas"
+        Me.Label7.Text = "Actualizar Citas:"
         '
         'Button2
         '
@@ -173,9 +173,9 @@ Partial Class FRMagendar
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(731, 108)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(67, 13)
+        Me.Label8.Size = New System.Drawing.Size(70, 13)
         Me.Label8.TabIndex = 18
-        Me.Label8.Text = "Elminar Citas"
+        Me.Label8.Text = "Elminar Citas:"
         '
         'DataGridView1
         '
