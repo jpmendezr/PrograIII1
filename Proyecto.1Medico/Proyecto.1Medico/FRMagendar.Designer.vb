@@ -39,17 +39,20 @@ Partial Class FRMagendar
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.Aqua
         Me.Button1.Location = New System.Drawing.Point(713, 415)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(120, 23)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Eliminar Citas"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -152,21 +155,23 @@ Partial Class FRMagendar
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.Aqua
         Me.Button2.Location = New System.Drawing.Point(392, 415)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 15
         Me.Button2.Text = "Actualizar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
+        Me.Button3.BackColor = System.Drawing.Color.Aqua
         Me.Button3.Location = New System.Drawing.Point(16, 415)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(120, 23)
         Me.Button3.TabIndex = 16
         Me.Button3.Text = "Citas Disponibles"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Label8
         '
@@ -180,10 +185,18 @@ Partial Class FRMagendar
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(19, 165)
+        Me.DataGridView1.Location = New System.Drawing.Point(247, 161)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(814, 225)
+        Me.DataGridView1.Size = New System.Drawing.Size(586, 225)
         Me.DataGridView1.TabIndex = 19
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(13, 161)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(200, 225)
+        Me.DataGridView2.TabIndex = 20
         '
         'FRMagendar
         '
@@ -191,6 +204,7 @@ Partial Class FRMagendar
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(857, 450)
+        Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button3)
@@ -211,6 +225,7 @@ Partial Class FRMagendar
         Me.Name = "FRMagendar"
         Me.Text = "Agendar Citas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -233,4 +248,5 @@ Partial Class FRMagendar
     Friend WithEvents Button3 As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridView2 As DataGridView
 End Class
