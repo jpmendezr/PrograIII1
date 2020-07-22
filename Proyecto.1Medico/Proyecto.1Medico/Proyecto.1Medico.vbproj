@@ -79,6 +79,12 @@
     <Compile Include="Enfermedades.vb" />
     <Compile Include="enlaceMedicamentos.vb" />
     <Compile Include="Examenes.vb" />
+    <Compile Include="FormConsultorio.Designer.vb">
+      <DependentUpon>FormConsultorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultorio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FRMagendar.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormConsultorio.resx">
+      <DependentUpon>FormConsultorio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRMagendar.resx">
       <DependentUpon>FRMagendar.vb</DependentUpon>
     </EmbeddedResource>
