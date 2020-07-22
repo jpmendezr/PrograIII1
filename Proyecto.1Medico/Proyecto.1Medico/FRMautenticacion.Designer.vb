@@ -49,7 +49,7 @@ Partial Class FRMautenticacion
         'BtnIngresar
         '
         Me.BtnIngresar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnIngresar.Location = New System.Drawing.Point(348, 340)
+        Me.BtnIngresar.Location = New System.Drawing.Point(334, 322)
         Me.BtnIngresar.Name = "BtnIngresar"
         Me.BtnIngresar.Size = New System.Drawing.Size(75, 23)
         Me.BtnIngresar.TabIndex = 2
