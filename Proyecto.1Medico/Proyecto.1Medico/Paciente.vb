@@ -7,7 +7,7 @@ Public Class Paciente
     Private NombreP As String
     Private Apellidos As String
     Private sexo As String
-    Private fecha As DateTime
+    Private fecha As String
     Private TelefonoPaciente As Integer
     Private correo As String
 
@@ -223,17 +223,6 @@ Public Class Paciente
 
 
     End Function
-
-    Public Sub AgregarPaciente()
-        Dim agregar As String = "insert into TbPersona values ('" + cedula + "','" + NombreP + "','" + Apellidos + "','" + sexo + "','" + fecha + "','" + TelefonoPaciente + "','" + MedicamentosAlergicos + "')"
-        If RegistrarSQL(agregar) Then
-            MsgBox(" datos agregados")
-        Else
-            MsgBox(" datos no agregados")
-        End If
-    End Sub
-
-
 
     Public Function FichaEmergencia() As String
 

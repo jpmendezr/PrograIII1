@@ -26,6 +26,8 @@
         registro.pro_Fecha1 = Me.TexFecha.Text
         registro.pro_TelefonoPaciente1 = Me.TextCel.Text
         registro.pro_Correo1 = Me.TexCorreoElectronico.Text
+        registro.AgregarPaciente()
+
         'AgregarRegistrosPersona()
 
 
