@@ -12,8 +12,6 @@ Public Class Paciente
     Private correo As String
 
 
-
-
     ' informacion adicional'
     Private tipoSangre As String
     Private MedicamentosAlergicos As Integer
@@ -31,7 +29,7 @@ Public Class Paciente
     Public da As SqlDataAdapter
     Public comand As SqlCommand
 
-    Private myconnection As New SqlConnection("Server=DESKTOP-EBUQM5L\SQLEXPRESS;Initial Catalog=BdCentroMedico;INTEGRATED SECURITY= SSPI")
+    Private myconnection As New SqlConnection("Server=LAPTOP-JQ6UM2LL\SQLEXPRESS;Initial Catalog=BdCentroMedico;INTEGRATED SECURITY= SSPI")
     Public Sub conectar()
         Try
             myconnection.Open()
@@ -161,6 +159,15 @@ Public Class Paciente
         End Get
         Set(value As String)
             correo = value
+        End Set
+    End Property
+
+    Public Property MedicamentosAlergicos1 As Integer
+        Get
+            Return MedicamentosAlergicos
+        End Get
+        Set(value As Integer)
+            MedicamentosAlergicos = value
         End Set
     End Property
 
