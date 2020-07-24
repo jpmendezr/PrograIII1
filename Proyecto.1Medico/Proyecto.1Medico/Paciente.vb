@@ -175,11 +175,11 @@ Public Class Paciente
         End Set
     End Property
 
-    Public Property pro_Fecha1 As Date
+    Public Property pro_Fecha1 As String
         Get
             Return fecha
         End Get
-        Set(value As Date)
+        Set(value As String)
             fecha = value
         End Set
     End Property
@@ -223,6 +223,7 @@ Public Class Paciente
 
 
     End Function
+
 
     Public Function FichaEmergencia() As String
 
