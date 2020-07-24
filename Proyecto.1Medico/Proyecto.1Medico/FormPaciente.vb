@@ -62,7 +62,7 @@
 
     Public Function AgregarRegistroPaciente() As Boolean
 
-        Dim agregarP As String = "insert into TbPaciente values ('" + Me.TexCedula.Text + "','" + "0" + "','" + "0" + "','" + TXTsangre.Text + "','" + Me.TextCel.Text + "','" + "0" + "','" + Me.TXTMedicamento.Text + "')"
+        Dim agregarP As String = "insert into TbPaciente values ('" + Me.TexCedula.Text + "','" + "0" + "','" + "0" + "','" + TXTsangre.Text + "','" + "0" + "','" + Me.TXTMedicamento.Text + "')"
         If (registroPaciente.RegistrarSQLPaciente(agregarP)) Then
             Return True
         Else
