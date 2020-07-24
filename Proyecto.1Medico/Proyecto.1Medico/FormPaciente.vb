@@ -1,5 +1,9 @@
 ﻿Public Class FormPaciente
     Dim registro As New Paciente()
+    Dim registroPaciente As New Paciente()
+    Dim registroFamilia As New Paciente()
+
+
     Private Sub MostrarDatosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MostrarDatosToolStripMenuItem.Click
         Dim buscar As New PacienteBuscarFiltros()
         buscar.Show()
@@ -59,7 +63,7 @@
     Public Function AgregarRegistroPaciente() As Boolean
 
         Dim agregarP As String = "insert into TbPaciente values ('" + Me.TexCedula.Text + "','" + "NA" + "','" + "NA" + "','" + TXTsangre.Text + "','" + Me.TextCel.Text + "','" + "NA" + "','" + Me.TXTMedicamento.Text + "')"
-        If (registro.RegistrarSQLPaciente(agregarP)) Then
+        If (registroPaciente.RegistrarSQLPaciente(agregarP)) Then
             Return True
         Else
             Return False
@@ -68,7 +72,7 @@
 
     Public Function AgregarRegistroFamiliar() As Boolean
         Dim agregarf As String = "insert into TbFamiliarPaciente values ('" + Me.TexCedula.Text + "','" + Me.txtrelacion.Text + "','" + Me.txtFamiliar.Text + "','" + Me.txtTelefonoFamiliar.Text + "','" + Me.txtDireccion.Text + "')"
-        If (registro.RegistrarSQLFamiliar(agregarf)) Then
+        If (registroFamilia.RegistrarSQLFamiliar(agregarf)) Then
             Return True
         Else
             Return False
