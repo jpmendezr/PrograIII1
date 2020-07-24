@@ -15,7 +15,7 @@ Public Class Paciente
 
 
     ' informacion adicional'
-    Private CedulaAd As Integer
+
     Private Peso As String
     Private Altura As String
     Private TipoSangre As String
@@ -166,15 +166,6 @@ Public Class Paciente
         End Set
     End Property
 
-    Public Property pro_CedulaAd1 As Integer
-        Get
-            Return CedulaAd
-        End Get
-        Set(value As Integer)
-            CedulaAd = value
-        End Set
-    End Property
-
     Public Property pro_Sexo1 As String
         Get
             Return sexo
@@ -229,7 +220,18 @@ Public Class Paciente
         Else
             Return False
         End If
+
+
     End Function
+
+    Public Sub AgregarPaciente()
+        Dim agregar As String = "insert into TbPersona values ('" + cedula + "','" + NombreP + "','" + Apellidos + "','" + sexo + "','" + fecha + "','" + TelefonoPaciente + "','" + MedicamentosAlergicos + "')"
+        If RegistrarSQL(agregar) Then
+            MsgBox(" datos agregados")
+        Else
+            MsgBox(" datos no agregados")
+        End If
+    End Sub
 
 
 

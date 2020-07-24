@@ -19,13 +19,14 @@
 
     Private Sub BtnRegistro_Click(sender As Object, e As EventArgs) Handles BtnRegistro.Click
         Dim registro As New Paciente()
-        'registro.pro_Cedula1 = Me.TexCedula.Text
-        ' registro.pro_Peso1 = Me.TexPeso.Text
-        'registro.pro_Altura1 = Me.TextAltura.Text
-        ' registro.pro_TipoSangre1 = Me.TextTipoSangre.Text
-        ' registro.pro_ContactoTel = Me.TXTContacto.Text
-        'registro.pro_MedicamentosAlergicos1 = Me.TextMedicamentosAlergicos.Text
-        AgregarRegistrosPersona()
+        registro.pro_Cedula1 = Me.TexCedula.Text
+        registro.pro_NombreP1 = Me.TextNombre.Text
+        registro.pro_Apellidos1 = Me.TexApellidos.Text
+        registro.pro_Sexo1 = Me.Sexo.Text
+        registro.pro_Fecha1 = Me.TexFecha.Text
+        registro.pro_TelefonoPaciente1 = Me.TextCel.Text
+        registro.pro_Correo1 = Me.TexCorreoElectronico.Text
+        'AgregarRegistrosPersona()
 
 
     End Sub
