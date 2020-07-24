@@ -16,7 +16,7 @@ Public Class Paciente
 
     ' informacion adicional'
     Private tipoSangre As String
-    Private MedicamentosAlergicos As String
+    Private MedicamentosAlergicos As Integer
 
     'informacion del familiar'
     Private NombreFamiliar As String
@@ -161,6 +161,15 @@ Public Class Paciente
         End Get
         Set(value As String)
             correo = value
+        End Set
+    End Property
+
+    Public Property MedicamentosAlergicos1 As Integer
+        Get
+            Return MedicamentosAlergicos
+        End Get
+        Set(value As Integer)
+            MedicamentosAlergicos = value
         End Set
     End Property
 
