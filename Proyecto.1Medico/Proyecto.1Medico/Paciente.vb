@@ -162,6 +162,15 @@ Public Class Paciente
         End Set
     End Property
 
+    Public Property MedicamentosAlergicos1 As Integer
+        Get
+            Return MedicamentosAlergicos
+        End Get
+        Set(value As Integer)
+            MedicamentosAlergicos = value
+        End Set
+    End Property
+
     Public Sub Consulta(ByVal sql As String, ByVal tabla As String)
         ds.Tables.Clear()
         da = New SqlDataAdapter(sql, myconnection)
