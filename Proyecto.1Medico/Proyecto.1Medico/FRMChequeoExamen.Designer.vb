@@ -59,9 +59,10 @@ Partial Class FRMChequeoExamen
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(81, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 13)
+        Me.Label1.Size = New System.Drawing.Size(107, 15)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Examen sangre"
         '
@@ -87,9 +88,10 @@ Partial Class FRMChequeoExamen
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(101, 22)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 13)
+        Me.Label2.Size = New System.Drawing.Size(98, 15)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Examen Orina"
         '
@@ -105,9 +107,10 @@ Partial Class FRMChequeoExamen
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(233, 223)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(43, 13)
+        Me.Label3.Size = New System.Drawing.Size(56, 15)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Cedula:"
         '
@@ -120,12 +123,13 @@ Partial Class FRMChequeoExamen
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.Aqua
         Me.Button1.Location = New System.Drawing.Point(362, 433)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Mostar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'FRMChequeoExamen
         '

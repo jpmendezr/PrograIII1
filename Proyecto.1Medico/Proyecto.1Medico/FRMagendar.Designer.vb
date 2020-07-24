@@ -57,45 +57,50 @@ Partial Class FRMagendar
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(13, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(37, 13)
+        Me.Label1.Size = New System.Drawing.Size(46, 15)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Fecha"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(244, 22)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(30, 13)
+        Me.Label2.Size = New System.Drawing.Size(38, 15)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Hora"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(364, 22)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 13)
+        Me.Label3.Size = New System.Drawing.Size(90, 15)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Especialidad"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(480, 22)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(99, 13)
+        Me.Label4.Size = New System.Drawing.Size(133, 15)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Nombre del Medico"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(675, 22)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(106, 13)
+        Me.Label5.Size = New System.Drawing.Size(142, 15)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Nombre del Paciente"
         '
@@ -138,18 +143,20 @@ Partial Class FRMagendar
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(16, 108)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(90, 13)
+        Me.Label6.Size = New System.Drawing.Size(123, 15)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Citas Disponibles:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(388, 108)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(82, 13)
+        Me.Label7.Size = New System.Drawing.Size(110, 15)
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Actualizar Citas:"
         '
@@ -176,9 +183,10 @@ Partial Class FRMagendar
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(731, 108)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(70, 13)
+        Me.Label8.Size = New System.Drawing.Size(97, 15)
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "Elminar Citas:"
         '

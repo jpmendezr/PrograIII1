@@ -108,6 +108,12 @@
     <Compile Include="FRMChequeoExamen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FRM_Enfermeria.Designer.vb">
+      <DependentUpon>FRM_Enfermeria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Enfermeria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRMChequeoExamen.resx">
       <DependentUpon>FRMChequeoExamen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Enfermeria.resx">
+      <DependentUpon>FRM_Enfermeria.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
