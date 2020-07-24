@@ -6,4 +6,8 @@
         DataGridView1.DataSource = consulta.ds.Tables("TbPaciente")
 
     End Sub
+
+    Private Sub PacienteBuscarFiltros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
