@@ -25,8 +25,10 @@
     End Property
 
     Public Sub AgregarM()
-        For Each Item In EnlaceMedicamento1
-            Me.EnlaceMedicamento1.Add(MRecetado1)
-        Next
+
+        Me.enlaceMedicamento.Add(MRecetado)
+
+
+
     End Sub
 End Class

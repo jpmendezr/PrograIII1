@@ -31,6 +31,17 @@ Partial Class PacienteBuscarFiltros
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'BtnMostrar
+        '
+        BtnMostrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        BtnMostrar.Location = New System.Drawing.Point(237, 51)
+        BtnMostrar.Name = "BtnMostrar"
+        BtnMostrar.Size = New System.Drawing.Size(75, 23)
+        BtnMostrar.TabIndex = 4
+        BtnMostrar.Text = "Mostrar"
+        BtnMostrar.UseVisualStyleBackColor = False
+        AddHandler BtnMostrar.Click, AddressOf Me.BtnMostrar_Click
+        '
         'TextBuscar
         '
         Me.TextBuscar.Location = New System.Drawing.Point(12, 51)
@@ -64,16 +75,6 @@ Partial Class PacienteBuscarFiltros
         Me.BTNbuscar.Size = New System.Drawing.Size(75, 23)
         Me.BTNbuscar.TabIndex = 1
         Me.BTNbuscar.UseVisualStyleBackColor = False
-        '
-        'BtnMostrar
-        '
-        BtnMostrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        BtnMostrar.Location = New System.Drawing.Point(237, 51)
-        BtnMostrar.Name = "BtnMostrar"
-        BtnMostrar.Size = New System.Drawing.Size(75, 23)
-        BtnMostrar.TabIndex = 4
-        BtnMostrar.Text = "Mostrar"
-        BtnMostrar.UseVisualStyleBackColor = False
         '
         'PacienteBuscarFiltros
         '

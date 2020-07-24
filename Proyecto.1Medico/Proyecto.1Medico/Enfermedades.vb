@@ -3,7 +3,7 @@
     Private enfermedad As String
     Private tipoEnfermedades As List(Of String)
 
-    Public Property Enfermedad1 As String
+    Public Property setEnfermedad As String
         Get
             Return enfermedad
         End Get
@@ -22,9 +22,9 @@
 
     Public Sub agregacion()
 
-        For Each Item In TipoEnfermedades1
-            Me.TipoEnfermedades1.Add(Enfermedad1)
-        Next
+        Me.TipoEnfermedades1.Add(enfermedad)
+
+
 
     End Sub
 
