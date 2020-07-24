@@ -74,11 +74,11 @@ Public Class Paciente
 
 
 
-    Public Property pro_MedicamentosAlergicos1 As String
+    Public Property pro_MedicamentosAlergicos1 As Integer
         Get
             Return MedicamentosAlergicos
         End Get
-        Set(value As String)
+        Set(value As Integer)
             MedicamentosAlergicos = value
         End Set
     End Property
