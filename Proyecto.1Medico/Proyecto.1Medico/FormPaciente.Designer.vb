@@ -24,6 +24,9 @@ Partial Class FormPaciente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPaciente))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TexFecha = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Sexo = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -40,10 +43,10 @@ Partial Class FormPaciente
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtDireccion = New System.Windows.Forms.TextBox()
+        Me.txtTelefonoFamiliar = New System.Windows.Forms.TextBox()
+        Me.txtrelacion = New System.Windows.Forms.TextBox()
+        Me.txtFamiliar = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.menu = New System.Windows.Forms.ToolStripMenuItem()
         Me.MostrarDatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -52,11 +55,10 @@ Partial Class FormPaciente
         Me.BtnElimino = New System.Windows.Forms.Button()
         Me.BtnActualizo = New System.Windows.Forms.Button()
         Me.BtnRegistro = New System.Windows.Forms.Button()
-        Me.Sexo = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.TxtCedulaPF = New System.Windows.Forms.TextBox()
-        Me.TexFecha = New System.Windows.Forms.TextBox()
+        Me.TXTMedicamento = New System.Windows.Forms.TextBox()
+        Me.TXTsangre = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -66,6 +68,10 @@ Partial Class FormPaciente
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.TXTsangre)
+        Me.Panel1.Controls.Add(Me.TXTMedicamento)
+        Me.Panel1.Controls.Add(Me.Label18)
+        Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.TexFecha)
         Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Controls.Add(Me.Sexo)
@@ -82,13 +88,36 @@ Partial Class FormPaciente
         Me.Panel1.Controls.Add(Me.TexCedula)
         Me.Panel1.Location = New System.Drawing.Point(12, 50)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(495, 267)
+        Me.Panel1.Size = New System.Drawing.Size(961, 267)
         Me.Panel1.TabIndex = 0
+        '
+        'TexFecha
+        '
+        Me.TexFecha.Location = New System.Drawing.Point(833, 28)
+        Me.TexFecha.Name = "TexFecha"
+        Me.TexFecha.Size = New System.Drawing.Size(115, 20)
+        Me.TexFecha.TabIndex = 24
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(-2, 160)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(31, 13)
+        Me.Label17.TabIndex = 23
+        Me.Label17.Text = "Sexo"
+        '
+        'Sexo
+        '
+        Me.Sexo.Location = New System.Drawing.Point(-2, 176)
+        Me.Sexo.Name = "Sexo"
+        Me.Sexo.Size = New System.Drawing.Size(73, 20)
+        Me.Sexo.TabIndex = 22
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(370, 134)
+        Me.Label9.Location = New System.Drawing.Point(820, 110)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(94, 13)
         Me.Label9.TabIndex = 17
@@ -97,7 +126,7 @@ Partial Class FormPaciente
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(386, 80)
+        Me.Label8.Location = New System.Drawing.Point(865, 61)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(49, 13)
         Me.Label8.TabIndex = 16
@@ -106,7 +135,7 @@ Partial Class FormPaciente
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(370, 31)
+        Me.Label7.Location = New System.Drawing.Point(843, 12)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(93, 13)
         Me.Label7.TabIndex = 15
@@ -141,14 +170,14 @@ Partial Class FormPaciente
         '
         'TextCel
         '
-        Me.TextCel.Location = New System.Drawing.Point(330, 107)
+        Me.TextCel.Location = New System.Drawing.Point(823, 77)
         Me.TextCel.Name = "TextCel"
-        Me.TextCel.Size = New System.Drawing.Size(158, 20)
+        Me.TextCel.Size = New System.Drawing.Size(125, 20)
         Me.TextCel.TabIndex = 7
         '
         'TexCorreoElectronico
         '
-        Me.TexCorreoElectronico.Location = New System.Drawing.Point(296, 160)
+        Me.TexCorreoElectronico.Location = New System.Drawing.Point(756, 138)
         Me.TexCorreoElectronico.Name = "TexCorreoElectronico"
         Me.TexCorreoElectronico.Size = New System.Drawing.Size(192, 20)
         Me.TexCorreoElectronico.TabIndex = 6
@@ -178,25 +207,24 @@ Partial Class FormPaciente
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel2.Controls.Add(Me.TxtCedulaPF)
-        Me.Panel2.Controls.Add(Me.Label18)
         Me.Panel2.Controls.Add(Me.Label15)
         Me.Panel2.Controls.Add(Me.Label14)
+        Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Controls.Add(Me.Label12)
-        Me.Panel2.Controls.Add(Me.TextBox4)
-        Me.Panel2.Controls.Add(Me.TextBox3)
-        Me.Panel2.Controls.Add(Me.TextBox2)
-        Me.Panel2.Controls.Add(Me.TextBox1)
-        Me.Panel2.Location = New System.Drawing.Point(513, 50)
+        Me.Panel2.Controls.Add(Me.txtDireccion)
+        Me.Panel2.Controls.Add(Me.txtTelefonoFamiliar)
+        Me.Panel2.Controls.Add(Me.txtrelacion)
+        Me.Panel2.Controls.Add(Me.txtFamiliar)
+        Me.Panel2.Location = New System.Drawing.Point(12, 323)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(473, 267)
+        Me.Panel2.Size = New System.Drawing.Size(950, 267)
         Me.Panel2.TabIndex = 1
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(361, 107)
+        Me.Label15.Location = New System.Drawing.Point(419, 201)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(52, 13)
         Me.Label15.TabIndex = 8
@@ -205,7 +233,7 @@ Partial Class FormPaciente
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(17, 153)
+        Me.Label14.Location = New System.Drawing.Point(414, 151)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(49, 13)
         Me.Label14.TabIndex = 7
@@ -214,7 +242,7 @@ Partial Class FormPaciente
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(3, 89)
+        Me.Label13.Location = New System.Drawing.Point(394, 87)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(87, 13)
         Me.Label13.TabIndex = 6
@@ -223,39 +251,39 @@ Partial Class FormPaciente
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(3, 27)
+        Me.Label12.Location = New System.Drawing.Point(394, 37)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(99, 13)
         Me.Label12.TabIndex = 5
         Me.Label12.Text = "Nombre del Familiar"
         '
-        'TextBox4
+        'txtDireccion
         '
-        Me.TextBox4.Location = New System.Drawing.Point(268, 126)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(179, 20)
-        Me.TextBox4.TabIndex = 3
+        Me.txtDireccion.Location = New System.Drawing.Point(296, 217)
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(329, 20)
+        Me.txtDireccion.TabIndex = 3
         '
-        'TextBox3
+        'txtTelefonoFamiliar
         '
-        Me.TextBox3.Location = New System.Drawing.Point(-2, 181)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox3.TabIndex = 2
+        Me.txtTelefonoFamiliar.Location = New System.Drawing.Point(389, 167)
+        Me.txtTelefonoFamiliar.Name = "txtTelefonoFamiliar"
+        Me.txtTelefonoFamiliar.Size = New System.Drawing.Size(116, 20)
+        Me.txtTelefonoFamiliar.TabIndex = 2
         '
-        'TextBox2
+        'txtrelacion
         '
-        Me.TextBox2.Location = New System.Drawing.Point(-2, 110)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.txtrelacion.Location = New System.Drawing.Point(356, 112)
+        Me.txtrelacion.Name = "txtrelacion"
+        Me.txtrelacion.Size = New System.Drawing.Size(173, 20)
+        Me.txtrelacion.TabIndex = 1
         '
-        'TextBox1
+        'txtFamiliar
         '
-        Me.TextBox1.Location = New System.Drawing.Point(-2, 54)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.txtFamiliar.Location = New System.Drawing.Point(306, 53)
+        Me.txtFamiliar.Name = "txtFamiliar"
+        Me.txtFamiliar.Size = New System.Drawing.Size(295, 20)
+        Me.txtFamiliar.TabIndex = 0
         '
         'MenuStrip1
         '
@@ -296,7 +324,7 @@ Partial Class FormPaciente
         '
         Me.Label10.AutoSize = True
         Me.Label10.ForeColor = System.Drawing.Color.Fuchsia
-        Me.Label10.Location = New System.Drawing.Point(635, 21)
+        Me.Label10.Location = New System.Drawing.Point(370, 11)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(149, 13)
         Me.Label10.TabIndex = 5
@@ -306,7 +334,7 @@ Partial Class FormPaciente
         '
         Me.BtnElimino.BackColor = System.Drawing.Color.Aqua
         Me.BtnElimino.Image = Global.Proyecto._1Medico.My.Resources.Resources.eliminar
-        Me.BtnElimino.Location = New System.Drawing.Point(808, 334)
+        Me.BtnElimino.Location = New System.Drawing.Point(731, 596)
         Me.BtnElimino.Name = "BtnElimino"
         Me.BtnElimino.Size = New System.Drawing.Size(120, 23)
         Me.BtnElimino.TabIndex = 7
@@ -316,7 +344,7 @@ Partial Class FormPaciente
         '
         Me.BtnActualizo.BackColor = System.Drawing.Color.Aqua
         Me.BtnActualizo.Image = Global.Proyecto._1Medico.My.Resources.Resources.update
-        Me.BtnActualizo.Location = New System.Drawing.Point(455, 334)
+        Me.BtnActualizo.Location = New System.Drawing.Point(365, 596)
         Me.BtnActualizo.Name = "BtnActualizo"
         Me.BtnActualizo.Size = New System.Drawing.Size(112, 23)
         Me.BtnActualizo.TabIndex = 6
@@ -326,59 +354,51 @@ Partial Class FormPaciente
         '
         Me.BtnRegistro.BackColor = System.Drawing.Color.Aqua
         Me.BtnRegistro.Image = CType(resources.GetObject("BtnRegistro.Image"), System.Drawing.Image)
-        Me.BtnRegistro.Location = New System.Drawing.Point(34, 334)
+        Me.BtnRegistro.Location = New System.Drawing.Point(20, 596)
         Me.BtnRegistro.Name = "BtnRegistro"
         Me.BtnRegistro.Size = New System.Drawing.Size(108, 23)
         Me.BtnRegistro.TabIndex = 3
         Me.BtnRegistro.UseVisualStyleBackColor = False
         '
-        'Sexo
+        'Label11
         '
-        Me.Sexo.Location = New System.Drawing.Point(-2, 176)
-        Me.Sexo.Name = "Sexo"
-        Me.Sexo.Size = New System.Drawing.Size(73, 20)
-        Me.Sexo.TabIndex = 22
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(-2, 160)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(31, 13)
-        Me.Label17.TabIndex = 23
-        Me.Label17.Text = "Sexo"
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(0, 209)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(65, 13)
+        Me.Label11.TabIndex = 27
+        Me.Label11.Text = "Tipo Sangre"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(373, 12)
+        Me.Label18.Location = New System.Drawing.Point(820, 161)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(40, 13)
-        Me.Label18.TabIndex = 9
-        Me.Label18.Text = "Cedula"
+        Me.Label18.Size = New System.Drawing.Size(112, 13)
+        Me.Label18.TabIndex = 29
+        Me.Label18.Text = "Medicamento Alergico"
         '
-        'TxtCedulaPF
+        'TXTMedicamento
         '
-        Me.TxtCedulaPF.Location = New System.Drawing.Point(347, 54)
-        Me.TxtCedulaPF.Name = "TxtCedulaPF"
-        Me.TxtCedulaPF.Size = New System.Drawing.Size(100, 20)
-        Me.TxtCedulaPF.TabIndex = 10
+        Me.TXTMedicamento.Location = New System.Drawing.Point(756, 180)
+        Me.TXTMedicamento.Name = "TXTMedicamento"
+        Me.TXTMedicamento.Size = New System.Drawing.Size(192, 20)
+        Me.TXTMedicamento.TabIndex = 31
         '
-        'TexFecha
+        'TXTsangre
         '
-        Me.TexFecha.Location = New System.Drawing.Point(356, 54)
-        Me.TexFecha.Name = "TexFecha"
-        Me.TexFecha.Size = New System.Drawing.Size(115, 20)
-        Me.TexFecha.TabIndex = 24
+        Me.TXTsangre.Location = New System.Drawing.Point(1, 225)
+        Me.TXTsangre.Name = "TXTsangre"
+        Me.TXTsangre.Size = New System.Drawing.Size(56, 20)
+        Me.TXTsangre.TabIndex = 33
         '
         'FormPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(962, 386)
+        Me.ClientSize = New System.Drawing.Size(962, 623)
         Me.Controls.Add(Me.BtnElimino)
         Me.Controls.Add(Me.BtnActualizo)
-        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnRegistro)
         Me.Controls.Add(Me.Panel2)
@@ -421,15 +441,17 @@ Partial Class FormPaciente
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtDireccion As TextBox
+    Friend WithEvents txtTelefonoFamiliar As TextBox
+    Friend WithEvents txtrelacion As TextBox
+    Friend WithEvents txtFamiliar As TextBox
     Friend WithEvents BtnActualizo As Button
     Friend WithEvents BtnElimino As Button
     Friend WithEvents Sexo As TextBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents TxtCedulaPF As TextBox
-    Friend WithEvents Label18 As Label
     Friend WithEvents TexFecha As TextBox
+    Friend WithEvents TXTsangre As TextBox
+    Friend WithEvents TXTMedicamento As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label11 As Label
 End Class
