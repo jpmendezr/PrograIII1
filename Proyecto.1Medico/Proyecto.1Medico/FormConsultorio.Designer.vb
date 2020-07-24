@@ -56,7 +56,6 @@ Partial Class FormConsultorio
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.BtnEnviar)
         Me.Panel1.Controls.Add(Me.txtSintomas)
         Me.Panel1.Controls.Add(Me.txtPeso)
         Me.Panel1.Controls.Add(Me.txtaltura)
@@ -67,13 +66,13 @@ Partial Class FormConsultorio
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(12, 38)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(397, 321)
+        Me.Panel1.Size = New System.Drawing.Size(411, 321)
         Me.Panel1.TabIndex = 0
         '
         'BtnEnviar
         '
         Me.BtnEnviar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnEnviar.Location = New System.Drawing.Point(286, 238)
+        Me.BtnEnviar.Location = New System.Drawing.Point(339, 282)
         Me.BtnEnviar.Name = "BtnEnviar"
         Me.BtnEnviar.Size = New System.Drawing.Size(75, 23)
         Me.BtnEnviar.TabIndex = 8
@@ -149,6 +148,7 @@ Partial Class FormConsultorio
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel2.Controls.Add(Me.BtnEnviar)
         Me.Panel2.Controls.Add(Me.TxtDiagnostico)
         Me.Panel2.Controls.Add(Me.txtMedicamentosAdminis)
         Me.Panel2.Controls.Add(Me.TxtMedicamentosRece)
@@ -252,7 +252,7 @@ Partial Class FormConsultorio
         'btnRegistrar
         '
         Me.btnRegistrar.BackColor = System.Drawing.Color.Aqua
-        Me.btnRegistrar.Location = New System.Drawing.Point(12, 415)
+        Me.btnRegistrar.Location = New System.Drawing.Point(17, 365)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(75, 23)
         Me.btnRegistrar.TabIndex = 9
@@ -262,7 +262,7 @@ Partial Class FormConsultorio
         'BtnActualizar
         '
         Me.BtnActualizar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnActualizar.Location = New System.Drawing.Point(380, 415)
+        Me.BtnActualizar.Location = New System.Drawing.Point(373, 365)
         Me.BtnActualizar.Name = "BtnActualizar"
         Me.BtnActualizar.Size = New System.Drawing.Size(75, 23)
         Me.BtnActualizar.TabIndex = 10
@@ -272,7 +272,7 @@ Partial Class FormConsultorio
         'BtnEliminar
         '
         Me.BtnEliminar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnEliminar.Location = New System.Drawing.Point(737, 415)
+        Me.BtnEliminar.Location = New System.Drawing.Point(770, 365)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(75, 23)
         Me.BtnEliminar.TabIndex = 11
@@ -293,7 +293,7 @@ Partial Class FormConsultorio
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(656, 10)
+        Me.Label11.Location = New System.Drawing.Point(634, 10)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(88, 25)
         Me.Label11.TabIndex = 13
@@ -303,7 +303,7 @@ Partial Class FormConsultorio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(857, 450)
+        Me.ClientSize = New System.Drawing.Size(857, 396)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.BtnEliminar)
