@@ -15,18 +15,13 @@ Public Class Paciente
 
 
     ' informacion adicional'
-
-    Private Peso As String
-    Private Altura As String
-    Private TipoSangre As String
-    Private contactoTel As Integer
-    Private sintomas As String
+    Private tipoSangre As String
     Private MedicamentosAlergicos As String
 
     'informacion del familiar'
     Private NombreFamiliar As String
     Private TipoFamiliar As String
-    Private Telefono As Integer
+    Private Telefono As String
     Private Direccion As String
 
 
@@ -75,33 +70,7 @@ Public Class Paciente
         End Set
     End Property
 
-    Public Property pro_Peso1 As String
-        Get
-            Return Peso
-        End Get
-        Set(value As String)
-            Peso = value
-        End Set
-    End Property
 
-    Public Property pro_Altura1 As String
-        Get
-            Return Altura
-        End Get
-        Set(value As String)
-            Altura = value
-        End Set
-    End Property
-
-
-    Public Property pro_TipoSangre1 As String
-        Get
-            Return TipoSangre
-        End Get
-        Set(value As String)
-            TipoSangre = value
-        End Set
-    End Property
 
     Public Property pro_MedicamentosAlergicos1 As String
         Get
@@ -130,11 +99,11 @@ Public Class Paciente
         End Set
     End Property
 
-    Public Property pro_Telefono1 As Integer
+    Public Property pro_Telefono1 As String
         Get
             Return Telefono
         End Get
-        Set(value As Integer)
+        Set(value As String)
             Telefono = value
         End Set
     End Property
@@ -148,21 +117,12 @@ Public Class Paciente
         End Set
     End Property
 
-    Public Property pro_ContactoTel As Integer
+    Public Property pro_Sangre As String
         Get
-            Return contactoTel
-        End Get
-        Set(value As Integer)
-            contactoTel = value
-        End Set
-    End Property
-
-    Public Property pro_Sintomas1 As String
-        Get
-            Return sintomas
+            Return tipoSangre
         End Get
         Set(value As String)
-            sintomas = value
+            tipoSangre = value
         End Set
     End Property
 
@@ -208,10 +168,19 @@ Public Class Paciente
         cmb = New SqlCommandBuilder(da)
         da.Fill(ds, tabla)
 
-
-
     End Sub
-    Function RegistrarSQL(ByVal sql)
+    Function RegistrarSQLPersona(ByVal sql)
+        myconnection.Open()
+        comand = New SqlCommand(sql, myconnection)
+        Dim i As Integer = comand.ExecuteNonQuery()
+        If (i > 0) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Function RegistrarSQLPaciente(ByVal sql)
         myconnection.Open()
         comand = New SqlCommand(sql, myconnection)
         Dim i As Integer = comand.ExecuteNonQuery()
@@ -221,9 +190,18 @@ Public Class Paciente
             Return False
         End If
 
-
     End Function
 
+    Function RegistrarSQLFamiliar(ByVal sql)
+        myconnection.Open()
+        comand = New SqlCommand(sql, myconnection)
+        Dim i As Integer = comand.ExecuteNonQuery()
+        If (i > 0) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 
     Public Function FichaEmergencia() As String
 
