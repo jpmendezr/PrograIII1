@@ -12,8 +12,6 @@ Public Class Paciente
     Private correo As String
 
 
-
-
     ' informacion adicional'
     Private tipoSangre As String
     Private MedicamentosAlergicos As Integer
