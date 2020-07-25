@@ -3,10 +3,27 @@
 
 
     Private Sub BtnActualizo_Click(sender As Object, e As EventArgs) Handles BtnActualizo.Click
-        registro.pro_Cedula1 = Me.TexCedula.Text
-        registro.pro_NombreP1 = Me.TextNombre.Text
+        If Information.IsNumeric(Me.TexCedula.Text) Then
+            registro.pro_Cedula1 = Me.TexCedula.Text
+        Else
+            MsgBox("No puede meter letras ")
+        End If
+
+        If Information.IsNumeric(Me.TextNombre.Text) Then
+            MsgBox("No puede meter numeros")
+        Else
+            registro.pro_NombreP1 = Me.TextNombre.Text
+
+        End If
+
+        If Information.IsNumeric(Me.TextCel.Text) Then
+            registro.pro_TelefonoPaciente1 = Me.TextCel.Text
+        Else
+
+            MsgBox("No puede meter numeros")
+        End If
+
         registro.pro_Sexo1 = Me.ComboBoxSexo.Text
-        registro.pro_TelefonoPaciente1 = Me.TextCel.Text
         registro.pro_Correo1 = Me.TexCorreoElectronico.Text
         registro.ActualizarPersona()
 
@@ -80,13 +97,13 @@
         registro.RegistrarPaciente()
         registro.RegistrarFamiliar()
 
-
-
     End Sub
 
 
     Private Sub BtnElimino_Click(sender As Object, e As EventArgs) Handles BtnElimino.Click
-        registro.pro_Cedula1 = Me.TexCedula.Text
+        If Information.IsNumeric(Me.TexCedula.Text) Then
+            registro.pro_Cedula1 = Me.TexCedula.Text
+        End If
         registro.EliminarPersona()
         registro.EliminarPaciente()
         registro.EliminarFamiliar()
