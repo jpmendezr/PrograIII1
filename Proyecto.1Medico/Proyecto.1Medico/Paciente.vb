@@ -230,6 +230,13 @@ Public Class Paciente
                 Dim actualizarRegis = (From ac In Actualizar.TbPersona Where ac.Cedula = cedula Select ac).SingleOrDefault
 
                 If Not IsNothing(actualizarRegis) Then
+                    actualizarRegis.Nombre = NombreP
+                    actualizarRegis.Sexo = sexo
+                    actualizarRegis.Correo = correo
+                    actualizarRegis.Telefono = Telefono
+                    MsgBox("Datos Actualizados")
+
+                    Actualizar.SaveChanges()
 
                 End If
             End Using
