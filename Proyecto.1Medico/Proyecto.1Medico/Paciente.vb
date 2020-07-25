@@ -29,7 +29,7 @@ Public Class Paciente
     Public da As SqlDataAdapter
     Public comand As SqlCommand
 
-    Private myconnection As New SqlConnection("Server=DESKTOP-JQ96R3T\SQLEXPRESS01;Initial Catalog=BdCentroMedicox;INTEGRATED SECURITY= SSPI")
+    Private myconnection As New SqlConnection("Server=LAPTOP-JQ6UM2LL\SQLEXPRESS;Initial Catalog=BdCentroMedicox;INTEGRATED SECURITY= SSPI")
     Public Sub conectar()
         Try
             myconnection.Open()

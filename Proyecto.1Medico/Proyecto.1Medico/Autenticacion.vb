@@ -5,7 +5,7 @@ Public Class Autenticacion
     Dim ds As DataSet = New DataSet()
     Dim da As SqlDataAdapter
     Dim comand As SqlCommand
-    Dim myconnection As New SqlConnection("Server=DESKTOP-JQ96R3T\SQLEXPRESS01;Initial Catalog=BdCentroMedicox;INTEGRATED SECURITY= SSPI")
+    Dim myconnection As New SqlConnection("Server=LAPTOP-JQ6UM2LL\SQLEXPRESS;Initial Catalog=BdCentroMedicox;INTEGRATED SECURITY= SSPI")
     '--------------------------------------
     Private Cedula As String = ""
     Private Contrasena As String = ""
