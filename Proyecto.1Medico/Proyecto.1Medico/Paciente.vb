@@ -71,16 +71,6 @@ Public Class Paciente
     End Property
 
 
-
-    Public Property pro_MedicamentosAlergicos1 As String
-        Get
-            Return MedicamentosAlergicos
-        End Get
-        Set(value As String)
-            MedicamentosAlergicos = value
-        End Set
-    End Property
-
     Public Property pro_NombreFamiliar1 As String
         Get
             Return NombreFamiliar
@@ -238,6 +228,7 @@ Public Class Paciente
         Try
             Using Actualizar As New BdCentroMedicoEntities
                 Dim actualizarRegis = (From ac In Actualizar.TbPersona Where ac.Cedula = cedula Select ac).SingleOrDefault
+
                 If Not IsNothing(actualizarRegis) Then
 
                 End If
@@ -247,12 +238,43 @@ Public Class Paciente
         End Try
     End Sub
 
-    Public Sub Eliminar()
+    Public Sub EliminarPersona()
         Try
             Using eleminar As New BdCentroMedicoEntities
                 Dim delete = (From e In eleminar.TbPersona Where e.Cedula = cedula Select e).SingleOrDefault
                 If Not IsNothing(delete) Then
                     eleminar.TbPersona.Remove(delete)
+                    eleminar.SaveChanges()
+                    MsgBox("Se eliminaron los datos")
+                End If
+
+            End Using
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Public Sub EliminarPaciente()
+        Try
+            Using eleminar As New BdCentroMedicoEntities
+                Dim delete = (From e In eleminar.TbPaciente Where e.CedulaPersona = cedula Select e).SingleOrDefault
+                If Not IsNothing(delete) Then
+                    eleminar.TbPaciente.Remove(delete)
+                    eleminar.SaveChanges()
+                    MsgBox("Se eliminaron los datos")
+                End If
+
+            End Using
+        Catch ex As Exception
+
+        End Try
+    End Sub
+    Public Sub EliminarFamiliar()
+        Try
+            Using eleminar As New BdCentroMedicoEntities
+                Dim delete = (From e In eleminar.TbFamiliarPaciente Where e.CedulaPaciente = cedula Select e).SingleOrDefault
+                If Not IsNothing(delete) Then
+                    eleminar.TbFamiliarPaciente.Remove(delete)
                     eleminar.SaveChanges()
                     MsgBox("Se eliminaron los datos")
                 End If

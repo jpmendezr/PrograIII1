@@ -53,28 +53,30 @@ Partial Class FormPaciente
         Me.txtrelacion = New System.Windows.Forms.TextBox()
         Me.txtFamiliar = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.menu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MostrarDatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnElimino = New System.Windows.Forms.Button()
         Me.BtnActualizo = New System.Windows.Forms.Button()
         Me.BtnRegistro = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.BtnLupa = New System.Windows.Forms.Button()
+        Me.BtnMostrar = New System.Windows.Forms.Button()
+        Me.ComboBoxSexo = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.ComboBoxSexo)
         Me.Panel1.Controls.Add(Me.TXTsangre)
         Me.Panel1.Controls.Add(Me.TXTMedicamento)
         Me.Panel1.Controls.Add(Me.Label18)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.TexFecha)
         Me.Panel1.Controls.Add(Me.Label17)
-        Me.Panel1.Controls.Add(Me.Sexo)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label7)
@@ -88,7 +90,7 @@ Partial Class FormPaciente
         Me.Panel1.Controls.Add(Me.TexCedula)
         Me.Panel1.Location = New System.Drawing.Point(12, 50)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(793, 189)
+        Me.Panel1.Size = New System.Drawing.Size(793, 166)
         Me.Panel1.TabIndex = 0
         '
         'TXTsangre
@@ -144,7 +146,7 @@ Partial Class FormPaciente
         '
         'Sexo
         '
-        Me.Sexo.Location = New System.Drawing.Point(582, 39)
+        Me.Sexo.Location = New System.Drawing.Point(615, 371)
         Me.Sexo.Name = "Sexo"
         Me.Sexo.Size = New System.Drawing.Size(73, 20)
         Me.Sexo.TabIndex = 22
@@ -246,7 +248,7 @@ Partial Class FormPaciente
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel2.Controls.Add(Me.Label15)
         Me.Panel2.Controls.Add(Me.Label14)
@@ -258,15 +260,15 @@ Partial Class FormPaciente
         Me.Panel2.Controls.Add(Me.txtrelacion)
         Me.Panel2.Controls.Add(Me.txtFamiliar)
         Me.Panel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel2.Location = New System.Drawing.Point(12, 262)
+        Me.Panel2.Location = New System.Drawing.Point(12, 222)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(793, 193)
+        Me.Panel2.Size = New System.Drawing.Size(793, 121)
         Me.Panel2.TabIndex = 1
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(550, 68)
+        Me.Label15.Location = New System.Drawing.Point(671, 41)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(68, 15)
         Me.Label15.TabIndex = 8
@@ -275,7 +277,7 @@ Partial Class FormPaciente
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(408, 68)
+        Me.Label14.Location = New System.Drawing.Point(435, 41)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(63, 15)
         Me.Label14.TabIndex = 7
@@ -286,7 +288,7 @@ Partial Class FormPaciente
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(288, 14)
+        Me.Label10.Location = New System.Drawing.Point(282, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(255, 20)
         Me.Label10.TabIndex = 5
@@ -295,7 +297,7 @@ Partial Class FormPaciente
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(263, 68)
+        Me.Label13.Location = New System.Drawing.Point(272, 41)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(121, 15)
         Me.Label13.TabIndex = 6
@@ -304,7 +306,7 @@ Partial Class FormPaciente
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(7, 68)
+        Me.Label12.Location = New System.Drawing.Point(7, 41)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(139, 15)
         Me.Label12.TabIndex = 5
@@ -312,63 +314,46 @@ Partial Class FormPaciente
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(553, 100)
+        Me.txtDireccion.Location = New System.Drawing.Point(553, 68)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(233, 21)
         Me.txtDireccion.TabIndex = 3
         '
         'txtTelefonoFamiliar
         '
-        Me.txtTelefonoFamiliar.Location = New System.Drawing.Point(411, 100)
+        Me.txtTelefonoFamiliar.Location = New System.Drawing.Point(411, 68)
         Me.txtTelefonoFamiliar.Name = "txtTelefonoFamiliar"
         Me.txtTelefonoFamiliar.Size = New System.Drawing.Size(126, 21)
         Me.txtTelefonoFamiliar.TabIndex = 2
         '
         'txtrelacion
         '
-        Me.txtrelacion.Location = New System.Drawing.Point(266, 100)
+        Me.txtrelacion.Location = New System.Drawing.Point(258, 65)
         Me.txtrelacion.Name = "txtrelacion"
         Me.txtrelacion.Size = New System.Drawing.Size(137, 21)
         Me.txtrelacion.TabIndex = 1
         '
         'txtFamiliar
         '
-        Me.txtFamiliar.Location = New System.Drawing.Point(6, 100)
+        Me.txtFamiliar.Location = New System.Drawing.Point(-2, 65)
         Me.txtFamiliar.Name = "txtFamiliar"
         Me.txtFamiliar.Size = New System.Drawing.Size(254, 21)
         Me.txtFamiliar.TabIndex = 0
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(814, 24)
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'menu
-        '
-        Me.menu.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.menu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MostrarDatosToolStripMenuItem})
-        Me.menu.Name = "menu"
-        Me.menu.Size = New System.Drawing.Size(67, 20)
-        Me.menu.Text = "Registros"
-        '
-        'MostrarDatosToolStripMenuItem
-        '
-        Me.MostrarDatosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.MostrarDatosToolStripMenuItem.Image = CType(resources.GetObject("MostrarDatosToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.MostrarDatosToolStripMenuItem.Name = "MostrarDatosToolStripMenuItem"
-        Me.MostrarDatosToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
-        Me.MostrarDatosToolStripMenuItem.Text = "Buscador "
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(306, 9)
+        Me.Label3.Location = New System.Drawing.Point(295, 7)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(179, 40)
         Me.Label3.TabIndex = 4
@@ -378,7 +363,7 @@ Partial Class FormPaciente
         '
         Me.BtnElimino.BackColor = System.Drawing.Color.Aqua
         Me.BtnElimino.Image = Global.Proyecto._1Medico.My.Resources.Resources.eliminar
-        Me.BtnElimino.Location = New System.Drawing.Point(633, 474)
+        Me.BtnElimino.Location = New System.Drawing.Point(657, 492)
         Me.BtnElimino.Name = "BtnElimino"
         Me.BtnElimino.Size = New System.Drawing.Size(120, 23)
         Me.BtnElimino.TabIndex = 7
@@ -388,7 +373,7 @@ Partial Class FormPaciente
         '
         Me.BtnActualizo.BackColor = System.Drawing.Color.Aqua
         Me.BtnActualizo.Image = Global.Proyecto._1Medico.My.Resources.Resources.update
-        Me.BtnActualizo.Location = New System.Drawing.Point(323, 474)
+        Me.BtnActualizo.Location = New System.Drawing.Point(205, 492)
         Me.BtnActualizo.Name = "BtnActualizo"
         Me.BtnActualizo.Size = New System.Drawing.Size(112, 23)
         Me.BtnActualizo.TabIndex = 6
@@ -398,19 +383,60 @@ Partial Class FormPaciente
         '
         Me.BtnRegistro.BackColor = System.Drawing.Color.Aqua
         Me.BtnRegistro.Image = CType(resources.GetObject("BtnRegistro.Image"), System.Drawing.Image)
-        Me.BtnRegistro.Location = New System.Drawing.Point(52, 474)
+        Me.BtnRegistro.Location = New System.Drawing.Point(12, 492)
         Me.BtnRegistro.Name = "BtnRegistro"
         Me.BtnRegistro.Size = New System.Drawing.Size(108, 23)
         Me.BtnRegistro.TabIndex = 3
         Me.BtnRegistro.UseVisualStyleBackColor = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 349)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(788, 137)
+        Me.DataGridView1.TabIndex = 8
+        '
+        'BtnLupa
+        '
+        Me.BtnLupa.BackColor = System.Drawing.Color.Aqua
+        Me.BtnLupa.Image = Global.Proyecto._1Medico.My.Resources.Resources.lupa
+        Me.BtnLupa.Location = New System.Drawing.Point(517, 492)
+        Me.BtnLupa.Name = "BtnLupa"
+        Me.BtnLupa.Size = New System.Drawing.Size(97, 23)
+        Me.BtnLupa.TabIndex = 9
+        Me.BtnLupa.UseVisualStyleBackColor = False
+        '
+        'BtnMostrar
+        '
+        Me.BtnMostrar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnMostrar.Location = New System.Drawing.Point(387, 492)
+        Me.BtnMostrar.Name = "BtnMostrar"
+        Me.BtnMostrar.Size = New System.Drawing.Size(98, 23)
+        Me.BtnMostrar.TabIndex = 10
+        Me.BtnMostrar.Text = "Mostrar"
+        Me.BtnMostrar.UseVisualStyleBackColor = False
+        '
+        'ComboBoxSexo
+        '
+        Me.ComboBoxSexo.FormattingEnabled = True
+        Me.ComboBoxSexo.Items.AddRange(New Object() {"M", "F"})
+        Me.ComboBoxSexo.Location = New System.Drawing.Point(571, 38)
+        Me.ComboBoxSexo.Name = "ComboBoxSexo"
+        Me.ComboBoxSexo.Size = New System.Drawing.Size(79, 21)
+        Me.ComboBoxSexo.TabIndex = 11
         '
         'FormPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(814, 516)
+        Me.Controls.Add(Me.BtnMostrar)
+        Me.Controls.Add(Me.BtnLupa)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.BtnElimino)
         Me.Controls.Add(Me.BtnActualizo)
+        Me.Controls.Add(Me.Sexo)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnRegistro)
         Me.Controls.Add(Me.Panel2)
@@ -423,8 +449,7 @@ Partial Class FormPaciente
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -433,8 +458,6 @@ Partial Class FormPaciente
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents menu As ToolStripMenuItem
-    Friend WithEvents MostrarDatosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnRegistro As Button
     Friend WithEvents TextCel As TextBox
     Friend WithEvents TexCorreoElectronico As TextBox
@@ -466,4 +489,8 @@ Partial Class FormPaciente
     Friend WithEvents TXTMedicamento As TextBox
     Friend WithEvents Label18 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents BtnLupa As Button
+    Friend WithEvents BtnMostrar As Button
+    Friend WithEvents ComboBoxSexo As ComboBox
 End Class
