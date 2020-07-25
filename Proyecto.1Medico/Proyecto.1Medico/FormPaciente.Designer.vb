@@ -28,7 +28,7 @@ Partial Class FormPaciente
         Me.TXTMedicamento = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TexFecha = New System.Windows.Forms.TextBox()
+        Me.TexDia = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Sexo = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -61,6 +61,8 @@ Partial Class FormPaciente
         Me.BtnLupa = New System.Windows.Forms.Button()
         Me.BtnMostrar = New System.Windows.Forms.Button()
         Me.ComboBoxSexo = New System.Windows.Forms.ComboBox()
+        Me.TexMes = New System.Windows.Forms.TextBox()
+        Me.TexAño = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,12 +72,14 @@ Partial Class FormPaciente
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.TexAño)
+        Me.Panel1.Controls.Add(Me.TexMes)
         Me.Panel1.Controls.Add(Me.ComboBoxSexo)
         Me.Panel1.Controls.Add(Me.TXTsangre)
         Me.Panel1.Controls.Add(Me.TXTMedicamento)
         Me.Panel1.Controls.Add(Me.Label18)
         Me.Panel1.Controls.Add(Me.Label11)
-        Me.Panel1.Controls.Add(Me.TexFecha)
+        Me.Panel1.Controls.Add(Me.TexDia)
         Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Label8)
@@ -127,12 +131,12 @@ Partial Class FormPaciente
         Me.Label11.TabIndex = 27
         Me.Label11.Text = "Tipo Sangre"
         '
-        'TexFecha
+        'TexDia
         '
-        Me.TexFecha.Location = New System.Drawing.Point(3, 110)
-        Me.TexFecha.Name = "TexFecha"
-        Me.TexFecha.Size = New System.Drawing.Size(143, 20)
-        Me.TexFecha.TabIndex = 24
+        Me.TexDia.Location = New System.Drawing.Point(3, 110)
+        Me.TexDia.Name = "TexDia"
+        Me.TexDia.Size = New System.Drawing.Size(28, 20)
+        Me.TexDia.TabIndex = 24
         '
         'Label17
         '
@@ -426,6 +430,20 @@ Partial Class FormPaciente
         Me.ComboBoxSexo.Size = New System.Drawing.Size(79, 21)
         Me.ComboBoxSexo.TabIndex = 11
         '
+        'TexMes
+        '
+        Me.TexMes.Location = New System.Drawing.Point(37, 110)
+        Me.TexMes.Name = "TexMes"
+        Me.TexMes.Size = New System.Drawing.Size(34, 20)
+        Me.TexMes.TabIndex = 34
+        '
+        'TexAño
+        '
+        Me.TexAño.Location = New System.Drawing.Point(77, 110)
+        Me.TexAño.Name = "TexAño"
+        Me.TexAño.Size = New System.Drawing.Size(34, 20)
+        Me.TexAño.TabIndex = 35
+        '
         'FormPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -484,7 +502,7 @@ Partial Class FormPaciente
     Friend WithEvents BtnElimino As Button
     Friend WithEvents Sexo As TextBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents TexFecha As TextBox
+    Friend WithEvents TexDia As TextBox
     Friend WithEvents TXTsangre As TextBox
     Friend WithEvents TXTMedicamento As TextBox
     Friend WithEvents Label18 As Label
@@ -493,4 +511,6 @@ Partial Class FormPaciente
     Friend WithEvents BtnLupa As Button
     Friend WithEvents BtnMostrar As Button
     Friend WithEvents ComboBoxSexo As ComboBox
+    Friend WithEvents TexAño As TextBox
+    Friend WithEvents TexMes As TextBox
 End Class
