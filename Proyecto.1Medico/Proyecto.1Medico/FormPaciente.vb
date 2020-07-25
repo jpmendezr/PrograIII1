@@ -1,7 +1,7 @@
 ﻿Public Class FormPaciente
     Dim registro As New Paciente()
-    Dim registroPaciente As New Paciente()
-    Dim registroFamilia As New Paciente()
+    ' Dim registroPaciente As New Paciente()
+    '  Dim registroFamilia As New Paciente()
 
 
     Private Sub MostrarDatosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MostrarDatosToolStripMenuItem.Click
@@ -12,6 +12,13 @@
 
 
     Private Sub BtnActualizo_Click(sender As Object, e As EventArgs) Handles BtnActualizo.Click
+        Dim act As String = "Nombre '" + Me.TextNombre.Text + "' Apellido '" + Me.TexApellidos.Text + "' Sexo '" + Me.Sexo.Text + "' FechaNacimiento '" + Me.TexFecha.Text + "' Telefono '" + Me.TextCel.Text + "' Correo '" + Me.TexCorreoElectronico.Text + "'"
+        'If registro.Actualizar("TbPersona", act, "Cedula =" + Me.TexCedula.Text) Then
+        'MsgBox("se actualizaron los datos ")
+        'Else
+        'MsgBox("no se actualizaron")
+        'End If
+
 
     End Sub
 
@@ -39,48 +46,30 @@
         registro.pro_TipoFamiliar1 = Me.txtrelacion.Text
         registro.pro_Telefono1 = Me.txtTelefonoFamiliar.Text
 
-
-        AgregarRegistrosPersona()
-        AgregarRegistroPaciente()
-        AgregarRegistroFamiliar()
-
+        registro.RegistrarPersona()
+        registro.RegistrarPaciente()
+        registro.RegistrarFamiliar()
 
 
 
-    End Sub
-
-    Public Sub AgregarRegistrosPersona()
-        Dim agregar As String = "insert into TbPersona values ('" + Me.TexCedula.Text + "','" + Me.TextNombre.Text + "','" + Me.TexApellidos.Text + "','" + Me.Sexo.Text + "','" + Me.TexFecha.Text + "','" + Me.TextCel.Text + "','" + Me.TexCorreoElectronico.Text + "')"
-
-        If (registro.RegistrarSQLPersona(agregar)) Then
-            MsgBox("datos agregados")
-        Else
-            MsgBox("error al agregar")
-
-        End If
     End Sub
 
     Public Function AgregarRegistroPaciente() As Boolean
 
-        Dim agregarP As String = "insert into TbPaciente values ('" + Me.TexCedula.Text + "','" + "0" + "','" + "0" + "','" + TXTsangre.Text + "','" + "0" + "','" + Me.TXTMedicamento.Text + "')"
-        If (registroPaciente.RegistrarSQLPaciente(agregarP)) Then
-            Return True
-        Else
-            Return False
-        End If
+
     End Function
 
     Public Function AgregarRegistroFamiliar() As Boolean
-        Dim agregarf As String = "insert into TbFamiliarPaciente values ('" + Me.TexCedula.Text + "','" + Me.txtrelacion.Text + "','" + Me.txtFamiliar.Text + "','" + Me.txtTelefonoFamiliar.Text + "','" + Me.txtDireccion.Text + "')"
-        If (registroFamilia.RegistrarSQLFamiliar(agregarf)) Then
-            Return True
-        Else
-            Return False
-        End If
+
     End Function
 
     Private Sub Label18_Click(sender As Object, e As EventArgs)
 
     End Sub
 
+    Private Sub BtnElimino_Click(sender As Object, e As EventArgs) Handles BtnElimino.Click
+        registro.pro_Cedula1 = Me.TexCedula.Text
+        registro.Eliminar()
+
+    End Sub
 End Class

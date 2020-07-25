@@ -48,10 +48,19 @@
     <OptionInfer>Off</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -137,12 +146,60 @@
     <Compile Include="PacienteBuscarFiltros.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ProyectoMedico.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoMedico.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoMedico.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoMedico.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoMedico.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
     <Compile Include="Reporteria.vb" />
     <Compile Include="ReporteriaForm.Designer.vb">
       <DependentUpon>ReporteriaForm.vb</DependentUpon>
     </Compile>
     <Compile Include="ReporteriaForm.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TbChequeoExamanes.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TbChequeoMedicamentos.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TbCita.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TbConsultaMedica.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TbEnfermedad.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TbEspecialidad.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TbFamiliarPaciente.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TbMedicamento.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TbPaciente.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TbPersona.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TbPersonalInterno.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +247,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="ProyectoMedico.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ProyectoMedico.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="ProyectoMedico.edmx.diagram">
+      <DependentUpon>ProyectoMedico.edmx</DependentUpon>
+    </None>
     <None Include="Resources\update.png" />
   </ItemGroup>
   <ItemGroup>
@@ -197,6 +262,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProyectoMedico.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ProyectoMedico.Context.vb</LastGenOutput>
+      <DependentUpon>ProyectoMedico.edmx</DependentUpon>
+    </Content>
+    <Content Include="ProyectoMedico.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProyectoMedico.edmx</DependentUpon>
+      <LastGenOutput>ProyectoMedico.vb</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
