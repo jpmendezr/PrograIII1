@@ -3,6 +3,13 @@
 
 
     Private Sub BtnActualizo_Click(sender As Object, e As EventArgs) Handles BtnActualizo.Click
+        registro.pro_Cedula1 = Me.TexCedula.Text
+        registro.pro_NombreP1 = Me.TextNombre.Text
+        registro.pro_Sexo1 = Me.ComboBoxSexo.Text
+        registro.pro_TelefonoPaciente1 = Me.TextCel.Text
+        registro.pro_Correo1 = Me.TexCorreoElectronico.Text
+
+        registro.ActualizarPersona()
 
 
     End Sub
