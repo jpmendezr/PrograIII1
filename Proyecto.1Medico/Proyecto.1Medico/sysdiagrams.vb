@@ -10,15 +10,11 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class TbCita
-    Public Property IdCita As Integer
-    Public Property CedulaPaciente As String
-    Public Property Fecha As Date
-    Public Property Hora As String
-    Public Property NombreMedico As String
-    Public Property Especialidad As String
-
-    Public Overridable Property TbConsultaMedica As ICollection(Of TbConsultaMedica) = New HashSet(Of TbConsultaMedica)
-    Public Overridable Property TbConsultaMedica1 As TbConsultaMedica
+Partial Public Class sysdiagrams
+    Public Property name As String
+    Public Property principal_id As Integer
+    Public Property diagram_id As Integer
+    Public Property version As Nullable(Of Integer)
+    Public Property definition As Byte()
 
 End Class

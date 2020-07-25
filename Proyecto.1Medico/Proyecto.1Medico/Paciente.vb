@@ -29,19 +29,19 @@ Public Class Paciente
     Public da As SqlDataAdapter
     Public comand As SqlCommand
 
-    Private myconnection As New SqlConnection("Server=LAPTOP-JQ6UM2LL\SQLEXPRESS;Initial Catalog=BdCentroMedicox;INTEGRATED SECURITY= SSPI")
-    Public Sub conectar()
-        Try
-            myconnection.Open()
+    'Private myconnection As New SqlConnection("Server=LAPTOP-JQ6UM2LL\SQLEXPRESS;Initial Catalog=BdCentroMedico;INTEGRATED SECURITY= SSPI")
+    ' Public Sub conectar()
+    ' Try
+    ' myconnection.Open()
 
 
-            'MsgBox(" conexion valida")
+    'MsgBox(" conexion valida")
 
-        Catch ex As Exception
-            MsgBox(" conexion mala ")
-
-        End Try
-    End Sub
+    'Catch ex As Exception
+    ' MsgBox(" conexion mala ")
+    '
+    ' Try
+    ' End Sub
 
     Public Property pro_Cedula1 As String
         Get

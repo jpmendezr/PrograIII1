@@ -162,6 +162,9 @@
     <Compile Include="ReporteriaForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="sysdiagrams.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
     <Compile Include="TbChequeoExamanes.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
