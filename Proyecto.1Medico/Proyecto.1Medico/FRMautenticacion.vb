@@ -2,9 +2,8 @@
 Imports System.Data.SqlClient
 Public Class FRMautenticacion
     Dim Autent As New Autenticacion
-    Dim FormPaciente As FormPaciente
-    Dim FormEnfermera As FRM_Enfermeria
-    Dim FormConsultorio As FormConsultorio
+
+    Dim FormMenu As FormMenu
 
     Private Sub FRMautenticacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label4.Visible = False
@@ -51,17 +50,23 @@ Public Class FRMautenticacion
     End Function
 
     Public Sub abrirform()
-        If Autent.Departamento1.Equals("Medico") Then
-            Me.FormConsultorio = New FormConsultorio
-            Me.FormConsultorio.Show()
+        'If Autent.Departamento1.Equals("Medico") Then
+        '    'Me.FormConsultorio = New FormConsultorio
+        '    'Me.FormConsultorio.Show()
+        Me.FormMenu = New FormMenu()
+        Me.FormMenu.VereficarUsuario(Autent.Departamento1)
 
-        ElseIf Autent.Departamento1.Equals("Enfermermeria") Then
-            Me.FormEnfermera = New FRM_Enfermeria()
-            Me.FormEnfermera.Show()
+        Me.FormMenu.Show()
 
-        ElseIf Autent.Departamento1.Equals("Recepcion") Then
-            Me.FormPaciente = New FormPaciente()
-            Me.FormPaciente.Show()
-        End If
+
+
+        'ElseIf Autent.Departamento1.Equals("Enfermermeria") Then
+        '    'Me.FormEnfermera = New FRM_Enfermeria()
+        '    'Me.FormEnfermera.Show()
+
+        'ElseIf Autent.Departamento1.Equals("Recepcion") Then
+        '    'Me.FormPaciente = New FormPaciente()
+        '    'Me.FormPaciente.Show()
+        'End If
     End Sub
 End Class
