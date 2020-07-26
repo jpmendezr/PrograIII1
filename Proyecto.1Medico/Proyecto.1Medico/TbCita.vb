@@ -13,12 +13,11 @@ Imports System.Collections.Generic
 Partial Public Class TbCita
     Public Property IdCita As Integer
     Public Property CedulaPaciente As String
-    Public Property Fecha As Date
+    Public Property Fecha As String
     Public Property Hora As String
     Public Property NombreMedico As String
     Public Property Especialidad As String
 
-    Public Overridable Property TbConsultaMedica As ICollection(Of TbConsultaMedica) = New HashSet(Of TbConsultaMedica)
-    Public Overridable Property TbConsultaMedica1 As TbConsultaMedica
+    Public Overridable Property TbConsultaMedica As TbConsultaMedica
 
 End Class
