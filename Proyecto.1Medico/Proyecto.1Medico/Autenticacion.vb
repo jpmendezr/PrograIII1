@@ -7,6 +7,7 @@ Public Class Autenticacion
     Dim comand As SqlCommand
     ' Dim myconnection As New SqlConnection("Server=DESKTOP-EBUQM5L\SQLEXPRESS;Initial Catalog=BdCentroMedico;INTEGRATED SECURITY= SSPI")
     '--------------------------------------
+
     Private Cedula As String = ""
     Private Contrasena As String = ""
     Private Departamento As String = ""
