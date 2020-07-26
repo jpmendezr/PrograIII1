@@ -202,8 +202,6 @@ Public Class Paciente
                     act.Sexo = sexo
                     act.Telefono = TelefonoPaciente
                     act.Correo = correo
-                    actualizar.TbPersona.Add(act)
-
                     actualizar.SaveChanges()
                     MessageBox.Show("Datos actualizados ")
                 Else
@@ -212,6 +210,8 @@ Public Class Paciente
             End Using
         Catch ex As Exception
             resul = 0
+            MessageBox.Show(ex.Message.ToString)
+
         End Try
     End Sub
 
