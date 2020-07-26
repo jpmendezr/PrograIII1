@@ -3,6 +3,8 @@ Imports System.Data.SqlClient
 Public Class FRMautenticacion
     Dim Autent As New Autenticacion
     Dim FormPaciente As FormPaciente
+    Dim FormEnfermera As FRM_Enfermeria
+    Dim FormConsultorio As FormConsultorio
 
     Private Sub FRMautenticacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label4.Visible = False
@@ -11,11 +13,10 @@ Public Class FRMautenticacion
     End Sub
 
     Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles BtnIngresar.Click
-        Autent.conectar()
-        If VerificarCampos() Then
-            Autent.verificarUsuario()
-            Me.abrirform()
 
+        If VerificarCampos() Then
+            Autent.VerificarUSua()
+            Me.abrirform()
         Else
             MsgBox("Error usario o contraseña incorrecta")
         End If
@@ -51,9 +52,13 @@ Public Class FRMautenticacion
 
     Public Sub abrirform()
         If Autent.Departamento1.Equals("Medico") Then
-            MsgBox("Medico")
+            Me.FormConsultorio = New FormConsultorio
+            Me.FormConsultorio.Show()
+
         ElseIf Autent.Departamento1.Equals("Enfermermeria") Then
-            MsgBox("Enfermeria")
+            Me.FormEnfermera = New FRM_Enfermeria()
+            Me.FormEnfermera.Show()
+
         ElseIf Autent.Departamento1.Equals("Recepcion") Then
             Me.FormPaciente = New FormPaciente()
             Me.FormPaciente.Show()
