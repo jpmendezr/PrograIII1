@@ -35,6 +35,7 @@
 
                 If (mostrar.Count > 0) Then
                     Me.DataGridView1.DataSource = mostrar
+
                 End If
 
             End Using

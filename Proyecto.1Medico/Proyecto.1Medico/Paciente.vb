@@ -150,18 +150,18 @@ Public Class Paciente
 
     End Sub
 
-    Public Sub RegistrarPaciente()
+    Public Function RegistrarPaciente() As Boolean
         Dim resultado As Integer = 0
         Try
             Using registro As New BdCentroMedicoEntities
-                Dim NuevoRegistro As New TbPaciente With {.CedulaPersona = cedula}
+                Dim NuevoRegistro As New TbPaciente With {.CedulaPersona = cedula, .Peso = "NA", .Altura = "NA", .TipoSangre = "NA", .Sintomas = "NA", .MedicamentoAlergico = "NA"}
 
                 registro.TbPaciente.Add(NuevoRegistro)
                 resultado = registro.SaveChanges
                 If resultado > 0 Then
-                    MsgBox(" se registraron los datos ")
+                    Return True
                 Else
-                    MsgBox(" no se registraron ")
+                    Return False
 
                 End If
             End Using
@@ -169,7 +169,7 @@ Public Class Paciente
             resultado = 0
         End Try
 
-    End Sub
+    End Function
 
     Public Function RegistrarFamiliar() As Boolean
         Dim resultado As Integer = 0
@@ -240,7 +240,7 @@ Public Class Paciente
                 If Not IsNothing(delete) Then
                     eleminar.TbFamiliarPaciente.Remove(delete)
                     eleminar.SaveChanges()
-                    MsgBox("Se eliminaron los datos")
+
                 End If
 
             End Using
@@ -256,7 +256,7 @@ Public Class Paciente
                 If Not IsNothing(delete) Then
                     eleminar.TbPaciente.Remove(delete)
                     eleminar.SaveChanges()
-                    MsgBox("Se eliminaron los datos")
+
                 End If
 
             End Using

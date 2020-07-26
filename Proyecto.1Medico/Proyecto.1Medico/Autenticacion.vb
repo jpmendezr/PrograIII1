@@ -5,24 +5,24 @@ Public Class Autenticacion
     Dim ds As DataSet = New DataSet()
     Dim da As SqlDataAdapter
     Dim comand As SqlCommand
-    ' Dim myconnection As New SqlConnection("Server=DESKTOP-EBUQM5L\SQLEXPRESS;Initial Catalog=BdCentroMedico;INTEGRATED SECURITY= SSPI")
-    '--------------------------------------
+    Dim myconnection As New SqlConnection("Server=LAPTOP-JQ6UM2LL\SQLEXPRESS;Initial Catalog=BdCentroMedico;INTEGRATED SECURITY= SSPI")
+
     Private Cedula As String = ""
     Private Contrasena As String = ""
     Private Departamento As String = ""
 
 
     'conecta con la base de datos
-    'Public Sub conectar()
-    '    Try
-    '        myconnection.Open()
-    '        MsgBox(" conexion valida")
+    Public Sub conectar()
+        Try
+            myconnection.Open()
+            MsgBox(" conexion valida")
 
-    '    Catch ex As Exception
-    '        MsgBox(" conexion mala ")
+        Catch ex As Exception
+            MsgBox(" conexion mala ")
 
-    '    End Try
-    'End Sub
+        End Try
+    End Sub
     'Verifica si en la base de datos existe el usuario
     'Public Sub verificarUsuario()
     '    Dim tabla As String = "TbPersonalInterno"
