@@ -229,9 +229,9 @@ Partial Class FRMagendar
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(19, 155)
+        Me.DataGridView1.Location = New System.Drawing.Point(34, 157)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(814, 254)
+        Me.DataGridView1.Size = New System.Drawing.Size(788, 252)
         Me.DataGridView1.TabIndex = 26
         '
         'FRMagendar

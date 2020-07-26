@@ -31,7 +31,7 @@
 
         Try
             Using selexion As New BdCentroMedicoEntities
-                Dim mostrar = (From se In selexion.TbCita Take (1000) Select se).ToList
+                Dim mostrar = (From se In selexion.TbCita Take (2) Select se).ToList
 
                 If (mostrar.Count > 0) Then
                     Me.DataGridView1.DataSource = mostrar
