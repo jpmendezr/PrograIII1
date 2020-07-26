@@ -34,6 +34,5 @@ Partial Public Class BdCentroMedicoEntities
     Public Overridable Property sysdiagrams() As DbSet(Of sysdiagrams)
     Public Overridable Property TbCita() As DbSet(Of TbCita)
     Public Overridable Property TbPaciente() As DbSet(Of TbPaciente)
-    Public Overridable Property TbCita() As DbSet(Of TbCita)
 
 End Class

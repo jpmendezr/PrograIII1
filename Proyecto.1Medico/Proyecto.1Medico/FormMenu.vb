@@ -3,7 +3,7 @@
     Dim FormEnfermera As FRM_Enfermeria
     Dim FormConsultorio As FormConsultorio
     Dim FormReporte As Reporteria
-    Dim Form
+    Dim Formchequeo As FRMChequeoExamen
     Private Sub FormMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -27,7 +27,11 @@
             BtnConsEnferm.Enabled = False
             btnConsMedico.Enabled = False
             btnReporte.Enabled = False
-
         End If
+    End Sub
+
+    Private Sub btnRegPaciente_Click(sender As Object, e As EventArgs) Handles btnRegPaciente.Click
+        FormPaciente = New FormPaciente
+        FormPaciente.Show()
     End Sub
 End Class

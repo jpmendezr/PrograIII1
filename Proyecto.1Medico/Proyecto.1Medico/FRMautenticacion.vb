@@ -55,7 +55,6 @@ Public Class FRMautenticacion
         '    'Me.FormConsultorio.Show()
         Me.FormMenu = New FormMenu()
         Me.FormMenu.VereficarUsuario(Autent.Departamento1)
-
         Me.FormMenu.Show()
 
 
