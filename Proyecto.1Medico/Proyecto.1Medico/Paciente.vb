@@ -12,10 +12,6 @@ Public Class Paciente
     Private correo As String
 
 
-    ' informacion adicional'
-    Private tipoSangre As String
-    Private MedicamentosAlergicos As String
-
     'informacion del familiar'
     Private NombreFamiliar As String
     Private TipoFamiliar As String
@@ -29,19 +25,6 @@ Public Class Paciente
     Public da As SqlDataAdapter
     Public comand As SqlCommand
 
-    'Private myconnection As New SqlConnection("Server=LAPTOP-JQ6UM2LL\SQLEXPRESS;Initial Catalog=BdCentroMedico;INTEGRATED SECURITY= SSPI")
-    ' Public Sub conectar()
-    ' Try
-    ' myconnection.Open()
-
-
-    'MsgBox(" conexion valida")
-
-    'Catch ex As Exception
-    ' MsgBox(" conexion mala ")
-    '
-    ' Try
-    ' End Sub
 
     Public Property pro_Cedula1 As String
         Get
@@ -107,14 +90,6 @@ Public Class Paciente
         End Set
     End Property
 
-    Public Property pro_Sangre As String
-        Get
-            Return tipoSangre
-        End Get
-        Set(value As String)
-            tipoSangre = value
-        End Set
-    End Property
 
     Public Property pro_Sexo1 As String
         Get
@@ -152,20 +127,14 @@ Public Class Paciente
         End Set
     End Property
 
-    Public Property MedicamentosAlergicos1 As String
-        Get
-            Return MedicamentosAlergicos
-        End Get
-        Set(value As String)
-            MedicamentosAlergicos = value
-        End Set
-    End Property
+
 
     Public Sub RegistrarPersona()
         Dim resultado As Integer = 0
         Try
             Using registro As New BdCentroMedicoEntities
                 Dim NuevoRegistro As New TbPersona With {.Cedula = cedula, .Nombre = NombreP, .Apellido = Apellidos, .Sexo = sexo, .FechaNacimiento = fecha, .Telefono = TelefonoPaciente, .Correo = correo}
+
                 registro.TbPersona.Add(NuevoRegistro)
                 resultado = registro.SaveChanges
                 If resultado > 0 Then
@@ -181,17 +150,18 @@ Public Class Paciente
 
     End Sub
 
-    Public Function RegistrarPaciente() As Boolean
+    Public Sub RegistrarPaciente()
         Dim resultado As Integer = 0
         Try
             Using registro As New BdCentroMedicoEntities
-                Dim NuevoRegistro As New TbPaciente With {.CedulaPersona = cedula, .Peso = 0, .Altura = 0, .TipoSangre = tipoSangre, .Sintomas = "NA", .MedicamentoAlergico = MedicamentosAlergicos}
+                Dim NuevoRegistro As New TbPaciente With {.CedulaPersona = cedula}
+
                 registro.TbPaciente.Add(NuevoRegistro)
                 resultado = registro.SaveChanges
                 If resultado > 0 Then
-                    Return True
+                    MsgBox(" se registraron los datos ")
                 Else
-                    Return False
+                    MsgBox(" no se registraron ")
 
                 End If
             End Using
@@ -199,15 +169,13 @@ Public Class Paciente
             resultado = 0
         End Try
 
-
-
-    End Function
+    End Sub
 
     Public Function RegistrarFamiliar() As Boolean
         Dim resultado As Integer = 0
         Try
             Using registro As New BdCentroMedicoEntities
-                Dim NuevoRegistro As New TbFamiliarPaciente With {.CedulaPaciente = cedula, .Parentesco = tipoSangre, .NombreCompleto = NombreFamiliar, .Telefono = Telefono, .Direccion = Direccion}
+                Dim NuevoRegistro As New TbFamiliarPaciente With {.CedulaPaciente = cedula, .Parentesco = TipoFamiliar, .NombreCompleto = NombreFamiliar, .Telefono = Telefono, .Direccion = Direccion}
                 registro.TbFamiliarPaciente.Add(NuevoRegistro)
                 resultado = registro.SaveChanges
                 If resultado > 0 Then
@@ -223,12 +191,14 @@ Public Class Paciente
 
     End Function
 
+
     Public Sub ActualizarPersona()
         Dim resultado = 0
         Try
             Using Actualizar As New BdCentroMedicoEntities
                 Dim actualizarRegis = (From ac In Actualizar.TbPersona Where ac.Cedula = cedula Select ac).SingleOrDefault
-                If Not IsNothing(actualizarRegis) Then
+                If (Not IsNothing(actualizarRegis)) Then
+
                     actualizarRegis.Nombre = NombreP
                     actualizarRegis.Sexo = sexo
                     actualizarRegis.Correo = correo
@@ -239,11 +209,14 @@ Public Class Paciente
                 End If
             End Using
         Catch ex As Exception
-
+            resultado = 0
         End Try
     End Sub
 
+
+
     Public Sub EliminarPersona()
+        Dim resultado As Integer = 0
         Try
             Using eleminar As New BdCentroMedicoEntities
                 Dim delete = (From e In eleminar.TbPersona Where e.Cedula = cedula Select e).SingleOrDefault
@@ -255,26 +228,12 @@ Public Class Paciente
 
             End Using
         Catch ex As Exception
-
+            resultado = 0
         End Try
     End Sub
 
-    Public Sub EliminarPaciente()
-        Try
-            Using eleminar As New BdCentroMedicoEntities
-                Dim delete = (From e In eleminar.TbPaciente Where e.CedulaPersona = cedula Select e).SingleOrDefault
-                If Not IsNothing(delete) Then
-                    eleminar.TbPaciente.Remove(delete)
-                    eleminar.SaveChanges()
-                    MsgBox("Se eliminaron los datos")
-                End If
-
-            End Using
-        Catch ex As Exception
-
-        End Try
-    End Sub
     Public Sub EliminarFamiliar()
+        Dim resultado As Integer = 0
         Try
             Using eleminar As New BdCentroMedicoEntities
                 Dim delete = (From e In eleminar.TbFamiliarPaciente Where e.CedulaPaciente = cedula Select e).SingleOrDefault
@@ -286,7 +245,23 @@ Public Class Paciente
 
             End Using
         Catch ex As Exception
+            resultado = 0
+        End Try
+    End Sub
+    Public Sub EliminarPaciente()
+        Dim resultado As Integer = 0
+        Try
+            Using eleminar As New BdCentroMedicoEntities
+                Dim delete = (From e In eleminar.TbPaciente Where e.CedulaPersona = cedula Select e).SingleOrDefault
+                If Not IsNothing(delete) Then
+                    eleminar.TbPaciente.Remove(delete)
+                    eleminar.SaveChanges()
+                    MsgBox("Se eliminaron los datos")
+                End If
 
+            End Using
+        Catch ex As Exception
+            resultado = 0
         End Try
     End Sub
 
