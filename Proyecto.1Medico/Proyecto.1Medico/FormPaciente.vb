@@ -4,20 +4,19 @@
 
     Private Sub BtnActualizo_Click(sender As Object, e As EventArgs) Handles BtnActualizo.Click
 
-        If Information.IsNumeric(Me.TexCedula.Text) Then
+        If Information.IsNumeric(Me.TexCedula.Text) And Information.IsNumeric(Me.TextCel.Text) Then
             registro.pro_Cedula1 = Me.TexCedula.Text
+            registro.pro_TelefonoPaciente1 = Me.TextCel.Text
         Else
             MsgBox("No puede meter letras ")
         End If
 
-        If Information.IsNumeric(Me.TextNombre.Text) And Information.IsNumeric(Me.TextCel.Text) Then
+        If Information.IsNumeric(Me.TextNombre.Text) Then
             MsgBox("No puede meter numeros")
         Else
             registro.pro_NombreP1 = Me.TextNombre.Text
-            registro.pro_TelefonoPaciente1 = Me.TextCel.Text
 
         End If
-
 
         registro.pro_Sexo1 = Me.ComboBoxSexo.Text
         registro.pro_Correo1 = Me.TexCorreoElectronico.Text
