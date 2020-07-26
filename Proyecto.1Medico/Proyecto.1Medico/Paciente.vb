@@ -203,6 +203,7 @@ Public Class Paciente
                     act.Telefono = TelefonoPaciente
                     act.Correo = correo
                     actualizar.TbPersona.Add(act)
+
                     actualizar.SaveChanges()
                     MessageBox.Show("Datos actualizados ")
                 Else
