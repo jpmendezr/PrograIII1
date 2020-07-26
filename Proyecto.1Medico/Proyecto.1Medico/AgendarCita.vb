@@ -72,21 +72,27 @@
 
 
     Public Sub ActualizarCita()
-        Dim resultado = 0
-        Try
-            Using ActualizarAgenda As New BdCentroMedicoEntities
-                'Dim actualizarRegis = (From ac In ActualizarAgenda.TbCita Where ac.CedulaPaciente = cedula Select ac).SingleOrDefault
-                'If Not IsNothing(actualizarRegis) Then
-                '    actualizarRegis.Nombre = NombreP
+        'Dim resultado As Integer = 0
+        'Try
+        '    Dim ordenDeCompra As String = "987"
 
-                '    actualizarRegis.SaveChanges()
-                '    MsgBox("Datos Actualizados")
+        '    Using _Clinica As New BdCentroMedicoEntities
+        '        Dim Registro = (From x In _Clinica.TbCita Where x.Orden_compra1 = ordenDeCompra Select x).SingleOrDefault
+        '        If (Not IsNothing(Registro)) Then
+        '            Registro.Bodega = "bod03"
+        '            Registro.Id_proveedor = "1233"
+        '            '  _almacen.Orden_Compra.Add(Registro)
+        '            _Clinica.SaveChanges()
+        '            MsgBox("actualizado")
+        '        Else
+        '            MsgBox("Fallo")
+        '        End If
+        '    End Using
+        'Catch ex As Exception
+        '    resultado = 0
+        '    MsgBox(ex.Message)
+        'End Try
 
-                'End If
-            End Using
-        Catch ex As Exception
-            resultado = 0
-        End Try
     End Sub
 
     Public Sub RegistrarPersona()
