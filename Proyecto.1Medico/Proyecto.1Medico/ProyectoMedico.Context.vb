@@ -24,7 +24,6 @@ Partial Public Class BdCentroMedicoEntities
 
     Public Overridable Property TbChequeoExamanes() As DbSet(Of TbChequeoExamanes)
     Public Overridable Property TbChequeoMedicamentos() As DbSet(Of TbChequeoMedicamentos)
-    Public Overridable Property TbCita() As DbSet(Of TbCita)
     Public Overridable Property TbConsultaMedica() As DbSet(Of TbConsultaMedica)
     Public Overridable Property TbEnfermedad() As DbSet(Of TbEnfermedad)
     Public Overridable Property TbEspecialidad() As DbSet(Of TbEspecialidad)
@@ -34,5 +33,6 @@ Partial Public Class BdCentroMedicoEntities
     Public Overridable Property TbPersonalInterno() As DbSet(Of TbPersonalInterno)
     Public Overridable Property sysdiagrams() As DbSet(Of sysdiagrams)
     Public Overridable Property TbPaciente() As DbSet(Of TbPaciente)
+    Public Overridable Property TbCita() As DbSet(Of TbCita)
 
 End Class

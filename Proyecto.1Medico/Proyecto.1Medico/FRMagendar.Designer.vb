@@ -22,37 +22,39 @@ Partial Class FRMagendar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextHora = New System.Windows.Forms.TextBox()
+        Me.TextEspecialidad = New System.Windows.Forms.TextBox()
+        Me.TextNMedico = New System.Windows.Forms.TextBox()
+        Me.TextCedula = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.BtnActualizar = New System.Windows.Forms.Button()
+        Me.BtnCitas = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextBoxDia = New System.Windows.Forms.TextBox()
+        Me.TextBoxMes = New System.Windows.Forms.TextBox()
+        Me.TextBoxAño = New System.Windows.Forms.TextBox()
+        Me.BtnAgregar = New System.Windows.Forms.Button()
+        Me.BtnRegresar = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'BtnEliminar
         '
-        Me.Button1.BackColor = System.Drawing.Color.Aqua
-        Me.Button1.Location = New System.Drawing.Point(713, 415)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Eliminar Citas"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BtnEliminar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnEliminar.Location = New System.Drawing.Point(571, 415)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(120, 23)
+        Me.BtnEliminar.TabIndex = 0
+        Me.BtnEliminar.Text = "Eliminar Citas"
+        Me.BtnEliminar.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -68,7 +70,7 @@ Partial Class FRMagendar
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(244, 22)
+        Me.Label2.Location = New System.Drawing.Point(209, 22)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(38, 15)
         Me.Label2.TabIndex = 2
@@ -78,7 +80,7 @@ Partial Class FRMagendar
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(364, 22)
+        Me.Label3.Location = New System.Drawing.Point(351, 22)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(90, 15)
         Me.Label3.TabIndex = 3
@@ -100,45 +102,38 @@ Partial Class FRMagendar
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(675, 22)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(142, 15)
+        Me.Label5.Size = New System.Drawing.Size(136, 15)
         Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Nombre del Paciente"
+        Me.Label5.Text = "Cedula del Paciente"
         '
-        'TextBox1
+        'TextHora
         '
-        Me.TextBox1.Location = New System.Drawing.Point(247, 53)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 6
+        Me.TextHora.Location = New System.Drawing.Point(212, 53)
+        Me.TextHora.Name = "TextHora"
+        Me.TextHora.Size = New System.Drawing.Size(100, 20)
+        Me.TextHora.TabIndex = 6
         '
-        'TextBox2
+        'TextEspecialidad
         '
-        Me.TextBox2.Location = New System.Drawing.Point(367, 53)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 7
+        Me.TextEspecialidad.Location = New System.Drawing.Point(354, 53)
+        Me.TextEspecialidad.Name = "TextEspecialidad"
+        Me.TextEspecialidad.Size = New System.Drawing.Size(100, 20)
+        Me.TextEspecialidad.TabIndex = 7
         '
-        'TextBox3
+        'TextNMedico
         '
-        Me.TextBox3.Location = New System.Drawing.Point(483, 53)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(167, 20)
-        Me.TextBox3.TabIndex = 8
+        Me.TextNMedico.Location = New System.Drawing.Point(483, 53)
+        Me.TextNMedico.Multiline = True
+        Me.TextNMedico.Name = "TextNMedico"
+        Me.TextNMedico.Size = New System.Drawing.Size(167, 20)
+        Me.TextNMedico.TabIndex = 8
         '
-        'TextBox4
+        'TextCedula
         '
-        Me.TextBox4.Location = New System.Drawing.Point(678, 53)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(155, 20)
-        Me.TextBox4.TabIndex = 9
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(13, 53)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 10
+        Me.TextCedula.Location = New System.Drawing.Point(678, 53)
+        Me.TextCedula.Name = "TextCedula"
+        Me.TextCedula.Size = New System.Drawing.Size(155, 20)
+        Me.TextCedula.TabIndex = 9
         '
         'Label6
         '
@@ -160,25 +155,25 @@ Partial Class FRMagendar
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Actualizar Citas:"
         '
-        'Button2
+        'BtnActualizar
         '
-        Me.Button2.BackColor = System.Drawing.Color.Aqua
-        Me.Button2.Location = New System.Drawing.Point(392, 415)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 15
-        Me.Button2.Text = "Actualizar"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.BtnActualizar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnActualizar.Location = New System.Drawing.Point(392, 415)
+        Me.BtnActualizar.Name = "BtnActualizar"
+        Me.BtnActualizar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnActualizar.TabIndex = 15
+        Me.BtnActualizar.Text = "Actualizar"
+        Me.BtnActualizar.UseVisualStyleBackColor = False
         '
-        'Button3
+        'BtnCitas
         '
-        Me.Button3.BackColor = System.Drawing.Color.Aqua
-        Me.Button3.Location = New System.Drawing.Point(16, 415)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(120, 23)
-        Me.Button3.TabIndex = 16
-        Me.Button3.Text = "Citas Disponibles"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.BtnCitas.BackColor = System.Drawing.Color.Aqua
+        Me.BtnCitas.Location = New System.Drawing.Point(162, 415)
+        Me.BtnCitas.Name = "BtnCitas"
+        Me.BtnCitas.Size = New System.Drawing.Size(120, 23)
+        Me.BtnCitas.TabIndex = 16
+        Me.BtnCitas.Text = "Citas Disponibles"
+        Me.BtnCitas.UseVisualStyleBackColor = False
         '
         'Label8
         '
@@ -190,21 +185,54 @@ Partial Class FRMagendar
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "Elminar Citas:"
         '
+        'TextBoxDia
+        '
+        Me.TextBoxDia.Location = New System.Drawing.Point(19, 53)
+        Me.TextBoxDia.Name = "TextBoxDia"
+        Me.TextBoxDia.Size = New System.Drawing.Size(40, 20)
+        Me.TextBoxDia.TabIndex = 21
+        '
+        'TextBoxMes
+        '
+        Me.TextBoxMes.Location = New System.Drawing.Point(65, 53)
+        Me.TextBoxMes.Name = "TextBoxMes"
+        Me.TextBoxMes.Size = New System.Drawing.Size(40, 20)
+        Me.TextBoxMes.TabIndex = 22
+        '
+        'TextBoxAño
+        '
+        Me.TextBoxAño.Location = New System.Drawing.Point(111, 53)
+        Me.TextBoxAño.Name = "TextBoxAño"
+        Me.TextBoxAño.Size = New System.Drawing.Size(40, 20)
+        Me.TextBoxAño.TabIndex = 23
+        '
+        'BtnAgregar
+        '
+        Me.BtnAgregar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnAgregar.Location = New System.Drawing.Point(16, 415)
+        Me.BtnAgregar.Name = "BtnAgregar"
+        Me.BtnAgregar.Size = New System.Drawing.Size(120, 23)
+        Me.BtnAgregar.TabIndex = 24
+        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.UseVisualStyleBackColor = False
+        '
+        'BtnRegresar
+        '
+        Me.BtnRegresar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnRegresar.Location = New System.Drawing.Point(713, 415)
+        Me.BtnRegresar.Name = "BtnRegresar"
+        Me.BtnRegresar.Size = New System.Drawing.Size(120, 23)
+        Me.BtnRegresar.TabIndex = 25
+        Me.BtnRegresar.Text = "Regresar"
+        Me.BtnRegresar.UseVisualStyleBackColor = False
+        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(247, 161)
+        Me.DataGridView1.Location = New System.Drawing.Point(19, 155)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(586, 225)
-        Me.DataGridView1.TabIndex = 19
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(13, 161)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(200, 225)
-        Me.DataGridView2.TabIndex = 20
+        Me.DataGridView1.Size = New System.Drawing.Size(814, 254)
+        Me.DataGridView1.TabIndex = 26
         '
         'FRMagendar
         '
@@ -212,49 +240,54 @@ Partial Class FRMagendar
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(857, 450)
-        Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.BtnRegresar)
+        Me.Controls.Add(Me.BtnAgregar)
+        Me.Controls.Add(Me.TextBoxAño)
+        Me.Controls.Add(Me.TextBoxMes)
+        Me.Controls.Add(Me.TextBoxDia)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.BtnCitas)
+        Me.Controls.Add(Me.BtnActualizar)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextCedula)
+        Me.Controls.Add(Me.TextNMedico)
+        Me.Controls.Add(Me.TextEspecialidad)
+        Me.Controls.Add(Me.TextHora)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnEliminar)
         Me.Name = "FRMagendar"
         Me.Text = "Agendar Citas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnEliminar As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents TextHora As TextBox
+    Friend WithEvents TextEspecialidad As TextBox
+    Friend WithEvents TextNMedico As TextBox
+    Friend WithEvents TextCedula As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents BtnActualizar As Button
+    Friend WithEvents BtnCitas As Button
     Friend WithEvents Label8 As Label
+    Friend WithEvents TextBoxDia As TextBox
+    Friend WithEvents TextBoxMes As TextBox
+    Friend WithEvents TextBoxAño As TextBox
+    Friend WithEvents BtnAgregar As Button
+    Friend WithEvents BtnRegresar As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents DataGridView2 As DataGridView
 End Class
