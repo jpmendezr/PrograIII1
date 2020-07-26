@@ -18,6 +18,6 @@ Partial Public Class TbCita
     Public Property NombreMedico As String
     Public Property Especialidad As String
 
-    Public Overridable Property TbConsultaMedica As TbConsultaMedica
+    Public Overridable Property TbConsultaMedica As ICollection(Of TbConsultaMedica) = New HashSet(Of TbConsultaMedica)
 
 End Class

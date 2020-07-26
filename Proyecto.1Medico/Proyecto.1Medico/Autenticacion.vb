@@ -5,39 +5,39 @@ Public Class Autenticacion
     Dim ds As DataSet = New DataSet()
     Dim da As SqlDataAdapter
     Dim comand As SqlCommand
-    Dim myconnection As New SqlConnection("Server=DESKTOP-JQ96R3T\SQLEXPRESS01;Initial Catalog=BdCentroMedico;INTEGRATED SECURITY= SSPI")
-    '--------------------------------------
+    'Dim myconnection As New SqlConnection("Server=LAPTOP-JQ6UM2LL\SQLEXPRESS;Initial Catalog=BdCentroMedico;INTEGRATED SECURITY= SSPI")
+
     Private Cedula As String = ""
     Private Contrasena As String = ""
     Private Departamento As String = ""
 
 
-    ' conecta con la base de datos
-    Public Sub conectar()
-        Try
-            myconnection.Open()
-            MsgBox(" conexion valida")
+    'conecta con la base de datos
+    'Public Sub conectar()
+    '    Try
+    '        myconnection.Open()
+    '        MsgBox(" conexion valida")
 
-        Catch ex As Exception
-            MsgBox(" conexion mala ")
+    '    Catch ex As Exception
+    '        MsgBox(" conexion mala ")
 
-        End Try
-    End Sub
+    '    End Try
+    'End Sub
     'Verifica si en la base de datos existe el usuario
-    Public Sub verificarUsuario()
-        Dim tabla As String = "TbPersonalInterno"
-        Dim cedula As String = "select cedula, contrasena,departamento from " + tabla + " where Cedula=" + Cedula1 + " and Contrasena=" + "'" + Contrasena1 + "'"
-        da = New SqlDataAdapter(cedula, myconnection)
-        cmb = New SqlCommandBuilder(da)
-        da.Fill(ds, tabla)
-        If ds.Tables(0).Rows.Count > 0 Then
-            'MsgBox(ds.Tables(0).Rows(0).Item(0).ToString + ds.Tables(0).Rows(0).Item(1).ToString + ds.Tables(0).Rows(0).Item(2).ToString)
-            Departamento1 = ds.Tables(0).Rows(0).Item(2).ToString
-            MsgBox("Ingreso exitoso")
-        Else
-            MsgBox("No existe el usuario o contraseña")
-        End If
-    End Sub
+    'Public Sub verificarUsuario()
+    '    Dim tabla As String = "TbPersonalInterno"
+    '    Dim cedula As String = "select cedula, contrasena,departamento from " + tabla + " where Cedula=" + Cedula1 + " and Contrasena=" + "'" + Contrasena1 + "'"
+    '    da = New SqlDataAdapter(cedula, myconnection)
+    '    cmb = New SqlCommandBuilder(da)
+    '    da.Fill(ds, tabla)
+    '    If ds.Tables(0).Rows.Count > 0 Then
+    '        'MsgBox(ds.Tables(0).Rows(0).Item(0).ToString + ds.Tables(0).Rows(0).Item(1).ToString + ds.Tables(0).Rows(0).Item(2).ToString)
+    '        Departamento1 = ds.Tables(0).Rows(0).Item(2).ToString
+    '        MsgBox("Ingreso exitoso")
+    '    Else
+    '        MsgBox("No existe el usuario o contraseña")
+    '    End If
+    'End Sub
     Public Sub VerificarUSua()
         Try
             Using selexion As New BdCentroMedicoEntities
