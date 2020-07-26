@@ -32,27 +32,25 @@
 
     Private Sub BtnRegistro_Click(sender As Object, e As EventArgs) Handles BtnRegistro.Click
 
-        If Information.IsNumeric(Me.TexCedula.Text) And Information.IsNumeric(Me.TextCel.Text) And Information.IsNumeric(Me.TXTMedicamento.Text) And Information.IsNumeric(Me.txtTelefonoFamiliar.Text) Then
+        If Information.IsNumeric(Me.TexCedula.Text) And Information.IsNumeric(Me.txtTelefonoFamiliar.Text) Then
             registro.pro_Cedula1 = Me.TexCedula.Text
             registro.pro_TelefonoPaciente1 = Me.TextCel.Text
-            registro.MedicamentosAlergicos1 = Me.TXTMedicamento.Text
+
         Else
             MsgBox("No puede meter letras ")
         End If
 
 
-        If Information.IsNumeric(Me.TextNombre.Text) And Information.IsNumeric(Me.TexApellidos.Text) And Information.IsNumeric(TXTsangre.Text) And Information.IsNumeric(Me.txtFamiliar.Text) And Information.IsNumeric(Me.txtrelacion.Text) Then
+        If Information.IsNumeric(Me.TextNombre.Text) And Information.IsNumeric(Me.TexApellidos.Text) And Information.IsNumeric(Me.txtFamiliar.Text) And Information.IsNumeric(Me.txtrelacion.Text) Then
             MsgBox(" no puede ingresar numeros")
         Else
             registro.pro_NombreP1 = Me.TextNombre.Text
             registro.pro_Apellidos1 = Me.TexApellidos.Text
-            registro.pro_Sangre = TXTsangre.Text
+
             registro.pro_NombreFamiliar1 = Me.txtFamiliar.Text
 
             registro.pro_TipoFamiliar1 = Me.txtrelacion.Text
         End If
-
-
 
 
         If Information.IsNumeric(Me.TexDia.Text) And Information.IsNumeric(Me.TexMes.Text) And Information.IsNumeric(Me.TexAño.Text) Then

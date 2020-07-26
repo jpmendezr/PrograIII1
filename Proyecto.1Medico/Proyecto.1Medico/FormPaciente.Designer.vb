@@ -24,13 +24,11 @@ Partial Class FormPaciente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPaciente))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TXTsangre = New System.Windows.Forms.TextBox()
-        Me.TXTMedicamento = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TexAño = New System.Windows.Forms.TextBox()
+        Me.TexMes = New System.Windows.Forms.TextBox()
+        Me.ComboBoxSexo = New System.Windows.Forms.ComboBox()
         Me.TexDia = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.Sexo = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -42,6 +40,7 @@ Partial Class FormPaciente
         Me.TexApellidos = New System.Windows.Forms.TextBox()
         Me.TextNombre = New System.Windows.Forms.TextBox()
         Me.TexCedula = New System.Windows.Forms.TextBox()
+        Me.Sexo = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -60,9 +59,6 @@ Partial Class FormPaciente
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.BtnLupa = New System.Windows.Forms.Button()
         Me.BtnMostrar = New System.Windows.Forms.Button()
-        Me.ComboBoxSexo = New System.Windows.Forms.ComboBox()
-        Me.TexMes = New System.Windows.Forms.TextBox()
-        Me.TexAño = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,10 +71,6 @@ Partial Class FormPaciente
         Me.Panel1.Controls.Add(Me.TexAño)
         Me.Panel1.Controls.Add(Me.TexMes)
         Me.Panel1.Controls.Add(Me.ComboBoxSexo)
-        Me.Panel1.Controls.Add(Me.TXTsangre)
-        Me.Panel1.Controls.Add(Me.TXTMedicamento)
-        Me.Panel1.Controls.Add(Me.Label18)
-        Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.TexDia)
         Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Controls.Add(Me.Label9)
@@ -97,43 +89,32 @@ Partial Class FormPaciente
         Me.Panel1.Size = New System.Drawing.Size(793, 166)
         Me.Panel1.TabIndex = 0
         '
-        'TXTsangre
+        'TexAño
         '
-        Me.TXTsangre.Location = New System.Drawing.Point(686, 39)
-        Me.TXTsangre.Name = "TXTsangre"
-        Me.TXTsangre.Size = New System.Drawing.Size(82, 20)
-        Me.TXTsangre.TabIndex = 33
+        Me.TexAño.Location = New System.Drawing.Point(112, 110)
+        Me.TexAño.Name = "TexAño"
+        Me.TexAño.Size = New System.Drawing.Size(34, 20)
+        Me.TexAño.TabIndex = 35
         '
-        'TXTMedicamento
+        'TexMes
         '
-        Me.TXTMedicamento.Location = New System.Drawing.Point(571, 110)
-        Me.TXTMedicamento.Name = "TXTMedicamento"
-        Me.TXTMedicamento.Size = New System.Drawing.Size(192, 20)
-        Me.TXTMedicamento.TabIndex = 31
+        Me.TexMes.Location = New System.Drawing.Point(55, 110)
+        Me.TexMes.Name = "TexMes"
+        Me.TexMes.Size = New System.Drawing.Size(34, 20)
+        Me.TexMes.TabIndex = 34
         '
-        'Label18
+        'ComboBoxSexo
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(568, 84)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(150, 15)
-        Me.Label18.TabIndex = 29
-        Me.Label18.Text = "Medicamento Alergico"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(683, 12)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(85, 15)
-        Me.Label11.TabIndex = 27
-        Me.Label11.Text = "Tipo Sangre"
+        Me.ComboBoxSexo.FormattingEnabled = True
+        Me.ComboBoxSexo.Items.AddRange(New Object() {"M", "F"})
+        Me.ComboBoxSexo.Location = New System.Drawing.Point(636, 39)
+        Me.ComboBoxSexo.Name = "ComboBoxSexo"
+        Me.ComboBoxSexo.Size = New System.Drawing.Size(79, 21)
+        Me.ComboBoxSexo.TabIndex = 11
         '
         'TexDia
         '
-        Me.TexDia.Location = New System.Drawing.Point(3, 110)
+        Me.TexDia.Location = New System.Drawing.Point(10, 110)
         Me.TexDia.Name = "TexDia"
         Me.TexDia.Size = New System.Drawing.Size(28, 20)
         Me.TexDia.TabIndex = 24
@@ -142,24 +123,17 @@ Partial Class FormPaciente
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(579, 12)
+        Me.Label17.Location = New System.Drawing.Point(651, 21)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(39, 15)
         Me.Label17.TabIndex = 23
         Me.Label17.Text = "Sexo"
         '
-        'Sexo
-        '
-        Me.Sexo.Location = New System.Drawing.Point(615, 371)
-        Me.Sexo.Name = "Sexo"
-        Me.Sexo.Size = New System.Drawing.Size(73, 20)
-        Me.Sexo.TabIndex = 22
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(334, 84)
+        Me.Label9.Location = New System.Drawing.Point(589, 84)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(126, 15)
         Me.Label9.TabIndex = 17
@@ -169,7 +143,7 @@ Partial Class FormPaciente
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(164, 84)
+        Me.Label8.Location = New System.Drawing.Point(321, 84)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(63, 15)
         Me.Label8.TabIndex = 16
@@ -179,7 +153,7 @@ Partial Class FormPaciente
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(3, 84)
+        Me.Label7.Location = New System.Drawing.Point(23, 84)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(123, 15)
         Me.Label7.TabIndex = 15
@@ -189,7 +163,7 @@ Partial Class FormPaciente
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(370, 12)
+        Me.Label4.Location = New System.Drawing.Point(435, 12)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(66, 15)
         Me.Label4.TabIndex = 12
@@ -199,7 +173,7 @@ Partial Class FormPaciente
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(136, 12)
+        Me.Label2.Location = New System.Drawing.Point(217, 12)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 15)
         Me.Label2.TabIndex = 10
@@ -209,7 +183,7 @@ Partial Class FormPaciente
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 12)
+        Me.Label1.Location = New System.Drawing.Point(37, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(52, 15)
         Me.Label1.TabIndex = 9
@@ -217,28 +191,28 @@ Partial Class FormPaciente
         '
         'TextCel
         '
-        Me.TextCel.Location = New System.Drawing.Point(167, 110)
+        Me.TextCel.Location = New System.Drawing.Point(285, 110)
         Me.TextCel.Name = "TextCel"
         Me.TextCel.Size = New System.Drawing.Size(146, 20)
         Me.TextCel.TabIndex = 7
         '
         'TexCorreoElectronico
         '
-        Me.TexCorreoElectronico.Location = New System.Drawing.Point(337, 110)
+        Me.TexCorreoElectronico.Location = New System.Drawing.Point(535, 110)
         Me.TexCorreoElectronico.Name = "TexCorreoElectronico"
-        Me.TexCorreoElectronico.Size = New System.Drawing.Size(221, 20)
+        Me.TexCorreoElectronico.Size = New System.Drawing.Size(239, 20)
         Me.TexCorreoElectronico.TabIndex = 6
         '
         'TexApellidos
         '
-        Me.TexApellidos.Location = New System.Drawing.Point(356, 39)
+        Me.TexApellidos.Location = New System.Drawing.Point(385, 40)
         Me.TexApellidos.Name = "TexApellidos"
         Me.TexApellidos.Size = New System.Drawing.Size(202, 20)
         Me.TexApellidos.TabIndex = 3
         '
         'TextNombre
         '
-        Me.TextNombre.Location = New System.Drawing.Point(139, 39)
+        Me.TextNombre.Location = New System.Drawing.Point(151, 39)
         Me.TextNombre.Name = "TextNombre"
         Me.TextNombre.Size = New System.Drawing.Size(202, 20)
         Me.TextNombre.TabIndex = 2
@@ -249,6 +223,13 @@ Partial Class FormPaciente
         Me.TexCedula.Name = "TexCedula"
         Me.TexCedula.Size = New System.Drawing.Size(126, 20)
         Me.TexCedula.TabIndex = 1
+        '
+        'Sexo
+        '
+        Me.Sexo.Location = New System.Drawing.Point(615, 371)
+        Me.Sexo.Name = "Sexo"
+        Me.Sexo.Size = New System.Drawing.Size(73, 20)
+        Me.Sexo.TabIndex = 22
         '
         'Panel2
         '
@@ -421,29 +402,6 @@ Partial Class FormPaciente
         Me.BtnMostrar.Text = "Mostrar"
         Me.BtnMostrar.UseVisualStyleBackColor = False
         '
-        'ComboBoxSexo
-        '
-        Me.ComboBoxSexo.FormattingEnabled = True
-        Me.ComboBoxSexo.Items.AddRange(New Object() {"M", "F"})
-        Me.ComboBoxSexo.Location = New System.Drawing.Point(571, 38)
-        Me.ComboBoxSexo.Name = "ComboBoxSexo"
-        Me.ComboBoxSexo.Size = New System.Drawing.Size(79, 21)
-        Me.ComboBoxSexo.TabIndex = 11
-        '
-        'TexMes
-        '
-        Me.TexMes.Location = New System.Drawing.Point(37, 110)
-        Me.TexMes.Name = "TexMes"
-        Me.TexMes.Size = New System.Drawing.Size(34, 20)
-        Me.TexMes.TabIndex = 34
-        '
-        'TexAño
-        '
-        Me.TexAño.Location = New System.Drawing.Point(77, 110)
-        Me.TexAño.Name = "TexAño"
-        Me.TexAño.Size = New System.Drawing.Size(34, 20)
-        Me.TexAño.TabIndex = 35
-        '
         'FormPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -503,10 +461,6 @@ Partial Class FormPaciente
     Friend WithEvents Sexo As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents TexDia As TextBox
-    Friend WithEvents TXTsangre As TextBox
-    Friend WithEvents TXTMedicamento As TextBox
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents BtnLupa As Button
     Friend WithEvents BtnMostrar As Button
