@@ -28,13 +28,13 @@ Partial Class FRM_Enfermeria
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.txtSintomas = New System.Windows.Forms.RichTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Txtpeso = New System.Windows.Forms.TextBox()
+        Me.TXTaltura = New System.Windows.Forms.TextBox()
+        Me.txtpresion = New System.Windows.Forms.TextBox()
+        Me.BTNactualizar = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtcedula = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,7 +54,7 @@ Partial Class FRM_Enfermeria
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(18, 21)
+        Me.Label2.Location = New System.Drawing.Point(178, 21)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(56, 15)
         Me.Label2.TabIndex = 1
@@ -64,7 +64,7 @@ Partial Class FRM_Enfermeria
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(235, 21)
+        Me.Label3.Location = New System.Drawing.Point(338, 21)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 15)
         Me.Label3.TabIndex = 2
@@ -74,7 +74,7 @@ Partial Class FRM_Enfermeria
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(464, 21)
+        Me.Label4.Location = New System.Drawing.Point(498, 21)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(39, 15)
         Me.Label4.TabIndex = 3
@@ -93,39 +93,21 @@ Partial Class FRM_Enfermeria
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.Controls.Add(Me.BTNactualizar)
+        Me.Panel1.Controls.Add(Me.txtcedula)
+        Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.txtSintomas)
-        Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.Txtpeso)
+        Me.Panel1.Controls.Add(Me.TXTaltura)
+        Me.Panel1.Controls.Add(Me.txtpresion)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Location = New System.Drawing.Point(61, 89)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(678, 288)
+        Me.Panel1.Size = New System.Drawing.Size(678, 323)
         Me.Panel1.TabIndex = 5
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(21, 52)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(190, 20)
-        Me.TextBox1.TabIndex = 5
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(238, 52)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(189, 20)
-        Me.TextBox2.TabIndex = 6
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(467, 52)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(188, 20)
-        Me.TextBox3.TabIndex = 7
         '
         'txtSintomas
         '
@@ -135,44 +117,59 @@ Partial Class FRM_Enfermeria
         Me.txtSintomas.TabIndex = 8
         Me.txtSintomas.Text = ""
         '
-        'Button1
+        'Txtpeso
         '
-        Me.Button1.BackColor = System.Drawing.Color.Aqua
-        Me.Button1.Location = New System.Drawing.Point(82, 415)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Registar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Txtpeso.Location = New System.Drawing.Point(501, 52)
+        Me.Txtpeso.Name = "Txtpeso"
+        Me.Txtpeso.Size = New System.Drawing.Size(154, 20)
+        Me.Txtpeso.TabIndex = 7
         '
-        'Button2
+        'TXTaltura
         '
-        Me.Button2.BackColor = System.Drawing.Color.Aqua
-        Me.Button2.Location = New System.Drawing.Point(641, 415)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Eliminar"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.TXTaltura.Location = New System.Drawing.Point(341, 52)
+        Me.TXTaltura.Name = "TXTaltura"
+        Me.TXTaltura.Size = New System.Drawing.Size(154, 20)
+        Me.TXTaltura.TabIndex = 6
         '
-        'Button3
+        'txtpresion
         '
-        Me.Button3.BackColor = System.Drawing.Color.Aqua
-        Me.Button3.Location = New System.Drawing.Point(362, 415)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 8
-        Me.Button3.Text = "Actualizar"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.txtpresion.Location = New System.Drawing.Point(181, 52)
+        Me.txtpresion.Name = "txtpresion"
+        Me.txtpresion.Size = New System.Drawing.Size(154, 20)
+        Me.txtpresion.TabIndex = 5
+        '
+        'BTNactualizar
+        '
+        Me.BTNactualizar.BackColor = System.Drawing.Color.Aqua
+        Me.BTNactualizar.Location = New System.Drawing.Point(284, 291)
+        Me.BTNactualizar.Name = "BTNactualizar"
+        Me.BTNactualizar.Size = New System.Drawing.Size(75, 23)
+        Me.BTNactualizar.TabIndex = 8
+        Me.BTNactualizar.Text = "Actualizar"
+        Me.BTNactualizar.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(24, 27)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(52, 15)
+        Me.Label6.TabIndex = 9
+        Me.Label6.Text = "Cedula"
+        '
+        'txtcedula
+        '
+        Me.txtcedula.Location = New System.Drawing.Point(21, 52)
+        Me.txtcedula.Name = "txtcedula"
+        Me.txtcedula.Size = New System.Drawing.Size(154, 20)
+        Me.txtcedula.TabIndex = 10
         '
         'FRM_Enfermeria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(800, 418)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FRM_Enfermeria"
@@ -190,11 +187,11 @@ Partial Class FRM_Enfermeria
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Txtpeso As TextBox
+    Friend WithEvents TXTaltura As TextBox
+    Friend WithEvents txtpresion As TextBox
     Friend WithEvents txtSintomas As RichTextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents BTNactualizar As Button
+    Friend WithEvents txtcedula As TextBox
+    Friend WithEvents Label6 As Label
 End Class

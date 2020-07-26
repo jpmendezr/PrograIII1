@@ -34,7 +34,7 @@ Partial Class FormConsultorio
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ListSintomas = New System.Windows.Forms.ListBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.btnRegistrar = New System.Windows.Forms.Button()
+        Me.btnRegresar = New System.Windows.Forms.Button()
         Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -161,20 +161,20 @@ Partial Class FormConsultorio
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Sintomas Mostrados"
         '
-        'btnRegistrar
+        'btnRegresar
         '
-        Me.btnRegistrar.BackColor = System.Drawing.Color.Aqua
-        Me.btnRegistrar.Location = New System.Drawing.Point(35, 428)
-        Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnRegistrar.TabIndex = 9
-        Me.btnRegistrar.Text = "Registrar"
-        Me.btnRegistrar.UseVisualStyleBackColor = False
+        Me.btnRegresar.BackColor = System.Drawing.Color.Aqua
+        Me.btnRegresar.Location = New System.Drawing.Point(324, 428)
+        Me.btnRegresar.Name = "btnRegresar"
+        Me.btnRegresar.Size = New System.Drawing.Size(75, 23)
+        Me.btnRegresar.TabIndex = 9
+        Me.btnRegresar.Text = "Regresar"
+        Me.btnRegresar.UseVisualStyleBackColor = False
         '
         'BtnActualizar
         '
         Me.BtnActualizar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnActualizar.Location = New System.Drawing.Point(379, 428)
+        Me.BtnActualizar.Location = New System.Drawing.Point(30, 428)
         Me.BtnActualizar.Name = "BtnActualizar"
         Me.BtnActualizar.Size = New System.Drawing.Size(75, 23)
         Me.BtnActualizar.TabIndex = 10
@@ -210,7 +210,7 @@ Partial Class FormConsultorio
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.BtnEliminar)
         Me.Controls.Add(Me.BtnActualizar)
-        Me.Controls.Add(Me.btnRegistrar)
+        Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "FormConsultorio"
         Me.Text = "FormConsultorio"
@@ -232,7 +232,7 @@ Partial Class FormConsultorio
     Friend WithEvents Label6 As Label
     Friend WithEvents ListSintomas As ListBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents btnRegistrar As Button
+    Friend WithEvents btnRegresar As Button
     Friend WithEvents BtnActualizar As Button
     Friend WithEvents BtnEliminar As Button
     Friend WithEvents Label11 As Label

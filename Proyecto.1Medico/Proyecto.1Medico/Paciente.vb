@@ -193,26 +193,25 @@ Public Class Paciente
 
 
     Public Sub ActualizarPersona()
-        Dim resultado = 0
+        Dim resul As Integer = 0
         Try
-            Using Actualizar As New BdCentroMedicoEntities
-                Dim actualizarRegis = (From ac In Actualizar.TbPersona Where ac.Cedula = 100001 Select ac).SingleOrDefault
-                If (Not IsNothing(actualizarRegis)) Then
+            Using actualizar As New BdCentroMedicoEntities
+                Dim act = (From ac In actualizar.TbPersona Where ac.Cedula = cedula Select ac).SingleOrDefault
+                If Not IsNothing(act) Then
+                    act.Nombre = NombreP
+                    act.Sexo = sexo
+                    act.Telefono = TelefonoPaciente
+                    act.Correo = correo
+                    actualizar.TbPersona.Add(act)
 
-                    actualizarRegis.Nombre = "Juan"
-                    actualizarRegis.Apellido = "Perez"
-                    actualizarRegis.Sexo = "Maculino"
-                    actualizarRegis.FechaNacimiento = "1-2-3"
-                    actualizarRegis.Telefono = 123
-                    actualizarRegis.Correo = "@@@@"
-
-                    Actualizar.SaveChanges()
-                    MsgBox("Datos Actualizados")
-
+                    actualizar.SaveChanges()
+                    MessageBox.Show("Datos actualizados ")
+                Else
+                    MessageBox.Show("Error al actualizar ")
                 End If
             End Using
         Catch ex As Exception
-            resultado = 0
+            resul = 0
         End Try
     End Sub
 

@@ -38,22 +38,25 @@ Public Class Autenticacion
     '        MsgBox("No existe el usuario o contraseña")
     '    End If
     'End Sub
-    Public Sub VerificarUSua()
+    Public Function VerificarUSua() As Boolean
         Try
             Using selexion As New BdCentroMedicoEntities
                 Dim dato = (From se In selexion.TbPersonalInterno Where se.Cedula = Cedula1 And se.Contrasena = Contrasena1 Select se.Departamento).SingleOrDefault
                 Dim mostrar = (From se In selexion.TbPersonalInterno Where se.Cedula = Cedula1 And se.Contrasena = Contrasena1 Select se).ToList
                 If (mostrar.Count > 0) Then
                     Departamento1 = dato
+                    Return True
                     MsgBox("Ingreso exitoso")
                 Else
                     MsgBox("No existe el usuario o contraseña")
+                    Return False
                 End If
             End Using
         Catch ex As Exception
+            Return False
             MsgBox(ex.Message.ToString)
         End Try
-    End Sub
+    End Function
 
     Public Property Cedula1 As String
         Get

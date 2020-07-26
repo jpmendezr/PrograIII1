@@ -54,11 +54,11 @@ Partial Class FormPaciente
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnElimino = New System.Windows.Forms.Button()
-        Me.BtnActualizo = New System.Windows.Forms.Button()
         Me.BtnRegistro = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.BtnLupa = New System.Windows.Forms.Button()
         Me.BtnMostrar = New System.Windows.Forms.Button()
+        Me.ACT = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -354,16 +354,6 @@ Partial Class FormPaciente
         Me.BtnElimino.TabIndex = 7
         Me.BtnElimino.UseVisualStyleBackColor = False
         '
-        'BtnActualizo
-        '
-        Me.BtnActualizo.BackColor = System.Drawing.Color.Aqua
-        Me.BtnActualizo.Image = Global.Proyecto._1Medico.My.Resources.Resources.update
-        Me.BtnActualizo.Location = New System.Drawing.Point(205, 492)
-        Me.BtnActualizo.Name = "BtnActualizo"
-        Me.BtnActualizo.Size = New System.Drawing.Size(112, 23)
-        Me.BtnActualizo.TabIndex = 6
-        Me.BtnActualizo.UseVisualStyleBackColor = False
-        '
         'BtnRegistro
         '
         Me.BtnRegistro.BackColor = System.Drawing.Color.Aqua
@@ -402,16 +392,25 @@ Partial Class FormPaciente
         Me.BtnMostrar.Text = "Mostrar"
         Me.BtnMostrar.UseVisualStyleBackColor = False
         '
+        'ACT
+        '
+        Me.ACT.Location = New System.Drawing.Point(234, 492)
+        Me.ACT.Name = "ACT"
+        Me.ACT.Size = New System.Drawing.Size(75, 23)
+        Me.ACT.TabIndex = 23
+        Me.ACT.Text = "Actualizar"
+        Me.ACT.UseVisualStyleBackColor = True
+        '
         'FormPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(814, 516)
+        Me.Controls.Add(Me.ACT)
         Me.Controls.Add(Me.BtnMostrar)
         Me.Controls.Add(Me.BtnLupa)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.BtnElimino)
-        Me.Controls.Add(Me.BtnActualizo)
         Me.Controls.Add(Me.Sexo)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnRegistro)
@@ -456,7 +455,6 @@ Partial Class FormPaciente
     Friend WithEvents txtTelefonoFamiliar As TextBox
     Friend WithEvents txtrelacion As TextBox
     Friend WithEvents txtFamiliar As TextBox
-    Friend WithEvents BtnActualizo As Button
     Friend WithEvents BtnElimino As Button
     Friend WithEvents Sexo As TextBox
     Friend WithEvents Label17 As Label
@@ -467,4 +465,5 @@ Partial Class FormPaciente
     Friend WithEvents ComboBoxSexo As ComboBox
     Friend WithEvents TexAño As TextBox
     Friend WithEvents TexMes As TextBox
+    Friend WithEvents ACT As Button
 End Class
