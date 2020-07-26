@@ -29,11 +29,9 @@ Partial Class FRMautenticacion
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtCedula
@@ -102,13 +100,14 @@ Partial Class FRMautenticacion
         Me.Panel1.Size = New System.Drawing.Size(750, 210)
         Me.Panel1.TabIndex = 6
         '
-        'DataGridView1
+        'Label5
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(506, 303)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(259, 76)
-        Me.DataGridView1.TabIndex = 7
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(499, 115)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(39, 13)
+        Me.Label5.TabIndex = 6
+        Me.Label5.Text = "Label5"
         '
         'Label4
         '
@@ -119,21 +118,11 @@ Partial Class FRMautenticacion
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Label4"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(499, 115)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(39, 13)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "Label5"
-        '
         'FRMautenticacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 391)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnIngresar)
@@ -141,7 +130,6 @@ Partial Class FRMautenticacion
         Me.Text = "FRMautenticacion"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -154,7 +142,6 @@ Partial Class FRMautenticacion
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
 End Class
