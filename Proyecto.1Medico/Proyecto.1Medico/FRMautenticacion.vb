@@ -18,7 +18,7 @@ Public Class FRMautenticacion
             Me.abrirform()
 
         Else
-            MsgBox("Error usario o contraseña incorrecta  1")
+            MsgBox("Error usario o contraseña incorrecta  ")
         End If
     End Sub
 

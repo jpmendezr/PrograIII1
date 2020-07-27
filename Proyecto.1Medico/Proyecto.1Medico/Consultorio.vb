@@ -111,48 +111,33 @@
     End Property
 
 
-    'consultorio Enfermera
-    Public Function agregar_sintomas() As Boolean
-
-    End Function
-
-    Public Function descripcion() As Boolean
-
-    End Function
-
-    Public Function actualizar_sintomas() As Boolean
-
-    End Function
-
-    'Consultorio Medico
-
-    Public Sub IAgregarRegistro(ISintomasMostrados1, IDescripcionProceso1, IDiagnostico1, IMediacamentosAdministrados1, IMedicamentosRecetados1)
-
-    End Sub
-
     ''''''''''''''''''''''''''''''' ACTUALIZAR ENFERMERIA '''''''''''''''''''''''''''''''
 
-    Public Sub Actualizar_datos()
+    Public Sub Actualizar_datos() ' este metodo va a actualizar los datos de tbpaciente 
+        Dim resultado As Integer = 0
         Try
             Using actualizar As New BdCentroMedicoEntities
 
-                Dim actualizar_registro = (From ac In actualizar.TbPaciente Where ac.CedulaPersona = cedula Select ac).SingleOrDefault
+                Dim actu = (From ac In actualizar.TbPaciente Where ac.CedulaPersona = cedula Select ac).SingleOrDefault
 
-                If Not IsNothing(actualizar_registro) Then
-
-                    actualizar_registro.Peso = peso
-                    actualizar_registro.Altura = altura
-                    actualizar_registro.Sintomas = mostrar_sintomas
-
-                    MsgBox(" Los datos de Actualizaron correctamente ")
+                If Not IsNothing(actu) Then
+                    'actu.Presion = presion
+                    actu.peso = peso
+                    actu.Altura = altura
 
                     actualizar.SaveChanges()
 
+                    MessageBox.Show(" Datos actualizados ")
+                Else
+                    MessageBox.Show(" Error al actualizar ")
+
                 End If
-
             End Using
-
         Catch ex As Exception
+            resultado = 0
+            MessageBox.Show(ex.Message.ToString)
+            'MsgBox(ex.Message.ToString)
+
 
         End Try
     End Sub
@@ -160,22 +145,5 @@
     ''''''''''''''''''''''''''''''  MEDICO  ''''''''''''''''''''''''''''''
     Public Sub Actualizar_Medico()
 
-        Using actualizar As New BdCentroMedicoEntities
-            Dim actualizar_registro = (From ac In actualizar.TbPaciente Where ac.CedulaPersona = cedula Select ac).SingleOrDefault
-
-            If Not IsNothing(actualizar_registro) Then
-
-                'actualizar_registro.
-                'actualizar_registro.
-                'actualizar_registro.
-
-                MsgBox(" Los datos de Actualizaron correctamente ")
-
-                actualizar.SaveChanges()
-
-            End If
-        End Using
     End Sub
-
-
 End Class

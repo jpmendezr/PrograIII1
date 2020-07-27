@@ -28,7 +28,6 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BtnCitas.Click
         'Btn citas disponibles
-
         Try
             Using selexion As New BdCentroMedicoEntities
                 Dim mostrar = (From se In selexion.TbCita Take (2) Select se).ToList
@@ -77,7 +76,11 @@
     End Sub
 
     Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
-        'Btn de actualizar las citas.
+        'Btn de actualizar las citas por numero de cedula.
+
+        agenda.CedulaP1 = Me.TextCedula.Text
+
+        agenda.ActualizarCita()
 
 
     End Sub
