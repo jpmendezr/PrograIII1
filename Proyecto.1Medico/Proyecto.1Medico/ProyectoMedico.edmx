@@ -99,8 +99,9 @@
           <Property Name="Peso" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Altura" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="TipoSangre" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="ContactoPaciente" Type="int" Nullable="false" />
           <Property Name="Sintomas" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="MedicamentoAlergico" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MedicamentoAlergico" Type="varchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="TbPersona">
           <Key>
@@ -153,13 +154,13 @@ advertencia 6035: La relación 'FK_ConsultaMedica_Paciente' tiene columnas que n
         </Association>
         <Association Name="FK_ConsultaMedica_TbCita">
           <End Role="TbCita" Type="Self.TbCita" Multiplicity="1" />
-          <End Role="TbConsultaMedica" Type="Self.TbConsultaMedica" Multiplicity="0..1" />
+          <End Role="TbConsultaMedica" Type="Self.TbConsultaMedica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TbCita">
               <PropertyRef Name="IdCita" />
             </Principal>
             <Dependent Role="TbConsultaMedica">
-              <PropertyRef Name="IdConsulta" />
+              <PropertyRef Name="IdCita" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -257,7 +258,7 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           <Property Name="CedulaP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Sangre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Orina" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="TbConsultaMedica" Relationship="Self.FK_ConsultaMedica_TbChequeoExamanes" FromRole="TbChequeoExamanes" ToRole="TbConsultaMedica" />
+          <NavigationProperty Name="TbConsultaMedica" Relationship="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoExamanes" FromRole="TbChequeoExamanes" ToRole="TbConsultaMedica" />
         </EntityType>
         <EntityType Name="TbChequeoMedicamentos">
           <Key>
@@ -267,26 +268,10 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           <Property Name="CedulaP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MedicamentoAdm" Type="Int32" Nullable="false" />
           <Property Name="MedicamentoRecetado" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="TbConsultaMedica" Relationship="Self.FK_ConsultaMedica_TbChequeoMedicamentos" FromRole="TbChequeoMedicamentos" ToRole="TbConsultaMedica" />
           <NavigationProperty Name="TbMedicamento" Relationship="Self.FK_TbChequeoMedicamentos_Medicamento" FromRole="TbChequeoMedicamentos" ToRole="TbMedicamento" />
           <NavigationProperty Name="TbMedicamento1" Relationship="Self.FK_TbChequeoMedicamentos_Medicamento1" FromRole="TbChequeoMedicamentos" ToRole="TbMedicamento" />
+          <NavigationProperty Name="TbConsultaMedica" Relationship="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoMedicamentos" FromRole="TbChequeoMedicamentos" ToRole="TbConsultaMedica" />
         </EntityType>
-        <EntityType Name="TbConsultaMedica">
-          <Key>
-            <PropertyRef Name="IdConsulta" />
-          </Key>
-          <Property Name="IdConsulta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdCita" Type="Int32" Nullable="false" />
-          <Property Name="CedulaP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CedulaM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Diagnostico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="IdCheqMedicamento" Type="Int32" Nullable="false" />
-          <Property Name="IdCheqExamenes" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="TbChequeoExamanes" Relationship="Self.FK_ConsultaMedica_TbChequeoExamanes" FromRole="TbConsultaMedica" ToRole="TbChequeoExamanes" />
-          <NavigationProperty Name="TbChequeoMedicamentos" Relationship="Self.FK_ConsultaMedica_TbChequeoMedicamentos" FromRole="TbConsultaMedica" ToRole="TbChequeoMedicamentos" />
-          <NavigationProperty Name="TbCita" Relationship="BdCentroMedicoModel.FK_ConsultaMedica_TbCita" FromRole="TbConsultaMedica" ToRole="TbCita" />
-          <NavigationProperty Name="TbCita1" Relationship="BdCentroMedicoModel.FK_ConsultaMedica_TbCita1" FromRole="TbConsultaMedica" ToRole="TbCita" />
-          </EntityType>
         <EntityType Name="TbEnfermedad">
           <Key>
             <PropertyRef Name="IdEnfermedad" />
@@ -345,30 +330,6 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           <Property Name="Departamento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <Association Name="FK_ConsultaMedica_TbChequeoExamanes">
-          <End Role="TbChequeoExamanes" Type="Self.TbChequeoExamanes" Multiplicity="1" />
-          <End Role="TbConsultaMedica" Type="Self.TbConsultaMedica" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TbChequeoExamanes">
-              <PropertyRef Name="IdExamen" />
-            </Principal>
-            <Dependent Role="TbConsultaMedica">
-              <PropertyRef Name="IdCheqExamenes" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ConsultaMedica_TbChequeoMedicamentos">
-          <End Role="TbChequeoMedicamentos" Type="Self.TbChequeoMedicamentos" Multiplicity="1" />
-          <End Role="TbConsultaMedica" Type="Self.TbConsultaMedica" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TbChequeoMedicamentos">
-              <PropertyRef Name="IdChequeoMed" />
-            </Principal>
-            <Dependent Role="TbConsultaMedica">
-              <PropertyRef Name="IdCheqMedicamento" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_TbChequeoMedicamentos_Medicamento">
           <End Role="TbMedicamento" Type="Self.TbMedicamento" Multiplicity="1" />
           <End Role="TbChequeoMedicamentos" Type="Self.TbChequeoMedicamentos" Multiplicity="*" />
@@ -396,21 +357,12 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
         <EntityContainer Name="BdCentroMedicoEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TbChequeoExamanes" EntityType="Self.TbChequeoExamanes" />
           <EntitySet Name="TbChequeoMedicamentos" EntityType="Self.TbChequeoMedicamentos" />
-          <EntitySet Name="TbConsultaMedica" EntityType="Self.TbConsultaMedica" />
           <EntitySet Name="TbEnfermedad" EntityType="Self.TbEnfermedad" />
           <EntitySet Name="TbEspecialidad" EntityType="Self.TbEspecialidad" />
           <EntitySet Name="TbFamiliarPaciente" EntityType="Self.TbFamiliarPaciente" />
           <EntitySet Name="TbMedicamento" EntityType="Self.TbMedicamento" />
           <EntitySet Name="TbPersona" EntityType="Self.TbPersona" />
           <EntitySet Name="TbPersonalInterno" EntityType="Self.TbPersonalInterno" />
-          <AssociationSet Name="FK_ConsultaMedica_TbChequeoExamanes" Association="Self.FK_ConsultaMedica_TbChequeoExamanes">
-            <End Role="TbChequeoExamanes" EntitySet="TbChequeoExamanes" />
-            <End Role="TbConsultaMedica" EntitySet="TbConsultaMedica" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ConsultaMedica_TbChequeoMedicamentos" Association="Self.FK_ConsultaMedica_TbChequeoMedicamentos">
-            <End Role="TbChequeoMedicamentos" EntitySet="TbChequeoMedicamentos" />
-            <End Role="TbConsultaMedica" EntitySet="TbConsultaMedica" />
-          </AssociationSet>
           <AssociationSet Name="FK_TbChequeoMedicamentos_Medicamento" Association="Self.FK_TbChequeoMedicamentos_Medicamento">
             <End Role="TbMedicamento" EntitySet="TbMedicamento" />
             <End Role="TbChequeoMedicamentos" EntitySet="TbChequeoMedicamentos" />
@@ -420,17 +372,22 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
             <End Role="TbChequeoMedicamentos" EntitySet="TbChequeoMedicamentos" />
           </AssociationSet>
           <EntitySet Name="sysdiagrams" EntityType="BdCentroMedicoModel.sysdiagrams" />
+          <EntitySet Name="TbPaciente" EntityType="BdCentroMedicoModel.TbPaciente" />
           <EntitySet Name="TbCita" EntityType="BdCentroMedicoModel.TbCita" />
+          <EntitySet Name="TbConsultaMedica" EntityType="BdCentroMedicoModel.TbConsultaMedica" />
+          <AssociationSet Name="FK_ConsultaMedica_TbChequeoExamanes" Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoExamanes">
+            <End Role="TbChequeoExamanes" EntitySet="TbChequeoExamanes" />
+            <End Role="TbConsultaMedica" EntitySet="TbConsultaMedica" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ConsultaMedica_TbChequeoMedicamentos" Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoMedicamentos">
+            <End Role="TbChequeoMedicamentos" EntitySet="TbChequeoMedicamentos" />
+            <End Role="TbConsultaMedica" EntitySet="TbConsultaMedica" />
+          </AssociationSet>
           <AssociationSet Name="FK_ConsultaMedica_TbCita" Association="BdCentroMedicoModel.FK_ConsultaMedica_TbCita">
             <End Role="TbCita" EntitySet="TbCita" />
             <End Role="TbConsultaMedica" EntitySet="TbConsultaMedica" />
           </AssociationSet>
-          <EntitySet Name="TbPaciente" EntityType="BdCentroMedicoModel.TbPaciente" />
-          <AssociationSet Name="FK_ConsultaMedica_TbCita1" Association="BdCentroMedicoModel.FK_ConsultaMedica_TbCita1">
-            <End Role="TbCita" EntitySet="TbCita" />
-            <End Role="TbConsultaMedica" EntitySet="TbConsultaMedica" />
-          </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -440,6 +397,19 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TbPaciente">
+          <Key>
+            <PropertyRef Name="IdPaciente" />
+          </Key>
+          <Property Name="IdPaciente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CedulaPersona" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Peso" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Altura" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TipoSangre" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="Sintomas" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MedicamentoAlergico" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ContactoPaciente" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="TbCita">
           <Key>
@@ -452,8 +422,46 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           <Property Name="NombreMedico" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Especialidad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TbConsultaMedica" Relationship="BdCentroMedicoModel.FK_ConsultaMedica_TbCita" FromRole="TbCita" ToRole="TbConsultaMedica" />
-          <NavigationProperty Name="TbConsultaMedica1" Relationship="BdCentroMedicoModel.FK_ConsultaMedica_TbCita1" FromRole="TbCita" ToRole="TbConsultaMedica" />
         </EntityType>
+        <EntityType Name="TbConsultaMedica">
+          <Key>
+            <PropertyRef Name="IdConsulta" />
+          </Key>
+          <Property Name="IdConsulta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCita" Type="Int32" Nullable="false" />
+          <Property Name="CedulaP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CedulaM" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Diagnostico" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IdCheqMedicamento" Type="Int32" Nullable="false" />
+          <Property Name="IdCheqExamenes" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TbChequeoExamanes" Relationship="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoExamanes" FromRole="TbConsultaMedica" ToRole="TbChequeoExamanes" />
+          <NavigationProperty Name="TbChequeoMedicamentos" Relationship="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoMedicamentos" FromRole="TbConsultaMedica" ToRole="TbChequeoMedicamentos" />
+          <NavigationProperty Name="TbCita" Relationship="BdCentroMedicoModel.FK_ConsultaMedica_TbCita" FromRole="TbConsultaMedica" ToRole="TbCita" />
+        </EntityType>
+        <Association Name="FK_ConsultaMedica_TbChequeoExamanes">
+          <End Type="BdCentroMedicoModel.TbChequeoExamanes" Role="TbChequeoExamanes" Multiplicity="1" />
+          <End Type="BdCentroMedicoModel.TbConsultaMedica" Role="TbConsultaMedica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TbChequeoExamanes">
+              <PropertyRef Name="IdExamen" />
+            </Principal>
+            <Dependent Role="TbConsultaMedica">
+              <PropertyRef Name="IdCheqExamenes" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ConsultaMedica_TbChequeoMedicamentos">
+          <End Type="BdCentroMedicoModel.TbChequeoMedicamentos" Role="TbChequeoMedicamentos" Multiplicity="1" />
+          <End Type="BdCentroMedicoModel.TbConsultaMedica" Role="TbConsultaMedica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TbChequeoMedicamentos">
+              <PropertyRef Name="IdChequeoMed" />
+            </Principal>
+            <Dependent Role="TbConsultaMedica">
+              <PropertyRef Name="IdCheqMedicamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ConsultaMedica_TbCita">
           <End Type="BdCentroMedicoModel.TbCita" Role="TbCita" Multiplicity="1" />
           <End Type="BdCentroMedicoModel.TbConsultaMedica" Role="TbConsultaMedica" Multiplicity="*" />
@@ -466,31 +474,7 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="TbPaciente">
-          <Key>
-            <PropertyRef Name="IdPaciente" />
-          </Key>
-          <Property Name="IdPaciente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CedulaPersona" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Peso" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Altura" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="TipoSangre" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
-          <Property Name="Sintomas" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="MedicamentoAlergico" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <Association Name="FK_ConsultaMedica_TbCita1">
-          <End Type="BdCentroMedicoModel.TbCita" Role="TbCita" Multiplicity="1" />
-          <End Type="BdCentroMedicoModel.TbConsultaMedica" Role="TbConsultaMedica" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="TbCita">
-              <PropertyRef Name="IdCita" />
-            </Principal>
-            <Dependent Role="TbConsultaMedica">
-              <PropertyRef Name="IdConsulta" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -513,19 +497,6 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
                 <ScalarProperty Name="CedulaP" ColumnName="CedulaP" />
                 <ScalarProperty Name="MedicamentoAdm" ColumnName="MedicamentoAdm" />
                 <ScalarProperty Name="MedicamentoRecetado" ColumnName="MedicamentoRecetado" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TbConsultaMedica">
-            <EntityTypeMapping TypeName="BdCentroMedicoModel.TbConsultaMedica">
-              <MappingFragment StoreEntitySet="TbConsultaMedica">
-                <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
-                <ScalarProperty Name="IdCita" ColumnName="IdCita" />
-                <ScalarProperty Name="CedulaP" ColumnName="CedulaP" />
-                <ScalarProperty Name="CedulaM" ColumnName="CedulaM" />
-                <ScalarProperty Name="Diagnostico" ColumnName="Diagnostico" />
-                <ScalarProperty Name="IdCheqMedicamento" ColumnName="IdCheqMedicamento" />
-                <ScalarProperty Name="IdCheqExamenes" ColumnName="IdCheqExamenes" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -602,6 +573,20 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="TbPaciente">
+            <EntityTypeMapping TypeName="BdCentroMedicoModel.TbPaciente">
+              <MappingFragment StoreEntitySet="TbPaciente">
+                <ScalarProperty Name="ContactoPaciente" ColumnName="ContactoPaciente" />
+                <ScalarProperty Name="MedicamentoAlergico" ColumnName="MedicamentoAlergico" />
+                <ScalarProperty Name="Sintomas" ColumnName="Sintomas" />
+                <ScalarProperty Name="TipoSangre" ColumnName="TipoSangre" />
+                <ScalarProperty Name="Altura" ColumnName="Altura" />
+                <ScalarProperty Name="Peso" ColumnName="Peso" />
+                <ScalarProperty Name="CedulaPersona" ColumnName="CedulaPersona" />
+                <ScalarProperty Name="IdPaciente" ColumnName="IdPaciente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TbCita">
             <EntityTypeMapping TypeName="BdCentroMedicoModel.TbCita">
               <MappingFragment StoreEntitySet="TbCita">
@@ -614,16 +599,16 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TbPaciente">
-            <EntityTypeMapping TypeName="BdCentroMedicoModel.TbPaciente">
-              <MappingFragment StoreEntitySet="TbPaciente">
-                <ScalarProperty Name="MedicamentoAlergico" ColumnName="MedicamentoAlergico" />
-                <ScalarProperty Name="Sintomas" ColumnName="Sintomas" />
-                <ScalarProperty Name="TipoSangre" ColumnName="TipoSangre" />
-                <ScalarProperty Name="Altura" ColumnName="Altura" />
-                <ScalarProperty Name="Peso" ColumnName="Peso" />
-                <ScalarProperty Name="CedulaPersona" ColumnName="CedulaPersona" />
-                <ScalarProperty Name="IdPaciente" ColumnName="IdPaciente" />
+          <EntitySetMapping Name="TbConsultaMedica">
+            <EntityTypeMapping TypeName="BdCentroMedicoModel.TbConsultaMedica">
+              <MappingFragment StoreEntitySet="TbConsultaMedica">
+                <ScalarProperty Name="IdCheqExamenes" ColumnName="IdCheqExamenes" />
+                <ScalarProperty Name="IdCheqMedicamento" ColumnName="IdCheqMedicamento" />
+                <ScalarProperty Name="Diagnostico" ColumnName="Diagnostico" />
+                <ScalarProperty Name="CedulaM" ColumnName="CedulaM" />
+                <ScalarProperty Name="CedulaP" ColumnName="CedulaP" />
+                <ScalarProperty Name="IdCita" ColumnName="IdCita" />
+                <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
