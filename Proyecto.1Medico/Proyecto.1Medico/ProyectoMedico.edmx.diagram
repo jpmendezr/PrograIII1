@@ -12,7 +12,6 @@
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbEspecialidad" Width="1.5" PointX="6.5" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbFamiliarPaciente" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbMedicamento" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPersona" Width="1.5" PointX="4.75" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbPersonalInterno" Width="1.5" PointX="8.5" PointY="0.625" IsExpanded="true" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoExamanes" ManuallyRouted="false" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoMedicamentos" ManuallyRouted="false" />
@@ -22,6 +21,7 @@
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="0.75" PointY="7" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbCita" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbPaciente" Width="1.5" PointX="7.375" PointY="6.75" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPersona" Width="1.5" PointX="4.5" PointY="7" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

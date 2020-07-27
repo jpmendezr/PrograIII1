@@ -394,12 +394,13 @@ Partial Class FormPaciente
         '
         'ACT
         '
+        Me.ACT.BackColor = System.Drawing.Color.Aqua
         Me.ACT.Location = New System.Drawing.Point(234, 492)
         Me.ACT.Name = "ACT"
         Me.ACT.Size = New System.Drawing.Size(75, 23)
         Me.ACT.TabIndex = 23
         Me.ACT.Text = "Actualizar"
-        Me.ACT.UseVisualStyleBackColor = True
+        Me.ACT.UseVisualStyleBackColor = False
         '
         'FormPaciente
         '
