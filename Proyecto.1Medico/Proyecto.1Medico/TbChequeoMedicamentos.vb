@@ -16,8 +16,8 @@ Partial Public Class TbChequeoMedicamentos
     Public Property MedicamentoAdm As Integer
     Public Property MedicamentoRecetado As Integer
 
-    Public Overridable Property TbConsultaMedica As ICollection(Of TbConsultaMedica) = New HashSet(Of TbConsultaMedica)
     Public Overridable Property TbMedicamento As TbMedicamento
     Public Overridable Property TbMedicamento1 As TbMedicamento
+    Public Overridable Property TbConsultaMedica As ICollection(Of TbConsultaMedica) = New HashSet(Of TbConsultaMedica)
 
 End Class

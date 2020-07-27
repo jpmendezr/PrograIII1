@@ -71,6 +71,8 @@
         Else
             MsgBox("No puede meter letras ")
         End If
+        agenda.RegistrarPersona()
+
 
 
     End Sub

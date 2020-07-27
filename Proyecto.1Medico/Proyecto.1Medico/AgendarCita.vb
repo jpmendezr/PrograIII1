@@ -90,7 +90,7 @@
             End Using
         Catch ex As Exception
             resul = 0
-            MessageBox.Show(ex.Message.ToString)
+
         End Try
     End Sub
 
@@ -98,7 +98,7 @@
         Dim resultado As Integer = 0
         Try
             Using registro As New BdCentroMedicoEntities
-                Dim NuevoRegistro As New TbCita With {.CedulaPaciente = cedulaP, .Fecha = Fecha, .Hora = Hora, .Especialidad = EspecialidadM, .NombreMedico = NombreM}
+                Dim NuevoRegistro As New TbCita With {.CedulaPaciente = cedulaP, .Fecha = Fecha, .Hora = Hora, .NombreMedico = NombreM, .Especialidad = EspecialidadM}
                 registro.TbCita.Add(NuevoRegistro)
                 resultado = registro.SaveChanges
                 If resultado > 0 Then
@@ -109,6 +109,7 @@
             End Using
         Catch ex As Exception
             resultado = 0
+            MessageBox.Show(ex.ToString)
         End Try
 
     End Sub
