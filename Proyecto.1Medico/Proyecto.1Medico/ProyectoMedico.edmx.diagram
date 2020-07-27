@@ -17,11 +17,10 @@
         <AssociationConnector Association="BdCentroMedicoModel.FK_TbChequeoMedicamentos_Medicamento1" ManuallyRouted="false" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.sysdiagrams" Width="1.5" PointX="8.375" PointY="3.75" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbPaciente" Width="1.5" PointX="7.375" PointY="6.75" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="2.125" PointX="0.5" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbConsultaMedica" Width="2.5" PointX="9.75" PointY="7.375" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoExamanes" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoMedicamentos" />
-        <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbCita" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="0.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -98,7 +98,7 @@
         Dim resultado As Integer = 0
         Try
             Using registro As New BdCentroMedicoEntities
-                Dim NuevoRegistro As New TbCita With {.CedulaPaciente = cedulaP, .Fecha = Fecha, .Hora = Hora, .Especialidad = EspecialidadM, .NombreMedico = NombreM}
+                Dim NuevoRegistro As New TbCita With {.CedulaPaciente = cedulaP, .Fecha = Fecha, .Hora = Hora, .NombreMedico = NombreM, .Especialidad = EspecialidadM}
                 registro.TbCita.Add(NuevoRegistro)
                 resultado = registro.SaveChanges
                 If resultado > 0 Then
