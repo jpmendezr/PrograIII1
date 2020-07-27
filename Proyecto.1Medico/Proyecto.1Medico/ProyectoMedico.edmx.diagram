@@ -22,6 +22,7 @@
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="0.75" PointY="7" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbCita" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbPaciente" Width="1.5" PointX="7.375" PointY="6.75" />
+        <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbCita1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
