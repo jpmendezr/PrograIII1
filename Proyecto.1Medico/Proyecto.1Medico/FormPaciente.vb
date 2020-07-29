@@ -4,10 +4,10 @@
 
     Private Sub BtnRegistro_Click(sender As Object, e As EventArgs) Handles BtnRegistro.Click
         If Me.TexCedula.Text.Length > 0 Then
-            If Information.IsNumeric(Me.TexCedula.Text) And Information.IsNumeric(Me.txtTelefonoFamiliar.Text) And Information.IsNumeric(Me.TexDia.Text) And Information.IsNumeric(Me.TexMes.Text) And Information.IsNumeric(Me.TexAño.Text) Then
+            If Information.IsNumeric(Me.TexCedula.Text) And Information.IsNumeric(Me.txtTelefonoFamiliar.Text) And Information.IsNumeric(Me.ComboBoxDia.Text) And Information.IsNumeric(Me.ComboBoxMes.Text) And Information.IsNumeric(Me.ComboBoxAño.Text) Then
                 registro.pro_Cedula1 = Me.TexCedula.Text
                 registro.pro_TelefonoPaciente1 = Me.TextCel.Text
-                registro.pro_Fecha1 = Me.TexDia.Text + "/" + Me.TexMes.Text + "/" + Me.TexAño.Text
+                registro.pro_Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
 
             Else
                 MsgBox("No puede meter letras ")
@@ -25,6 +25,7 @@
                 registro.pro_TipoFamiliar1 = Me.txtrelacion.Text
 
             End If
+
             registro.pro_Correo1 = Me.TexCorreoElectronico.Text
             registro.pro_Direccion1 = Me.txtDireccion.Text
             registro.pro_Sexo1 = Me.ComboBoxSexo.Text
@@ -36,6 +37,8 @@
             MessageBox.Show("Debe de ingresar los datos primero")
         End If
 
+
+
     End Sub
 
 
@@ -43,9 +46,9 @@
         Me.txtrelacion.Enabled = False
         Me.txtFamiliar.Enabled = False
         Me.TexApellidos.Enabled = False
-        Me.TexAño.Enabled = False
-        Me.TexDia.Enabled = False
-        Me.TexMes.Enabled = False
+        Me.ComboBoxAño.Enabled = False
+        Me.ComboBoxDia.Enabled = False
+        Me.ComboBoxMes.Enabled = False
 
         Me.txtTelefonoFamiliar.Enabled = False
         Me.txtDireccion.Enabled = False
@@ -92,9 +95,9 @@
         Me.txtrelacion.Enabled = False
         Me.txtFamiliar.Enabled = False
         Me.TexApellidos.Enabled = False
-        Me.TexAño.Enabled = False
-        Me.TexDia.Enabled = False
-        Me.TexMes.Enabled = False
+        Me.ComboBoxAño.Enabled = False
+        Me.ComboBoxDia.Enabled = False
+        Me.ComboBoxMes.Enabled = False
 
         If Me.TexCedula.Text.Length > 0 Then
             If Information.IsNumeric(Me.TexCedula.Text) And Information.IsNumeric(Me.TextCel.Text) And Information.IsNumeric(Me.txtTelefonoFamiliar.Text) Then
@@ -126,5 +129,18 @@
 
 
 
+    End Sub
+
+    Private Sub ComboBoxAño_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxAño.TextChanged
+        Me.ComboBoxAño.DropDownStyle = ComboBoxStyle.DropDownList
+
+    End Sub
+
+    Private Sub ComboBoxMes_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxMes.TextChanged
+        Me.ComboBoxMes.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
+
+    Private Sub ComboBoxDia_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxDia.TextChanged
+        Me.ComboBoxDia.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 End Class
