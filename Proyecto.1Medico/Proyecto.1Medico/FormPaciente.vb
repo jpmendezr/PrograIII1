@@ -14,7 +14,6 @@
                 MsgBox("No puede meter letras ")
             End If
 
-
             If Information.IsNumeric(Me.TextNombre.Text) And Information.IsNumeric(Me.TexApellidos.Text) And Information.IsNumeric(Me.txtFamiliar.Text) And Information.IsNumeric(Me.txtrelacion.Text) Then
                 MsgBox(" no puede ingresar numeros")
             Else
