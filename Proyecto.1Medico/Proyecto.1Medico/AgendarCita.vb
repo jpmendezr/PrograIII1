@@ -53,7 +53,6 @@
 
     Public Sub eliminarDatos()
         'Eliminar
-
         Try
             Using eleminar As New BdCentroMedicoEntities
                 Dim delete = (From e In eleminar.TbCita Where e.CedulaPaciente = cedulaP Select e).SingleOrDefault
@@ -66,13 +65,10 @@
         Catch ex As Exception
             MsgBox("Error al eliminar.")
         End Try
-
-
     End Sub
 
 
     Public Sub ActualizarCita()
-        Dim resul As Integer = 0
         Try
             Using actualizar As New BdCentroMedicoEntities
                 Dim act = (From ac In actualizar.TbCita Where ac.CedulaPaciente = cedulaP Select ac).SingleOrDefault
@@ -89,8 +85,7 @@
                 End If
             End Using
         Catch ex As Exception
-            resul = 0
-
+            MsgBox("No se puede realizar la accion.")
         End Try
     End Sub
 

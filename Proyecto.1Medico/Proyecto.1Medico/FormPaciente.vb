@@ -143,4 +143,8 @@
     Private Sub ComboBoxDia_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxDia.TextChanged
         Me.ComboBoxDia.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
+
+    Private Sub ComboBoxDia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxDia.SelectedIndexChanged
+
+    End Sub
 End Class

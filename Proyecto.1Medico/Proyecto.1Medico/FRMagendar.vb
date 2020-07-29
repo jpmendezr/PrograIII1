@@ -1,7 +1,7 @@
 ﻿Public Class FRMagendar
 
     Dim agenda As New AgendarCita
-
+    Dim frmMenu As FormMenu
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
         'Btn eliminar
         'Encargado de eliminar
@@ -9,23 +9,8 @@
         If Information.IsNumeric(Me.TextCedula.Text) Then
             agenda.CedulaP1 = Me.TextCedula.Text
         End If
-
         agenda.eliminarDatos()
-
     End Sub
-
-    Private Sub FRMagendar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
-    End Sub
-
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BtnCitas.Click
         'Btn citas disponibles
         Try
@@ -55,14 +40,11 @@
 
         End If
 
-        If Information.IsNumeric(Me.TextBoxDia.Text) And Information.IsNumeric(Me.TextBoxMes.Text) And Information.IsNumeric(Me.TextBoxAño.Text) Then
-            agenda.Fecha1 = Me.TextBoxDia.Text + "/" + Me.TextBoxMes.Text + "/" + Me.TextBoxAño.Text
-        Else
-            MsgBox("No puede meter letras ")
 
-        End If
+        agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
 
-        If Information.IsNumeric(Me.TextHora.Text) And Information.IsNumeric(Me.TextCedula.Text) Then
+
+        If Information.IsDate(Me.TextHora.Text) And Information.IsNumeric(Me.TextCedula.Text) Then
             agenda.CedulaP1 = Me.TextCedula.Text
             agenda.Hora1 = Me.TextHora.Text
         Else
@@ -74,16 +56,27 @@
 
     Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
         'Btn de actualizar las citas por numero de cedula.
-
         agenda.CedulaP1 = Me.TextCedula.Text
-
         agenda.ActualizarCita()
-
-
     End Sub
 
     Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
         'Btn de regresar a la ventana principal.
+        Me.Hide()
+        frmMenu = New FormMenu()
+        frmMenu.Show()
 
+    End Sub
+
+    Private Sub ComboBoxMes_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxMes.TextChanged
+        Me.ComboBoxMes.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
+
+    Private Sub ComboBoxAño_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxAño.TextChanged
+        Me.ComboBoxAño.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
+
+    Private Sub ComboBoxDia_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxDia.TextChanged
+        Me.ComboBoxDia.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 End Class
