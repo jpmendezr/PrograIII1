@@ -21,5 +21,7 @@ Partial Public Class TbConsultaMedica
 
     Public Overridable Property TbChequeoExamanes As TbChequeoExamanes
     Public Overridable Property TbChequeoMedicamentos As TbChequeoMedicamentos
+    Public Overridable Property TbCita As TbCita
+    Public Overridable Property TbCita1 As TbCita
 
 End Class

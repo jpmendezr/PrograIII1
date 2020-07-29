@@ -26,35 +26,25 @@ Partial Public Class BdCentroMedicoEntities
 
     Public Overridable Property TbChequeoExamanes() As DbSet(Of TbChequeoExamanes)
     Public Overridable Property TbChequeoMedicamentos() As DbSet(Of TbChequeoMedicamentos)
+    Public Overridable Property TbConsultaMedica() As DbSet(Of TbConsultaMedica)
     Public Overridable Property TbEnfermedad() As DbSet(Of TbEnfermedad)
     Public Overridable Property TbEspecialidad() As DbSet(Of TbEspecialidad)
+    Public Overridable Property TbFamiliarPaciente() As DbSet(Of TbFamiliarPaciente)
     Public Overridable Property TbMedicamento() As DbSet(Of TbMedicamento)
     Public Overridable Property TbPersona() As DbSet(Of TbPersona)
     Public Overridable Property TbPersonalInterno() As DbSet(Of TbPersonalInterno)
     Public Overridable Property sysdiagrams() As DbSet(Of sysdiagrams)
-    Public Overridable Property TbConsultaMedica() As DbSet(Of TbConsultaMedica)
     Public Overridable Property TbCita() As DbSet(Of TbCita)
     Public Overridable Property TbPaciente() As DbSet(Of TbPaciente)
-    Public Overridable Property TbFamiliarPaciente() As DbSet(Of TbFamiliarPaciente)
 
-    Public Overridable Function f_sp_BuscarPersonal(cedu As String) As ObjectResult(Of f_sp_BuscarPersonal_Result)
+    Public Overridable Function f_sp_BuscarPersonal(cedu As String) As ObjectResult(Of f_sp_BuscarPersonal_Result1)
         Dim ceduParameter As ObjectParameter = If(cedu IsNot Nothing, New ObjectParameter("Cedu", cedu), New ObjectParameter("Cedu", GetType(String)))
 
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of f_sp_BuscarPersonal_Result)("f_sp_BuscarPersonal", ceduParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of f_sp_BuscarPersonal_Result1)("f_sp_BuscarPersonal", ceduParameter)
     End Function
 
-    Public Overridable Function f_sp_MostrarPersonal() As ObjectResult(Of f_sp_MostrarPersonal_Result)
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of f_sp_MostrarPersonal_Result)("f_sp_MostrarPersonal")
-    End Function
-
-    Public Overridable Function sp_persona_familiarpaciente(cedula As String) As ObjectResult(Of sp_persona_familiarpaciente_Result)
-        Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
-
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of sp_persona_familiarpaciente_Result)("sp_persona_familiarpaciente", cedulaParameter)
-    End Function
-
-    Public Overridable Function familiar_paciente() As ObjectResult(Of familiar_paciente_Result1)
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of familiar_paciente_Result1)("familiar_paciente")
+    Public Overridable Function f_sp_MostrarPersonal() As ObjectResult(Of f_sp_MostrarPersonal_Result1)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of f_sp_MostrarPersonal_Result1)("f_sp_MostrarPersonal")
     End Function
 
 End Class
