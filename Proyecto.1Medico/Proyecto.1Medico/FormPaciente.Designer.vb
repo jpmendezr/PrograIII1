@@ -24,10 +24,10 @@ Partial Class FormPaciente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPaciente))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TexAño = New System.Windows.Forms.TextBox()
-        Me.TexMes = New System.Windows.Forms.TextBox()
+        Me.ComboBoxDia = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxMes = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxAño = New System.Windows.Forms.ComboBox()
         Me.ComboBoxSexo = New System.Windows.Forms.ComboBox()
-        Me.TexDia = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -59,6 +59,7 @@ Partial Class FormPaciente
         Me.BtnLupa = New System.Windows.Forms.Button()
         Me.BtnMostrar = New System.Windows.Forms.Button()
         Me.ACT = New System.Windows.Forms.Button()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,10 +69,10 @@ Partial Class FormPaciente
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.TexAño)
-        Me.Panel1.Controls.Add(Me.TexMes)
+        Me.Panel1.Controls.Add(Me.ComboBoxDia)
+        Me.Panel1.Controls.Add(Me.ComboBoxMes)
+        Me.Panel1.Controls.Add(Me.ComboBoxAño)
         Me.Panel1.Controls.Add(Me.ComboBoxSexo)
-        Me.Panel1.Controls.Add(Me.TexDia)
         Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Label8)
@@ -89,19 +90,35 @@ Partial Class FormPaciente
         Me.Panel1.Size = New System.Drawing.Size(793, 166)
         Me.Panel1.TabIndex = 0
         '
-        'TexAño
+        'ComboBoxDia
         '
-        Me.TexAño.Location = New System.Drawing.Point(112, 110)
-        Me.TexAño.Name = "TexAño"
-        Me.TexAño.Size = New System.Drawing.Size(34, 20)
-        Me.TexAño.TabIndex = 35
+        Me.ComboBoxDia.FormattingEnabled = True
+        Me.ComboBoxDia.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"})
+        Me.ComboBoxDia.Location = New System.Drawing.Point(-2, 110)
+        Me.ComboBoxDia.Name = "ComboBoxDia"
+        Me.ComboBoxDia.Size = New System.Drawing.Size(41, 21)
+        Me.ComboBoxDia.TabIndex = 38
+        Me.ComboBoxDia.Text = "dia"
         '
-        'TexMes
+        'ComboBoxMes
         '
-        Me.TexMes.Location = New System.Drawing.Point(55, 110)
-        Me.TexMes.Name = "TexMes"
-        Me.TexMes.Size = New System.Drawing.Size(34, 20)
-        Me.TexMes.TabIndex = 34
+        Me.ComboBoxMes.FormattingEnabled = True
+        Me.ComboBoxMes.Items.AddRange(New Object() {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"})
+        Me.ComboBoxMes.Location = New System.Drawing.Point(45, 110)
+        Me.ComboBoxMes.Name = "ComboBoxMes"
+        Me.ComboBoxMes.Size = New System.Drawing.Size(44, 21)
+        Me.ComboBoxMes.TabIndex = 37
+        Me.ComboBoxMes.Text = "mes"
+        '
+        'ComboBoxAño
+        '
+        Me.ComboBoxAño.FormattingEnabled = True
+        Me.ComboBoxAño.Items.AddRange(New Object() {"2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940"})
+        Me.ComboBoxAño.Location = New System.Drawing.Point(95, 110)
+        Me.ComboBoxAño.Name = "ComboBoxAño"
+        Me.ComboBoxAño.Size = New System.Drawing.Size(51, 21)
+        Me.ComboBoxAño.TabIndex = 36
+        Me.ComboBoxAño.Text = "año"
         '
         'ComboBoxSexo
         '
@@ -111,13 +128,6 @@ Partial Class FormPaciente
         Me.ComboBoxSexo.Name = "ComboBoxSexo"
         Me.ComboBoxSexo.Size = New System.Drawing.Size(79, 21)
         Me.ComboBoxSexo.TabIndex = 11
-        '
-        'TexDia
-        '
-        Me.TexDia.Location = New System.Drawing.Point(10, 110)
-        Me.TexDia.Name = "TexDia"
-        Me.TexDia.Size = New System.Drawing.Size(28, 20)
-        Me.TexDia.TabIndex = 24
         '
         'Label17
         '
@@ -153,7 +163,7 @@ Partial Class FormPaciente
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(23, 84)
+        Me.Label7.Location = New System.Drawing.Point(9, 74)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(123, 15)
         Me.Label7.TabIndex = 15
@@ -394,12 +404,13 @@ Partial Class FormPaciente
         '
         'ACT
         '
+        Me.ACT.BackColor = System.Drawing.Color.Aqua
         Me.ACT.Location = New System.Drawing.Point(234, 492)
         Me.ACT.Name = "ACT"
         Me.ACT.Size = New System.Drawing.Size(75, 23)
         Me.ACT.TabIndex = 23
         Me.ACT.Text = "Actualizar"
-        Me.ACT.UseVisualStyleBackColor = True
+        Me.ACT.UseVisualStyleBackColor = False
         '
         'FormPaciente
         '
@@ -458,12 +469,13 @@ Partial Class FormPaciente
     Friend WithEvents BtnElimino As Button
     Friend WithEvents Sexo As TextBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents TexDia As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents BtnLupa As Button
     Friend WithEvents BtnMostrar As Button
     Friend WithEvents ComboBoxSexo As ComboBox
-    Friend WithEvents TexAño As TextBox
-    Friend WithEvents TexMes As TextBox
     Friend WithEvents ACT As Button
+    Friend WithEvents ComboBoxAño As ComboBox
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ComboBoxDia As ComboBox
+    Friend WithEvents ComboBoxMes As ComboBox
 End Class
