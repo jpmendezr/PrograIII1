@@ -435,7 +435,7 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
             <End Role="TbConsultaMedica" EntitySet="TbConsultaMedica" />
           </AssociationSet>
           <FunctionImport Name="f_sp_BuscarPersonal" ReturnType="Collection(BdCentroMedicoModel.f_sp_BuscarPersonal_Result1)">
-            <Parameter Name="Cedu" Mode="In" Type="String" />
+          <Parameter Name="Cedu" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="f_sp_MostrarPersonal" ReturnType="Collection(BdCentroMedicoModel.f_sp_MostrarPersonal_Result1)" />
         </EntityContainer>
