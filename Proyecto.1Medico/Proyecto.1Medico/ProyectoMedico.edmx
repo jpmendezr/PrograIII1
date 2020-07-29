@@ -153,13 +153,13 @@ advertencia 6035: La relación 'FK_ConsultaMedica_Paciente' tiene columnas que n
         </Association>
         <Association Name="FK_ConsultaMedica_TbCita">
           <End Role="TbCita" Type="Self.TbCita" Multiplicity="1" />
-          <End Role="TbConsultaMedica" Type="Self.TbConsultaMedica" Multiplicity="0..1" />
+          <End Role="TbConsultaMedica" Type="Self.TbConsultaMedica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TbCita">
               <PropertyRef Name="IdCita" />
             </Principal>
             <Dependent Role="TbConsultaMedica">
-              <PropertyRef Name="IdConsulta" />
+              <PropertyRef Name="IdCita" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -211,6 +211,10 @@ advertencia 6035: La relación 'FK_TbEspecialidad_TbPersonalInterno' tiene colum
         <!--Errores durante la generación:
 advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
         <Association Name="FK_TbPersonalInterno_TbPersona" />-->
+        <Function Name="f_sp_BuscarPersonal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="_sp_BuscarPersonal">
+          <Parameter Name="Cedu" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="f_sp_MostrarPersonal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="_sp_MostrarPersonal" />
         <EntityContainer Name="BdCentroMedicoModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TbChequeoExamanes" EntityType="Self.TbChequeoExamanes" Schema="dbo" store:Type="Tables" />
@@ -430,6 +434,10 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
             <End Role="TbCita" EntitySet="TbCita" />
             <End Role="TbConsultaMedica" EntitySet="TbConsultaMedica" />
           </AssociationSet>
+          <FunctionImport Name="f_sp_BuscarPersonal" ReturnType="Collection(BdCentroMedicoModel.f_sp_BuscarPersonal_Result1)">
+            <Parameter Name="Cedu" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="f_sp_MostrarPersonal" ReturnType="Collection(BdCentroMedicoModel.f_sp_MostrarPersonal_Result1)" />
         </EntityContainer>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -490,6 +498,48 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="f_sp_MostrarPersonal_Result">
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sexo" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="FechaNacimiento" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Departamento" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="f_sp_BuscarPersonal_Result">
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sexo" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="FechaNacimiento" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Departamento" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="f_sp_BuscarPersonal_Result1">
+          <Property Type="Int32" Name="IdPersona" Nullable="false" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sexo" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="FechaNacimiento" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Departamento" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="f_sp_MostrarPersonal_Result1">
+          <Property Type="Int32" Name="IdPersona" Nullable="false" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sexo" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="FechaNacimiento" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Departamento" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -627,6 +677,38 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="f_sp_BuscarPersonal" FunctionName="BdCentroMedicoModel.Store.f_sp_BuscarPersonal">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BdCentroMedicoModel.f_sp_BuscarPersonal_Result1">
+                <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="f_sp_MostrarPersonal" FunctionName="BdCentroMedicoModel.Store.f_sp_MostrarPersonal">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BdCentroMedicoModel.f_sp_MostrarPersonal_Result1">
+                <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

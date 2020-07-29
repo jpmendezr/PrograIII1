@@ -1,43 +1,19 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 Public Class Autenticacion
-    Dim cmb As SqlCommandBuilder
-    Dim ds As DataSet = New DataSet()
-    Dim da As SqlDataAdapter
-    Dim comand As SqlCommand
-    'Dim myconnection As New SqlConnection("Server=LAPTOP-JQ6UM2LL\SQLEXPRESS;Initial Catalog=BdCentroMedico;INTEGRATED SECURITY= SSPI")
+
 
     Private Cedula As String = ""
     Private Contrasena As String = ""
     Private Departamento As String = ""
-
-
-    'conecta con la base de datos
-    'Public Sub conectar()
-    '    Try
-    '        myconnection.Open()
-    '        MsgBox(" conexion valida")
-
-    '    Catch ex As Exception
-    '        MsgBox(" conexion mala ")
-
-    '    End Try
-    'End Sub
-    'Verifica si en la base de datos existe el usuario
-    'Public Sub verificarUsuario()
-    '    Dim tabla As String = "TbPersonalInterno"
-    '    Dim cedula As String = "select cedula, contrasena,departamento from " + tabla + " where Cedula=" + Cedula1 + " and Contrasena=" + "'" + Contrasena1 + "'"
-    '    da = New SqlDataAdapter(cedula, myconnection)
-    '    cmb = New SqlCommandBuilder(da)
-    '    da.Fill(ds, tabla)
-    '    If ds.Tables(0).Rows.Count > 0 Then
-    '        'MsgBox(ds.Tables(0).Rows(0).Item(0).ToString + ds.Tables(0).Rows(0).Item(1).ToString + ds.Tables(0).Rows(0).Item(2).ToString)
-    '        Departamento1 = ds.Tables(0).Rows(0).Item(2).ToString
-    '        MsgBox("Ingreso exitoso")
-    '    Else
-    '        MsgBox("No existe el usuario o contraseña")
-    '    End If
-    'End Sub
+    Private nombre As String = ""
+    Private apellido As String = ""
+    Private Sexo As String = ""
+    Private Fecha As String = ""
+    Private Telef As String = ""
+    Private Corre As String = ""
+    Private Contra As String = ""
+    Private boo As Boolean = False
     Public Function VerificarUSua() As Boolean
         Try
             Using selexion As New BdCentroMedicoEntities
@@ -85,17 +61,190 @@ Public Class Autenticacion
         End Set
     End Property
 
-    Public Function agregar() As Boolean
+    Public Property Nombre1 As String
+        Get
+            Return nombre
+        End Get
+        Set(value As String)
+            nombre = value
+        End Set
+    End Property
 
+    Public Property Apellido1 As String
+        Get
+            Return apellido
+        End Get
+        Set(value As String)
+            apellido = value
+        End Set
+    End Property
+
+    Public Property Sexo1 As String
+        Get
+            Return Sexo
+        End Get
+        Set(value As String)
+            Sexo = value
+        End Set
+    End Property
+
+    Public Property Fecha1 As String
+        Get
+            Return Fecha
+        End Get
+        Set(value As String)
+            Fecha = value
+        End Set
+    End Property
+
+    Public Property Telef1 As String
+        Get
+            Return Telef
+        End Get
+        Set(value As String)
+            Telef = value
+        End Set
+    End Property
+
+    Public Property Corre1 As String
+        Get
+            Return Corre
+        End Get
+        Set(value As String)
+            Corre = value
+        End Set
+    End Property
+
+    Public Property Contra1 As String
+        Get
+            Return Contra
+        End Get
+        Set(value As String)
+            Contra = value
+        End Set
+    End Property
+
+    Public Property Boo1 As Boolean
+        Get
+            Return boo
+        End Get
+        Set(value As Boolean)
+            boo = value
+        End Set
+    End Property
+
+    Public Function agregarPersonal() As Boolean
+        Dim resultado As Integer = 0
+        Try
+            Using registro As New BdCentroMedicoEntities
+                Dim NuevoRegistro As New TbPersona With {.Cedula = Cedula1, .Nombre = Nombre1, .Apellido = Apellido1, .Sexo = Sexo1, .FechaNacimiento = Fecha1, .Telefono = Telef1, .Correo = Corre1}
+                registro.TbPersona.Add(NuevoRegistro)
+                resultado = registro.SaveChanges
+                If resultado > 0 Then
+                    MsgBox(" se registraron los datos ")
+                    Return True
+                Else
+
+                    MsgBox(" no se registraron ")
+                    Return False
+                End If
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+            Return False
+        End Try
     End Function
+    Public Sub InsertarEspecialidad()
+        Dim resultado As Integer = 0
+        Try
+            Using regi As New BdCentroMedicoEntities
+                Dim tbnuev As New TbPersonalInterno With {.Cedula = Cedula1, .Departamento = Departamento1, .Contrasena = Contra1}
+                regi.TbPersonalInterno.Add(tbnuev)
+                resultado = regi.SaveChanges
+                If resultado > 0 Then
+                    MsgBox(" se registraron los datos en la tabla especialidad ")
+                Else
+                    MsgBox(" no se registraron en la tabla especialidad  ")
+
+                End If
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+        End Try
+    End Sub
 
     Public Function actualizar() As Boolean
+        Try
+            Using bd As New BdCentroMedicoEntities
+                Dim sen = (From ac In bd.TbPersona Where ac.Cedula = Cedula Select ac).SingleOrDefault
+                Dim senr = (From ac In bd.TbPersonalInterno Where ac.Cedula = Cedula Select ac).SingleOrDefault
+                MsgBox(Apellido1)
+                If Not IsNothing(sen) Then
+                    sen.cedula = Cedula1
+                    sen.Nombre = Nombre1
+                    sen.Apellido = Apellido1
+                    sen.Sexo = Sexo1
+                    sen.fechanacimiento = Fecha1
+                    sen.Telefono = Telef1
+                    sen.Correo = Corre1
+                    senr.Departamento = Departamento1
+                    senr.Contrasena = Contra1
+                    bd.SaveChanges()
+                    MsgBox("Actualización exitosa")
+                Else
+                    MsgBox("Error al actualizar")
+                End If
 
+            End Using
+
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+        End Try
     End Function
 
-    Public Function eliminarUsuario() As Boolean
+    Public Sub eliminarUsuario()
+        Try
+            ElminarEspecialidad()
+            If Boo1 Then
+                Using eleminar As New BdCentroMedicoEntities
+                    Dim delete = (From e In eleminar.TbPersona Where e.Cedula = Cedula1 Select e).SingleOrDefault
+                    If Not IsNothing(delete) Then
+                        eleminar.TbPersona.Remove(delete)
+                        eleminar.SaveChanges()
+                        MsgBox("Se eliminaron los datos en persona")
+
+                    Else
+                        MsgBox("Error al eliminar persona")
+
+                    End If
+
+                End Using
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+
+        End Try
+    End Sub
 
 
-    End Function
+    Public Sub ElminarEspecialidad()
+        Try
+            Using eleminar As New BdCentroMedicoEntities
+                Dim delete = (From e In eleminar.TbPersonalInterno Where e.Cedula = Cedula1 Select e).SingleOrDefault
+                If Not IsNothing(delete) Then
+                    eleminar.TbPersonalInterno.Remove(delete)
+                    eleminar.SaveChanges()
+                    MsgBox("Se eliminaron los datos")
+                    Boo1 = True
+                Else
+                    MsgBox("Error al eliminar Especialidad")
 
+                End If
+
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+
+        End Try
+    End Sub
 End Class

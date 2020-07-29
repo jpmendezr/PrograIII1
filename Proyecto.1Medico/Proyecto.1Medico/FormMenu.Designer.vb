@@ -28,6 +28,8 @@ Partial Class FormMenu
         Me.btnConsMedico = New System.Windows.Forms.Button()
         Me.BtnConsEnferm = New System.Windows.Forms.Button()
         Me.btnReporte = New System.Windows.Forms.Button()
+        Me.btnAbrir = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -84,11 +86,31 @@ Partial Class FormMenu
         Me.btnReporte.Text = "Reporte"
         Me.btnReporte.UseVisualStyleBackColor = True
         '
+        'btnAbrir
+        '
+        Me.btnAbrir.Location = New System.Drawing.Point(647, 78)
+        Me.btnAbrir.Name = "btnAbrir"
+        Me.btnAbrir.Size = New System.Drawing.Size(75, 23)
+        Me.btnAbrir.TabIndex = 6
+        Me.btnAbrir.Text = "Abrir"
+        Me.btnAbrir.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(644, 49)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(88, 13)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "Menu de Usuario"
+        '
         'FormMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.btnAbrir)
         Me.Controls.Add(Me.btnReporte)
         Me.Controls.Add(Me.BtnConsEnferm)
         Me.Controls.Add(Me.btnConsMedico)
@@ -108,4 +130,6 @@ Partial Class FormMenu
     Friend WithEvents btnConsMedico As Button
     Friend WithEvents BtnConsEnferm As Button
     Friend WithEvents btnReporte As Button
+    Friend WithEvents btnAbrir As Button
+    Friend WithEvents Label2 As Label
 End Class
