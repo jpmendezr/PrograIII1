@@ -60,6 +60,9 @@ Partial Class FormPaciente
         Me.BtnMostrar = New System.Windows.Forms.Button()
         Me.ACT = New System.Windows.Forms.Button()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.label = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,6 +72,9 @@ Partial Class FormPaciente
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.label)
         Me.Panel1.Controls.Add(Me.ComboBoxDia)
         Me.Panel1.Controls.Add(Me.ComboBoxMes)
         Me.Panel1.Controls.Add(Me.ComboBoxAño)
@@ -124,7 +130,7 @@ Partial Class FormPaciente
         '
         Me.ComboBoxSexo.FormattingEnabled = True
         Me.ComboBoxSexo.Items.AddRange(New Object() {"M", "F"})
-        Me.ComboBoxSexo.Location = New System.Drawing.Point(636, 39)
+        Me.ComboBoxSexo.Location = New System.Drawing.Point(636, 38)
         Me.ComboBoxSexo.Name = "ComboBoxSexo"
         Me.ComboBoxSexo.Size = New System.Drawing.Size(79, 21)
         Me.ComboBoxSexo.TabIndex = 11
@@ -133,7 +139,7 @@ Partial Class FormPaciente
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(651, 21)
+        Me.Label17.Location = New System.Drawing.Point(650, 12)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(39, 15)
         Me.Label17.TabIndex = 23
@@ -395,7 +401,7 @@ Partial Class FormPaciente
         'BtnMostrar
         '
         Me.BtnMostrar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnMostrar.Location = New System.Drawing.Point(387, 492)
+        Me.BtnMostrar.Location = New System.Drawing.Point(364, 492)
         Me.BtnMostrar.Name = "BtnMostrar"
         Me.BtnMostrar.Size = New System.Drawing.Size(98, 23)
         Me.BtnMostrar.TabIndex = 10
@@ -405,12 +411,39 @@ Partial Class FormPaciente
         'ACT
         '
         Me.ACT.BackColor = System.Drawing.Color.Aqua
-        Me.ACT.Location = New System.Drawing.Point(234, 492)
+        Me.ACT.Location = New System.Drawing.Point(214, 492)
         Me.ACT.Name = "ACT"
         Me.ACT.Size = New System.Drawing.Size(75, 23)
         Me.ACT.TabIndex = 23
         Me.ACT.Text = "Actualizar"
         Me.ACT.UseVisualStyleBackColor = False
+        '
+        'label
+        '
+        Me.label.AutoSize = True
+        Me.label.Location = New System.Drawing.Point(0, 94)
+        Me.label.Name = "label"
+        Me.label.Size = New System.Drawing.Size(23, 13)
+        Me.label.TabIndex = 39
+        Me.label.Text = "Dia"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(54, 94)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(27, 13)
+        Me.Label5.TabIndex = 40
+        Me.Label5.Text = "Mes"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(109, 94)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(26, 13)
+        Me.Label6.TabIndex = 41
+        Me.Label6.Text = "Año"
         '
         'FormPaciente
         '
@@ -478,4 +511,7 @@ Partial Class FormPaciente
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents ComboBoxDia As ComboBox
     Friend WithEvents ComboBoxMes As ComboBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents label As Label
 End Class

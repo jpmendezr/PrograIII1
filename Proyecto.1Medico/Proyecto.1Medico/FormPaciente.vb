@@ -4,7 +4,7 @@
 
     Private Sub BtnRegistro_Click(sender As Object, e As EventArgs) Handles BtnRegistro.Click
 
-        If Me.TexCedula.Text.Length > 0 And Me.txtDireccion.Text.Length > 0 And Me.TexApellidos.Text.Length > 0 And Me.TexCorreoElectronico.Text.Length > 0 And Me.TextNombre.Text.Length > 0 And Me.TexCorreoElectronico.Text.Length > 0 And Me.ComboBoxAño.Text.Length > 0 And Me.ComboBoxDia.Text.Length > 0 Then
+        If Me.TexCedula.Text.Length > 0 And Me.txtDireccion.Text.Length > 0 And Me.TexApellidos.Text.Length > 0 And Me.TexCorreoElectronico.Text.Length > 0 And Me.TextNombre.Text.Length > 0 And Me.TexCorreoElectronico.Text.Length > 0 And Me.ComboBoxAño.Text.Length > 0 And Me.ComboBoxDia.Text.Length > 0 And Me.ComboBoxMes.Text.Length > 0 And Me.txtTelefonoFamiliar.Text.Length > 0 And txtFamiliar.Text.Length > 0 And Me.txtrelacion.Text.Length > 0 Then
             If Information.IsNumeric(Me.TexCedula.Text) And Information.IsNumeric(Me.txtTelefonoFamiliar.Text) And Information.IsNumeric(Me.ComboBoxDia.Text) And Information.IsNumeric(Me.ComboBoxMes.Text) And Information.IsNumeric(Me.ComboBoxAño.Text) Then
                 registro.pro_Cedula1 = Me.TexCedula.Text
                 registro.pro_TelefonoPaciente1 = Me.TextCel.Text
@@ -89,6 +89,9 @@
         Catch ex As Exception
 
         End Try
+
+
+
     End Sub
 
     Private Sub ACT_Click(sender As Object, e As EventArgs) Handles ACT.Click
@@ -142,5 +145,10 @@
 
     Private Sub ComboBoxDia_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxDia.TextChanged
         Me.ComboBoxDia.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
+
+    Private Sub BtnLupa_Click(sender As Object, e As EventArgs) Handles BtnLupa.Click
+
+
     End Sub
 End Class
