@@ -11,20 +11,10 @@ Public Class Paciente
     Private TelefonoPaciente As String
     Private correo As String
 
-
-    'informacion del familiar'
     Private NombreFamiliar As String
     Private TipoFamiliar As String
     Private Telefono As String
     Private Direccion As String
-
-
-    ' variables base de datos 
-    Private cmb As SqlCommandBuilder
-    Public ds As DataSet = New DataSet()
-    Public da As SqlDataAdapter
-    Public comand As SqlCommand
-
 
     Public Property pro_Cedula1 As String
         Get
