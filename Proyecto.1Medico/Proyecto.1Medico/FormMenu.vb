@@ -5,6 +5,7 @@
     Dim FormReporte As ReporteriaForm
     Dim Formchequeo As FRMChequeoExamen
     Dim formCita As FRMagendar
+    Dim formUsuario As FormUsuarios
     Private Sub FormMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -29,6 +30,7 @@
             BtnConsEnferm.Enabled = False
             btnConsMedico.Enabled = False
             btnReporte.Enabled = False
+            btnAbrir.Enabled = False
         End If
     End Sub
 
@@ -58,6 +60,12 @@
         FormReporte = New ReporteriaForm
         FormReporte.Show()
 
+
+    End Sub
+
+    Private Sub btnAbrir_Click(sender As Object, e As EventArgs) Handles btnAbrir.Click
+        formUsuario = New FormUsuarios
+        FormUsuarios.Show()
 
     End Sub
 End Class

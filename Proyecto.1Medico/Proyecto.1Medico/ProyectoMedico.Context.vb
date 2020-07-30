@@ -10,6 +10,8 @@
 Imports System
 Imports System.Data.Entity
 Imports System.Data.Entity.Infrastructure
+Imports System.Data.Entity.Core.Objects
+Imports System.Linq
 
 Partial Public Class BdCentroMedicoEntities
     Inherits DbContext
@@ -34,5 +36,15 @@ Partial Public Class BdCentroMedicoEntities
     Public Overridable Property sysdiagrams() As DbSet(Of sysdiagrams)
     Public Overridable Property TbCita() As DbSet(Of TbCita)
     Public Overridable Property TbPaciente() As DbSet(Of TbPaciente)
+
+    Public Overridable Function f_sp_BuscarPersonal(cedu As String) As ObjectResult(Of f_sp_BuscarPersonal_Result1)
+        Dim ceduParameter As ObjectParameter = If(cedu IsNot Nothing, New ObjectParameter("Cedu", cedu), New ObjectParameter("Cedu", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of f_sp_BuscarPersonal_Result1)("f_sp_BuscarPersonal", ceduParameter)
+    End Function
+
+    Public Overridable Function f_sp_MostrarPersonal() As ObjectResult(Of f_sp_MostrarPersonal_Result1)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of f_sp_MostrarPersonal_Result1)("f_sp_MostrarPersonal")
+    End Function
 
 End Class

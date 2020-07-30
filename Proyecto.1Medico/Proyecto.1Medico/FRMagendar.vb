@@ -28,10 +28,9 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BtnCitas.Click
         'Btn citas disponibles
-
         Try
             Using selexion As New BdCentroMedicoEntities
-                Dim mostrar = (From se In selexion.TbCita Take (2) Select se).ToList
+                Dim mostrar = (From se In selexion.TbCita Take (1000) Select se).ToList
 
                 If (mostrar.Count > 0) Then
                     Me.DataGridView1.DataSource = mostrar
@@ -53,13 +52,11 @@
         Else
             agenda.EspecialidadM1 = Me.TextEspecialidad.Text
             agenda.NombreM1 = Me.TextNMedico.Text
-            MsgBox("Los valores se agregaron corectamente. ")
 
         End If
 
         If Information.IsNumeric(Me.TextBoxDia.Text) And Information.IsNumeric(Me.TextBoxMes.Text) And Information.IsNumeric(Me.TextBoxAño.Text) Then
             agenda.Fecha1 = Me.TextBoxDia.Text + "/" + Me.TextBoxMes.Text + "/" + Me.TextBoxAño.Text
-            MsgBox("Los valores se agregaron corectamente. ")
         Else
             MsgBox("No puede meter letras ")
 
@@ -68,16 +65,19 @@
         If Information.IsNumeric(Me.TextHora.Text) And Information.IsNumeric(Me.TextCedula.Text) Then
             agenda.CedulaP1 = Me.TextCedula.Text
             agenda.Hora1 = Me.TextHora.Text
-            MsgBox("Los valores se agregaron corectamente. ")
         Else
             MsgBox("No puede meter letras ")
         End If
-
+        agenda.RegistrarPersona()
 
     End Sub
 
     Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
-        'Btn de actualizar las citas.
+        'Btn de actualizar las citas por numero de cedula.
+
+        agenda.CedulaP1 = Me.TextCedula.Text
+
+        agenda.ActualizarCita()
 
 
     End Sub

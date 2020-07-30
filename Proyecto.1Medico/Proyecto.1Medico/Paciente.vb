@@ -215,6 +215,27 @@ Public Class Paciente
         End Try
     End Sub
 
+    Public Function ActualizarFamilia() As Boolean
+        Dim resul As Integer = 0
+        Try
+            Using actualizar As New BdCentroMedicoEntities
+                Dim act = (From ac In actualizar.TbFamiliarPaciente Where ac.CedulaPaciente = cedula Select ac).SingleOrDefault
+                If Not IsNothing(act) Then
+                    act.Telefono = Telefono
+                    act.Direccion = Direccion
+                    actualizar.SaveChanges()
+                    Return True
+                Else
+                    Return False
+                End If
+            End Using
+        Catch ex As Exception
+            resul = 0
+            MessageBox.Show("Error")
+
+        End Try
+    End Function
+
 
 
     Public Sub EliminarPersona()
