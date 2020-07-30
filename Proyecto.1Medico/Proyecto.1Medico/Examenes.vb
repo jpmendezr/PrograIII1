@@ -1,6 +1,7 @@
 ﻿Public Class Examenes
     Private sangre As String
     Private orina As String
+    Private cedula As String
 
     Public Property Sangre1 As String
         Get
@@ -20,12 +21,33 @@
         End Set
     End Property
 
-    Public Function examen_sangre(Sangre1 As String) As String
+    Public Property Cedula1 As String
+        Get
+            Return cedula
+        End Get
+        Set(value As String)
+            cedula = value
+        End Set
+    End Property
 
-    End Function
+    Public Sub enviar_exa()
+        Dim resultado As Integer = 0
+        Try
+            Using regitro_exa As New BdCentroMedicoEntities
 
-    Public Function examen_orina(Orina1 As String) As String
+                Dim registro As New TbChequeoExamanes With {.CedulaP = Cedula1, .Sangre = sangre, .Orina = orina}
+                regitro_exa.TbChequeoExamanes.Add(registro)
+                resultado = regitro_exa.SaveChanges()
 
-    End Function
+                If resultado > 0 Then
+                    MsgBox(" Se registraon los datos ")
+                Else
+                    MsgBox(" No se registraron los datos ")
+                End If
+            End Using
+        Catch ex As Exception
+            resultado = 0
+        End Try
+    End Sub
 
 End Class
