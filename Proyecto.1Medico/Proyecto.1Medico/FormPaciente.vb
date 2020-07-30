@@ -5,11 +5,12 @@
     Private Sub BtnRegistro_Click(sender As Object, e As EventArgs) Handles BtnRegistro.Click
 
         If Me.TexCedula.Text.Length > 0 And Me.txtDireccion.Text.Length > 0 And Me.TexApellidos.Text.Length > 0 And Me.TexCorreoElectronico.Text.Length > 0 And Me.TextNombre.Text.Length > 0 And Me.TexCorreoElectronico.Text.Length > 0 And Me.ComboBoxAño.Text.Length > 0 And Me.ComboBoxDia.Text.Length > 0 And Me.ComboBoxMes.Text.Length > 0 And Me.txtTelefonoFamiliar.Text.Length > 0 And txtFamiliar.Text.Length > 0 And Me.txtrelacion.Text.Length > 0 Then
+
             If Information.IsNumeric(Me.TexCedula.Text) And Information.IsNumeric(Me.txtTelefonoFamiliar.Text) And Information.IsNumeric(Me.ComboBoxDia.Text) And Information.IsNumeric(Me.ComboBoxMes.Text) And Information.IsNumeric(Me.ComboBoxAño.Text) Then
                 registro.pro_Cedula1 = Me.TexCedula.Text
                 registro.pro_TelefonoPaciente1 = Me.TextCel.Text
                 registro.pro_Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
-
+                registro.pro_Telefono1 = Me.txtTelefonoFamiliar.Text
             Else
                 MsgBox("No puede meter letras ")
             End If
@@ -33,11 +34,13 @@
             registro.RegistrarPersona()
             registro.RegistrarPaciente()
             registro.RegistrarFamiliar()
+
+
         Else
             MessageBox.Show("Debe de ingresar los datos primero")
         End If
 
-
+        limpiar()
 
     End Sub
 
@@ -67,29 +70,29 @@
             registro.EliminarPersona()
             registro.EliminarPaciente()
             registro.EliminarFamiliar()
+
+
         Else
             MessageBox.Show("Debe de ingresar valores")
 
         End If
 
-
+        limpiar()
 
     End Sub
 
     Private Sub BtnMostrar_Click(sender As Object, e As EventArgs) Handles BtnMostrar.Click
-        Try
-            Using selexion As New BdCentroMedicoEntities
-                Dim mostrar = (From se In selexion.TbPersona Take (1000) Select se).ToList
 
+        Try
+            Using bd As New BdCentroMedicoEntities
+                Dim mostrar = bd.MostrarPersona.ToList
                 If (mostrar.Count > 0) Then
                     Me.DataGridView1.DataSource = mostrar
                 End If
-
             End Using
         Catch ex As Exception
-
+            MsgBox(ex.Message.ToString)
         End Try
-
 
 
     End Sub
@@ -125,11 +128,13 @@
 
             registro.ActualizarPersona()
             registro.ActualizarFamilia()
+
+
         Else
             MessageBox.Show("Debe de ingresar datos")
 
         End If
-
+        limpiar()
 
 
     End Sub
@@ -148,7 +153,45 @@
     End Sub
 
     Private Sub BtnLupa_Click(sender As Object, e As EventArgs) Handles BtnLupa.Click
+        Try
+            Using bd As New BdCentroMedicoEntities
+                Dim mostrar = bd.BuscarPersona(TexCedula.Text).ToList
+                If (mostrar.Count > 0) Then
+                    Me.DataGridView1.DataSource = mostrar
+                Else
+                    MsgBox("No se encuentra el usuario")
+                End If
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+        End Try
 
+    End Sub
+
+    Public Sub limpiar()
+        Me.TexCedula.Text = ""
+        Me.TexApellidos.Text = ""
+        Me.TexCorreoElectronico.Text = ""
+        Me.TextCel.Text = ""
+        Me.TextNombre.Text = ""
+        Me.txtDireccion.Text = ""
+        Me.txtFamiliar.Text = ""
+        Me.txtrelacion.Text = ""
+        Me.txtTelefonoFamiliar.Text = ""
+
+    End Sub
+
+    Private Sub FormPaciente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            Using bd As New BdCentroMedicoEntities
+                Dim mostrar = bd.MostrarPersona.ToList
+                If (mostrar.Count > 0) Then
+                    Me.DataGridView1.DataSource = mostrar
+                End If
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+        End Try
 
     End Sub
 End Class

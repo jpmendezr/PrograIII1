@@ -4,13 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="46e23a6fa652431296f2c0a3da041bfb" Name="Diagram1">
+      <Diagram DiagramId="46e23a6fa652431296f2c0a3da041bfb" Name="Diagram1" ZoomLevel="89">
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbChequeoExamanes" Width="1.5" PointX="1.625" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbChequeoMedicamentos" Width="1.5" PointX="3.75" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbEnfermedad" Width="1.5" PointX="4.25" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbEspecialidad" Width="1.5" PointX="6.5" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbMedicamento" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPersona" Width="1.5" PointX="4.125" PointY="6.375" IsExpanded="true" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbPersonalInterno" Width="1.5" PointX="8.5" PointY="0.625" IsExpanded="true" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_TbChequeoMedicamentos_Medicamento" ManuallyRouted="false" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_TbChequeoMedicamentos_Medicamento1" ManuallyRouted="false" />
@@ -20,9 +19,13 @@
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbConsultaMedica" Width="1.5" PointX="15.125" PointY="4.625" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoExamanes" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoMedicamentos" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="1.625" PointY="6.625" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPaciente" Width="1.5" PointX="6.5" PointY="6.375" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbFamiliarPaciente" Width="1.5" PointX="5.6114732313954612" PointY="15.629867993122836" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="0.5" PointY="6.25" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPaciente" Width="1.5" PointX="6.375" PointY="6" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPersona" Width="1.5" PointX="3" PointY="6" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbFamiliarPaciente" Width="1.5" PointX="5" PointY="8.625" />
+        
+        
+        
         
 =======
         
@@ -30,6 +33,16 @@
         
         
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
       &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
       </Diagram>
     </edmx:Diagrams>

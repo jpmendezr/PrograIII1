@@ -172,10 +172,10 @@ Public Class Paciente
     End Function
 
     Public Function RegistrarFamiliar() As Boolean
-        Dim resultado As Integer = 0
+        Dim resultado As Integer
         Try
             Using registro As New BdCentroMedicoEntities
-                Dim NuevoRegistro As New TbFamiliarPaciente With {.CedulaPaciente = cedula, .Parentesco = TipoFamiliar, .NombreCompleto = NombreFamiliar, .Telefono = Telefono, .Direccion = Direccion}
+                Dim NuevoRegistro As New TbFamiliarPaciente With {.CedulaPaciente = cedula, .Parentesco = TipoFamiliar, .NombreCompleto = NombreFamiliar, .TelefonoFamiliar = Telefono, .Direccion = Direccion}
                 registro.TbFamiliarPaciente.Add(NuevoRegistro)
                 resultado = registro.SaveChanges
                 If resultado > 0 Then
@@ -186,7 +186,8 @@ Public Class Paciente
                 End If
             End Using
         Catch ex As Exception
-            resultado = 0
+
+            MessageBox.Show(ex.ToString)
         End Try
 
     End Function
@@ -221,7 +222,7 @@ Public Class Paciente
             Using actualizar As New BdCentroMedicoEntities
                 Dim act = (From ac In actualizar.TbFamiliarPaciente Where ac.CedulaPaciente = cedula Select ac).SingleOrDefault
                 If Not IsNothing(act) Then
-                    act.Telefono = Telefono
+                    act.TelefonoFamiliar = Telefono
                     act.Direccion = Direccion
                     actualizar.SaveChanges()
                     Return True
