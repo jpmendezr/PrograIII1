@@ -20,86 +20,25 @@ Partial Class FRMChequeoExamen
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtcedula = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtsangre = New System.Windows.Forms.TextBox()
+        Me.txtorina = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.Panel1.Controls.Add(Me.ListBox1)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(29, 30)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(359, 168)
-        Me.Panel1.TabIndex = 0
-        '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Items.AddRange(New Object() {"hemoglobina", "colesterol", "hematocritos", "triglicéridos", "Ácido úrico", " creatinina"})
-        Me.ListBox1.Location = New System.Drawing.Point(17, 53)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(329, 82)
-        Me.ListBox1.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(81, 22)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(107, 15)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Examen sangre"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.Panel2.Controls.Add(Me.ListBox2)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(417, 30)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(371, 168)
-        Me.Panel2.TabIndex = 1
-        '
-        'ListBox2
-        '
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Items.AddRange(New Object() {"Glucosa", "eritrocitos", "color", "leucocitos (esterasa)"})
-        Me.ListBox2.Location = New System.Drawing.Point(21, 53)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(331, 82)
-        Me.ListBox2.TabIndex = 1
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(101, 22)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(98, 15)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Examen Orina"
         '
         'DataGridView1
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(46, 251)
+        Me.DataGridView1.Location = New System.Drawing.Point(29, 121)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(688, 165)
         Me.DataGridView1.TabIndex = 2
@@ -108,68 +47,130 @@ Partial Class FRMChequeoExamen
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(233, 223)
+        Me.Label3.Location = New System.Drawing.Point(26, 31)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 15)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Cedula:"
         '
-        'TextBox1
+        'txtcedula
         '
-        Me.TextBox1.Location = New System.Drawing.Point(328, 216)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(143, 20)
-        Me.TextBox1.TabIndex = 4
+        Me.txtcedula.Location = New System.Drawing.Point(29, 67)
+        Me.txtcedula.Name = "txtcedula"
+        Me.txtcedula.Size = New System.Drawing.Size(143, 20)
+        Me.txtcedula.TabIndex = 4
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Aqua
-        Me.Button1.Location = New System.Drawing.Point(362, 433)
+        Me.Button1.Location = New System.Drawing.Point(432, 307)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Mostar"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(204, 31)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(109, 15)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Examen Sangre"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(389, 31)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(98, 15)
+        Me.Label5.TabIndex = 7
+        Me.Label5.Text = "Examen Orina"
+        '
+        'txtsangre
+        '
+        Me.txtsangre.Location = New System.Drawing.Point(207, 67)
+        Me.txtsangre.Name = "txtsangre"
+        Me.txtsangre.Size = New System.Drawing.Size(143, 20)
+        Me.txtsangre.TabIndex = 8
+        '
+        'txtorina
+        '
+        Me.txtorina.Location = New System.Drawing.Point(392, 67)
+        Me.txtorina.Name = "txtorina"
+        Me.txtorina.Size = New System.Drawing.Size(143, 20)
+        Me.txtorina.TabIndex = 9
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Aqua
+        Me.Button2.Location = New System.Drawing.Point(181, 308)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "Agregar"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'FRMChequeoExamen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.ClientSize = New System.Drawing.Size(800, 479)
+        Me.ClientSize = New System.Drawing.Size(800, 353)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.txtorina)
+        Me.Controls.Add(Me.txtsangre)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.txtcedula)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "FRMChequeoExamen"
         Me.Text = "FRMChequeoExamen"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents ListBox2 As ListBox
-    Friend WithEvents Label2 As Label
-
-    Private Sub FRMChequeoExamen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Dim chequeo_examen As New Examenes
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtcedula As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents txtsangre As TextBox
+    Friend WithEvents txtorina As TextBox
+    Friend WithEvents Button2 As Button
 
+    Dim registro As New Examenes()
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Try
+            Using mostrar_examen As New BdCentroMedicoEntities
+                Dim mostrar = (From mos In mostrar_examen.TbChequeoExamanes Take (1000) Select mos).ToList
+
+                If (mostrar.count > 0) Then
+                    Me.DataGridView1.DataSource = mostrar
+                    MsgBox("se mostraron los datos")
+                End If
+            End Using
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        registro.Cedula1 = txtcedula.Text
+        registro.Sangre1 = txtsangre.Text
+        registro.Orina1 = txtorina.Text
+        registro.enviar_exa()
+
+    End Sub
 End Class
