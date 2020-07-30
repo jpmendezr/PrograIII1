@@ -186,7 +186,6 @@ Partial Class FRMagendar
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Enabled = False
         Me.DataGridView1.Location = New System.Drawing.Point(80, 167)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(643, 210)

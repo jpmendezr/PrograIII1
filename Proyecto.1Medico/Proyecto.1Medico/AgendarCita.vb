@@ -110,7 +110,21 @@
     End Sub
 
 
-    Public Sub ReservarCita(Hora1, NombreM1)
+    Public Sub ReservarCita()
+
+        'Select de verificar valores.
+
+        Dim resultado As Integer = 0
+        Try
+            Using consulta As New BdCentroMedicoEntities
+                Dim QuerrySelect = (From dato In consulta.TbCita Take (20) Select dato).ToList
+                If (QuerrySelect.Count > 0) Then
+                    'Me.DataGridView1.DataSource = QuerrySelect
+                End If
+            End Using
+        Catch ex As Exception
+            MsgBox("No se pueden verificar. ")
+        End Try
 
     End Sub
 
