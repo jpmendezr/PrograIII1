@@ -24,6 +24,9 @@ Partial Class FormPaciente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPaciente))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.label = New System.Windows.Forms.Label()
         Me.ComboBoxDia = New System.Windows.Forms.ComboBox()
         Me.ComboBoxMes = New System.Windows.Forms.ComboBox()
         Me.ComboBoxAño = New System.Windows.Forms.ComboBox()
@@ -69,6 +72,9 @@ Partial Class FormPaciente
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.label)
         Me.Panel1.Controls.Add(Me.ComboBoxDia)
         Me.Panel1.Controls.Add(Me.ComboBoxMes)
         Me.Panel1.Controls.Add(Me.ComboBoxAño)
@@ -89,6 +95,33 @@ Partial Class FormPaciente
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(793, 166)
         Me.Panel1.TabIndex = 0
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(109, 94)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(26, 13)
+        Me.Label6.TabIndex = 41
+        Me.Label6.Text = "Año"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(54, 94)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(27, 13)
+        Me.Label5.TabIndex = 40
+        Me.Label5.Text = "Mes"
+        '
+        'label
+        '
+        Me.label.AutoSize = True
+        Me.label.Location = New System.Drawing.Point(0, 94)
+        Me.label.Name = "label"
+        Me.label.Size = New System.Drawing.Size(23, 13)
+        Me.label.TabIndex = 39
+        Me.label.Text = "Dia"
         '
         'ComboBoxDia
         '
@@ -124,7 +157,7 @@ Partial Class FormPaciente
         '
         Me.ComboBoxSexo.FormattingEnabled = True
         Me.ComboBoxSexo.Items.AddRange(New Object() {"M", "F"})
-        Me.ComboBoxSexo.Location = New System.Drawing.Point(636, 39)
+        Me.ComboBoxSexo.Location = New System.Drawing.Point(636, 38)
         Me.ComboBoxSexo.Name = "ComboBoxSexo"
         Me.ComboBoxSexo.Size = New System.Drawing.Size(79, 21)
         Me.ComboBoxSexo.TabIndex = 11
@@ -133,7 +166,7 @@ Partial Class FormPaciente
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(651, 21)
+        Me.Label17.Location = New System.Drawing.Point(650, 12)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(39, 15)
         Me.Label17.TabIndex = 23
@@ -276,13 +309,13 @@ Partial Class FormPaciente
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(63, 15)
         Me.Label14.TabIndex = 7
-        Me.Label14.Text = "Telefono"
+        Me.Label14.Text = "Teléfono"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label10.ForeColor = System.Drawing.Color.White
         Me.Label10.Location = New System.Drawing.Point(282, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(255, 20)
@@ -309,20 +342,23 @@ Partial Class FormPaciente
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(553, 68)
+        Me.txtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDireccion.Location = New System.Drawing.Point(553, 65)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(233, 21)
         Me.txtDireccion.TabIndex = 3
         '
         'txtTelefonoFamiliar
         '
-        Me.txtTelefonoFamiliar.Location = New System.Drawing.Point(411, 68)
+        Me.txtTelefonoFamiliar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefonoFamiliar.Location = New System.Drawing.Point(411, 65)
         Me.txtTelefonoFamiliar.Name = "txtTelefonoFamiliar"
         Me.txtTelefonoFamiliar.Size = New System.Drawing.Size(126, 21)
         Me.txtTelefonoFamiliar.TabIndex = 2
         '
         'txtrelacion
         '
+        Me.txtrelacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtrelacion.Location = New System.Drawing.Point(258, 65)
         Me.txtrelacion.Name = "txtrelacion"
         Me.txtrelacion.Size = New System.Drawing.Size(137, 21)
@@ -330,6 +366,7 @@ Partial Class FormPaciente
         '
         'txtFamiliar
         '
+        Me.txtFamiliar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFamiliar.Location = New System.Drawing.Point(-2, 65)
         Me.txtFamiliar.Name = "txtFamiliar"
         Me.txtFamiliar.Size = New System.Drawing.Size(254, 21)
@@ -347,7 +384,7 @@ Partial Class FormPaciente
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(295, 7)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(179, 40)
@@ -395,7 +432,7 @@ Partial Class FormPaciente
         'BtnMostrar
         '
         Me.BtnMostrar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnMostrar.Location = New System.Drawing.Point(387, 492)
+        Me.BtnMostrar.Location = New System.Drawing.Point(364, 492)
         Me.BtnMostrar.Name = "BtnMostrar"
         Me.BtnMostrar.Size = New System.Drawing.Size(98, 23)
         Me.BtnMostrar.TabIndex = 10
@@ -405,11 +442,11 @@ Partial Class FormPaciente
         'ACT
         '
         Me.ACT.BackColor = System.Drawing.Color.Aqua
-        Me.ACT.Location = New System.Drawing.Point(234, 492)
+        Me.ACT.Image = Global.Proyecto._1Medico.My.Resources.Resources.update
+        Me.ACT.Location = New System.Drawing.Point(214, 492)
         Me.ACT.Name = "ACT"
         Me.ACT.Size = New System.Drawing.Size(75, 23)
         Me.ACT.TabIndex = 23
-        Me.ACT.Text = "Actualizar"
         Me.ACT.UseVisualStyleBackColor = False
         '
         'FormPaciente
@@ -478,4 +515,7 @@ Partial Class FormPaciente
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents ComboBoxDia As ComboBox
     Friend WithEvents ComboBoxMes As ComboBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents label As Label
 End Class

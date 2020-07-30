@@ -1,5 +1,6 @@
 ﻿Public Class FormUsuarios
     Dim auten As New Autenticacion
+    Dim formMenu As FormMenu
 
     Private Sub FormUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrar()
@@ -199,5 +200,13 @@
     Private Sub CBSexo_TextChanged(sender As Object, e As EventArgs) Handles CBSexo.TextChanged
         Me.CBdepa.DropDownStyle = ComboBoxStyle.DropDownList
         Me.CBSexo.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
+
+    Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
+        formMenu = New FormMenu()
+        formMenu.Show()
+        Me.Dispose()
+
+
     End Sub
 End Class

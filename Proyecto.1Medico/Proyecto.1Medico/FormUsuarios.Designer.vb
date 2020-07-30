@@ -52,6 +52,7 @@ Partial Class FormUsuarios
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnMostar = New System.Windows.Forms.Button()
         Me.btnActualizar = New System.Windows.Forms.Button()
+        Me.BtnRegresar = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -304,11 +305,21 @@ Partial Class FormUsuarios
         Me.btnActualizar.Text = "Actualizar"
         Me.btnActualizar.UseVisualStyleBackColor = True
         '
+        'BtnRegresar
+        '
+        Me.BtnRegresar.Location = New System.Drawing.Point(22, 414)
+        Me.BtnRegresar.Name = "BtnRegresar"
+        Me.BtnRegresar.Size = New System.Drawing.Size(156, 23)
+        Me.BtnRegresar.TabIndex = 33
+        Me.BtnRegresar.Text = "Regresar"
+        Me.BtnRegresar.UseVisualStyleBackColor = True
+        '
         'FormUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.BtnRegresar)
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.btnMostar)
         Me.Controls.Add(Me.btnEliminar)
@@ -377,4 +388,5 @@ Partial Class FormUsuarios
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnMostar As Button
     Friend WithEvents btnActualizar As Button
+    Friend WithEvents BtnRegresar As Button
 End Class

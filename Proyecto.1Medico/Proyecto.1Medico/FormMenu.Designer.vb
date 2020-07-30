@@ -88,7 +88,7 @@ Partial Class FormMenu
         '
         'btnAbrir
         '
-        Me.btnAbrir.Location = New System.Drawing.Point(647, 78)
+        Me.btnAbrir.Location = New System.Drawing.Point(636, 78)
         Me.btnAbrir.Name = "btnAbrir"
         Me.btnAbrir.Size = New System.Drawing.Size(75, 23)
         Me.btnAbrir.TabIndex = 6
@@ -98,7 +98,7 @@ Partial Class FormMenu
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(644, 49)
+        Me.Label2.Location = New System.Drawing.Point(633, 49)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(88, 13)
         Me.Label2.TabIndex = 7
