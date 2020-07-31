@@ -10,13 +10,12 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class TbFamiliarPaciente
-    Public Property IdFamiliarP As Integer
+Partial Public Class TbCita1
+    Public Property IdCita As Integer
     Public Property CedulaPaciente As String
-    Public Property Parentesco As String
-    Public Property NombreCompleto As String
-    Public Property TelefonoFamiliar As String
-    Public Property Direccion As String
-    Public Property Telefono As String
+    Public Property Fecha As String
+    Public Property Hora As String
+    Public Property NombreMedico As String
+    Public Property Especialidad As String
 
 End Class
