@@ -10,7 +10,7 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class TbCita
+Partial Public Class TbCita1
     Public Property IdCita As Integer
     Public Property CedulaPaciente As String
     Public Property Fecha As String

@@ -49,6 +49,7 @@
         Else
             MsgBox("No puede meter letras ")
         End If
+        ReservarCita()
         agenda.RegistrarPersona()
 
     End Sub
@@ -86,9 +87,12 @@
         Dim resultado As Integer = 0
         Try
             Using consulta As New BdCentroMedicoEntities
-                Dim QuerrySelect = (From dato In consulta.TbCita Take (20) Select dato).ToList
+                Dim QuerrySelect = (From dato In consulta.TbCita Where dato.Hora = TextHora.Text And dato.NombreMedico = TextNMedico.Text Take (2000) Select dato).ToList
                 If (QuerrySelect.Count > 0) Then
                     'Me.DataGridView1.DataSource = QuerrySelect
+                    MsgBox("Si existe este registro.")
+                Else
+                    MsgBox("No exite este registro.")
                 End If
             End Using
         Catch ex As Exception
