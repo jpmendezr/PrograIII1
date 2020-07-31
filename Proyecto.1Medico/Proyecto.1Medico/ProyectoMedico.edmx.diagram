@@ -19,10 +19,10 @@
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbConsultaMedica" Width="1.5" PointX="15.125" PointY="4.625" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoExamanes" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoMedicamentos" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="0.5" PointY="6.25" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbPaciente" Width="1.5" PointX="6.375" PointY="6" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbPersona" Width="1.5" PointX="3" PointY="6" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbFamiliarPaciente" Width="1.5" PointX="5" PointY="8.625" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="6.7635159672999361" PointY="31.440108686424843" />
         
         
         

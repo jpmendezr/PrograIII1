@@ -86,9 +86,9 @@ Partial Class FormUsuarios
         '
         'txtBusCedula
         '
-        Me.txtBusCedula.Location = New System.Drawing.Point(302, 25)
+        Me.txtBusCedula.Location = New System.Drawing.Point(18, 134)
         Me.txtBusCedula.Name = "txtBusCedula"
-        Me.txtBusCedula.Size = New System.Drawing.Size(174, 20)
+        Me.txtBusCedula.Size = New System.Drawing.Size(76, 20)
         Me.txtBusCedula.TabIndex = 3
         '
         'btnAgregar
@@ -224,9 +224,9 @@ Partial Class FormUsuarios
         '
         'txtCedula
         '
-        Me.txtCedula.Location = New System.Drawing.Point(26, 134)
+        Me.txtCedula.Location = New System.Drawing.Point(291, 26)
         Me.txtCedula.Name = "txtCedula"
-        Me.txtCedula.Size = New System.Drawing.Size(54, 20)
+        Me.txtCedula.Size = New System.Drawing.Size(209, 20)
         Me.txtCedula.TabIndex = 24
         '
         'Label2
@@ -251,7 +251,7 @@ Partial Class FormUsuarios
         '
         Me.CBdepa.FormattingEnabled = True
         Me.CBdepa.Items.AddRange(New Object() {"Recepción", "Enfermería", "Médico"})
-        Me.CBdepa.Location = New System.Drawing.Point(333, 65)
+        Me.CBdepa.Location = New System.Drawing.Point(322, 66)
         Me.CBdepa.Name = "CBdepa"
         Me.CBdepa.Size = New System.Drawing.Size(121, 21)
         Me.CBdepa.TabIndex = 27
@@ -259,7 +259,7 @@ Partial Class FormUsuarios
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(357, 105)
+        Me.Label11.Location = New System.Drawing.Point(351, 105)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(61, 13)
         Me.Label11.TabIndex = 28
@@ -267,7 +267,7 @@ Partial Class FormUsuarios
         '
         'txtContra
         '
-        Me.txtContra.Location = New System.Drawing.Point(344, 121)
+        Me.txtContra.Location = New System.Drawing.Point(325, 121)
         Me.txtContra.Name = "txtContra"
         Me.txtContra.Size = New System.Drawing.Size(100, 20)
         Me.txtContra.TabIndex = 29

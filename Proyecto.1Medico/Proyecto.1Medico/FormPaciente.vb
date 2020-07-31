@@ -152,6 +152,8 @@
         Me.ComboBoxDia.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 
+
+
     Private Sub BtnLupa_Click(sender As Object, e As EventArgs) Handles BtnLupa.Click
         Try
             Using bd As New BdCentroMedicoEntities
@@ -196,8 +198,12 @@
     End Sub
 
     Private Sub BtnRegrsar_Click(sender As Object, e As EventArgs) Handles BtnRegrsar.Click
-        FormMenu = New FormMenu()
-        FormMenu.Show()
+        Dim menu As New FormMenu()
+        menu.Show()
         Me.Dispose()
+    End Sub
+
+    Private Sub ComboBoxSexo_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxSexo.TextChanged
+        Me.ComboBoxSexo.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 End Class

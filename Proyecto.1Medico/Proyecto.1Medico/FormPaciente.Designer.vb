@@ -297,7 +297,7 @@ Partial Class FormPaciente
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(671, 41)
+        Me.Label15.Location = New System.Drawing.Point(650, 41)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(68, 15)
         Me.Label15.TabIndex = 8

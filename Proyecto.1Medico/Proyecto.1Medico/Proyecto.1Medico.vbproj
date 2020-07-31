@@ -153,6 +153,9 @@
     <Compile Include="MostrarPersona_Result.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
+    <Compile Include="mostrar_tablas_Result.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

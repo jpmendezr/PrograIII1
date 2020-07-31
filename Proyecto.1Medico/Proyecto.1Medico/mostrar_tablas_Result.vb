@@ -10,12 +10,12 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class TbCita
-    Public Property IdCita As Integer
-    Public Property CedulaPaciente As String
-    Public Property Fecha As String
-    Public Property Hora As String
-    Public Property NombreMedico As String
-    Public Property Especialidad As String
+Partial Public Class mostrar_tablas_Result
+    Public Property Cedula As String
+    Public Property Diagnostico As String
+    Public Property Medicamento_Administrado As String
+    Public Property Medicamento_Recetado As String
+    Public Property Sangre As String
+    Public Property Orina As String
 
 End Class

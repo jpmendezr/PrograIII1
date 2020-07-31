@@ -135,7 +135,7 @@ Public Class Paciente
                 End If
             End Using
         Catch ex As Exception
-            resultado = 0
+            MessageBox.Show("Error Persona")
         End Try
 
     End Sub
@@ -156,7 +156,7 @@ Public Class Paciente
                 End If
             End Using
         Catch ex As Exception
-            resultado = 0
+            MessageBox.Show("Error Paciente")
         End Try
 
     End Function
@@ -177,7 +177,7 @@ Public Class Paciente
             End Using
         Catch ex As Exception
 
-            MessageBox.Show(ex.ToString)
+            MessageBox.Show("Error Familiar")
         End Try
 
     End Function
@@ -200,8 +200,7 @@ Public Class Paciente
                 End If
             End Using
         Catch ex As Exception
-            resul = 0
-            MessageBox.Show(ex.Message.ToString)
+            MessageBox.Show("Error Actualizar")
 
         End Try
     End Sub
@@ -242,7 +241,7 @@ Public Class Paciente
 
             End Using
         Catch ex As Exception
-            resultado = 0
+            MessageBox.Show("Error Eliminar")
         End Try
     End Sub
 
@@ -259,7 +258,7 @@ Public Class Paciente
 
             End Using
         Catch ex As Exception
-            resultado = 0
+            MessageBox.Show("Error Eliminar Familiar")
         End Try
     End Sub
     Public Sub EliminarPaciente()
@@ -275,7 +274,7 @@ Public Class Paciente
 
             End Using
         Catch ex As Exception
-            resultado = 0
+            MessageBox.Show("Error  Eliminar Paciente")
         End Try
     End Sub
 
