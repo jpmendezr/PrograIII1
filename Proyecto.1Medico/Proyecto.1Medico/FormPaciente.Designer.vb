@@ -63,6 +63,7 @@ Partial Class FormPaciente
         Me.BtnMostrar = New System.Windows.Forms.Button()
         Me.ACT = New System.Windows.Forms.Button()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.BtnRegrsar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -395,7 +396,7 @@ Partial Class FormPaciente
         '
         Me.BtnElimino.BackColor = System.Drawing.Color.Aqua
         Me.BtnElimino.Image = Global.Proyecto._1Medico.My.Resources.Resources.eliminar
-        Me.BtnElimino.Location = New System.Drawing.Point(657, 492)
+        Me.BtnElimino.Location = New System.Drawing.Point(694, 492)
         Me.BtnElimino.Name = "BtnElimino"
         Me.BtnElimino.Size = New System.Drawing.Size(120, 23)
         Me.BtnElimino.TabIndex = 7
@@ -423,7 +424,7 @@ Partial Class FormPaciente
         '
         Me.BtnLupa.BackColor = System.Drawing.Color.Aqua
         Me.BtnLupa.Image = Global.Proyecto._1Medico.My.Resources.Resources.lupa
-        Me.BtnLupa.Location = New System.Drawing.Point(517, 492)
+        Me.BtnLupa.Location = New System.Drawing.Point(549, 492)
         Me.BtnLupa.Name = "BtnLupa"
         Me.BtnLupa.Size = New System.Drawing.Size(97, 23)
         Me.BtnLupa.TabIndex = 9
@@ -432,7 +433,7 @@ Partial Class FormPaciente
         'BtnMostrar
         '
         Me.BtnMostrar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnMostrar.Location = New System.Drawing.Point(364, 492)
+        Me.BtnMostrar.Location = New System.Drawing.Point(347, 492)
         Me.BtnMostrar.Name = "BtnMostrar"
         Me.BtnMostrar.Size = New System.Drawing.Size(98, 23)
         Me.BtnMostrar.TabIndex = 10
@@ -443,17 +444,29 @@ Partial Class FormPaciente
         '
         Me.ACT.BackColor = System.Drawing.Color.Aqua
         Me.ACT.Image = Global.Proyecto._1Medico.My.Resources.Resources.update
-        Me.ACT.Location = New System.Drawing.Point(214, 492)
+        Me.ACT.Location = New System.Drawing.Point(178, 492)
         Me.ACT.Name = "ACT"
-        Me.ACT.Size = New System.Drawing.Size(75, 23)
+        Me.ACT.Size = New System.Drawing.Size(88, 23)
         Me.ACT.TabIndex = 23
         Me.ACT.UseVisualStyleBackColor = False
+        '
+        'BtnRegrsar
+        '
+        Me.BtnRegrsar.BackColor = System.Drawing.Color.Cyan
+        Me.BtnRegrsar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnRegrsar.Location = New System.Drawing.Point(0, 1)
+        Me.BtnRegrsar.Name = "BtnRegrsar"
+        Me.BtnRegrsar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnRegrsar.TabIndex = 24
+        Me.BtnRegrsar.Text = "Regresar"
+        Me.BtnRegrsar.UseVisualStyleBackColor = False
         '
         'FormPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(814, 516)
+        Me.Controls.Add(Me.BtnRegrsar)
         Me.Controls.Add(Me.ACT)
         Me.Controls.Add(Me.BtnMostrar)
         Me.Controls.Add(Me.BtnLupa)
@@ -518,4 +531,5 @@ Partial Class FormPaciente
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents label As Label
+    Friend WithEvents BtnRegrsar As Button
 End Class

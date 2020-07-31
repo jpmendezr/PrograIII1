@@ -29,98 +29,120 @@ Partial Class FormMenu
         Me.BtnConsEnferm = New System.Windows.Forms.Button()
         Me.btnReporte = New System.Windows.Forms.Button()
         Me.btnAbrir = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(343, 9)
+        Me.Label1.Font = New System.Drawing.Font("Tempus Sans ITC", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(161, 1)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 13)
+        Me.Label1.Size = New System.Drawing.Size(224, 35)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Menu de Usuario"
         '
         'btnRegPaciente
         '
-        Me.btnRegPaciente.Location = New System.Drawing.Point(22, 319)
+        Me.btnRegPaciente.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnRegPaciente.Location = New System.Drawing.Point(16, 317)
         Me.btnRegPaciente.Name = "btnRegPaciente"
-        Me.btnRegPaciente.Size = New System.Drawing.Size(139, 23)
+        Me.btnRegPaciente.Size = New System.Drawing.Size(124, 23)
         Me.btnRegPaciente.TabIndex = 1
         Me.btnRegPaciente.Text = "Registrar Paciente"
-        Me.btnRegPaciente.UseVisualStyleBackColor = True
+        Me.btnRegPaciente.UseVisualStyleBackColor = False
         '
         'btnRegCita
         '
-        Me.btnRegCita.Location = New System.Drawing.Point(366, 319)
+        Me.btnRegCita.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnRegCita.Location = New System.Drawing.Point(464, 317)
         Me.btnRegCita.Name = "btnRegCita"
-        Me.btnRegCita.Size = New System.Drawing.Size(166, 23)
+        Me.btnRegCita.Size = New System.Drawing.Size(126, 23)
         Me.btnRegCita.TabIndex = 2
         Me.btnRegCita.Text = "Registrar Cita"
-        Me.btnRegCita.UseVisualStyleBackColor = True
+        Me.btnRegCita.UseVisualStyleBackColor = False
         '
         'btnConsMedico
         '
-        Me.btnConsMedico.Location = New System.Drawing.Point(557, 319)
+        Me.btnConsMedico.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnConsMedico.Location = New System.Drawing.Point(471, 356)
         Me.btnConsMedico.Name = "btnConsMedico"
-        Me.btnConsMedico.Size = New System.Drawing.Size(139, 23)
+        Me.btnConsMedico.Size = New System.Drawing.Size(119, 23)
         Me.btnConsMedico.TabIndex = 3
         Me.btnConsMedico.Text = "Consultorio Medico"
-        Me.btnConsMedico.UseVisualStyleBackColor = True
+        Me.btnConsMedico.UseVisualStyleBackColor = False
         '
         'BtnConsEnferm
         '
-        Me.BtnConsEnferm.Location = New System.Drawing.Point(185, 319)
+        Me.BtnConsEnferm.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BtnConsEnferm.Location = New System.Drawing.Point(16, 356)
         Me.BtnConsEnferm.Name = "BtnConsEnferm"
-        Me.BtnConsEnferm.Size = New System.Drawing.Size(166, 23)
+        Me.BtnConsEnferm.Size = New System.Drawing.Size(131, 23)
         Me.BtnConsEnferm.TabIndex = 4
         Me.BtnConsEnferm.Text = "Consultorio Enfermeria"
-        Me.BtnConsEnferm.UseVisualStyleBackColor = True
+        Me.BtnConsEnferm.UseVisualStyleBackColor = False
         '
         'btnReporte
         '
-        Me.btnReporte.Location = New System.Drawing.Point(713, 319)
+        Me.btnReporte.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnReporte.Location = New System.Drawing.Point(272, 356)
         Me.btnReporte.Name = "btnReporte"
         Me.btnReporte.Size = New System.Drawing.Size(75, 23)
         Me.btnReporte.TabIndex = 5
         Me.btnReporte.Text = "Reporte"
-        Me.btnReporte.UseVisualStyleBackColor = True
+        Me.btnReporte.UseVisualStyleBackColor = False
         '
         'btnAbrir
         '
-        Me.btnAbrir.Location = New System.Drawing.Point(636, 78)
+        Me.btnAbrir.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnAbrir.Location = New System.Drawing.Point(259, 317)
         Me.btnAbrir.Name = "btnAbrir"
-        Me.btnAbrir.Size = New System.Drawing.Size(75, 23)
+        Me.btnAbrir.Size = New System.Drawing.Size(103, 23)
         Me.btnAbrir.TabIndex = 6
-        Me.btnAbrir.Text = "Abrir"
-        Me.btnAbrir.UseVisualStyleBackColor = True
+        Me.btnAbrir.Text = "Ingreso Usuarios"
+        Me.btnAbrir.UseVisualStyleBackColor = False
         '
-        'Label2
+        'Panel1
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(633, 49)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 13)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Menu de Usuario"
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.BtnConsEnferm)
+        Me.Panel1.Controls.Add(Me.btnAbrir)
+        Me.Panel1.Controls.Add(Me.btnRegPaciente)
+        Me.Panel1.Controls.Add(Me.btnConsMedico)
+        Me.Panel1.Controls.Add(Me.btnReporte)
+        Me.Panel1.Controls.Add(Me.btnRegCita)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Location = New System.Drawing.Point(-4, 2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(603, 424)
+        Me.Panel1.TabIndex = 8
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Proyecto._1Medico.My.Resources.Resources.Hospital
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 40)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(598, 259)
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
         '
         'FormMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnAbrir)
-        Me.Controls.Add(Me.btnReporte)
-        Me.Controls.Add(Me.BtnConsEnferm)
-        Me.Controls.Add(Me.btnConsMedico)
-        Me.Controls.Add(Me.btnRegCita)
-        Me.Controls.Add(Me.btnRegPaciente)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(598, 423)
+        Me.Controls.Add(Me.Panel1)
         Me.Name = "FormMenu"
         Me.Text = "FormMenu"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -131,5 +153,6 @@ Partial Class FormMenu
     Friend WithEvents BtnConsEnferm As Button
     Friend WithEvents btnReporte As Button
     Friend WithEvents btnAbrir As Button
-    Friend WithEvents Label2 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
