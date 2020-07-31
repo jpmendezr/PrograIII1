@@ -194,4 +194,10 @@
         End Try
 
     End Sub
+
+    Private Sub BtnRegrsar_Click(sender As Object, e As EventArgs) Handles BtnRegrsar.Click
+        FormMenu = New FormMenu()
+        FormMenu.Show()
+        Me.Dispose()
+    End Sub
 End Class
