@@ -151,18 +151,6 @@ advertencia 6035: La relación 'FK_ConsultaMedica_Paciente' tiene columnas que n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ConsultaMedica_TbCita">
-          <End Role="TbCita" Type="Self.TbCita" Multiplicity="1" />
-          <End Role="TbConsultaMedica" Type="Self.TbConsultaMedica" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TbCita">
-              <PropertyRef Name="IdCita" />
-            </Principal>
-            <Dependent Role="TbConsultaMedica">
-              <PropertyRef Name="IdCita" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <!--Errores durante la generación:
 advertencia 6035: La relación 'FK_ConsultaMedica_TbPersonalInterno' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
         <Association Name="FK_ConsultaMedica_TbPersonalInterno" />-->
@@ -234,10 +222,6 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           </AssociationSet>
           <AssociationSet Name="FK_ConsultaMedica_TbChequeoMedicamentos" Association="Self.FK_ConsultaMedica_TbChequeoMedicamentos">
             <End Role="TbChequeoMedicamentos" EntitySet="TbChequeoMedicamentos" />
-            <End Role="TbConsultaMedica" EntitySet="TbConsultaMedica" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ConsultaMedica_TbCita" Association="Self.FK_ConsultaMedica_TbCita">
-            <End Role="TbCita" EntitySet="TbCita" />
             <End Role="TbConsultaMedica" EntitySet="TbConsultaMedica" />
           </AssociationSet>
           <AssociationSet Name="FK_TbChequeoMedicamentos_Medicamento" Association="Self.FK_TbChequeoMedicamentos_Medicamento">
