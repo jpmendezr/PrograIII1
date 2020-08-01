@@ -15,7 +15,7 @@ Partial Public Class TbFamiliarPaciente
     Public Property CedulaPaciente As String
     Public Property Parentesco As String
     Public Property NombreCompleto As String
-    Public Property Telefono As String
+    Public Property TelefonoFamiliar As String
     Public Property Direccion As String
     Public Property TelefonoFamiliar As String
 

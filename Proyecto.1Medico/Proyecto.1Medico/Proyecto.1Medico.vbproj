@@ -14,6 +14,21 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -132,12 +147,6 @@
     <Compile Include="FRMChequeoExamen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRMChequeoMedicamentos.Designer.vb">
-      <DependentUpon>FRMChequeoMedicamentos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FRMChequeoMedicamentos.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FRM_Enfermeria.Designer.vb">
       <DependentUpon>FRM_Enfermeria.vb</DependentUpon>
     </Compile>
@@ -156,7 +165,6 @@
     <Compile Include="f_sp_MostrarPersonal_Result1.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
-    <Compile Include="Medicamentos.vb" />
     <Compile Include="MostrarPersona_Result.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
@@ -261,9 +269,6 @@
     <EmbeddedResource Include="FRMChequeoExamen.resx">
       <DependentUpon>FRMChequeoExamen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRMChequeoMedicamentos.resx">
-      <DependentUpon>FRMChequeoMedicamentos.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FRM_Enfermeria.resx">
       <DependentUpon>FRM_Enfermeria.vb</DependentUpon>
     </EmbeddedResource>
@@ -309,8 +314,8 @@
   <ItemGroup>
     <Content Include="ProyectoMedico.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ProyectoMedico.Context.vb</LastGenOutput>
       <DependentUpon>ProyectoMedico.edmx</DependentUpon>
+      <LastGenOutput>ProyectoMedico.Context.vb</LastGenOutput>
     </Content>
     <Content Include="ProyectoMedico.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -320,6 +325,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

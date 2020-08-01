@@ -11,20 +11,10 @@ Public Class Paciente
     Private TelefonoPaciente As String
     Private correo As String
 
-
-    'informacion del familiar'
     Private NombreFamiliar As String
     Private TipoFamiliar As String
     Private Telefono As String
     Private Direccion As String
-
-
-    ' variables base de datos 
-    Private cmb As SqlCommandBuilder
-    Public ds As DataSet = New DataSet()
-    Public da As SqlDataAdapter
-    Public comand As SqlCommand
-
 
     Public Property pro_Cedula1 As String
         Get
@@ -145,7 +135,7 @@ Public Class Paciente
                 End If
             End Using
         Catch ex As Exception
-            resultado = 0
+            MessageBox.Show("Error Persona")
         End Try
 
     End Sub
@@ -166,16 +156,16 @@ Public Class Paciente
                 End If
             End Using
         Catch ex As Exception
-            resultado = 0
+            MessageBox.Show("Error Paciente")
         End Try
 
     End Function
 
     Public Function RegistrarFamiliar() As Boolean
-        Dim resultado As Integer = 0
+        Dim resultado As Integer
         Try
             Using registro As New BdCentroMedicoEntities
-                Dim NuevoRegistro As New TbFamiliarPaciente With {.CedulaPaciente = cedula, .Parentesco = TipoFamiliar, .NombreCompleto = NombreFamiliar, .Telefono = Telefono, .Direccion = Direccion}
+                Dim NuevoRegistro As New TbFamiliarPaciente With {.CedulaPaciente = cedula, .Parentesco = TipoFamiliar, .NombreCompleto = NombreFamiliar, .TelefonoFamiliar = Telefono, .Direccion = Direccion}
                 registro.TbFamiliarPaciente.Add(NuevoRegistro)
                 resultado = registro.SaveChanges
                 If resultado > 0 Then
@@ -186,7 +176,8 @@ Public Class Paciente
                 End If
             End Using
         Catch ex As Exception
-            resultado = 0
+
+            MessageBox.Show("Error Familiar")
         End Try
 
     End Function
@@ -209,8 +200,7 @@ Public Class Paciente
                 End If
             End Using
         Catch ex As Exception
-            resul = 0
-            MessageBox.Show(ex.Message.ToString)
+            MessageBox.Show("Error Actualizar")
 
         End Try
     End Sub
@@ -221,7 +211,7 @@ Public Class Paciente
             Using actualizar As New BdCentroMedicoEntities
                 Dim act = (From ac In actualizar.TbFamiliarPaciente Where ac.CedulaPaciente = cedula Select ac).SingleOrDefault
                 If Not IsNothing(act) Then
-                    act.Telefono = Telefono
+                    act.TelefonoFamiliar = Telefono
                     act.Direccion = Direccion
                     actualizar.SaveChanges()
                     Return True
@@ -251,7 +241,7 @@ Public Class Paciente
 
             End Using
         Catch ex As Exception
-            resultado = 0
+            MessageBox.Show("Error Eliminar")
         End Try
     End Sub
 
@@ -268,7 +258,7 @@ Public Class Paciente
 
             End Using
         Catch ex As Exception
-            resultado = 0
+            MessageBox.Show("Error Eliminar Familiar")
         End Try
     End Sub
     Public Sub EliminarPaciente()
@@ -284,7 +274,7 @@ Public Class Paciente
 
             End Using
         Catch ex As Exception
-            resultado = 0
+            MessageBox.Show("Error  Eliminar Paciente")
         End Try
     End Sub
 

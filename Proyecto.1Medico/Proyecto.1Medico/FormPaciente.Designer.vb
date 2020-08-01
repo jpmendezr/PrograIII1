@@ -24,6 +24,9 @@ Partial Class FormPaciente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPaciente))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.label = New System.Windows.Forms.Label()
         Me.ComboBoxDia = New System.Windows.Forms.ComboBox()
         Me.ComboBoxMes = New System.Windows.Forms.ComboBox()
         Me.ComboBoxAño = New System.Windows.Forms.ComboBox()
@@ -60,9 +63,7 @@ Partial Class FormPaciente
         Me.BtnMostrar = New System.Windows.Forms.Button()
         Me.ACT = New System.Windows.Forms.Button()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.label = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.BtnRegrsar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,6 +96,33 @@ Partial Class FormPaciente
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(793, 166)
         Me.Panel1.TabIndex = 0
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(109, 94)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(26, 13)
+        Me.Label6.TabIndex = 41
+        Me.Label6.Text = "Año"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(54, 94)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(27, 13)
+        Me.Label5.TabIndex = 40
+        Me.Label5.Text = "Mes"
+        '
+        'label
+        '
+        Me.label.AutoSize = True
+        Me.label.Location = New System.Drawing.Point(0, 94)
+        Me.label.Name = "label"
+        Me.label.Size = New System.Drawing.Size(23, 13)
+        Me.label.TabIndex = 39
+        Me.label.Text = "Dia"
         '
         'ComboBoxDia
         '
@@ -269,7 +297,7 @@ Partial Class FormPaciente
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(671, 41)
+        Me.Label15.Location = New System.Drawing.Point(650, 41)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(68, 15)
         Me.Label15.TabIndex = 8
@@ -282,13 +310,13 @@ Partial Class FormPaciente
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(63, 15)
         Me.Label14.TabIndex = 7
-        Me.Label14.Text = "Telefono"
+        Me.Label14.Text = "Teléfono"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label10.ForeColor = System.Drawing.Color.White
         Me.Label10.Location = New System.Drawing.Point(282, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(255, 20)
@@ -315,20 +343,23 @@ Partial Class FormPaciente
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(553, 68)
+        Me.txtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDireccion.Location = New System.Drawing.Point(553, 65)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(233, 21)
         Me.txtDireccion.TabIndex = 3
         '
         'txtTelefonoFamiliar
         '
-        Me.txtTelefonoFamiliar.Location = New System.Drawing.Point(411, 68)
+        Me.txtTelefonoFamiliar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefonoFamiliar.Location = New System.Drawing.Point(411, 65)
         Me.txtTelefonoFamiliar.Name = "txtTelefonoFamiliar"
         Me.txtTelefonoFamiliar.Size = New System.Drawing.Size(126, 21)
         Me.txtTelefonoFamiliar.TabIndex = 2
         '
         'txtrelacion
         '
+        Me.txtrelacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtrelacion.Location = New System.Drawing.Point(258, 65)
         Me.txtrelacion.Name = "txtrelacion"
         Me.txtrelacion.Size = New System.Drawing.Size(137, 21)
@@ -336,6 +367,7 @@ Partial Class FormPaciente
         '
         'txtFamiliar
         '
+        Me.txtFamiliar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFamiliar.Location = New System.Drawing.Point(-2, 65)
         Me.txtFamiliar.Name = "txtFamiliar"
         Me.txtFamiliar.Size = New System.Drawing.Size(254, 21)
@@ -353,7 +385,7 @@ Partial Class FormPaciente
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(295, 7)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(179, 40)
@@ -364,7 +396,7 @@ Partial Class FormPaciente
         '
         Me.BtnElimino.BackColor = System.Drawing.Color.Aqua
         Me.BtnElimino.Image = Global.Proyecto._1Medico.My.Resources.Resources.eliminar
-        Me.BtnElimino.Location = New System.Drawing.Point(657, 492)
+        Me.BtnElimino.Location = New System.Drawing.Point(694, 492)
         Me.BtnElimino.Name = "BtnElimino"
         Me.BtnElimino.Size = New System.Drawing.Size(120, 23)
         Me.BtnElimino.TabIndex = 7
@@ -392,7 +424,7 @@ Partial Class FormPaciente
         '
         Me.BtnLupa.BackColor = System.Drawing.Color.Aqua
         Me.BtnLupa.Image = Global.Proyecto._1Medico.My.Resources.Resources.lupa
-        Me.BtnLupa.Location = New System.Drawing.Point(517, 492)
+        Me.BtnLupa.Location = New System.Drawing.Point(549, 492)
         Me.BtnLupa.Name = "BtnLupa"
         Me.BtnLupa.Size = New System.Drawing.Size(97, 23)
         Me.BtnLupa.TabIndex = 9
@@ -401,7 +433,7 @@ Partial Class FormPaciente
         'BtnMostrar
         '
         Me.BtnMostrar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnMostrar.Location = New System.Drawing.Point(364, 492)
+        Me.BtnMostrar.Location = New System.Drawing.Point(347, 492)
         Me.BtnMostrar.Name = "BtnMostrar"
         Me.BtnMostrar.Size = New System.Drawing.Size(98, 23)
         Me.BtnMostrar.TabIndex = 10
@@ -411,45 +443,30 @@ Partial Class FormPaciente
         'ACT
         '
         Me.ACT.BackColor = System.Drawing.Color.Aqua
-        Me.ACT.Location = New System.Drawing.Point(214, 492)
+        Me.ACT.Image = Global.Proyecto._1Medico.My.Resources.Resources.update
+        Me.ACT.Location = New System.Drawing.Point(178, 492)
         Me.ACT.Name = "ACT"
-        Me.ACT.Size = New System.Drawing.Size(75, 23)
+        Me.ACT.Size = New System.Drawing.Size(88, 23)
         Me.ACT.TabIndex = 23
-        Me.ACT.Text = "Actualizar"
         Me.ACT.UseVisualStyleBackColor = False
         '
-        'label
+        'BtnRegrsar
         '
-        Me.label.AutoSize = True
-        Me.label.Location = New System.Drawing.Point(0, 94)
-        Me.label.Name = "label"
-        Me.label.Size = New System.Drawing.Size(23, 13)
-        Me.label.TabIndex = 39
-        Me.label.Text = "Dia"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(54, 94)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(27, 13)
-        Me.Label5.TabIndex = 40
-        Me.Label5.Text = "Mes"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(109, 94)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(26, 13)
-        Me.Label6.TabIndex = 41
-        Me.Label6.Text = "Año"
+        Me.BtnRegrsar.BackColor = System.Drawing.Color.Cyan
+        Me.BtnRegrsar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnRegrsar.Location = New System.Drawing.Point(0, 1)
+        Me.BtnRegrsar.Name = "BtnRegrsar"
+        Me.BtnRegrsar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnRegrsar.TabIndex = 24
+        Me.BtnRegrsar.Text = "Regresar"
+        Me.BtnRegrsar.UseVisualStyleBackColor = False
         '
         'FormPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(814, 516)
+        Me.Controls.Add(Me.BtnRegrsar)
         Me.Controls.Add(Me.ACT)
         Me.Controls.Add(Me.BtnMostrar)
         Me.Controls.Add(Me.BtnLupa)
@@ -514,4 +531,5 @@ Partial Class FormPaciente
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents label As Label
+    Friend WithEvents BtnRegrsar As Button
 End Class

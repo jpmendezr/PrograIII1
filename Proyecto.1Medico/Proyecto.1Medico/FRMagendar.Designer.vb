@@ -33,23 +33,21 @@ Partial Class FRMagendar
         Me.TextNMedico = New System.Windows.Forms.TextBox()
         Me.TextCedula = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.BtnCitas = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBoxDia = New System.Windows.Forms.TextBox()
-        Me.TextBoxMes = New System.Windows.Forms.TextBox()
-        Me.TextBoxAño = New System.Windows.Forms.TextBox()
         Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.BtnRegresar = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ComboBoxMes = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxAño = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxDia = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnEliminar
         '
         Me.BtnEliminar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnEliminar.Location = New System.Drawing.Point(571, 415)
+        Me.BtnEliminar.Location = New System.Drawing.Point(529, 415)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(120, 23)
         Me.BtnEliminar.TabIndex = 0
@@ -70,7 +68,7 @@ Partial Class FRMagendar
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(209, 22)
+        Me.Label2.Location = New System.Drawing.Point(179, 22)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(38, 15)
         Me.Label2.TabIndex = 2
@@ -80,7 +78,7 @@ Partial Class FRMagendar
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(351, 22)
+        Me.Label3.Location = New System.Drawing.Point(305, 22)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(90, 15)
         Me.Label3.TabIndex = 3
@@ -90,7 +88,7 @@ Partial Class FRMagendar
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(480, 22)
+        Me.Label4.Location = New System.Drawing.Point(429, 22)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(133, 15)
         Me.Label4.TabIndex = 4
@@ -100,7 +98,7 @@ Partial Class FRMagendar
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(675, 22)
+        Me.Label5.Location = New System.Drawing.Point(619, 22)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(136, 15)
         Me.Label5.TabIndex = 5
@@ -108,21 +106,21 @@ Partial Class FRMagendar
         '
         'TextHora
         '
-        Me.TextHora.Location = New System.Drawing.Point(212, 53)
+        Me.TextHora.Location = New System.Drawing.Point(182, 53)
         Me.TextHora.Name = "TextHora"
         Me.TextHora.Size = New System.Drawing.Size(100, 20)
         Me.TextHora.TabIndex = 6
         '
         'TextEspecialidad
         '
-        Me.TextEspecialidad.Location = New System.Drawing.Point(354, 53)
+        Me.TextEspecialidad.Location = New System.Drawing.Point(308, 53)
         Me.TextEspecialidad.Name = "TextEspecialidad"
         Me.TextEspecialidad.Size = New System.Drawing.Size(100, 20)
         Me.TextEspecialidad.TabIndex = 7
         '
         'TextNMedico
         '
-        Me.TextNMedico.Location = New System.Drawing.Point(483, 53)
+        Me.TextNMedico.Location = New System.Drawing.Point(432, 53)
         Me.TextNMedico.Multiline = True
         Me.TextNMedico.Name = "TextNMedico"
         Me.TextNMedico.Size = New System.Drawing.Size(167, 20)
@@ -130,7 +128,7 @@ Partial Class FRMagendar
         '
         'TextCedula
         '
-        Me.TextCedula.Location = New System.Drawing.Point(678, 53)
+        Me.TextCedula.Location = New System.Drawing.Point(622, 53)
         Me.TextCedula.Name = "TextCedula"
         Me.TextCedula.Size = New System.Drawing.Size(155, 20)
         Me.TextCedula.TabIndex = 9
@@ -139,26 +137,16 @@ Partial Class FRMagendar
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(16, 108)
+        Me.Label6.Location = New System.Drawing.Point(346, 139)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(123, 15)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Citas Disponibles:"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(388, 108)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(110, 15)
-        Me.Label7.TabIndex = 14
-        Me.Label7.Text = "Actualizar Citas:"
-        '
         'BtnActualizar
         '
         Me.BtnActualizar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnActualizar.Location = New System.Drawing.Point(392, 415)
+        Me.BtnActualizar.Location = New System.Drawing.Point(362, 415)
         Me.BtnActualizar.Name = "BtnActualizar"
         Me.BtnActualizar.Size = New System.Drawing.Size(75, 23)
         Me.BtnActualizar.TabIndex = 15
@@ -175,37 +163,6 @@ Partial Class FRMagendar
         Me.BtnCitas.Text = "Citas Disponibles"
         Me.BtnCitas.UseVisualStyleBackColor = False
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(731, 108)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(97, 15)
-        Me.Label8.TabIndex = 18
-        Me.Label8.Text = "Elminar Citas:"
-        '
-        'TextBoxDia
-        '
-        Me.TextBoxDia.Location = New System.Drawing.Point(19, 53)
-        Me.TextBoxDia.Name = "TextBoxDia"
-        Me.TextBoxDia.Size = New System.Drawing.Size(40, 20)
-        Me.TextBoxDia.TabIndex = 21
-        '
-        'TextBoxMes
-        '
-        Me.TextBoxMes.Location = New System.Drawing.Point(65, 53)
-        Me.TextBoxMes.Name = "TextBoxMes"
-        Me.TextBoxMes.Size = New System.Drawing.Size(40, 20)
-        Me.TextBoxMes.TabIndex = 22
-        '
-        'TextBoxAño
-        '
-        Me.TextBoxAño.Location = New System.Drawing.Point(111, 53)
-        Me.TextBoxAño.Name = "TextBoxAño"
-        Me.TextBoxAño.Size = New System.Drawing.Size(40, 20)
-        Me.TextBoxAño.TabIndex = 23
-        '
         'BtnAgregar
         '
         Me.BtnAgregar.BackColor = System.Drawing.Color.Aqua
@@ -219,7 +176,7 @@ Partial Class FRMagendar
         'BtnRegresar
         '
         Me.BtnRegresar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnRegresar.Location = New System.Drawing.Point(713, 415)
+        Me.BtnRegresar.Location = New System.Drawing.Point(670, 415)
         Me.BtnRegresar.Name = "BtnRegresar"
         Me.BtnRegresar.Size = New System.Drawing.Size(120, 23)
         Me.BtnRegresar.TabIndex = 25
@@ -229,27 +186,55 @@ Partial Class FRMagendar
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 170)
+        Me.DataGridView1.Location = New System.Drawing.Point(80, 167)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(833, 210)
+        Me.DataGridView1.Size = New System.Drawing.Size(643, 210)
         Me.DataGridView1.TabIndex = 26
+        '
+        'ComboBoxMes
+        '
+        Me.ComboBoxMes.FormattingEnabled = True
+        Me.ComboBoxMes.Items.AddRange(New Object() {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"})
+        Me.ComboBoxMes.Location = New System.Drawing.Point(66, 53)
+        Me.ComboBoxMes.Name = "ComboBoxMes"
+        Me.ComboBoxMes.Size = New System.Drawing.Size(44, 21)
+        Me.ComboBoxMes.TabIndex = 40
+        Me.ComboBoxMes.Text = "mes"
+        '
+        'ComboBoxAño
+        '
+        Me.ComboBoxAño.FormattingEnabled = True
+        Me.ComboBoxAño.Items.AddRange(New Object() {"2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045", "2046", "2047", "2048", "2049", "2050", "2051", "2052", "2053", "2054", "2055", "2056", "2057", "2058", "2059", "2060", "2061", "2062", "2063", "2064", "2065", "2066", "2067", "2068", "2069", "2070", "2071", "2072", "2073", "2074", "2075", "2076", "2077", "2078", "2079", "2080", "2081", "2082", "2083", "2084", "2085", "2086", "2087", "2088", "2089", "2090", "2091", "2092", "2093", "2094", "2095", "2096", "2097", "2098", "2099", "2100", "2101", "2102", "2103", "2104", "2105", "2106", "2107", "2108", "2109"})
+        Me.ComboBoxAño.Location = New System.Drawing.Point(116, 53)
+        Me.ComboBoxAño.Name = "ComboBoxAño"
+        Me.ComboBoxAño.Size = New System.Drawing.Size(51, 21)
+        Me.ComboBoxAño.TabIndex = 41
+        Me.ComboBoxAño.Text = "año"
+        '
+        'ComboBoxDia
+        '
+        Me.ComboBoxDia.FormattingEnabled = True
+        Me.ComboBoxDia.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"})
+        Me.ComboBoxDia.Location = New System.Drawing.Point(16, 53)
+        Me.ComboBoxDia.Name = "ComboBoxDia"
+        Me.ComboBoxDia.Size = New System.Drawing.Size(41, 21)
+        Me.ComboBoxDia.TabIndex = 42
+        Me.ComboBoxDia.Text = "dia"
         '
         'FRMagendar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(857, 450)
+        Me.ClientSize = New System.Drawing.Size(802, 450)
+        Me.Controls.Add(Me.ComboBoxDia)
+        Me.Controls.Add(Me.ComboBoxAño)
+        Me.Controls.Add(Me.ComboBoxMes)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.BtnRegresar)
         Me.Controls.Add(Me.BtnAgregar)
-        Me.Controls.Add(Me.TextBoxAño)
-        Me.Controls.Add(Me.TextBoxMes)
-        Me.Controls.Add(Me.TextBoxDia)
-        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.BtnCitas)
         Me.Controls.Add(Me.BtnActualizar)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextCedula)
         Me.Controls.Add(Me.TextNMedico)
@@ -262,6 +247,7 @@ Partial Class FRMagendar
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnEliminar)
         Me.Name = "FRMagendar"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agendar Citas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -280,14 +266,12 @@ Partial Class FRMagendar
     Friend WithEvents TextNMedico As TextBox
     Friend WithEvents TextCedula As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents BtnActualizar As Button
     Friend WithEvents BtnCitas As Button
-    Friend WithEvents Label8 As Label
-    Friend WithEvents TextBoxDia As TextBox
-    Friend WithEvents TextBoxMes As TextBox
-    Friend WithEvents TextBoxAño As TextBox
     Friend WithEvents BtnAgregar As Button
     Friend WithEvents BtnRegresar As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ComboBoxMes As ComboBox
+    Friend WithEvents ComboBoxAño As ComboBox
+    Friend WithEvents ComboBoxDia As ComboBox
 End Class
