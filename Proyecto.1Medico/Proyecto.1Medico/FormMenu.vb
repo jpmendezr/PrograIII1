@@ -51,6 +51,7 @@
     End Sub
 
     Private Sub btnConsMedico_Click(sender As Object, e As EventArgs) Handles btnConsMedico.Click
+        Me.Hide()
         FormConsultorio = New FormConsultorio
         FormConsultorio.Show()
 

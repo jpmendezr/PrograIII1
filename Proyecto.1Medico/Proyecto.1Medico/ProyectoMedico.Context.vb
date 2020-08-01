@@ -43,8 +43,28 @@ Partial Public Class BdCentroMedicoEntities
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of f_sp_BuscarPersonal_Result1)("f_sp_BuscarPersonal", ceduParameter)
     End Function
 
+    Friend Function mostrar_tablas() As Object
+        Throw New NotImplementedException()
+    End Function
+
     Public Overridable Function f_sp_MostrarPersonal() As ObjectResult(Of f_sp_MostrarPersonal_Result1)
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of f_sp_MostrarPersonal_Result1)("f_sp_MostrarPersonal")
+    End Function
+
+    Public Overridable Function BuscarPersona(cedulas As String) As ObjectResult(Of BuscarPersona_Result)
+        Dim cedulasParameter As ObjectParameter = If(cedulas IsNot Nothing, New ObjectParameter("cedulas", cedulas), New ObjectParameter("cedulas", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of BuscarPersona_Result)("BuscarPersona", cedulasParameter)
+    End Function
+
+    Public Overridable Function mostrar_tablas(cedula As String) As ObjectResult(Of mostrar_tablas_Result)
+        Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of mostrar_tablas_Result)("mostrar_tablas", cedulaParameter)
+    End Function
+
+    Public Overridable Function MostrarPersona() As ObjectResult(Of MostrarPersona_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of MostrarPersona_Result)("MostrarPersona")
     End Function
 
 End Class

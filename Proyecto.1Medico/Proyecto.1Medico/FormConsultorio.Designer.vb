@@ -22,10 +22,12 @@ Partial Class FormConsultorio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Btnagregar = New System.Windows.Forms.Button()
+        Me.Btnregresar = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtsintomas = New System.Windows.Forms.RichTextBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txtsangre = New System.Windows.Forms.TextBox()
+        Me.txtorina = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Txtcedula = New System.Windows.Forms.TextBox()
@@ -36,35 +38,35 @@ Partial Class FormConsultorio
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ListSintomas = New System.Windows.Forms.ListBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.btnRegresar = New System.Windows.Forms.Button()
+        Me.Btnmostrar = New System.Windows.Forms.Button()
         Me.BtnActualizar = New System.Windows.Forms.Button()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
+        Me.BtnMedicamentos = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Btnexamen = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Btnagregar
+        'Btnregresar
         '
-        Me.Btnagregar.BackColor = System.Drawing.Color.Aqua
-        Me.Btnagregar.Location = New System.Drawing.Point(549, 473)
-        Me.Btnagregar.Name = "Btnagregar"
-        Me.Btnagregar.Size = New System.Drawing.Size(75, 23)
-        Me.Btnagregar.TabIndex = 8
-        Me.Btnagregar.Text = "Agregar"
-        Me.Btnagregar.UseVisualStyleBackColor = False
+        Me.Btnregresar.BackColor = System.Drawing.Color.Aqua
+        Me.Btnregresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnregresar.Location = New System.Drawing.Point(521, 473)
+        Me.Btnregresar.Name = "Btnregresar"
+        Me.Btnregresar.Size = New System.Drawing.Size(75, 23)
+        Me.Btnregresar.TabIndex = 8
+        Me.Btnregresar.Text = "Regresar"
+        Me.Btnregresar.UseVisualStyleBackColor = False
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel2.Controls.Add(Me.txtsintomas)
         Me.Panel2.Controls.Add(Me.DataGridView1)
-        Me.Panel2.Controls.Add(Me.TextBox2)
-        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.txtsangre)
+        Me.Panel2.Controls.Add(Me.txtorina)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Txtcedula)
@@ -75,32 +77,47 @@ Partial Class FormConsultorio
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Controls.Add(Me.ListSintomas)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Location = New System.Drawing.Point(12, 47)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(724, 402)
         Me.Panel2.TabIndex = 1
         '
-        'TextBox2
+        'txtsintomas
         '
-        Me.TextBox2.Location = New System.Drawing.Point(168, 97)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 15
+        Me.txtsintomas.Location = New System.Drawing.Point(16, 160)
+        Me.txtsintomas.Name = "txtsintomas"
+        Me.txtsintomas.Size = New System.Drawing.Size(307, 82)
+        Me.txtsintomas.TabIndex = 17
+        Me.txtsintomas.Text = ""
         '
-        'TextBox1
+        'DataGridView1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(16, 97)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 14
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 268)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(649, 110)
+        Me.DataGridView1.TabIndex = 16
+        '
+        'txtsangre
+        '
+        Me.txtsangre.Location = New System.Drawing.Point(16, 97)
+        Me.txtsangre.Name = "txtsangre"
+        Me.txtsangre.Size = New System.Drawing.Size(100, 20)
+        Me.txtsangre.TabIndex = 15
+        '
+        'txtorina
+        '
+        Me.txtorina.Location = New System.Drawing.Point(168, 97)
+        Me.txtorina.Name = "txtorina"
+        Me.txtorina.Size = New System.Drawing.Size(100, 20)
+        Me.txtorina.TabIndex = 14
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(165, 70)
+        Me.Label2.Location = New System.Drawing.Point(13, 70)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(107, 15)
         Me.Label2.TabIndex = 13
@@ -110,7 +127,7 @@ Partial Class FormConsultorio
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(13, 70)
+        Me.Label1.Location = New System.Drawing.Point(165, 70)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(98, 15)
         Me.Label1.TabIndex = 12
@@ -135,7 +152,7 @@ Partial Class FormConsultorio
         '
         'TxtDiagnostico
         '
-        Me.TxtDiagnostico.Location = New System.Drawing.Point(358, 169)
+        Me.TxtDiagnostico.Location = New System.Drawing.Point(358, 160)
         Me.TxtDiagnostico.Name = "TxtDiagnostico"
         Me.TxtDiagnostico.Size = New System.Drawing.Size(307, 82)
         Me.TxtDiagnostico.TabIndex = 9
@@ -187,14 +204,6 @@ Partial Class FormConsultorio
         Me.Label7.TabIndex = 3
         Me.Label7.Text = "Diagnóstico"
         '
-        'ListSintomas
-        '
-        Me.ListSintomas.FormattingEnabled = True
-        Me.ListSintomas.Location = New System.Drawing.Point(16, 169)
-        Me.ListSintomas.Name = "ListSintomas"
-        Me.ListSintomas.Size = New System.Drawing.Size(297, 82)
-        Me.ListSintomas.TabIndex = 1
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -205,19 +214,21 @@ Partial Class FormConsultorio
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Sintomas Mostrados"
         '
-        'btnRegresar
+        'Btnmostrar
         '
-        Me.btnRegresar.BackColor = System.Drawing.Color.Aqua
-        Me.btnRegresar.Location = New System.Drawing.Point(411, 473)
-        Me.btnRegresar.Name = "btnRegresar"
-        Me.btnRegresar.Size = New System.Drawing.Size(75, 23)
-        Me.btnRegresar.TabIndex = 9
-        Me.btnRegresar.Text = "Mostrar"
-        Me.btnRegresar.UseVisualStyleBackColor = False
+        Me.Btnmostrar.BackColor = System.Drawing.Color.Aqua
+        Me.Btnmostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnmostrar.Location = New System.Drawing.Point(411, 473)
+        Me.Btnmostrar.Name = "Btnmostrar"
+        Me.Btnmostrar.Size = New System.Drawing.Size(75, 23)
+        Me.Btnmostrar.TabIndex = 9
+        Me.Btnmostrar.Text = "Mostrar"
+        Me.Btnmostrar.UseVisualStyleBackColor = False
         '
         'BtnActualizar
         '
         Me.BtnActualizar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnActualizar.Location = New System.Drawing.Point(55, 473)
         Me.BtnActualizar.Name = "BtnActualizar"
         Me.BtnActualizar.Size = New System.Drawing.Size(75, 23)
@@ -225,15 +236,16 @@ Partial Class FormConsultorio
         Me.BtnActualizar.Text = "Actualizar"
         Me.BtnActualizar.UseVisualStyleBackColor = False
         '
-        'BtnEliminar
+        'BtnMedicamentos
         '
-        Me.BtnEliminar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnEliminar.Location = New System.Drawing.Point(165, 473)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(88, 23)
-        Me.BtnEliminar.TabIndex = 11
-        Me.BtnEliminar.Text = "Medicamentos"
-        Me.BtnEliminar.UseVisualStyleBackColor = False
+        Me.BtnMedicamentos.BackColor = System.Drawing.Color.Aqua
+        Me.BtnMedicamentos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMedicamentos.Location = New System.Drawing.Point(165, 473)
+        Me.BtnMedicamentos.Name = "BtnMedicamentos"
+        Me.BtnMedicamentos.Size = New System.Drawing.Size(99, 23)
+        Me.BtnMedicamentos.TabIndex = 11
+        Me.BtnMedicamentos.Text = "Medicamentos"
+        Me.BtnMedicamentos.UseVisualStyleBackColor = False
         '
         'Label11
         '
@@ -249,6 +261,7 @@ Partial Class FormConsultorio
         'Btnexamen
         '
         Me.Btnexamen.BackColor = System.Drawing.Color.Aqua
+        Me.Btnexamen.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnexamen.Location = New System.Drawing.Point(292, 473)
         Me.Btnexamen.Name = "Btnexamen"
         Me.Btnexamen.Size = New System.Drawing.Size(75, 23)
@@ -256,25 +269,17 @@ Partial Class FormConsultorio
         Me.Btnexamen.Text = "Examenes"
         Me.Btnexamen.UseVisualStyleBackColor = False
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 268)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(649, 110)
-        Me.DataGridView1.TabIndex = 16
-        '
         'FormConsultorio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(748, 508)
         Me.Controls.Add(Me.Btnexamen)
-        Me.Controls.Add(Me.Btnagregar)
+        Me.Controls.Add(Me.Btnregresar)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.BtnEliminar)
+        Me.Controls.Add(Me.BtnMedicamentos)
         Me.Controls.Add(Me.BtnActualizar)
-        Me.Controls.Add(Me.btnRegresar)
+        Me.Controls.Add(Me.Btnmostrar)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "FormConsultorio"
         Me.Text = "FormConsultorio"
@@ -285,7 +290,7 @@ Partial Class FormConsultorio
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Btnagregar As Button
+    Friend WithEvents Btnregresar As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents TxtDiagnostico As RichTextBox
     Friend WithEvents txtMedicamentosAdminis As RichTextBox
@@ -293,18 +298,18 @@ Partial Class FormConsultorio
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents ListSintomas As ListBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents btnRegresar As Button
+    Friend WithEvents Btnmostrar As Button
     Friend WithEvents BtnActualizar As Button
-    Friend WithEvents BtnEliminar As Button
+    Friend WithEvents BtnMedicamentos As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents Txtcedula As TextBox
     Friend WithEvents label As Label
     Friend WithEvents Btnexamen As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtsangre As TextBox
+    Friend WithEvents txtorina As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents txtsintomas As RichTextBox
 End Class
