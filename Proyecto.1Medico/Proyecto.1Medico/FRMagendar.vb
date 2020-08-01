@@ -13,6 +13,11 @@
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BtnCitas.Click
         'Btn citas disponibles
+
+        MostrarCitas()
+    End Sub
+
+    Public Sub MostrarCitas()
         Try
             Using selexion As New BdCentroMedicoEntities
                 Dim mostrar = (From se In selexion.TbCita Take (1000) Select se).ToList
@@ -26,9 +31,7 @@
         Catch ex As Exception
             MsgBox(ex.Message.ToString)
         End Try
-
     End Sub
-
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
         'Btn de agregar a la base de datos.
         ' Validaciones de la agregacion en la base de datos.
@@ -36,7 +39,7 @@
             MsgBox(" no puede ingresar numeros")
         Else
             If Information.IsDate(Me.TextHora.Text) And Information.IsNumeric(Me.TextCedula.Text) Then
-                If ReservarCita() Then
+                If ReservarCita() And agenda.ConsultaHora() And agenda.ConsultaFecha Then
                     agenda.EspecialidadM1 = Me.TextEspecialidad.Text
                     agenda.NombreM1 = Me.TextNMedico.Text
                     agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
@@ -76,6 +79,7 @@
         Me.ComboBoxDia.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 
+
     Function ReservarCita() As Boolean
 
         'Select de verificar valores.
@@ -99,4 +103,8 @@
         End Try
 
     End Function
+
+    Private Sub FRMagendar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MostrarCitas()
+    End Sub
 End Class
