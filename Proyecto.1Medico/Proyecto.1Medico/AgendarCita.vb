@@ -5,6 +5,7 @@
     Private EspecialidadM As String
     Private NombreM As String 'nombre medico
     Private cedulaP As String 'cedula paciente 
+    Private Id As Integer 'Id de la persona
 
     Public Property EspecialidadM1 As String
         Get
@@ -51,11 +52,20 @@
         End Set
     End Property
 
+    Public Property Id1 As Integer
+        Get
+            Return Id
+        End Get
+        Set(value As Integer)
+            Id = value
+        End Set
+    End Property
+
     Public Sub eliminarDatos()
         'Eliminar
         Try
             Using eleminar As New BdCentroMedicoEntities
-                Dim delete = (From e In eleminar.TbCita Where e.CedulaPaciente = cedulaP Select e).SingleOrDefault
+                Dim delete = (From e In eleminar.TbCita Where e.IdCita = Id Select e).SingleOrDefault
                 If Not IsNothing(delete) Then
                     eleminar.TbCita.Remove(delete)
                     eleminar.SaveChanges()
@@ -71,9 +81,9 @@
     Public Sub ActualizarCita()
         Try
             Using actualizar As New BdCentroMedicoEntities
-                Dim act = (From ac In actualizar.TbCita Where ac.CedulaPaciente = cedulaP Select ac).SingleOrDefault
+                Dim act = (From ac In actualizar.TbCita Where ac.IdCita = Id Select ac).SingleOrDefault
                 If Not IsNothing(act) Then
-                    act.CedulaPaciente = cedulaP
+                    'act.CedulaPaciente = cedulaP
                     act.Fecha = Fecha
                     act.Hora = Hora
                     act.NombreMedico = NombreM
@@ -85,7 +95,8 @@
                 End If
             End Using
         Catch ex As Exception
-            MsgBox("No se puede realizar la accion.")
+            'MsgBox("No se puede realizar la accion.")
+            MsgBox(ex.ToString)
         End Try
     End Sub
 
@@ -129,19 +140,16 @@
     End Sub
 
     Function ConsultaHora() As Boolean
-        Dim resultado As Integer = 0
         Try
             Using consulta As New BdCentroMedicoEntities
                 Dim QuerrySelect = (From dato In consulta.TbCita Where dato.Hora = Hora1 Take (2000) Select dato).ToList
                 If (QuerrySelect.Count > 0) Then
                     MsgBox("No se pueden registrar usuarios a la misma Hora.")
                     Return False
-
                 Else
                     MsgBox("Hora Valida.")
                     Return True
                 End If
-
             End Using
         Catch ex As Exception
             MsgBox("No se pueden verificar. ")
@@ -169,4 +177,7 @@
             Return False
         End Try
     End Function
+
+
+
 End Class

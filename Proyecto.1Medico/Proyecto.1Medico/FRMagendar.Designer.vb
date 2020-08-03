@@ -28,7 +28,6 @@ Partial Class FRMagendar
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextHora = New System.Windows.Forms.TextBox()
         Me.TextEspecialidad = New System.Windows.Forms.TextBox()
         Me.TextNMedico = New System.Windows.Forms.TextBox()
         Me.TextCedula = New System.Windows.Forms.TextBox()
@@ -41,6 +40,9 @@ Partial Class FRMagendar
         Me.ComboBoxMes = New System.Windows.Forms.ComboBox()
         Me.ComboBoxAño = New System.Windows.Forms.ComboBox()
         Me.ComboBoxDia = New System.Windows.Forms.ComboBox()
+        Me.ComboHora = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextID = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -98,18 +100,11 @@ Partial Class FRMagendar
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(619, 22)
+        Me.Label5.Location = New System.Drawing.Point(630, 22)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(136, 15)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Cedula del Paciente"
-        '
-        'TextHora
-        '
-        Me.TextHora.Location = New System.Drawing.Point(182, 53)
-        Me.TextHora.Name = "TextHora"
-        Me.TextHora.Size = New System.Drawing.Size(100, 20)
-        Me.TextHora.TabIndex = 6
         '
         'TextEspecialidad
         '
@@ -221,12 +216,42 @@ Partial Class FRMagendar
         Me.ComboBoxDia.TabIndex = 42
         Me.ComboBoxDia.Text = "dia"
         '
+        'ComboHora
+        '
+        Me.ComboHora.FormattingEnabled = True
+        Me.ComboHora.Items.AddRange(New Object() {"8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "1:00", "2:00", "2:30", "3:00", "3:30", "4:00", "4:30", "5:00"})
+        Me.ComboHora.Location = New System.Drawing.Point(182, 53)
+        Me.ComboHora.Name = "ComboHora"
+        Me.ComboHora.Size = New System.Drawing.Size(64, 21)
+        Me.ComboHora.TabIndex = 43
+        Me.ComboHora.Text = "Hora"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(650, 94)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(105, 15)
+        Me.Label7.TabIndex = 45
+        Me.Label7.Text = "ID del Paciente"
+        '
+        'TextID
+        '
+        Me.TextID.Location = New System.Drawing.Point(622, 112)
+        Me.TextID.Name = "TextID"
+        Me.TextID.Size = New System.Drawing.Size(155, 20)
+        Me.TextID.TabIndex = 44
+        '
         'FRMagendar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(802, 450)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.TextID)
+        Me.Controls.Add(Me.ComboHora)
         Me.Controls.Add(Me.ComboBoxDia)
         Me.Controls.Add(Me.ComboBoxAño)
         Me.Controls.Add(Me.ComboBoxMes)
@@ -239,7 +264,6 @@ Partial Class FRMagendar
         Me.Controls.Add(Me.TextCedula)
         Me.Controls.Add(Me.TextNMedico)
         Me.Controls.Add(Me.TextEspecialidad)
-        Me.Controls.Add(Me.TextHora)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -261,7 +285,6 @@ Partial Class FRMagendar
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextHora As TextBox
     Friend WithEvents TextEspecialidad As TextBox
     Friend WithEvents TextNMedico As TextBox
     Friend WithEvents TextCedula As TextBox
@@ -274,4 +297,7 @@ Partial Class FRMagendar
     Friend WithEvents ComboBoxMes As ComboBox
     Friend WithEvents ComboBoxAño As ComboBox
     Friend WithEvents ComboBoxDia As ComboBox
+    Friend WithEvents ComboHora As ComboBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TextID As TextBox
 End Class
