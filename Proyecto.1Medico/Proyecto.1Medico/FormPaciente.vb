@@ -206,4 +206,6 @@
     Private Sub ComboBoxSexo_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxSexo.TextChanged
         Me.ComboBoxSexo.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
+
+
 End Class

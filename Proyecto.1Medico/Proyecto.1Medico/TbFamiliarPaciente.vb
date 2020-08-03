@@ -17,6 +17,5 @@ Partial Public Class TbFamiliarPaciente
     Public Property NombreCompleto As String
     Public Property TelefonoFamiliar As String
     Public Property Direccion As String
-    Public Property Telefono As String
 
 End Class
