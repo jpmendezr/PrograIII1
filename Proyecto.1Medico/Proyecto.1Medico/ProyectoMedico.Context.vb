@@ -53,14 +53,28 @@ Partial Public Class BdCentroMedicoEntities
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of BuscarPersona_Result)("BuscarPersona", cedulasParameter)
     End Function
 
-    Public Overridable Function MostrarPersona() As ObjectResult(Of MostrarPersona_Result)
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of MostrarPersona_Result)("MostrarPersona")
+    Public Overridable Function MostrarPersona() As Integer
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction("MostrarPersona")
     End Function
 
-    Public Overridable Function mostrar_tablas(cedula As String) As ObjectResult(Of mostrar_tablas_Result)
+    Public Overridable Function mostrar_tablas(cedula As String) As Integer
         Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
 
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of mostrar_tablas_Result)("mostrar_tablas", cedulaParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction("mostrar_tablas", cedulaParameter)
+    End Function
+
+    Public Overridable Function MostrarPersona1() As Integer
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction("MostrarPersona1")
+    End Function
+
+    Public Overridable Function mostrar_tablas1(cedula As String) As ObjectResult(Of mostrar_tablas1_Result)
+        Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of mostrar_tablas1_Result)("mostrar_tablas1", cedulaParameter)
+    End Function
+
+    Public Overridable Function MostrarPersona2() As ObjectResult(Of MostrarPersona2_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of MostrarPersona2_Result)("MostrarPersona2")
     End Function
 
     Public Overridable Function f_Sp_Reporte_Cita(cedula As String, fechaInicio As String, fechaFinal As String) As ObjectResult(Of f_Sp_Reporte_Cita_Result)
