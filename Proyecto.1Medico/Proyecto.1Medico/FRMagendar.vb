@@ -6,10 +6,13 @@
         'Btn eliminar
         'Encargado de eliminar
 
-        If Information.IsNumeric(Me.TextCedula.Text) Then
-            agenda.CedulaP1 = Me.TextCedula.Text
+        If Information.IsNumeric(Me.TextID.Text) Then
+            agenda.Id1 = Me.TextID.Text
+            agenda.eliminarDatos()
         End If
-        agenda.eliminarDatos()
+
+
+
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BtnCitas.Click
         'Btn citas disponibles
@@ -38,13 +41,13 @@
         If Information.IsNumeric(Me.TextEspecialidad.Text) And Information.IsNumeric(Me.TextNMedico.Text) Then
             MsgBox(" no puede ingresar numeros")
         Else
-            If Information.IsDate(Me.TextHora.Text) And Information.IsNumeric(Me.TextCedula.Text) Then
-                If ReservarCita() And agenda.ConsultaHora() And agenda.ConsultaFecha Then
+            If Information.IsNumeric(Me.TextCedula.Text) Then
+                If ConsultaValores() And agenda.ConsultaHora() And agenda.ConsultaFecha Then
                     agenda.EspecialidadM1 = Me.TextEspecialidad.Text
                     agenda.NombreM1 = Me.TextNMedico.Text
                     agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
                     agenda.CedulaP1 = Me.TextCedula.Text
-                    agenda.Hora1 = Me.TextHora.Text
+                    agenda.Hora1 = Me.ComboHora.Text
                     agenda.RegistrarPersona()
                 End If
             Else
@@ -55,7 +58,12 @@
 
     Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
         'Btn de actualizar las citas por numero de cedula.
+        agenda.Id1 = Me.TextID.Text
+        agenda.EspecialidadM1 = Me.TextEspecialidad.Text
+        agenda.NombreM1 = Me.TextNMedico.Text
+        agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
         agenda.CedulaP1 = Me.TextCedula.Text
+        agenda.Hora1 = Me.ComboHora.Text
         agenda.ActualizarCita()
     End Sub
 
@@ -80,7 +88,7 @@
     End Sub
 
 
-    Function ReservarCita() As Boolean
+    Function ConsultaValores() As Boolean
 
         'Select de verificar valores.
         Dim valorFecha As String = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
@@ -88,7 +96,7 @@
         Dim resultado As Integer = 0
         Try
             Using consulta As New BdCentroMedicoEntities
-                Dim QuerrySelect = (From dato In consulta.TbCita Where dato.Fecha = valorFecha And dato.Hora = TextHora.Text And dato.NombreMedico = TextNMedico.Text And dato.CedulaPaciente = TextCedula.Text Take (2000) Select dato).ToList
+                Dim QuerrySelect = (From dato In consulta.TbCita Where dato.Fecha = valorFecha And dato.Hora = ComboHora.Text And dato.NombreMedico = TextNMedico.Text And dato.CedulaPaciente = TextCedula.Text Take (2000) Select dato).ToList
                 If (QuerrySelect.Count > 0) Then
                     MsgBox("Si existe este registro.")
                     Return False
@@ -107,4 +115,10 @@
     Private Sub FRMagendar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarCitas()
     End Sub
+
+    Private Sub ComboHora_TextChanged(sender As Object, e As EventArgs) Handles ComboHora.TextChanged
+        Me.ComboHora.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
+
+
 End Class
