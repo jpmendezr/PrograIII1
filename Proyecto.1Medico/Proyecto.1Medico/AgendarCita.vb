@@ -128,4 +128,45 @@
 
     End Sub
 
+    Function ConsultaHora() As Boolean
+        Dim resultado As Integer = 0
+        Try
+            Using consulta As New BdCentroMedicoEntities
+                Dim QuerrySelect = (From dato In consulta.TbCita Where dato.Hora = Hora1 Take (2000) Select dato).ToList
+                If (QuerrySelect.Count > 0) Then
+                    MsgBox("No se pueden registrar usuarios a la misma Hora.")
+                    Return False
+
+                Else
+                    MsgBox("Hora Valida.")
+                    Return True
+                End If
+
+            End Using
+        Catch ex As Exception
+            MsgBox("No se pueden verificar. ")
+            Return False
+        End Try
+    End Function
+
+    Function ConsultaFecha() As Boolean
+        Dim resultado As Integer = 0
+        Try
+            Using consulta As New BdCentroMedicoEntities
+                Dim QuerrySelect = (From dato In consulta.TbCita Where dato.Fecha = Fecha1 Take (2000) Select dato).ToList
+                If (QuerrySelect.Count > 0) Then
+                    MsgBox("No se pueden registrar usuarios a la misma Fecha.")
+                    Return False
+
+                Else
+                    MsgBox("Fecha Valida.")
+                    Return True
+                End If
+
+            End Using
+        Catch ex As Exception
+            MsgBox("No se pueden verificar. ")
+            Return False
+        End Try
+    End Function
 End Class
