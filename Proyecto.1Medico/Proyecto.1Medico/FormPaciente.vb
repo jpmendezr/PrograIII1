@@ -70,8 +70,6 @@
             registro.EliminarPersona()
             registro.EliminarPaciente()
             registro.EliminarFamiliar()
-
-
         Else
             MessageBox.Show("Debe de ingresar valores")
 
