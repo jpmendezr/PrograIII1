@@ -70,8 +70,6 @@
             registro.EliminarPersona()
             registro.EliminarPaciente()
             registro.EliminarFamiliar()
-
-
         Else
             MessageBox.Show("Debe de ingresar valores")
 
@@ -206,4 +204,6 @@
     Private Sub ComboBoxSexo_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxSexo.TextChanged
         Me.ComboBoxSexo.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
+
+
 End Class

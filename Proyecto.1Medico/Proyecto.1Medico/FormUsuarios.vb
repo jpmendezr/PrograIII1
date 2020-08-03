@@ -8,7 +8,6 @@
     End Sub
 
 
-
     Public Function VerificarCampos() As Boolean
         If Information.IsNumeric(txtCedula.Text) And Information.IsNumeric(txtdia.Text) And Information.IsNumeric(txtmes.Text) And Information.IsNumeric(txtano.Text) Then
             If (txtNombre.Text.Length > 0 And Not Information.IsNumeric(txtNombre.Text)) And (txtapell.Text.Length > 0 And Not Information.IsNumeric(txtapell.Text)) And CBSexo.Text.Length > 0 And txttel.Text.Length > 0 And txtCorr.Text.Length > 0 And CBdepa.Text.Length > 0 And txtContra.Text.Length > 0 And (txtdia.Text > 0 And txtdia.Text <= 31) And (txtmes.Text > 0 And txtmes.Text <= 12) And (txtdia.Text > 0 And txtdia.Text <= 31) And (txtano.Text > 1900 And txtano.Text <= 2020 And txtano.Text.Length = 4) Then

@@ -35,7 +35,7 @@
         Try
             Using regitro_exa As New BdCentroMedicoEntities
 
-                Dim registro As New TbChequeoExamanes With {.CedulaP = Cedula1, .Sangre = sangre, .Orina = orina}
+                Dim registro As New TbChequeoExamanes With {.CedulaP = cedula, .Sangre = sangre, .Orina = orina}
                 regitro_exa.TbChequeoExamanes.Add(registro)
                 resultado = regitro_exa.SaveChanges()
 
@@ -47,6 +47,7 @@
             End Using
         Catch ex As Exception
             resultado = 0
+            'MsgBox(ex.Message.ToString)
         End Try
     End Sub
 
