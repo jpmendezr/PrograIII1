@@ -222,9 +222,6 @@
     <Compile Include="TbCita.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
-    <Compile Include="TbCita1.vb">
-      <DependentUpon>ProyectoMedico.tt</DependentUpon>
-    </Compile>
     <Compile Include="TbConsultaMedica.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
