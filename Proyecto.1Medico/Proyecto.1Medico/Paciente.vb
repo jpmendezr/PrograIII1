@@ -10,7 +10,6 @@ Public Class Paciente
     Private fecha As String
     Private TelefonoPaciente As String
     Private correo As String
-
     Private NombreFamiliar As String
     Private TipoFamiliar As String
     Private Telefono As String
