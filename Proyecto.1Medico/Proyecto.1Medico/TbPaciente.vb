@@ -16,6 +16,7 @@ Partial Public Class TbPaciente
     Public Property Peso As String
     Public Property Altura As String
     Public Property TipoSangre As String
+    Public Property ContactoPaciente As Integer
     Public Property Sintomas As String
     Public Property MedicamentoAlergico As String
 

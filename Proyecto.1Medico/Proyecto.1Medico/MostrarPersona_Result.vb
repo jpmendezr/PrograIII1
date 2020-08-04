@@ -10,7 +10,7 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class MostrarPersona2_Result
+Partial Public Class MostrarPersona_Result
     Public Property IdPersona As Integer
     Public Property Cedula As String
     Public Property Nombre As String

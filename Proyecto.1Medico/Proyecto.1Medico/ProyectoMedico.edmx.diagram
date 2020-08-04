@@ -20,9 +20,10 @@
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoExamanes" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoMedicamentos" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbPersona" Width="1.5" PointX="4" PointY="6.375" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbFamiliarPaciente" Width="1.5" PointX="9.625" PointY="7.25" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="7.25" PointY="7.75" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPaciente" Width="1.5" PointX="0.28320468789115766" PointY="17.762497284339041" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbFamiliarPaciente" Width="1.5" PointX="8.75" PointY="6.375" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="6.375" PointY="6.375" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPaciente" Width="1.5" PointX="11.283732197845229" PointY="9.4853137477698333" />
+        
         
         
         
@@ -33,6 +34,18 @@
         
         
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
       &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
       &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
       &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
