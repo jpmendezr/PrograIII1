@@ -19,6 +19,7 @@
         FRMChequeoExamen.Show()
     End Sub
 
+    Private Sub Btnmostrar_Click(sender As Object, e As EventArgs) Handles Btnmostrar.Click
 
-
+    End Sub
 End Class
