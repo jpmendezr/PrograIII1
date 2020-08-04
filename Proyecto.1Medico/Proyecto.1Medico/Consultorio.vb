@@ -205,24 +205,24 @@
 
 
 
-    Public Sub agregar_medi()
-        Dim resultado As Integer = 0
-        Try
-            Using registro_medi As New BdCentroMedicoEntities
+    '    Public Sub agregar_medi()
+    '        Dim resultado As Integer = 0
+    '        Try
+    '            Using registro_medi As New BdCentroMedicoEntities
 
-                Dim registro As New TbChequeoMedicamentos With {.CedulaP = cedulaactualizar, .MedicamentoAdm = IMediacamentosAdministrados, .MedicamentoRecetado = IMedicamentosRecetados}
-                registro_medi.TbChequeoMedicamentos.Add(registro)
-                resultado = registro_medi.SaveChanges()
+    '                Dim registro As New TbChequeoMedicamentos With {.CedulaP = cedulaactualizar, .MedicamentoAdm = IMediacamentosAdministrados, .MedicamentoRecetado = IMedicamentosRecetados}
+    '                registro_medi.TbChequeoMedicamentos.Add(registro)
+    '                resultado = registro_medi.SaveChanges()
 
-                If resultado > 0 Then
-                    MsgBox(" Los medicamentos se registraron correctamente ")
-                Else
-                    MsgBox(" Los medicamentos no se registraron correctamente ")
-                End If
+    '                If resultado > 0 Then
+    '                    MsgBox(" Los medicamentos se registraron correctamente ")
+    '                Else
+    '                    MsgBox(" Los medicamentos no se registraron correctamente ")
+    '                End If
 
-            End Using
-        Catch ex As Exception
-            resultado = 0
-        End Try
-    End Sub
+    '            End Using
+    '        Catch ex As Exception
+    '            resultado = 0
+    '        End Try
+    '    End Sub
 End Class
