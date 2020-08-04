@@ -270,6 +270,7 @@ Partial Class FRMagendar
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnEliminar)
+        Me.MaximizeBox = False
         Me.Name = "FRMagendar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agendar Citas"
