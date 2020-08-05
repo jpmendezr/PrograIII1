@@ -5,13 +5,14 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
         'Btn eliminar
         'Encargado de eliminar
-
-        If Information.IsNumeric(Me.TextID.Text) Then
-            agenda.Id1 = Me.TextID.Text
-            agenda.eliminarDatos()
-        End If
-
-
+        Try
+            If Information.IsNumeric(Me.TextID.Text) Then
+                agenda.Id1 = Me.TextID.Text
+                agenda.eliminarDatos()
+            End If
+        Catch ex As Exception
+            MsgBox("Ingrese un ID para eliminar alguna cita.")
+        End Try
 
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BtnCitas.Click
