@@ -24,17 +24,17 @@ Partial Public Class BdCentroMedicoEntities
         Throw New UnintentionalCodeFirstException()
     End Sub
 
+    Public Overridable Property sysdiagrams() As DbSet(Of sysdiagrams)
     Public Overridable Property TbChequeoExamanes() As DbSet(Of TbChequeoExamanes)
     Public Overridable Property TbChequeoMedicamentos() As DbSet(Of TbChequeoMedicamentos)
     Public Overridable Property TbConsultaMedica() As DbSet(Of TbConsultaMedica)
     Public Overridable Property TbEnfermedad() As DbSet(Of TbEnfermedad)
     Public Overridable Property TbEspecialidad() As DbSet(Of TbEspecialidad)
-    Public Overridable Property TbMedicamento() As DbSet(Of TbMedicamento)
-    Public Overridable Property TbPersonalInterno() As DbSet(Of TbPersonalInterno)
-    Public Overridable Property sysdiagrams() As DbSet(Of sysdiagrams)
-    Public Overridable Property TbPersona() As DbSet(Of TbPersona)
     Public Overridable Property TbFamiliarPaciente() As DbSet(Of TbFamiliarPaciente)
+    Public Overridable Property TbMedicamento() As DbSet(Of TbMedicamento)
     Public Overridable Property TbPaciente() As DbSet(Of TbPaciente)
+    Public Overridable Property TbPersona() As DbSet(Of TbPersona)
+    Public Overridable Property TbPersonalInterno() As DbSet(Of TbPersonalInterno)
     Public Overridable Property TbCita() As DbSet(Of TbCita)
 
     Public Overridable Function f_sp_BuscarPersonal(cedu As String) As ObjectResult(Of f_sp_BuscarPersonal_Result1)

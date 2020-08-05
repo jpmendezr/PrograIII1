@@ -99,7 +99,6 @@
                     act.NombreMedico = NombreM
                     act.Especialidad = EspecialidadM
                     act.Estado = estado
-
                     actualizar.SaveChanges()
                     MessageBox.Show("Datos actualizados ")
                 Else
@@ -116,7 +115,7 @@
         Dim resultado As Integer = 0
         Try
             Using registro As New BdCentroMedicoEntities
-                Dim NuevoRegistro As New TbCita With {.CedulaPaciente = cedulaP, .Fecha = Fecha, .Hora = Hora, .NombreMedico = NombreM, .Especialidad = EspecialidadM}
+                Dim NuevoRegistro As New TbCita With {.CedulaPaciente = cedulaP, .Fecha = Fecha, .Hora = Hora, .NombreMedico = NombreM, .Especialidad = EspecialidadM, .Estado = estado}
                 registro.TbCita.Add(NuevoRegistro)
                 resultado = registro.SaveChanges
                 If resultado > 0 Then
