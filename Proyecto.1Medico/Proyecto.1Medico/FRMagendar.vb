@@ -48,6 +48,7 @@
                     agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
                     agenda.CedulaP1 = Me.TextCedula.Text
                     agenda.Hora1 = Me.ComboHora.Text
+                    agenda.estado1 = Me.ComboEstado.text
                     agenda.RegistrarPersona()
                 End If
             Else
@@ -64,6 +65,7 @@
         agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
         agenda.CedulaP1 = Me.TextCedula.Text
         agenda.Hora1 = Me.ComboHora.Text
+        agenda.estado1 = Me.ComboEstado.Text
         agenda.ActualizarCita()
     End Sub
 
@@ -120,5 +122,7 @@
         Me.ComboHora.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 
-
+    Private Sub ComboBox1_TextChanged(sender As Object, e As EventArgs) Handles ComboEstado.TextChanged
+        Me.ComboEstado.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
 End Class
