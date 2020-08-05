@@ -248,7 +248,7 @@ Partial Class FRMagendar
         'ComboEstado
         '
         Me.ComboEstado.FormattingEnabled = True
-        Me.ComboEstado.Items.AddRange(New Object() {"Cancelada.", "Disponible."})
+        Me.ComboEstado.Items.AddRange(New Object() {"Cancelada", "Disponible"})
         Me.ComboEstado.Location = New System.Drawing.Point(16, 111)
         Me.ComboEstado.Name = "ComboEstado"
         Me.ComboEstado.Size = New System.Drawing.Size(94, 21)
@@ -259,9 +259,9 @@ Partial Class FRMagendar
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(13, 94)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(79, 13)
+        Me.Label8.Size = New System.Drawing.Size(86, 13)
         Me.Label8.TabIndex = 47
-        Me.Label8.Text = "Cita Cancelada"
+        Me.Label8.Text = "Estado de la cita"
         '
         'FRMagendar
         '
