@@ -23,6 +23,12 @@ Partial Class ReporteriaForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBoxAño2 = New System.Windows.Forms.ComboBox()
         Me.ComboBoxMes2 = New System.Windows.Forms.ComboBox()
         Me.ComboBoxDia2 = New System.Windows.Forms.ComboBox()
@@ -36,12 +42,9 @@ Partial Class ReporteriaForm
         Me.TxtCedula = New System.Windows.Forms.TextBox()
         Me.BtnMostrar = New System.Windows.Forms.Button()
         Me.BtnBuscar = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.BtnBuscar2 = New System.Windows.Forms.Button()
+        Me.BtnMostrar2 = New System.Windows.Forms.Button()
+        Me.BtnRegresar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -67,10 +70,64 @@ Partial Class ReporteriaForm
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.TxtCedula)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Location = New System.Drawing.Point(-1, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(732, 295)
+        Me.Panel1.Size = New System.Drawing.Size(759, 307)
         Me.Panel1.TabIndex = 0
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(361, 28)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(26, 13)
+        Me.Label9.TabIndex = 19
+        Me.Label9.Text = "Año"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(303, 28)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(27, 13)
+        Me.Label8.TabIndex = 18
+        Me.Label8.Text = "Mes"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(258, 28)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(25, 13)
+        Me.Label7.TabIndex = 17
+        Me.Label7.Text = "Día"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(99, 28)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(26, 13)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Año"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(57, 28)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(27, 13)
+        Me.Label5.TabIndex = 15
+        Me.Label5.Text = "Mes"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(3, 28)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(25, 13)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "Día"
         '
         'ComboBoxAño2
         '
@@ -78,7 +135,7 @@ Partial Class ReporteriaForm
         Me.ComboBoxAño2.Items.AddRange(New Object() {"2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940"})
         Me.ComboBoxAño2.Location = New System.Drawing.Point(348, 44)
         Me.ComboBoxAño2.Name = "ComboBoxAño2"
-        Me.ComboBoxAño2.Size = New System.Drawing.Size(41, 21)
+        Me.ComboBoxAño2.Size = New System.Drawing.Size(59, 21)
         Me.ComboBoxAño2.TabIndex = 13
         '
         'ComboBoxMes2
@@ -94,9 +151,9 @@ Partial Class ReporteriaForm
         '
         Me.ComboBoxDia2.FormattingEnabled = True
         Me.ComboBoxDia2.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"})
-        Me.ComboBoxDia2.Location = New System.Drawing.Point(261, 43)
+        Me.ComboBoxDia2.Location = New System.Drawing.Point(248, 43)
         Me.ComboBoxDia2.Name = "ComboBoxDia2"
-        Me.ComboBoxDia2.Size = New System.Drawing.Size(34, 21)
+        Me.ComboBoxDia2.Size = New System.Drawing.Size(47, 21)
         Me.ComboBoxDia2.TabIndex = 11
         '
         'ComboBoxAño1
@@ -105,7 +162,7 @@ Partial Class ReporteriaForm
         Me.ComboBoxAño1.Items.AddRange(New Object() {"2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940"})
         Me.ComboBoxAño1.Location = New System.Drawing.Point(90, 44)
         Me.ComboBoxAño1.Name = "ComboBoxAño1"
-        Me.ComboBoxAño1.Size = New System.Drawing.Size(43, 21)
+        Me.ComboBoxAño1.Size = New System.Drawing.Size(53, 21)
         Me.ComboBoxAño1.TabIndex = 10
         '
         'ComboBoxMes1
@@ -129,9 +186,9 @@ Partial Class ReporteriaForm
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 80)
+        Me.DataGridView1.Location = New System.Drawing.Point(46, 84)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(722, 208)
+        Me.DataGridView1.Size = New System.Drawing.Size(642, 193)
         Me.DataGridView1.TabIndex = 7
         '
         'Label3
@@ -175,81 +232,61 @@ Partial Class ReporteriaForm
         '
         Me.BtnMostrar.BackColor = System.Drawing.Color.Aqua
         Me.BtnMostrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnMostrar.Location = New System.Drawing.Point(669, 313)
+        Me.BtnMostrar.Location = New System.Drawing.Point(622, 308)
         Me.BtnMostrar.Name = "BtnMostrar"
-        Me.BtnMostrar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnMostrar.Size = New System.Drawing.Size(136, 37)
         Me.BtnMostrar.TabIndex = 2
-        Me.BtnMostrar.Text = "Mostrar"
+        Me.BtnMostrar.Text = "Mostrar Reporte1"
         Me.BtnMostrar.UseVisualStyleBackColor = False
         '
         'BtnBuscar
         '
-        Me.BtnBuscar.Image = Global.Proyecto._1Medico.My.Resources.Resources.lupa
-        Me.BtnBuscar.Location = New System.Drawing.Point(12, 313)
+        Me.BtnBuscar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnBuscar.Location = New System.Drawing.Point(153, 308)
         Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnBuscar.Size = New System.Drawing.Size(156, 37)
         Me.BtnBuscar.TabIndex = 1
-        Me.BtnBuscar.UseVisualStyleBackColor = True
+        Me.BtnBuscar.Text = "    Buscar Reporte1"
+        Me.BtnBuscar.UseVisualStyleBackColor = False
         '
-        'Label4
+        'BtnBuscar2
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 28)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(25, 13)
-        Me.Label4.TabIndex = 14
-        Me.Label4.Text = "Día"
+        Me.BtnBuscar2.BackColor = System.Drawing.Color.Aqua
+        Me.BtnBuscar2.Location = New System.Drawing.Point(300, 308)
+        Me.BtnBuscar2.Name = "BtnBuscar2"
+        Me.BtnBuscar2.Size = New System.Drawing.Size(162, 37)
+        Me.BtnBuscar2.TabIndex = 3
+        Me.BtnBuscar2.Text = "Buscar Reporte 2"
+        Me.BtnBuscar2.UseVisualStyleBackColor = False
         '
-        'Label5
+        'BtnMostrar2
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(48, 28)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(27, 13)
-        Me.Label5.TabIndex = 15
-        Me.Label5.Text = "Mes"
+        Me.BtnMostrar2.BackColor = System.Drawing.Color.Aqua
+        Me.BtnMostrar2.Location = New System.Drawing.Point(461, 308)
+        Me.BtnMostrar2.Name = "BtnMostrar2"
+        Me.BtnMostrar2.Size = New System.Drawing.Size(167, 37)
+        Me.BtnMostrar2.TabIndex = 4
+        Me.BtnMostrar2.Text = "Mostrar Reporte2"
+        Me.BtnMostrar2.UseVisualStyleBackColor = False
         '
-        'Label6
+        'BtnRegresar
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(94, 28)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(26, 13)
-        Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Año"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(258, 28)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(25, 13)
-        Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Día"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(303, 28)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(27, 13)
-        Me.Label8.TabIndex = 18
-        Me.Label8.Text = "Mes"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(350, 28)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(26, 13)
-        Me.Label9.TabIndex = 19
-        Me.Label9.Text = "Año"
+        Me.BtnRegresar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnRegresar.Location = New System.Drawing.Point(-1, 308)
+        Me.BtnRegresar.Name = "BtnRegresar"
+        Me.BtnRegresar.Size = New System.Drawing.Size(158, 37)
+        Me.BtnRegresar.TabIndex = 5
+        Me.BtnRegresar.Text = "Regresar"
+        Me.BtnRegresar.UseVisualStyleBackColor = False
         '
         'ReporteriaForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(756, 345)
+        Me.Controls.Add(Me.BtnRegresar)
+        Me.Controls.Add(Me.BtnMostrar2)
+        Me.Controls.Add(Me.BtnBuscar2)
         Me.Controls.Add(Me.BtnMostrar)
         Me.Controls.Add(Me.BtnBuscar)
         Me.Controls.Add(Me.Panel1)
@@ -282,4 +319,7 @@ Partial Class ReporteriaForm
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents BtnBuscar2 As Button
+    Friend WithEvents BtnMostrar2 As Button
+    Friend WithEvents BtnRegresar As Button
 End Class
