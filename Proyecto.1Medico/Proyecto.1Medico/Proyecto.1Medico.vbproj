@@ -175,7 +175,7 @@
     <Compile Include="MostrarPersona_Result.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
-    <Compile Include="mostrar_tablas_Result.vb">
+    <Compile Include="mostrar_tablas1_Result.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -245,12 +245,6 @@
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
     <Compile Include="TbPaciente.vb">
-      <DependentUpon>ProyectoMedico.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TbPaciente1.vb">
-      <DependentUpon>ProyectoMedico.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TbPaciente2.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
     <Compile Include="TbPersona.vb">
