@@ -23,6 +23,12 @@ Partial Class ReporteriaForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBoxAño2 = New System.Windows.Forms.ComboBox()
         Me.ComboBoxMes2 = New System.Windows.Forms.ComboBox()
         Me.ComboBoxDia2 = New System.Windows.Forms.ComboBox()
@@ -36,12 +42,6 @@ Partial Class ReporteriaForm
         Me.TxtCedula = New System.Windows.Forms.TextBox()
         Me.BtnMostrar = New System.Windows.Forms.Button()
         Me.BtnBuscar = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,6 +71,60 @@ Partial Class ReporteriaForm
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(732, 295)
         Me.Panel1.TabIndex = 0
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(350, 28)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(26, 13)
+        Me.Label9.TabIndex = 19
+        Me.Label9.Text = "Año"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(303, 28)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(27, 13)
+        Me.Label8.TabIndex = 18
+        Me.Label8.Text = "Mes"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(258, 28)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(25, 13)
+        Me.Label7.TabIndex = 17
+        Me.Label7.Text = "Día"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(94, 28)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(26, 13)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Año"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(48, 28)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(27, 13)
+        Me.Label5.TabIndex = 15
+        Me.Label5.Text = "Mes"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(3, 28)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(25, 13)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "Día"
         '
         'ComboBoxAño2
         '
@@ -190,60 +244,6 @@ Partial Class ReporteriaForm
         Me.BtnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.BtnBuscar.TabIndex = 1
         Me.BtnBuscar.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 28)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(25, 13)
-        Me.Label4.TabIndex = 14
-        Me.Label4.Text = "Día"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(48, 28)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(27, 13)
-        Me.Label5.TabIndex = 15
-        Me.Label5.Text = "Mes"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(94, 28)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(26, 13)
-        Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Año"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(258, 28)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(25, 13)
-        Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Día"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(303, 28)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(27, 13)
-        Me.Label8.TabIndex = 18
-        Me.Label8.Text = "Mes"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(350, 28)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(26, 13)
-        Me.Label9.TabIndex = 19
-        Me.Label9.Text = "Año"
         '
         'ReporteriaForm
         '

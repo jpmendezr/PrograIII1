@@ -22,4 +22,8 @@
     Private Sub ComboBoxAño2_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxAño2.TextChanged
         Me.ComboBoxAño2.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
+
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+
+    End Sub
 End Class
