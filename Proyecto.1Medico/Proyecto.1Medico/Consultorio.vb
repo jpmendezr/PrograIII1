@@ -18,6 +18,7 @@
     Private cedulaactualizar As String
     Private exa_orina As String
     Private exa_sangre As String
+    Private id As String
 
     'Enfermera metodos de acceso.
 
@@ -130,6 +131,15 @@
         End Set
     End Property
 
+    Public Property Id1 As String
+        Get
+            Return id
+        End Get
+        Set(value As String)
+            id = value
+        End Set
+    End Property
+
 
     ''''''''''''''''''''''''''''''' ACTUALIZAR ENFERMERIA '''''''''''''''''''''''''''''''
 
@@ -163,31 +173,31 @@
     End Sub
 
     ''''''''''''''''''''''''''''''  MEDICO  ''''''''''''''''''''''''''''''
-    Public Sub Actualizar_ISintoma()
-        Dim resultado As Integer = 0
-        Try
-            Using actualizar As New BdCentroMedicoEntities
-                Dim actu = (From ac In actualizar.TbPaciente Where ac.CedulaPersona = cedulaactualizar Select ac).SingleOrDefault
-                If Not IsNothing(actu) Then
-                    actu.Sintomas = ISintomasMostrados
-                    actualizar.SaveChanges()
-                    MessageBox.Show(" Datos actualizados ")
-                Else
-                    MessageBox.Show(" Error al actualizar ")
-                End If
-            End Using
-        Catch ex As Exception
-            resultado = 0
-            MessageBox.Show(ex.Message.ToString)
-            'MsgBox(ex.Message.ToString)
-        End Try
-    End Sub
+    'Public Sub Actualizar_ISintoma()
+    '    Dim resultado As Integer = 0
+    '    Try
+    '        Using actualizar As New BdCentroMedicoEntities
+    '            Dim actu = (From ac In actualizar.TbPaciente Where ac.CedulaPersona = cedulaactualizar Select ac).SingleOrDefault
+    '            If Not IsNothing(actu) Then
+    '                actu.Sintomas = ISintomasMostrados
+    '                actualizar.SaveChanges()
+    '                MessageBox.Show(" Datos actualizados ")
+    '            Else
+    '                MessageBox.Show(" Error al actualizar ")
+    '            End If
+    '        End Using
+    '    Catch ex As Exception
+    '        resultado = 0
+    '        MessageBox.Show(ex.Message.ToString)
+    '        'MsgBox(ex.Message.ToString)
+    '    End Try
+    'End Sub
 
     Public Sub actualizar_Idiagnostico()
         Dim resultado As Integer = 0
         Try
             Using actualizar As New BdCentroMedicoEntities
-                Dim actu = (From ac In actualizar.TbConsultaMedica Where ac.CedulaP = cedulaactualizar Select ac).SingleOrDefault
+                Dim actu = (From ac In actualizar.TbConsultaMedica Where ac.IdConsulta = cedulaactualizar Select ac).SingleOrDefault
                 If Not IsNothing(actu) Then
                     actu.Diagnostico = IDiagnostico
                     actualizar.SaveChanges()

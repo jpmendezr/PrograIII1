@@ -24,7 +24,9 @@ Partial Class FormConsultorio
     Private Sub InitializeComponent()
         Me.Btnregresar = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txtsintomas = New System.Windows.Forms.RichTextBox()
+        Me.txtid = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtSintomas = New System.Windows.Forms.RichTextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.txtsangre = New System.Windows.Forms.TextBox()
         Me.txtorina = New System.Windows.Forms.TextBox()
@@ -63,7 +65,9 @@ Partial Class FormConsultorio
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel2.Controls.Add(Me.txtsintomas)
+        Me.Panel2.Controls.Add(Me.txtid)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.txtSintomas)
         Me.Panel2.Controls.Add(Me.DataGridView1)
         Me.Panel2.Controls.Add(Me.txtsangre)
         Me.Panel2.Controls.Add(Me.txtorina)
@@ -83,13 +87,30 @@ Partial Class FormConsultorio
         Me.Panel2.Size = New System.Drawing.Size(724, 402)
         Me.Panel2.TabIndex = 1
         '
-        'txtsintomas
+        'txtid
         '
-        Me.txtsintomas.Location = New System.Drawing.Point(16, 160)
-        Me.txtsintomas.Name = "txtsintomas"
-        Me.txtsintomas.Size = New System.Drawing.Size(307, 82)
-        Me.txtsintomas.TabIndex = 17
-        Me.txtsintomas.Text = ""
+        Me.txtid.Location = New System.Drawing.Point(358, 97)
+        Me.txtid.Name = "txtid"
+        Me.txtid.Size = New System.Drawing.Size(100, 20)
+        Me.txtid.TabIndex = 19
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(355, 72)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(113, 15)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "Actualizar por ID"
+        '
+        'txtSintomas
+        '
+        Me.txtSintomas.Location = New System.Drawing.Point(16, 160)
+        Me.txtSintomas.Name = "txtSintomas"
+        Me.txtSintomas.Size = New System.Drawing.Size(307, 95)
+        Me.txtSintomas.TabIndex = 17
+        Me.txtSintomas.Text = ""
         '
         'DataGridView1
         '
@@ -154,7 +175,7 @@ Partial Class FormConsultorio
         '
         Me.TxtDiagnostico.Location = New System.Drawing.Point(358, 160)
         Me.TxtDiagnostico.Name = "TxtDiagnostico"
-        Me.TxtDiagnostico.Size = New System.Drawing.Size(307, 82)
+        Me.TxtDiagnostico.Size = New System.Drawing.Size(307, 95)
         Me.TxtDiagnostico.TabIndex = 9
         Me.TxtDiagnostico.Text = ""
         '
@@ -311,5 +332,7 @@ Partial Class FormConsultorio
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents txtsintomas As RichTextBox
+    Friend WithEvents txtSintomas As RichTextBox
+    Friend WithEvents txtid As TextBox
+    Friend WithEvents Label3 As Label
 End Class

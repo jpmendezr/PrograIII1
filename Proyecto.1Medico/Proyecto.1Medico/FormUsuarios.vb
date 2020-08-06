@@ -9,17 +9,13 @@
 
 
     Public Function VerificarCampos() As Boolean
-        If Information.IsNumeric(txtCedula.Text) And Information.IsNumeric(txtdia.Text) And Information.IsNumeric(txtmes.Text) And Information.IsNumeric(txtano.Text) Then
-            If (txtNombre.Text.Length > 0 And Not Information.IsNumeric(txtNombre.Text)) And (txtapell.Text.Length > 0 And Not Information.IsNumeric(txtapell.Text)) And CBSexo.Text.Length > 0 And txttel.Text.Length > 0 And txtCorr.Text.Length > 0 And CBdepa.Text.Length > 0 And txtContra.Text.Length > 0 And (txtdia.Text > 0 And txtdia.Text <= 31) And (txtmes.Text > 0 And txtmes.Text <= 12) And (txtdia.Text > 0 And txtdia.Text <= 31) And (txtano.Text > 1900 And txtano.Text <= 2020 And txtano.Text.Length = 4) Then
-
+        If Information.IsNumeric(txtCedula.Text) Then 'And Information.IsNumeric(txtdia.Text) And Information.IsNumeric(txtmes.Text) And Information.IsNumeric(txtano.Text) Then
+            If (txtNombre.Text.Length > 0 And Not Information.IsNumeric(txtNombre.Text)) And (txtapell.Text.Length > 0 And Not Information.IsNumeric(txtapell.Text)) And CBSexo.Text.Length > 0 And txttel.Text.Length > 0 And txtCorr.Text.Length > 0 And CBdepa.Text.Length > 0 And txtContra.Text.Length > 0 And ComboBoxDia.Text.Length > 0 And ComboBoxMes.Text.Length > 0 And ComboBoxAño.Text.Length > 0 Then '(txtdia.Text > 0 And txtdia.Text <= 31) And (txtmes.Text > 0 And txtmes.Text <= 12) And (txtdia.Text > 0 And txtdia.Text <= 31) And (txtano.Text > 1900 And txtano.Text <= 2020 And txtano.Text.Length = 4) Then
                 Return True
             Else
                 MsgBox("Campos mal ingresados")
                 Return False
-
-
             End If
-
         Else
             MsgBox("No puede ingresar letras o estar vacio los campos ")
             Return False
@@ -32,7 +28,7 @@
             auten.Nombre1 = txtNombre.Text
             auten.Apellido1 = txtapell.Text
             auten.Sexo1 = CBSexo.Text
-            auten.Fecha1 = txtdia.Text + "/" + txtmes.Text + "/" + txtano.Text
+            auten.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
             auten.Telef1 = txttel.Text
             auten.Corre1 = txtCorr.Text
             auten.Departamento1 = CBdepa.Text
@@ -40,7 +36,6 @@
             If auten.agregarPersonal() Then
                 auten.InsertarEspecialidad()
                 LimpiarTexto()
-
             End If
         End If
     End Sub
@@ -77,7 +72,7 @@
 
     Public Sub InsertarPersonal()
         Dim resultado As Integer = 0
-        Dim fecha As String = txtdia.Text + "/" + txtmes.Text + "/" + txtano.Text
+        Dim fecha As String = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
         Try
             Using registro As New BdCentroMedicoEntities
                 Dim NuevoRegistro As New TbPersona With {.Cedula = txtCedula.Text, .Nombre = txtNombre.Text, .Apellido = txtapell.Text, .Sexo = CBSexo.Text, .FechaNacimiento = fecha, .Telefono = txttel.Text, .Correo = txtCorr.Text}
@@ -145,9 +140,9 @@
                     txtNombre.Text = sen.Nombre.ToString
                     txtapell.Text = sen.Apellido.ToString
                     CBSexo.Text = sen.Sexo.ToString
-                    txtdia.Text = fe(0)
-                    txtmes.Text = fe(1)
-                    txtano.Text = fe(2)
+                    Me.ComboBoxDia.Text = fe(0)
+                    Me.ComboBoxMes.Text = fe(1)
+                    Me.ComboBoxAño.Text = fe(2)
                     txttel.Text = sen.Telefono.ToString
                     txtCorr.Text = sen.Correo.ToString
                     CBdepa.Text = senr.Departamento.ToString
@@ -168,7 +163,7 @@
             auten.Nombre1 = txtNombre.Text
             auten.Apellido1 = txtapell.Text
             auten.Sexo1 = CBSexo.Text
-            auten.Fecha1 = txtdia.Text + "/" + txtmes.Text + "/" + txtano.Text
+            auten.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
             auten.Telef1 = txttel.Text
             auten.Corre1 = txtCorr.Text
             auten.Departamento1 = CBdepa.Text
@@ -187,9 +182,9 @@
         txtNombre.Text = ""
         txtapell.Text = ""
         CBSexo.Text = ""
-        txtdia.Text = ""
-        txtmes.Text = ""
-        txtano.Text = ""
+        Me.ComboBoxDia.Text = ""
+        Me.ComboBoxMes.Text = ""
+        Me.ComboBoxAño.Text = ""
         txttel.Text = ""
         txtCorr.Text = ""
         CBdepa.Text = ""
@@ -208,6 +203,17 @@
 
 
     End Sub
+    Private Sub ComboBoxAño_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxAño.TextChanged
+        Me.ComboBoxAño.DropDownStyle = ComboBoxStyle.DropDownList
 
+    End Sub
+
+    Private Sub ComboBoxMes_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxMes.TextChanged
+        Me.ComboBoxMes.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
+
+    Private Sub ComboBoxDia_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxDia.TextChanged
+        Me.ComboBoxDia.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
 
 End Class
