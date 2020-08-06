@@ -9,6 +9,8 @@
             If Information.IsNumeric(Me.TextID.Text) Then
                 agenda.Id1 = Me.TextID.Text
                 agenda.eliminarDatos()
+
+                MostrarCitas()
             End If
         Catch ex As Exception
             MsgBox("Ingrese un ID para eliminar alguna cita.")
@@ -43,7 +45,9 @@
             MsgBox(" no puede ingresar numeros")
         Else
             If Information.IsNumeric(Me.TextCedula.Text) Then
-                If ConsultaValores() And agenda.ConsultaHora() And agenda.ConsultaFecha Then
+
+
+                If Me.ComboHora.Text <> agenda.Hora1 And Me.TextNMedico.Text <> agenda.NombreM1 Then
                     agenda.EspecialidadM1 = Me.TextEspecialidad.Text
                     agenda.NombreM1 = Me.TextNMedico.Text
                     agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
@@ -51,11 +55,28 @@
                     agenda.Hora1 = Me.ComboHora.Text
                     agenda.estado1 = Me.ComboEstado.Text
                     agenda.RegistrarPersona()
+                    MostrarCitas()
+                    'refrescarControladores()
+
+                Else
+                    MsgBox("No se pueden volver a generar las citas.")
                 End If
             Else
                 MsgBox("No puede meter letras ")
             End If
         End If
+    End Sub
+
+    Public Sub refrescarControladores()
+        Me.TextEspecialidad.Clear()
+        Me.TextNMedico.Clear()
+        Me.TextCedula.Clear()
+        Me.TextID.Clear()
+        'Me.ComboEstado.SelectedIndex = 0
+        'Me.ComboHora.SelectedIndex = 0
+        'Me.ComboBoxDia.SelectedIndex = 0
+        'Me.ComboBoxMes.SelectedIndex = 0
+        'Me.ComboBoxAño.SelectedIndex = 0
     End Sub
 
     Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
@@ -69,6 +90,7 @@
             agenda.Hora1 = Me.ComboHora.Text
             agenda.estado1 = Me.ComboEstado.Text
             agenda.ActualizarCita()
+            MostrarCitas()
         Catch ex As Exception
             MsgBox("ingrese un valor de Id valido.")
         End Try
@@ -96,30 +118,6 @@
     End Sub
 
 
-    Function ConsultaValores() As Boolean
-
-        'Select de verificar valores.
-        Dim valorFecha As String = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
-
-        Dim resultado As Integer = 0
-        Try
-            Using consulta As New BdCentroMedicoEntities
-                Dim QuerrySelect = (From dato In consulta.TbCita Where dato.Fecha = valorFecha And dato.Hora = ComboHora.Text And dato.NombreMedico = TextNMedico.Text And dato.CedulaPaciente = TextCedula.Text Take (2000) Select dato).ToList
-                If (QuerrySelect.Count > 0) Then
-                    MsgBox("Si existe este registro.")
-                    Return False
-                Else
-                    MsgBox("No exite este registro.")
-                    Return True
-                End If
-            End Using
-        Catch ex As Exception
-            MsgBox("No se pueden verificar. ")
-            Return False
-        End Try
-
-    End Function
-
     Private Sub FRMagendar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarCitas()
     End Sub
@@ -130,5 +128,31 @@
 
     Private Sub ComboEstado_VisibleChanged(sender As Object, e As EventArgs) Handles ComboEstado.VisibleChanged
         Me.ComboEstado.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Try
+            estado()
+        Catch ex As Exception
+            MsgBox("inGRESE UN ID.")
+        End Try
+
+
+    End Sub
+
+    Public Sub estado()
+        Try
+            Using selexion As New BdCentroMedicoEntities
+                Dim mostrar = (From se In selexion.TbCita Where se.IdCita = Me.TextID.Text Take (1000) Select se).ToList
+
+                If (mostrar.Count > 0) Then
+                    Me.DataGridView1.DataSource = mostrar
+
+                End If
+
+            End Using
+        Catch ex As Exception
+            MsgBox("Ingrese un Valor de Id valido.")
+        End Try
     End Sub
 End Class
