@@ -172,7 +172,7 @@
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
     <Compile Include="Medicamentos_1.vb" />
-    <Compile Include="MostrarPersona2_Result.vb">
+    <Compile Include="MostrarPersona_Result.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
     <Compile Include="mostrar_tablas1_Result.vb">

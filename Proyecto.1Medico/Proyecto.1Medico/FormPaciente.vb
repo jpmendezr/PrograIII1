@@ -83,7 +83,7 @@
 
         Try
             Using bd As New BdCentroMedicoEntities
-                Dim mostrar = bd.MostrarPersona2.ToList
+                Dim mostrar = bd.MostrarPersona.ToList
                 If (mostrar.Count > 0) Then
                     Me.DataGridView1.DataSource = mostrar
                 End If
@@ -184,7 +184,7 @@
     Private Sub FormPaciente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Using bd As New BdCentroMedicoEntities
-                Dim mostrar = bd.MostrarPersona2.ToList
+                Dim mostrar = bd.MostrarPersona.ToList
                 If (mostrar.Count > 0) Then
                     Me.DataGridView1.DataSource = mostrar
                 End If
