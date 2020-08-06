@@ -406,9 +406,6 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           </FunctionImport>
           <FunctionImport Name="MostrarPersona" ReturnType="Collection(BdCentroMedicoModel.MostrarPersona_Result)" />
           <EntitySet Name="TbPersona" EntityType="BdCentroMedicoModel.TbPersona" />
-          <FunctionImport Name="mostrar_tablas" ReturnType="Collection(BdCentroMedicoModel.mostrar_tablas_Result)">
-          <Parameter Name="cedula" Mode="In" Type="String" />
-          </FunctionImport>
           <EntitySet Name="TbFamiliarPaciente" EntityType="BdCentroMedicoModel.TbFamiliarPaciente" />
           <EntitySet Name="TbCita" EntityType="BdCentroMedicoModel.TbCita" />
           <EntitySet Name="TbPaciente" EntityType="BdCentroMedicoModel.TbPaciente" />
@@ -423,6 +420,9 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
             <Parameter Name="Cedula" Mode="In" Type="String" />
             <Parameter Name="FechaInicio" Mode="In" Type="String" />
             <Parameter Name="FechaFinal" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="mostrar_tablas" ReturnType="Collection(BdCentroMedicoModel.mostrar_tablas_Result1)">
+            <Parameter Name="cedula" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <EntityType Name="sysdiagrams">
@@ -658,6 +658,15 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           <Property Type="String" Name="Administrado" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Recetado" Nullable="false" MaxLength="50" />
         </ComplexType>
+        <ComplexType Name="mostrar_tablas_Result1">
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Diagnostico" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Medicamento_Administrado" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Medicamento_Recetado" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sangre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Orina" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sintomas" Nullable="false" MaxLength="100" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -826,18 +835,6 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="mostrar_tablas" FunctionName="BdCentroMedicoModel.Store.mostrar_tablas">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="BdCentroMedicoModel.mostrar_tablas_Result">
-                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
-                <ScalarProperty Name="Diagnostico" ColumnName="Diagnostico" />
-                <ScalarProperty Name="Medicamento_Administrado" ColumnName="Medicamento Administrado" />
-                <ScalarProperty Name="Medicamento_Recetado" ColumnName="Medicamento Recetado" />
-                <ScalarProperty Name="Sangre" ColumnName="Sangre" />
-                <ScalarProperty Name="Orina" ColumnName="Orina" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <EntitySetMapping Name="TbFamiliarPaciente">
             <EntityTypeMapping TypeName="BdCentroMedicoModel.TbFamiliarPaciente">
               <MappingFragment StoreEntitySet="TbFamiliarPaciente">
@@ -935,6 +932,19 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
                 <ScalarProperty Name="Fecha" ColumnName="Fecha" />
                 <ScalarProperty Name="Administrado" ColumnName="Administrado" />
                 <ScalarProperty Name="Recetado" ColumnName="Recetado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="mostrar_tablas" FunctionName="BdCentroMedicoModel.Store.mostrar_tablas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BdCentroMedicoModel.mostrar_tablas_Result1">
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Diagnostico" ColumnName="Diagnostico" />
+                <ScalarProperty Name="Medicamento_Administrado" ColumnName="Medicamento Administrado" />
+                <ScalarProperty Name="Medicamento_Recetado" ColumnName="Medicamento Recetado" />
+                <ScalarProperty Name="Sangre" ColumnName="Sangre" />
+                <ScalarProperty Name="Orina" ColumnName="Orina" />
+                <ScalarProperty Name="Sintomas" ColumnName="Sintomas" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
