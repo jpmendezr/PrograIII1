@@ -10,13 +10,12 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class mostrar_tablas1_Result
-    Public Property Cedula As String
-    Public Property Diagnostico As String
-    Public Property Medicamento_Administrado As String
-    Public Property Medicamento_Recetado As String
-    Public Property Sangre As String
+Partial Public Class Sp_Reporte_Examenes_Result
+    Public Property CedulaPersona As String
     Public Property Orina As String
-    Public Property Sintomas As String
+    Public Property Sangre As String
+    Public Property Fecha As String
+    Public Property Administrado As String
+    Public Property Recetado As String
 
 End Class

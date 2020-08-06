@@ -171,11 +171,29 @@
     <Compile Include="f_sp_MostrarPersonal_Result1.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
-    <Compile Include="Medicamentos_1.vb" />
-    <Compile Include="MostrarPersona2_Result.vb">
+    <Compile Include="f_Sp_Reporte_Cita_Result.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
-    <Compile Include="mostrar_tablas1_Result.vb">
+    <Compile Include="f_Sp_Reporte_Cita_Result1.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="f_Sp_Reporte_Cita_Result2.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Medicamentos_1.vb" />
+    <Compile Include="MostrarExamenes_Result.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarPersona_Result.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mostrar_ReporteriaPacientePersonal_Result.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mostrar_ReporteriaPacientePersonal_Result1.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mostrar_tablas_Result.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -210,12 +228,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
-    <Compile Include="Reporteria.vb" />
     <Compile Include="ReporteriaForm.Designer.vb">
       <DependentUpon>ReporteriaForm.vb</DependentUpon>
     </Compile>
     <Compile Include="ReporteriaForm.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sp_Reporte_Examenes_Result.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
