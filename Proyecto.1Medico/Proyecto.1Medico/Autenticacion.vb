@@ -187,6 +187,7 @@ Public Class Autenticacion
                     sen.fechanacimiento = Fecha1
                     sen.Telefono = Telef1
                     sen.Correo = Corre1
+                    senr.Cedula = Cedula1
                     senr.Departamento = Departamento1
                     senr.Contrasena = Contra1
                     bd.SaveChanges()
@@ -194,9 +195,7 @@ Public Class Autenticacion
                 Else
                     MsgBox("Error al actualizar")
                 End If
-
             End Using
-
         Catch ex As Exception
             MsgBox(ex.Message.ToString)
         End Try

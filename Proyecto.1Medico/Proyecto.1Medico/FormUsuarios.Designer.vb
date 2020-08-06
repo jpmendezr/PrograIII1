@@ -36,9 +36,6 @@ Partial Class FormUsuarios
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtapell = New System.Windows.Forms.TextBox()
-        Me.txtdia = New System.Windows.Forms.TextBox()
-        Me.txtmes = New System.Windows.Forms.TextBox()
-        Me.txtano = New System.Windows.Forms.TextBox()
         Me.txttel = New System.Windows.Forms.TextBox()
         Me.txtCorr = New System.Windows.Forms.TextBox()
         Me.CBSexo = New System.Windows.Forms.ComboBox()
@@ -53,6 +50,9 @@ Partial Class FormUsuarios
         Me.btnActualizar = New System.Windows.Forms.Button()
         Me.BtnRegresar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ComboBoxDia = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxMes = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxAño = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -178,27 +178,6 @@ Partial Class FormUsuarios
         Me.txtapell.Size = New System.Drawing.Size(195, 20)
         Me.txtapell.TabIndex = 13
         '
-        'txtdia
-        '
-        Me.txtdia.Location = New System.Drawing.Point(18, 34)
-        Me.txtdia.Name = "txtdia"
-        Me.txtdia.Size = New System.Drawing.Size(19, 20)
-        Me.txtdia.TabIndex = 15
-        '
-        'txtmes
-        '
-        Me.txtmes.Location = New System.Drawing.Point(55, 34)
-        Me.txtmes.Name = "txtmes"
-        Me.txtmes.Size = New System.Drawing.Size(25, 20)
-        Me.txtmes.TabIndex = 16
-        '
-        'txtano
-        '
-        Me.txtano.Location = New System.Drawing.Point(99, 34)
-        Me.txtano.Name = "txtano"
-        Me.txtano.Size = New System.Drawing.Size(49, 20)
-        Me.txtano.TabIndex = 17
-        '
         'txttel
         '
         Me.txttel.Location = New System.Drawing.Point(678, 153)
@@ -316,15 +295,15 @@ Partial Class FormUsuarios
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.txtano)
-        Me.Panel1.Controls.Add(Me.txtmes)
+        Me.Panel1.Controls.Add(Me.ComboBoxDia)
+        Me.Panel1.Controls.Add(Me.ComboBoxMes)
+        Me.Panel1.Controls.Add(Me.ComboBoxAño)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.txttel)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.txtContra)
         Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.txtdia)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.txtCorr)
         Me.Panel1.Controls.Add(Me.CBdepa)
@@ -343,6 +322,36 @@ Partial Class FormUsuarios
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(810, 250)
         Me.Panel1.TabIndex = 34
+        '
+        'ComboBoxDia
+        '
+        Me.ComboBoxDia.FormattingEnabled = True
+        Me.ComboBoxDia.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"})
+        Me.ComboBoxDia.Location = New System.Drawing.Point(3, 40)
+        Me.ComboBoxDia.Name = "ComboBoxDia"
+        Me.ComboBoxDia.Size = New System.Drawing.Size(41, 21)
+        Me.ComboBoxDia.TabIndex = 41
+        Me.ComboBoxDia.Text = "dia"
+        '
+        'ComboBoxMes
+        '
+        Me.ComboBoxMes.FormattingEnabled = True
+        Me.ComboBoxMes.Items.AddRange(New Object() {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"})
+        Me.ComboBoxMes.Location = New System.Drawing.Point(50, 40)
+        Me.ComboBoxMes.Name = "ComboBoxMes"
+        Me.ComboBoxMes.Size = New System.Drawing.Size(44, 21)
+        Me.ComboBoxMes.TabIndex = 40
+        Me.ComboBoxMes.Text = "mes"
+        '
+        'ComboBoxAño
+        '
+        Me.ComboBoxAño.FormattingEnabled = True
+        Me.ComboBoxAño.Items.AddRange(New Object() {"2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940"})
+        Me.ComboBoxAño.Location = New System.Drawing.Point(100, 40)
+        Me.ComboBoxAño.Name = "ComboBoxAño"
+        Me.ComboBoxAño.Size = New System.Drawing.Size(51, 21)
+        Me.ComboBoxAño.TabIndex = 39
+        Me.ComboBoxAño.Text = "año"
         '
         'FormUsuarios
         '
@@ -380,9 +389,6 @@ Partial Class FormUsuarios
     Friend WithEvents Label8 As Label
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents txtapell As TextBox
-    Friend WithEvents txtdia As TextBox
-    Friend WithEvents txtmes As TextBox
-    Friend WithEvents txtano As TextBox
     Friend WithEvents txttel As TextBox
     Friend WithEvents txtCorr As TextBox
     Friend WithEvents CBSexo As ComboBox
@@ -397,4 +403,7 @@ Partial Class FormUsuarios
     Friend WithEvents btnActualizar As Button
     Friend WithEvents BtnRegresar As Button
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents ComboBoxDia As ComboBox
+    Friend WithEvents ComboBoxMes As ComboBox
+    Friend WithEvents ComboBoxAño As ComboBox
 End Class

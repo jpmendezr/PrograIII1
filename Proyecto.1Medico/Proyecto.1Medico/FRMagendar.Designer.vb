@@ -45,6 +45,7 @@ Partial Class FRMagendar
         Me.TextID = New System.Windows.Forms.TextBox()
         Me.ComboEstado = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -221,7 +222,7 @@ Partial Class FRMagendar
         'ComboHora
         '
         Me.ComboHora.FormattingEnabled = True
-        Me.ComboHora.Items.AddRange(New Object() {"8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "1:00", "2:00", "2:30", "3:00", "3:30", "4:00", "4:30", "5:00"})
+        Me.ComboHora.Items.AddRange(New Object() {"8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00", "4:30", "5:00"})
         Me.ComboHora.Location = New System.Drawing.Point(182, 53)
         Me.ComboHora.Name = "ComboHora"
         Me.ComboHora.Size = New System.Drawing.Size(64, 21)
@@ -263,12 +264,22 @@ Partial Class FRMagendar
         Me.Label8.TabIndex = 47
         Me.Label8.Text = "Estado de la cita"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(511, 108)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 48
+        Me.Button1.Text = "Estado cita"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'FRMagendar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(802, 450)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ComboEstado)
         Me.Controls.Add(Me.Label7)
@@ -325,4 +336,5 @@ Partial Class FRMagendar
     Friend WithEvents TextID As TextBox
     Friend WithEvents ComboEstado As ComboBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents Button1 As Button
 End Class
