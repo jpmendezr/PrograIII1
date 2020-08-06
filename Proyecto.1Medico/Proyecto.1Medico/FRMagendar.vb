@@ -5,13 +5,14 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
         'Btn eliminar
         'Encargado de eliminar
-
-        If Information.IsNumeric(Me.TextID.Text) Then
-            agenda.Id1 = Me.TextID.Text
-            agenda.eliminarDatos()
-        End If
-
-
+        Try
+            If Information.IsNumeric(Me.TextID.Text) Then
+                agenda.Id1 = Me.TextID.Text
+                agenda.eliminarDatos()
+            End If
+        Catch ex As Exception
+            MsgBox("Ingrese un ID para eliminar alguna cita.")
+        End Try
 
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BtnCitas.Click
@@ -48,6 +49,7 @@
                     agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
                     agenda.CedulaP1 = Me.TextCedula.Text
                     agenda.Hora1 = Me.ComboHora.Text
+                    agenda.estado1 = Me.ComboEstado.Text
                     agenda.RegistrarPersona()
                 End If
             Else
@@ -58,13 +60,19 @@
 
     Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
         'Btn de actualizar las citas por numero de cedula.
-        agenda.Id1 = Me.TextID.Text
-        agenda.EspecialidadM1 = Me.TextEspecialidad.Text
-        agenda.NombreM1 = Me.TextNMedico.Text
-        agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
-        agenda.CedulaP1 = Me.TextCedula.Text
-        agenda.Hora1 = Me.ComboHora.Text
-        agenda.ActualizarCita()
+        Try
+            agenda.Id1 = Me.TextID.Text
+            agenda.EspecialidadM1 = Me.TextEspecialidad.Text
+            agenda.NombreM1 = Me.TextNMedico.Text
+            agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
+            agenda.CedulaP1 = Me.TextCedula.Text
+            agenda.Hora1 = Me.ComboHora.Text
+            agenda.estado1 = Me.ComboEstado.Text
+            agenda.ActualizarCita()
+        Catch ex As Exception
+            MsgBox("ingrese un valor de Id valido.")
+        End Try
+
     End Sub
 
     Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
@@ -120,5 +128,7 @@
         Me.ComboHora.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 
-
+    Private Sub ComboEstado_VisibleChanged(sender As Object, e As EventArgs) Handles ComboEstado.VisibleChanged
+        Me.ComboEstado.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
 End Class

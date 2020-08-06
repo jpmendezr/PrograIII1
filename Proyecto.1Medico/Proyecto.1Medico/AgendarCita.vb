@@ -6,6 +6,7 @@
     Private NombreM As String 'nombre medico
     Private cedulaP As String 'cedula paciente 
     Private Id As Integer 'Id de la persona
+    Private estado As String ' citas canceladas
 
     Public Property EspecialidadM1 As String
         Get
@@ -61,6 +62,15 @@
         End Set
     End Property
 
+    Public Property estado1 As String
+        Get
+            Return estado
+        End Get
+        Set(value As String)
+            estado = value
+        End Set
+    End Property
+
     Public Sub eliminarDatos()
         'Eliminar
         Try
@@ -88,6 +98,7 @@
                     act.Hora = Hora
                     act.NombreMedico = NombreM
                     act.Especialidad = EspecialidadM
+                    act.Estado = estado
                     actualizar.SaveChanges()
                     MessageBox.Show("Datos actualizados ")
                 Else
@@ -104,7 +115,7 @@
         Dim resultado As Integer = 0
         Try
             Using registro As New BdCentroMedicoEntities
-                Dim NuevoRegistro As New TbCita With {.CedulaPaciente = cedulaP, .Fecha = Fecha, .Hora = Hora, .NombreMedico = NombreM, .Especialidad = EspecialidadM}
+                Dim NuevoRegistro As New TbCita With {.CedulaPaciente = cedulaP, .Fecha = Fecha, .Hora = Hora, .NombreMedico = NombreM, .Especialidad = EspecialidadM, .Estado = estado}
                 registro.TbCita.Add(NuevoRegistro)
                 resultado = registro.SaveChanges
                 If resultado > 0 Then
