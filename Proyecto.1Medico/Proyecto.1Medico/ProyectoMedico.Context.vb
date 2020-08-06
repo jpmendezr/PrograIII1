@@ -63,4 +63,28 @@ Partial Public Class BdCentroMedicoEntities
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of mostrar_tablas_Result)("mostrar_tablas", cedulaParameter)
     End Function
 
+    Public Overridable Function f_Sp_Reporte_Cita(cedula As String, fechaInicio As String, fechaFinal As String) As ObjectResult(Of f_Sp_Reporte_Cita_Result)
+        Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("Cedula", cedula), New ObjectParameter("Cedula", GetType(String)))
+
+        Dim fechaInicioParameter As ObjectParameter = If(fechaInicio IsNot Nothing, New ObjectParameter("FechaInicio", fechaInicio), New ObjectParameter("FechaInicio", GetType(String)))
+
+        Dim fechaFinalParameter As ObjectParameter = If(fechaFinal IsNot Nothing, New ObjectParameter("FechaFinal", fechaFinal), New ObjectParameter("FechaFinal", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of f_Sp_Reporte_Cita_Result)("f_Sp_Reporte_Cita", cedulaParameter, fechaInicioParameter, fechaFinalParameter)
+    End Function
+
+    Public Overridable Function Mostrar_ReporteriaPacientePersonal() As ObjectResult(Of Mostrar_ReporteriaPacientePersonal_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Mostrar_ReporteriaPacientePersonal_Result)("Mostrar_ReporteriaPacientePersonal")
+    End Function
+
+    Public Overridable Function Sp_Reporte_Examenes(cedula As String, fechaInicio As String, fechaFinal As String) As ObjectResult(Of Sp_Reporte_Examenes_Result)
+        Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("Cedula", cedula), New ObjectParameter("Cedula", GetType(String)))
+
+        Dim fechaInicioParameter As ObjectParameter = If(fechaInicio IsNot Nothing, New ObjectParameter("FechaInicio", fechaInicio), New ObjectParameter("FechaInicio", GetType(String)))
+
+        Dim fechaFinalParameter As ObjectParameter = If(fechaFinal IsNot Nothing, New ObjectParameter("FechaFinal", fechaFinal), New ObjectParameter("FechaFinal", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Sp_Reporte_Examenes_Result)("Sp_Reporte_Examenes", cedulaParameter, fechaInicioParameter, fechaFinalParameter)
+    End Function
+
 End Class
