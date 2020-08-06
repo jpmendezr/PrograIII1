@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="46e23a6fa652431296f2c0a3da041bfb" Name="Diagram1" ZoomLevel="70">
+      <Diagram DiagramId="46e23a6fa652431296f2c0a3da041bfb" Name="Diagram1" ZoomLevel="51">
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbChequeoExamanes" Width="1.5" PointX="1.625" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbChequeoMedicamentos" Width="1.5" PointX="3.75" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbEnfermedad" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
@@ -21,8 +21,9 @@
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoMedicamentos" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbPersona" Width="1.5" PointX="4" PointY="6.375" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbFamiliarPaciente" Width="1.5" PointX="9.625" PointY="7.25" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="7.25" PointY="7.75" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPaciente" Width="1.5" PointX="0.28320468789115766" PointY="17.762497284339041" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPaciente" Width="1.5" PointX="5.25" PointY="9.5" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="7.625" PointY="10" />
+        
         
         
         
@@ -33,6 +34,18 @@
         
         
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
       &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
       &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
       &gt;&gt;&gt;&gt;&gt;&gt;&gt; 34d3b82ce0fc2753eb6708f83a20fed03b310aba
