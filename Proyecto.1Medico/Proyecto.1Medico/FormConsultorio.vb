@@ -1,7 +1,7 @@
 ﻿Public Class FormConsultorio
     Dim registro As New Consultorio()
     Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
-
+        ' Arreglar esta clase
         'registro.Cedulaactualizar1 = Txtcedula.Text
         registro.Id1 = txtid.Text
         registro.actualizar_Idiagnostico()
