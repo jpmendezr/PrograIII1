@@ -43,6 +43,9 @@ Partial Class FRMagendar
         Me.ComboHora = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TextID = New System.Windows.Forms.TextBox()
+        Me.ComboEstado = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -181,9 +184,9 @@ Partial Class FRMagendar
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(80, 167)
+        Me.DataGridView1.Location = New System.Drawing.Point(23, 173)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(643, 210)
+        Me.DataGridView1.Size = New System.Drawing.Size(743, 210)
         Me.DataGridView1.TabIndex = 26
         '
         'ComboBoxMes
@@ -219,7 +222,7 @@ Partial Class FRMagendar
         'ComboHora
         '
         Me.ComboHora.FormattingEnabled = True
-        Me.ComboHora.Items.AddRange(New Object() {"8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "1:00", "2:00", "2:30", "3:00", "3:30", "4:00", "4:30", "5:00"})
+        Me.ComboHora.Items.AddRange(New Object() {"8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00", "4:30", "5:00"})
         Me.ComboHora.Location = New System.Drawing.Point(182, 53)
         Me.ComboHora.Name = "ComboHora"
         Me.ComboHora.Size = New System.Drawing.Size(64, 21)
@@ -243,12 +246,42 @@ Partial Class FRMagendar
         Me.TextID.Size = New System.Drawing.Size(155, 20)
         Me.TextID.TabIndex = 44
         '
+        'ComboEstado
+        '
+        Me.ComboEstado.FormattingEnabled = True
+        Me.ComboEstado.Items.AddRange(New Object() {"Cancelada", "Disponible"})
+        Me.ComboEstado.Location = New System.Drawing.Point(16, 111)
+        Me.ComboEstado.Name = "ComboEstado"
+        Me.ComboEstado.Size = New System.Drawing.Size(94, 21)
+        Me.ComboEstado.TabIndex = 46
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(13, 94)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(86, 13)
+        Me.Label8.TabIndex = 47
+        Me.Label8.Text = "Estado de la cita"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(511, 108)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 48
+        Me.Button1.Text = "Estado cita"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'FRMagendar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(802, 450)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.ComboEstado)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextID)
         Me.Controls.Add(Me.ComboHora)
@@ -270,6 +303,7 @@ Partial Class FRMagendar
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnEliminar)
+        Me.MaximizeBox = False
         Me.Name = "FRMagendar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agendar Citas"
@@ -300,4 +334,7 @@ Partial Class FRMagendar
     Friend WithEvents ComboHora As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents TextID As TextBox
+    Friend WithEvents ComboEstado As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Button1 As Button
 End Class
