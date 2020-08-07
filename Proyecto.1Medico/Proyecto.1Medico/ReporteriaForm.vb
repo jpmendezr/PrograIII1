@@ -22,4 +22,23 @@
     Private Sub ComboBoxAño2_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxAño2.TextChanged
         Me.ComboBoxAño2.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
+
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        Try
+            Using bd As New BdCentroMedicoEntities
+                Dim mostrar = bd.BuscarPersona(TxtCedula.Text).ToList
+                If (mostrar.Count > 0) Then
+                    Me.DataGridView1.DataSource = mostrar
+                Else
+                    MsgBox("No se encuentra el usuario")
+                End If
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+        End Try
+    End Sub
+
+    Private Sub BtnMostrar_Click(sender As Object, e As EventArgs) Handles BtnMostrar.Click
+
+    End Sub
 End Class
