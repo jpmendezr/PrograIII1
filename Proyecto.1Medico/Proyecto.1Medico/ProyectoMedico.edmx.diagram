@@ -4,28 +4,27 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="46e23a6fa652431296f2c0a3da041bfb" Name="Diagram1" ZoomLevel="79">
+      <Diagram DiagramId="46e23a6fa652431296f2c0a3da041bfb" Name="Diagram1" ZoomLevel="91">
         <<<<<<< HEAD
         
         
         
-        
-        
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbChequeoExamanes" Width="1.5" PointX="11.633417235516671" PointY="9.6487009719240948" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbChequeoMedicamentos" Width="1.5" PointX="4.452826734843117" PointY="13.004520392513145" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="8.26171390351919" PointY="23.937639575422573" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbConsultaMedica" Width="1.5" PointX="4.4713342732150734" PointY="6.243108558581727" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbEnfermedad" Width="1.5" PointX="11.947802960848344" PointY="3.1721889093388751" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbEspecialidad" Width="1.5" PointX="2.4495281048349704" PointY="26.451258507767346" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbFamiliarPaciente" Width="1.5" PointX="6.6576785532094895" PointY="2.8345151258793266" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbMedicamento" Width="1.5" PointX="8.9781921696747631" PointY="22.253488446703873" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPersona" Width="1.5" PointX="10.768122899703739" PointY="0.21878451119120443" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPersonalInterno" Width="1.5" PointX="7.3629480914040233" PointY="6.058713170727116" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.sysdiagrams" Width="1.5" PointX="5.125" PointY="7" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbChequeoExamanes" Width="1.5" PointX="6.125" PointY="3.5" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbChequeoMedicamentos" Width="1.5" PointX="10.125" PointY="3.5" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbConsultaMedica" Width="1.5" PointX="8.125" PointY="3.5" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbEnfermedad" Width="1.5" PointX="3.125" PointY="7" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbEspecialidad" Width="1.5" PointX="1.625" PointY="4.25" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbFamiliarPaciente" Width="1.5" PointX="10.75" PointY="7" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbMedicamento" Width="1.5" PointX="7" PointY="7" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPersona" Width="1.5" PointX="3.875" PointY="3.375" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPersonalInterno" Width="1.5" PointX="8.75" PointY="7" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoExamanes" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_ConsultaMedica_TbChequeoMedicamentos" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_TbChequeoMedicamentos_Medicamento" />
         <AssociationConnector Association="BdCentroMedicoModel.FK_TbChequeoMedicamentos_Medicamento1" />
-        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPaciente" Width="1.5" PointX="11.174714946735051" PointY="24.783881198979859" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="1.125" PointY="7" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.TbPaciente" Width="1.5" PointX="9.3912287547212223" PointY="6.7226843865228281" />
         
         
         

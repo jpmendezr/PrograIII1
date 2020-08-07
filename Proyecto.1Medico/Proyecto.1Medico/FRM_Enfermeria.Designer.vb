@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FRM_Enfermeria
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FRM_Enfermeria
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -28,13 +28,14 @@ Partial Class FRM_Enfermeria
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.txtSintomas = New System.Windows.Forms.RichTextBox()
+        Me.BTNactualizar = New System.Windows.Forms.Button()
+        Me.txtcedula = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Txtpeso = New System.Windows.Forms.TextBox()
         Me.TXTaltura = New System.Windows.Forms.TextBox()
         Me.txtpresion = New System.Windows.Forms.TextBox()
-        Me.BTNactualizar = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtcedula = New System.Windows.Forms.TextBox()
+        Me.TxtSintomas = New System.Windows.Forms.RichTextBox()
+        Me.Btnregresar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -93,10 +94,11 @@ Partial Class FRM_Enfermeria
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.Controls.Add(Me.Btnregresar)
+        Me.Panel1.Controls.Add(Me.TxtSintomas)
         Me.Panel1.Controls.Add(Me.BTNactualizar)
         Me.Panel1.Controls.Add(Me.txtcedula)
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.txtSintomas)
         Me.Panel1.Controls.Add(Me.Txtpeso)
         Me.Panel1.Controls.Add(Me.TXTaltura)
         Me.Panel1.Controls.Add(Me.txtpresion)
@@ -109,13 +111,33 @@ Partial Class FRM_Enfermeria
         Me.Panel1.Size = New System.Drawing.Size(678, 323)
         Me.Panel1.TabIndex = 5
         '
-        'txtSintomas
+        'BTNactualizar
         '
-        Me.txtSintomas.Location = New System.Drawing.Point(21, 150)
-        Me.txtSintomas.Name = "txtSintomas"
-        Me.txtSintomas.Size = New System.Drawing.Size(634, 113)
-        Me.txtSintomas.TabIndex = 8
-        Me.txtSintomas.Text = ""
+        Me.BTNactualizar.BackColor = System.Drawing.Color.Aqua
+        Me.BTNactualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNactualizar.Location = New System.Drawing.Point(207, 294)
+        Me.BTNactualizar.Name = "BTNactualizar"
+        Me.BTNactualizar.Size = New System.Drawing.Size(82, 23)
+        Me.BTNactualizar.TabIndex = 8
+        Me.BTNactualizar.Text = "Actualizar"
+        Me.BTNactualizar.UseVisualStyleBackColor = False
+        '
+        'txtcedula
+        '
+        Me.txtcedula.Location = New System.Drawing.Point(21, 52)
+        Me.txtcedula.Name = "txtcedula"
+        Me.txtcedula.Size = New System.Drawing.Size(154, 20)
+        Me.txtcedula.TabIndex = 10
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(24, 27)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(52, 15)
+        Me.Label6.TabIndex = 9
+        Me.Label6.Text = "Cedula"
         '
         'Txtpeso
         '
@@ -138,32 +160,24 @@ Partial Class FRM_Enfermeria
         Me.txtpresion.Size = New System.Drawing.Size(154, 20)
         Me.txtpresion.TabIndex = 5
         '
-        'BTNactualizar
+        'TxtSintomas
         '
-        Me.BTNactualizar.BackColor = System.Drawing.Color.Aqua
-        Me.BTNactualizar.Location = New System.Drawing.Point(284, 291)
-        Me.BTNactualizar.Name = "BTNactualizar"
-        Me.BTNactualizar.Size = New System.Drawing.Size(75, 23)
-        Me.BTNactualizar.TabIndex = 8
-        Me.BTNactualizar.Text = "Actualizar"
-        Me.BTNactualizar.UseVisualStyleBackColor = False
+        Me.TxtSintomas.Location = New System.Drawing.Point(21, 149)
+        Me.TxtSintomas.Name = "TxtSintomas"
+        Me.TxtSintomas.Size = New System.Drawing.Size(634, 124)
+        Me.TxtSintomas.TabIndex = 11
+        Me.TxtSintomas.Text = ""
         '
-        'Label6
+        'Btnregresar
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(24, 27)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(52, 15)
-        Me.Label6.TabIndex = 9
-        Me.Label6.Text = "Cedula"
-        '
-        'txtcedula
-        '
-        Me.txtcedula.Location = New System.Drawing.Point(21, 52)
-        Me.txtcedula.Name = "txtcedula"
-        Me.txtcedula.Size = New System.Drawing.Size(154, 20)
-        Me.txtcedula.TabIndex = 10
+        Me.Btnregresar.BackColor = System.Drawing.Color.Aqua
+        Me.Btnregresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnregresar.Location = New System.Drawing.Point(307, 294)
+        Me.Btnregresar.Name = "Btnregresar"
+        Me.Btnregresar.Size = New System.Drawing.Size(75, 23)
+        Me.Btnregresar.TabIndex = 12
+        Me.Btnregresar.Text = "Regresar"
+        Me.Btnregresar.UseVisualStyleBackColor = False
         '
         'FRM_Enfermeria
         '
@@ -190,8 +204,9 @@ Partial Class FRM_Enfermeria
     Friend WithEvents Txtpeso As TextBox
     Friend WithEvents TXTaltura As TextBox
     Friend WithEvents txtpresion As TextBox
-    Friend WithEvents txtSintomas As RichTextBox
     Friend WithEvents BTNactualizar As Button
     Friend WithEvents txtcedula As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents TxtSintomas As RichTextBox
+    Friend WithEvents Btnregresar As Button
 End Class
