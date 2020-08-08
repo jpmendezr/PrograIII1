@@ -396,9 +396,9 @@ Partial Class FormPaciente
         '
         Me.BtnElimino.BackColor = System.Drawing.Color.Aqua
         Me.BtnElimino.Image = Global.Proyecto._1Medico.My.Resources.Resources.eliminar
-        Me.BtnElimino.Location = New System.Drawing.Point(694, 492)
+        Me.BtnElimino.Location = New System.Drawing.Point(667, 492)
         Me.BtnElimino.Name = "BtnElimino"
-        Me.BtnElimino.Size = New System.Drawing.Size(120, 23)
+        Me.BtnElimino.Size = New System.Drawing.Size(147, 23)
         Me.BtnElimino.TabIndex = 7
         Me.BtnElimino.UseVisualStyleBackColor = False
         '
@@ -406,9 +406,9 @@ Partial Class FormPaciente
         '
         Me.BtnRegistro.BackColor = System.Drawing.Color.Aqua
         Me.BtnRegistro.Image = CType(resources.GetObject("BtnRegistro.Image"), System.Drawing.Image)
-        Me.BtnRegistro.Location = New System.Drawing.Point(12, 492)
+        Me.BtnRegistro.Location = New System.Drawing.Point(109, 492)
         Me.BtnRegistro.Name = "BtnRegistro"
-        Me.BtnRegistro.Size = New System.Drawing.Size(108, 23)
+        Me.BtnRegistro.Size = New System.Drawing.Size(125, 23)
         Me.BtnRegistro.TabIndex = 3
         Me.BtnRegistro.UseVisualStyleBackColor = False
         '
@@ -424,18 +424,18 @@ Partial Class FormPaciente
         '
         Me.BtnLupa.BackColor = System.Drawing.Color.Aqua
         Me.BtnLupa.Image = Global.Proyecto._1Medico.My.Resources.Resources.lupa
-        Me.BtnLupa.Location = New System.Drawing.Point(549, 492)
+        Me.BtnLupa.Location = New System.Drawing.Point(512, 492)
         Me.BtnLupa.Name = "BtnLupa"
-        Me.BtnLupa.Size = New System.Drawing.Size(97, 23)
+        Me.BtnLupa.Size = New System.Drawing.Size(158, 23)
         Me.BtnLupa.TabIndex = 9
         Me.BtnLupa.UseVisualStyleBackColor = False
         '
         'BtnMostrar
         '
         Me.BtnMostrar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnMostrar.Location = New System.Drawing.Point(347, 492)
+        Me.BtnMostrar.Location = New System.Drawing.Point(358, 492)
         Me.BtnMostrar.Name = "BtnMostrar"
-        Me.BtnMostrar.Size = New System.Drawing.Size(98, 23)
+        Me.BtnMostrar.Size = New System.Drawing.Size(157, 23)
         Me.BtnMostrar.TabIndex = 10
         Me.BtnMostrar.Text = "Mostrar"
         Me.BtnMostrar.UseVisualStyleBackColor = False
@@ -444,9 +444,9 @@ Partial Class FormPaciente
         '
         Me.ACT.BackColor = System.Drawing.Color.Aqua
         Me.ACT.Image = Global.Proyecto._1Medico.My.Resources.Resources.update
-        Me.ACT.Location = New System.Drawing.Point(178, 492)
+        Me.ACT.Location = New System.Drawing.Point(220, 492)
         Me.ACT.Name = "ACT"
-        Me.ACT.Size = New System.Drawing.Size(88, 23)
+        Me.ACT.Size = New System.Drawing.Size(147, 23)
         Me.ACT.TabIndex = 23
         Me.ACT.UseVisualStyleBackColor = False
         '
@@ -454,9 +454,9 @@ Partial Class FormPaciente
         '
         Me.BtnRegrsar.BackColor = System.Drawing.Color.Cyan
         Me.BtnRegrsar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnRegrsar.Location = New System.Drawing.Point(0, 1)
+        Me.BtnRegrsar.Location = New System.Drawing.Point(0, 492)
         Me.BtnRegrsar.Name = "BtnRegrsar"
-        Me.BtnRegrsar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnRegrsar.Size = New System.Drawing.Size(110, 23)
         Me.BtnRegrsar.TabIndex = 24
         Me.BtnRegrsar.Text = "Regresar"
         Me.BtnRegrsar.UseVisualStyleBackColor = False

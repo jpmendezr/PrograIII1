@@ -16,7 +16,7 @@
     Private Sub Btnmostrar_Click(sender As Object, e As EventArgs) Handles Btnmostrar.Click
         Try
             Using mostrar_datos As New BdCentroMedicoEntities
-                Dim mostrar = mostrar_datos.mostrar_tablas2(Txtcedula.Text).ToList
+                Dim mostrar = mostrar_datos.mostrar_tablas(Txtcedula.Text).ToList
                 If (mostrar.count > 0) Then
                     Me.DataGridView1.DataSource = mostrar
 
