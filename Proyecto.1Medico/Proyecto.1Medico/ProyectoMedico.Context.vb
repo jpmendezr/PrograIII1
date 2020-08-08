@@ -34,8 +34,8 @@ Partial Public Class BdCentroMedicoEntities
     Public Overridable Property sysdiagrams() As DbSet(Of sysdiagrams)
     Public Overridable Property TbPersona() As DbSet(Of TbPersona)
     Public Overridable Property TbFamiliarPaciente() As DbSet(Of TbFamiliarPaciente)
-    Public Overridable Property TbCita() As DbSet(Of TbCita)
     Public Overridable Property TbPaciente() As DbSet(Of TbPaciente)
+    Public Overridable Property TbCita() As DbSet(Of TbCita)
 
     Public Overridable Function f_sp_BuscarPersonal(cedu As String) As ObjectResult(Of f_sp_BuscarPersonal_Result1)
         Dim ceduParameter As ObjectParameter = If(cedu IsNot Nothing, New ObjectParameter("Cedu", cedu), New ObjectParameter("Cedu", GetType(String)))
