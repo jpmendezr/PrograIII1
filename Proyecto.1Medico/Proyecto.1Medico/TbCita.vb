@@ -17,6 +17,5 @@ Partial Public Class TbCita
     Public Property Hora As String
     Public Property NombreMedico As String
     Public Property Especialidad As String
-    Public Property Estado As String
 
 End Class

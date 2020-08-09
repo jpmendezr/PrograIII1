@@ -43,7 +43,6 @@
           <Property Name="Hora" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="NombreMedico" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Especialidad" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Estado" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TbConsultaMedica">
           <Key>
@@ -216,6 +215,7 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
         <Function Name="mostrar_tablas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cedula" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="MostrarExamenes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="MostrarPersona" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="Sp_Reporte_Examenes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Cedula" Type="varchar" Mode="In" />
@@ -413,7 +413,6 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           </FunctionImport>
           <EntitySet Name="TbFamiliarPaciente" EntityType="BdCentroMedicoModel.TbFamiliarPaciente" />
           <EntitySet Name="TbPaciente" EntityType="BdCentroMedicoModel.TbPaciente" />
-          <EntitySet Name="TbCita" EntityType="BdCentroMedicoModel.TbCita" />
           <FunctionImport Name="f_Sp_Reporte_Cita" ReturnType="Collection(BdCentroMedicoModel.f_Sp_Reporte_Cita_Result)">
             <Parameter Name="Cedula" Mode="In" Type="String" />
             <Parameter Name="FechaInicio" Mode="In" Type="String" />
@@ -425,6 +424,8 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
             <Parameter Name="FechaInicio" Mode="In" Type="String" />
             <Parameter Name="FechaFinal" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="MostrarExamenes" ReturnType="Collection(BdCentroMedicoModel.MostrarExamenes_Result)" />
+          <EntitySet Name="TbCita" EntityType="BdCentroMedicoModel.TbCita" />
         </EntityContainer>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -550,18 +551,6 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           <Property Name="Sintomas" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="MedicamentoAlergico" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="TbCita">
-          <Key>
-            <PropertyRef Name="IdCita" />
-          </Key>
-          <Property Name="IdCita" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CedulaPaciente" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Fecha" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Hora" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="NombreMedico" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Especialidad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
         <ComplexType Name="f_Sp_Reporte_Cita_Result">
           <Property Type="Int32" Name="IdPersona" Nullable="false" />
           <Property Type="String" Name="Cedula" Nullable="false" MaxLength="10" />
@@ -600,6 +589,25 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           <Property Type="String" Name="Administrado" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Recetado" Nullable="false" MaxLength="50" />
         </ComplexType>
+        <ComplexType Name="MostrarExamenes_Result">
+          <Property Type="String" Name="CedulaPersona" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Orina" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sangre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Fecha" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Administrado" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Recetado" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="TbCita">
+          <Key>
+            <PropertyRef Name="IdCita" />
+          </Key>
+          <Property Name="IdCita" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CedulaPaciente" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Hora" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="NombreMedico" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Especialidad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -805,19 +813,6 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TbCita">
-            <EntityTypeMapping TypeName="BdCentroMedicoModel.TbCita">
-              <MappingFragment StoreEntitySet="TbCita">
-                <ScalarProperty Name="Estado" ColumnName="Estado" />
-                <ScalarProperty Name="Especialidad" ColumnName="Especialidad" />
-                <ScalarProperty Name="NombreMedico" ColumnName="NombreMedico" />
-                <ScalarProperty Name="Hora" ColumnName="Hora" />
-                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-                <ScalarProperty Name="CedulaPaciente" ColumnName="CedulaPaciente" />
-                <ScalarProperty Name="IdCita" ColumnName="IdCita" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="f_Sp_Reporte_Cita" FunctionName="BdCentroMedicoModel.Store.f_Sp_Reporte_Cita">
             <ResultMapping>
               <ComplexTypeMapping TypeName="BdCentroMedicoModel.f_Sp_Reporte_Cita_Result">
@@ -868,6 +863,30 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="MostrarExamenes" FunctionName="BdCentroMedicoModel.Store.MostrarExamenes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BdCentroMedicoModel.MostrarExamenes_Result">
+                <ScalarProperty Name="CedulaPersona" ColumnName="CedulaPersona" />
+                <ScalarProperty Name="Orina" ColumnName="Orina" />
+                <ScalarProperty Name="Sangre" ColumnName="Sangre" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Administrado" ColumnName="Administrado" />
+                <ScalarProperty Name="Recetado" ColumnName="Recetado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="TbCita">
+            <EntityTypeMapping TypeName="BdCentroMedicoModel.TbCita">
+              <MappingFragment StoreEntitySet="TbCita">
+                <ScalarProperty Name="Especialidad" ColumnName="Especialidad" />
+                <ScalarProperty Name="NombreMedico" ColumnName="NombreMedico" />
+                <ScalarProperty Name="Hora" ColumnName="Hora" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="CedulaPaciente" ColumnName="CedulaPaciente" />
+                <ScalarProperty Name="IdCita" ColumnName="IdCita" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
