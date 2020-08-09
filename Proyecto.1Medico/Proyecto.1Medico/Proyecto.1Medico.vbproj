@@ -175,6 +175,9 @@
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
     <Compile Include="Medicamentos_1.vb" />
+    <Compile Include="MostrarExamenes_Result.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
     <Compile Include="MostrarPersona_Result.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>

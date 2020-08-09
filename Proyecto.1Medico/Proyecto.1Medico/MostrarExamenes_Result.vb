@@ -10,19 +10,12 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class f_Sp_Reporte_Cita_Result
-    Public Property IdPersona As Integer
-    Public Property Cedula As String
-    Public Property Nombre As String
-    Public Property Apellido As String
-    Public Property Sexo As String
-    Public Property FechaNacimiento As String
-    Public Property Telefono As String
-    Public Property Correo As String
+Partial Public Class MostrarExamenes_Result
+    Public Property CedulaPersona As String
+    Public Property Orina As String
+    Public Property Sangre As String
     Public Property Fecha As String
-    Public Property Hora As String
-    Public Property NombreMedico As String
-    Public Property Razón_Consulta As String
-    Public Property Diagnostico As String
+    Public Property Administrado As String
+    Public Property Recetado As String
 
 End Class
