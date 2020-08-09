@@ -6,7 +6,7 @@
     Private NombreM As String 'nombre medico
     Private cedulaP As String 'cedula paciente 
     Private Id As Integer 'Id de la persona
-    Private estado As String ' citas canceladas
+
 
     Public Property EspecialidadM1 As String
         Get
@@ -62,15 +62,6 @@
         End Set
     End Property
 
-    Public Property estado1 As String
-        Get
-            Return estado
-        End Get
-        Set(value As String)
-            estado = value
-        End Set
-    End Property
-
     Public Sub eliminarDatos()
         'Eliminar
         Try
@@ -98,7 +89,6 @@
                     act.Hora = Hora
                     act.NombreMedico = NombreM
                     act.Especialidad = EspecialidadM
-                    act.Estado = estado
                     actualizar.SaveChanges()
                     MessageBox.Show("Datos actualizados ")
                 Else
@@ -188,23 +178,23 @@
 
     'End Function
 
-    Function ConsultaValores() As Boolean
+    'Function ConsultaValores() As Boolean
 
-        Try
-            Using consulta As New BdCentroMedicoEntities
-                Dim QuerrySelect = (From dato In consulta.TbCita Where dato.Hora = Hora1 And dato.NombreMedico = NombreM1 Take (2000) Select dato).ToList
-                If (QuerrySelect.Count > 0) Then
-                    MsgBox("Si existe este registro.")
-                    Return False
-                Else
-                    MsgBox("No exite este registro.")
-                    Return True
-                End If
-            End Using
-        Catch ex As Exception
-            MsgBox("No se pueden verificar. ")
-            Return False
-        End Try
+    '    Try
+    '        Using consulta As New BdCentroMedicoEntities
+    '            Dim QuerrySelect = (From dato In consulta.TbCita Where dato.Hora = Hora1 And dato.NombreMedico = NombreM1 Take (2000) Select dato).ToList
+    '            If (QuerrySelect.Count > 0) Then
+    '                MsgBox("Si existe este registro.")
+    '                Return False
+    '            Else
+    '                MsgBox("No exite este registro.")
+    '                Return True
+    '            End If
+    '        End Using
+    '    Catch ex As Exception
+    '        MsgBox("No se pueden verificar. ")
+    '        Return False
+    '    End Try
 
-    End Function
+    'End Function
 End Class

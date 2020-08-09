@@ -41,42 +41,61 @@
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
         'Btn de agregar a la base de datos.
         ' Validaciones de la agregacion en la base de datos.
+        Dim fechas As String = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
         If Information.IsNumeric(Me.TextEspecialidad.Text) And Information.IsNumeric(Me.TextNMedico.Text) Then
             MsgBox(" no puede ingresar numeros")
         Else
             If Information.IsNumeric(Me.TextCedula.Text) Then
 
+                ConsultaValores()
 
-                If Me.ComboHora.Text <> agenda.Hora1 And Me.TextNMedico.Text <> agenda.NombreM1 Then
-                    agenda.EspecialidadM1 = Me.TextEspecialidad.Text
-                    agenda.NombreM1 = Me.TextNMedico.Text
-                    agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
-                    agenda.CedulaP1 = Me.TextCedula.Text
-                    agenda.Hora1 = Me.ComboHora.Text
-                    agenda.estado1 = Me.ComboEstado.Text
-                    agenda.RegistrarPersona()
-                    MostrarCitas()
-                    'refrescarControladores()
-
-                Else
-                    MsgBox("No se pueden volver a generar las citas.")
-                End If
             Else
                 MsgBox("No puede meter letras ")
             End If
         End If
     End Sub
 
+    Function ConsultaValores() As Boolean
+        Dim fechas As String = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
+        Try
+            Using consulta As New BdCentroMedicoEntities
+                Dim QuerrySelect = (From dato In consulta.TbCita Where dato.Fecha = fechas And dato.Hora = Me.ComboHora.Text And dato.NombreMedico = Me.TextNMedico.Text Take (2000) Select dato).ToList
+                If (QuerrySelect.Count > 0) Then
+                    MsgBox("Si existe este registro.")
+                    Return False
+                Else
+                    If Me.ComboHora.Text <> agenda.Hora1 Or Me.TextNMedico.Text <> agenda.NombreM1 Or fechas <> agenda.Fecha1 Then
+                        Llenado()
+                        MostrarCitas()
+                        'refrescarControladores()
+                        MsgBox("No exite este registro.")
+                        Return True
+                    End If
+                End If
+            End Using
+        Catch ex As Exception
+            MsgBox("No se pueden verificar. ")
+            Return False
+        End Try
+
+    End Function
+    Public Sub Llenado()
+        agenda.EspecialidadM1 = Me.TextEspecialidad.Text
+        agenda.NombreM1 = Me.TextNMedico.Text
+        agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
+        agenda.CedulaP1 = Me.TextCedula.Text
+        agenda.Hora1 = Me.ComboHora.Text
+        agenda.RegistrarPersona()
+    End Sub
     Public Sub refrescarControladores()
         Me.TextEspecialidad.Clear()
         Me.TextNMedico.Clear()
         Me.TextCedula.Clear()
         Me.TextID.Clear()
-        'Me.ComboEstado.SelectedIndex = 0
-        'Me.ComboHora.SelectedIndex = 0
-        'Me.ComboBoxDia.SelectedIndex = 0
-        'Me.ComboBoxMes.SelectedIndex = 0
-        'Me.ComboBoxAño.SelectedIndex = 0
+        Me.ComboHora.Text = ""
+        Me.ComboBoxDia.Text = ""
+        Me.ComboBoxMes.Text = ""
+        Me.ComboBoxAño.Text = ""
     End Sub
 
     Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
@@ -88,7 +107,6 @@
             agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
             agenda.CedulaP1 = Me.TextCedula.Text
             agenda.Hora1 = Me.ComboHora.Text
-            agenda.estado1 = Me.ComboEstado.Text
             agenda.ActualizarCita()
             MostrarCitas()
         Catch ex As Exception
@@ -126,9 +144,6 @@
         Me.ComboHora.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 
-    Private Sub ComboEstado_VisibleChanged(sender As Object, e As EventArgs) Handles ComboEstado.VisibleChanged
-        Me.ComboEstado.DropDownStyle = ComboBoxStyle.DropDownList
-    End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Try
