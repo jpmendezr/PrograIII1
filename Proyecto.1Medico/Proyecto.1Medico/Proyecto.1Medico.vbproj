@@ -216,7 +216,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
-    <Compile Include="Reporteria.vb" />
     <Compile Include="ReporteriaForm.Designer.vb">
       <DependentUpon>ReporteriaForm.vb</DependentUpon>
     </Compile>
