@@ -197,11 +197,7 @@
     End Sub
 
     Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
-        formMenu = New FormMenu()
-        formMenu.Show()
         Me.Dispose()
-
-
     End Sub
     Private Sub ComboBoxAño_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxAño.TextChanged
         Me.ComboBoxAño.DropDownStyle = ComboBoxStyle.DropDownList

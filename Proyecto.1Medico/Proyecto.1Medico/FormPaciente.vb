@@ -208,8 +208,7 @@
     End Sub
 
     Private Sub BtnRegrsar_Click(sender As Object, e As EventArgs) Handles BtnRegrsar.Click
-        Dim menu As New FormMenu()
-        menu.Show()
+
         Me.Dispose()
 
     End Sub

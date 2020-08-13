@@ -68,7 +68,7 @@ Partial Class FormUsuarios
         'btnBuscar
         '
         Me.btnBuscar.BackColor = System.Drawing.Color.Cyan
-        Me.btnBuscar.Location = New System.Drawing.Point(182, 415)
+        Me.btnBuscar.Location = New System.Drawing.Point(139, 415)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.btnBuscar.TabIndex = 1
@@ -94,7 +94,7 @@ Partial Class FormUsuarios
         'btnAgregar
         '
         Me.btnAgregar.BackColor = System.Drawing.Color.Cyan
-        Me.btnAgregar.Location = New System.Drawing.Point(597, 415)
+        Me.btnAgregar.Location = New System.Drawing.Point(15, 415)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
         Me.btnAgregar.TabIndex = 4
@@ -104,7 +104,7 @@ Partial Class FormUsuarios
         'Nombre
         '
         Me.Nombre.AutoSize = True
-        Me.Nombre.Location = New System.Drawing.Point(700, 9)
+        Me.Nombre.Location = New System.Drawing.Point(684, 10)
         Me.Nombre.Name = "Nombre"
         Me.Nombre.Size = New System.Drawing.Size(44, 13)
         Me.Nombre.TabIndex = 5
@@ -113,7 +113,7 @@ Partial Class FormUsuarios
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(700, 48)
+        Me.Label3.Location = New System.Drawing.Point(684, 48)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 13)
         Me.Label3.TabIndex = 6
@@ -131,7 +131,7 @@ Partial Class FormUsuarios
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(718, 176)
+        Me.Label5.Location = New System.Drawing.Point(684, 176)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(31, 13)
         Me.Label5.TabIndex = 7
@@ -140,7 +140,7 @@ Partial Class FormUsuarios
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(700, 137)
+        Me.Label6.Location = New System.Drawing.Point(679, 134)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(49, 13)
         Me.Label6.TabIndex = 8
@@ -149,7 +149,7 @@ Partial Class FormUsuarios
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(684, 89)
+        Me.Label7.Location = New System.Drawing.Point(662, 89)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(94, 13)
         Me.Label7.TabIndex = 9
@@ -166,28 +166,28 @@ Partial Class FormUsuarios
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(613, 25)
+        Me.txtNombre.Location = New System.Drawing.Point(607, 26)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(190, 20)
         Me.txtNombre.TabIndex = 12
         '
         'txtapell
         '
-        Me.txtapell.Location = New System.Drawing.Point(612, 66)
+        Me.txtapell.Location = New System.Drawing.Point(607, 67)
         Me.txtapell.Name = "txtapell"
         Me.txtapell.Size = New System.Drawing.Size(195, 20)
         Me.txtapell.TabIndex = 13
         '
         'txttel
         '
-        Me.txttel.Location = New System.Drawing.Point(678, 153)
+        Me.txttel.Location = New System.Drawing.Point(656, 153)
         Me.txttel.Name = "txttel"
         Me.txttel.Size = New System.Drawing.Size(100, 20)
         Me.txttel.TabIndex = 18
         '
         'txtCorr
         '
-        Me.txtCorr.Location = New System.Drawing.Point(618, 105)
+        Me.txtCorr.Location = New System.Drawing.Point(612, 105)
         Me.txtCorr.Name = "txtCorr"
         Me.txtCorr.Size = New System.Drawing.Size(190, 20)
         Me.txtCorr.TabIndex = 19
@@ -196,7 +196,7 @@ Partial Class FormUsuarios
         '
         Me.CBSexo.FormattingEnabled = True
         Me.CBSexo.Items.AddRange(New Object() {"F", "M"})
-        Me.CBSexo.Location = New System.Drawing.Point(712, 192)
+        Me.CBSexo.Location = New System.Drawing.Point(680, 192)
         Me.CBSexo.Name = "CBSexo"
         Me.CBSexo.Size = New System.Drawing.Size(53, 21)
         Me.CBSexo.TabIndex = 22
@@ -254,7 +254,7 @@ Partial Class FormUsuarios
         'btnEliminar
         '
         Me.btnEliminar.BackColor = System.Drawing.Color.Cyan
-        Me.btnEliminar.Location = New System.Drawing.Point(316, 415)
+        Me.btnEliminar.Location = New System.Drawing.Point(583, 415)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
         Me.btnEliminar.TabIndex = 30
@@ -264,7 +264,7 @@ Partial Class FormUsuarios
         'btnMostar
         '
         Me.btnMostar.BackColor = System.Drawing.Color.Cyan
-        Me.btnMostar.Location = New System.Drawing.Point(457, 415)
+        Me.btnMostar.Location = New System.Drawing.Point(430, 415)
         Me.btnMostar.Name = "btnMostar"
         Me.btnMostar.Size = New System.Drawing.Size(75, 23)
         Me.btnMostar.TabIndex = 31
@@ -274,7 +274,7 @@ Partial Class FormUsuarios
         'btnActualizar
         '
         Me.btnActualizar.BackColor = System.Drawing.Color.Cyan
-        Me.btnActualizar.Location = New System.Drawing.Point(721, 415)
+        Me.btnActualizar.Location = New System.Drawing.Point(285, 415)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(75, 23)
         Me.btnActualizar.TabIndex = 32
@@ -284,7 +284,7 @@ Partial Class FormUsuarios
         'BtnRegresar
         '
         Me.BtnRegresar.BackColor = System.Drawing.Color.Cyan
-        Me.BtnRegresar.Location = New System.Drawing.Point(6, 415)
+        Me.BtnRegresar.Location = New System.Drawing.Point(694, 415)
         Me.BtnRegresar.Name = "BtnRegresar"
         Me.BtnRegresar.Size = New System.Drawing.Size(102, 23)
         Me.BtnRegresar.TabIndex = 33
@@ -366,8 +366,10 @@ Partial Class FormUsuarios
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnAgregar)
+        Me.MaximizeBox = False
         Me.Name = "FormUsuarios"
-        Me.Text = "FormUsuarios"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Usuarios"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

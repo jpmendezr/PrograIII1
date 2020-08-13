@@ -1,7 +1,6 @@
 ﻿Public Class FRMagendar
 
     Dim agenda As New AgendarCita
-    Dim frmMenu As FormMenu
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
         'Btn eliminar
         'Encargado de eliminar
@@ -118,8 +117,6 @@
     Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
         'Btn de regresar a la ventana principal.
         Me.Hide()
-        frmMenu = New FormMenu()
-        frmMenu.Show()
 
     End Sub
 

@@ -290,8 +290,10 @@ Partial Class ReporteriaForm
         Me.Controls.Add(Me.BtnMostrar)
         Me.Controls.Add(Me.BtnBuscar)
         Me.Controls.Add(Me.Panel1)
+        Me.MaximizeBox = False
         Me.Name = "ReporteriaForm"
-        Me.Text = "ReporteriaForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Reporteria"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

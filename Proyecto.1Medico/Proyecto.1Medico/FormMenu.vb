@@ -45,17 +45,14 @@
     End Sub
 
     Private Sub BtnConsEnferm_Click(sender As Object, e As EventArgs) Handles BtnConsEnferm.Click
-        Me.Hide()
         FormEnfermera = New FRM_Enfermeria
         FormEnfermera.Show()
-
-
     End Sub
 
     Private Sub btnConsMedico_Click(sender As Object, e As EventArgs) Handles btnConsMedico.Click
         FormConsultorio = New FormConsultorio
         FormConsultorio.Show()
-        Me.Hide()
+
 
     End Sub
 
@@ -71,4 +68,5 @@
         FormUsuarios.Show()
 
     End Sub
+
 End Class

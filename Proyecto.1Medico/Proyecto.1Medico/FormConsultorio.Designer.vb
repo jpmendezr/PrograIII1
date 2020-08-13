@@ -272,7 +272,7 @@ Partial Class FormConsultorio
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label11.ForeColor = System.Drawing.Color.Red
         Me.Label11.Location = New System.Drawing.Point(319, 9)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(88, 25)
@@ -302,7 +302,9 @@ Partial Class FormConsultorio
         Me.Controls.Add(Me.BtnActualizar)
         Me.Controls.Add(Me.Btnmostrar)
         Me.Controls.Add(Me.Panel2)
+        Me.MaximizeBox = False
         Me.Name = "FormConsultorio"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormConsultorio"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

@@ -28,15 +28,17 @@ Partial Class FRM_Enfermeria
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Btnregresar = New System.Windows.Forms.Button()
+        Me.TxtSintomas = New System.Windows.Forms.RichTextBox()
         Me.BTNactualizar = New System.Windows.Forms.Button()
         Me.txtcedula = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Txtpeso = New System.Windows.Forms.TextBox()
         Me.TXTaltura = New System.Windows.Forms.TextBox()
         Me.txtpresion = New System.Windows.Forms.TextBox()
-        Me.TxtSintomas = New System.Windows.Forms.RichTextBox()
-        Me.Btnregresar = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -44,8 +46,8 @@ Partial Class FRM_Enfermeria
         Me.Label1.AutoSize = True
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(311, 37)
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Location = New System.Drawing.Point(332, 37)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(126, 25)
         Me.Label1.TabIndex = 0
@@ -106,10 +108,29 @@ Partial Class FRM_Enfermeria
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Location = New System.Drawing.Point(61, 89)
+        Me.Panel1.Location = New System.Drawing.Point(61, 92)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(678, 323)
+        Me.Panel1.Size = New System.Drawing.Size(678, 320)
         Me.Panel1.TabIndex = 5
+        '
+        'Btnregresar
+        '
+        Me.Btnregresar.BackColor = System.Drawing.Color.Aqua
+        Me.Btnregresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btnregresar.Location = New System.Drawing.Point(376, 294)
+        Me.Btnregresar.Name = "Btnregresar"
+        Me.Btnregresar.Size = New System.Drawing.Size(75, 23)
+        Me.Btnregresar.TabIndex = 12
+        Me.Btnregresar.Text = "Regresar"
+        Me.Btnregresar.UseVisualStyleBackColor = False
+        '
+        'TxtSintomas
+        '
+        Me.TxtSintomas.Location = New System.Drawing.Point(21, 149)
+        Me.TxtSintomas.Name = "TxtSintomas"
+        Me.TxtSintomas.Size = New System.Drawing.Size(634, 124)
+        Me.TxtSintomas.TabIndex = 11
+        Me.TxtSintomas.Text = ""
         '
         'BTNactualizar
         '
@@ -160,36 +181,30 @@ Partial Class FRM_Enfermeria
         Me.txtpresion.Size = New System.Drawing.Size(154, 20)
         Me.txtpresion.TabIndex = 5
         '
-        'TxtSintomas
+        'PictureBox1
         '
-        Me.TxtSintomas.Location = New System.Drawing.Point(21, 149)
-        Me.TxtSintomas.Name = "TxtSintomas"
-        Me.TxtSintomas.Size = New System.Drawing.Size(634, 124)
-        Me.TxtSintomas.TabIndex = 11
-        Me.TxtSintomas.Text = ""
-        '
-        'Btnregresar
-        '
-        Me.Btnregresar.BackColor = System.Drawing.Color.Aqua
-        Me.Btnregresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btnregresar.Location = New System.Drawing.Point(307, 294)
-        Me.Btnregresar.Name = "Btnregresar"
-        Me.Btnregresar.Size = New System.Drawing.Size(75, 23)
-        Me.Btnregresar.TabIndex = 12
-        Me.Btnregresar.Text = "Regresar"
-        Me.Btnregresar.UseVisualStyleBackColor = False
+        Me.PictureBox1.Image = Global.Proyecto._1Medico.My.Resources.Resources.doctor_medical_mask_avatar_care_hospital_icon_141626
+        Me.PictureBox1.Location = New System.Drawing.Point(703, 2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(97, 90)
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
         '
         'FRM_Enfermeria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 418)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
         Me.Name = "FRM_Enfermeria"
-        Me.Text = "FRM_Enfermeria"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Enfermeria"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -209,4 +224,5 @@ Partial Class FRM_Enfermeria
     Friend WithEvents Label6 As Label
     Friend WithEvents TxtSintomas As RichTextBox
     Friend WithEvents Btnregresar As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

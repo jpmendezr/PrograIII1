@@ -361,6 +361,15 @@
       <DependentUpon>ProyectoMedico.edmx</DependentUpon>
       <LastGenOutput>ProyectoMedico.vb</LastGenOutput>
     </Content>
+    <None Include="Resources\hospital-2_icon-icons.com_66067.png" />
+    <None Include="Resources\medicine_icon-icons.com_66070 %281%29.png" />
+    <None Include="Resources\medicine-2_icon-icons.com_66043.png" />
+    <None Include="Resources\hospital_doctor_10738.png" />
+    <None Include="Resources\doctorhospital_101095.png" />
+    <None Include="Resources\doctor_medical_mask_avatar_care_hospital_icon_141626.png" />
+    <None Include="Resources\hospital_medical_consultation_icon_1401641.png" />
+    <None Include="Resources\hospital_medical_consultation_icon_140164.png" />
+    <None Include="Resources\hospital_health_clinic_urban_buildings_medical_icon_134527.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

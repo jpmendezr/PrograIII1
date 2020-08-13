@@ -55,8 +55,7 @@
 
 
     Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
-        Dim regresarMenu As New FormMenu()
-        regresarMenu.Show()
+
         Me.Dispose()
     End Sub
 

@@ -148,9 +148,10 @@ Partial Class FRMChequeoExamen
         Me.Controls.Add(Me.txtcedula)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.DataGridView1)
+        Me.MaximizeBox = False
         Me.Name = "FRMChequeoExamen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FRMChequeoExamen"
+        Me.Text = "Chequeo de Examenes"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
