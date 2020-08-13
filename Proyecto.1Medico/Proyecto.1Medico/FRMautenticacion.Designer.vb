@@ -29,15 +29,15 @@ Partial Class FRMautenticacion
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -109,15 +109,6 @@ Partial Class FRMautenticacion
         Me.Panel1.Size = New System.Drawing.Size(750, 210)
         Me.Panel1.TabIndex = 6
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Proyecto._1Medico.My.Resources.Resources.hospital_doctor_10738
-        Me.PictureBox3.Location = New System.Drawing.Point(-4, 606)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(95, 99)
-        Me.PictureBox3.TabIndex = 10
-        Me.PictureBox3.TabStop = False
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Proyecto._1Medico.My.Resources.Resources.hospital_medical_consultation_icon_140164
@@ -145,10 +136,19 @@ Partial Class FRMautenticacion
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Label4"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Proyecto._1Medico.My.Resources.Resources.hospital_doctor_10738
+        Me.PictureBox3.Location = New System.Drawing.Point(-4, 606)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(95, 99)
+        Me.PictureBox3.TabIndex = 10
+        Me.PictureBox3.TabStop = False
+        '
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.Proyecto._1Medico.My.Resources.Resources.hospital_2_icon_icons_com_66067
-        Me.PictureBox4.Location = New System.Drawing.Point(1113, 491)
+        Me.PictureBox4.Location = New System.Drawing.Point(1149, 473)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(249, 257)
         Me.PictureBox4.TabIndex = 16
@@ -179,8 +179,8 @@ Partial Class FRMautenticacion
         Me.Text = "Autenticacion"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
