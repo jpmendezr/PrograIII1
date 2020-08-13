@@ -71,4 +71,6 @@ Public Class FRMautenticacion
         '    'Me.FormPaciente.Show()
         'End If
     End Sub
+
+
 End Class
