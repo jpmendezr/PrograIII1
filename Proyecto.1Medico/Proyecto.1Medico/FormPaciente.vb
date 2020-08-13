@@ -68,8 +68,8 @@
             End If
 
             registro.EliminarPersona()
-            registro.EliminarPaciente()
             registro.EliminarFamiliar()
+            registro.EliminarPaciente()
         Else
             MessageBox.Show("Debe de ingresar valores")
 
@@ -92,7 +92,19 @@
             MsgBox(ex.Message.ToString)
         End Try
 
-
+        Me.txtFamiliar.Enabled = True
+        Me.txtrelacion.Enabled = True
+        Me.txtTelefonoFamiliar.Enabled = True
+        Me.txtDireccion.Enabled = True
+        Me.TexApellidos.Enabled = True
+        Me.TexCedula.Enabled = True
+        Me.TexCorreoElectronico.Enabled = True
+        Me.TextCel.Enabled = True
+        Me.TextNombre.Enabled = True
+        Me.ComboBoxAño.Enabled = True
+        Me.ComboBoxDia.Enabled = True
+        Me.ComboBoxMes.Enabled = True
+        Me.ComboBoxSexo.Enabled = True
     End Sub
 
     Private Sub ACT_Click(sender As Object, e As EventArgs) Handles ACT.Click
@@ -199,6 +211,7 @@
         Dim menu As New FormMenu()
         menu.Show()
         Me.Dispose()
+
     End Sub
 
     Private Sub ComboBoxSexo_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxSexo.TextChanged

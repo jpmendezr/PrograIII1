@@ -225,8 +225,6 @@ Public Class Paciente
         End Try
     End Function
 
-
-
     Public Sub EliminarPersona()
         Dim resultado As Integer = 0
         Try
@@ -269,11 +267,12 @@ Public Class Paciente
                     eleminar.TbPaciente.Remove(delete)
                     eleminar.SaveChanges()
 
+
                 End If
 
             End Using
         Catch ex As Exception
-            MessageBox.Show("Error  Eliminar Paciente")
+            MessageBox.Show(ex.ToString)
         End Try
     End Sub
 
