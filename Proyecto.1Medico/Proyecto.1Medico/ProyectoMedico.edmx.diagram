@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="46e23a6fa652431296f2c0a3da041bfb" Name="Diagram1" ZoomLevel="61">
+      <Diagram DiagramId="46e23a6fa652431296f2c0a3da041bfb" Name="Diagram1" ZoomLevel="92">
         <<<<<<< HEAD
         
         
         
         
-        <EntityTypeShape EntityType="BdCentroMedicoModel.sysdiagrams" Width="1.5" PointX="1.25" PointY="6.25" />
+        <EntityTypeShape EntityType="BdCentroMedicoModel.sysdiagrams" Width="1.5" PointX="2.125" PointY="6.25" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbChequeoExamanes" Width="1.5" PointX="9.5" PointY="7.625" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbChequeoMedicamentos" Width="1.5" PointX="6.75" PointY="6.875" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="4.75" PointY="1.25" />
