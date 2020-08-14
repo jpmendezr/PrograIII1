@@ -219,7 +219,7 @@ Public Class Paciente
             End Using
         Catch ex As Exception
             resul = 0
-            ' MessageBox.Show("Error")
+
 
         End Try
     End Function
