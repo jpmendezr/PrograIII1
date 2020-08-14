@@ -4,6 +4,7 @@ Imports System.Windows.Forms
 
 Public Class Paciente
     Private cedula As String
+
     Private NombreP As String
     Private Apellidos As String
     Private sexo As String
@@ -116,8 +117,6 @@ Public Class Paciente
         End Set
     End Property
 
-
-
     Public Sub RegistrarPersona()
         Dim resultado As Integer = 0
         Try
@@ -155,7 +154,7 @@ Public Class Paciente
                 End If
             End Using
         Catch ex As Exception
-            MessageBox.Show("Error Paciente")
+            ' MessageBox.Show("Error Paciente")
         End Try
 
     End Function
@@ -176,7 +175,7 @@ Public Class Paciente
             End Using
         Catch ex As Exception
 
-            MessageBox.Show("Error Familiar")
+            'MessageBox.Show("Error Familiar")
         End Try
 
     End Function
@@ -220,7 +219,7 @@ Public Class Paciente
             End Using
         Catch ex As Exception
             resul = 0
-            MessageBox.Show("Error")
+            ' MessageBox.Show("Error")
 
         End Try
     End Function
@@ -255,7 +254,7 @@ Public Class Paciente
 
             End Using
         Catch ex As Exception
-            MessageBox.Show("Error Eliminar Familiar")
+            ' MessageBox.Show("Error Eliminar Familiar")
         End Try
     End Sub
     Public Sub EliminarPaciente()
@@ -272,7 +271,7 @@ Public Class Paciente
 
             End Using
         Catch ex As Exception
-            MessageBox.Show(ex.ToString)
+            '' MessageBox.Show("Error Elimimar Paciente")
         End Try
     End Sub
 
