@@ -273,9 +273,6 @@
     <Compile Include="TbMedicamento.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
-    <Compile Include="TbPaciente.vb">
-      <DependentUpon>ProyectoMedico.tt</DependentUpon>
-    </Compile>
     <Compile Include="TbPersona.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
