@@ -90,6 +90,18 @@
           <Property Name="IdMedicamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Medicamento" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="TbPaciente">
+          <Key>
+            <PropertyRef Name="IdPaciente" />
+          </Key>
+          <Property Name="IdPaciente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CedulaPersona" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Peso" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Altura" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TipoSangre" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="Sintomas" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="MedicamentoAlergico" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
         <EntityType Name="TbPersona">
           <Key>
             <PropertyRef Name="IdPersona" />
@@ -216,6 +228,7 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           <EntitySet Name="TbEspecialidad" EntityType="Self.TbEspecialidad" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TbFamiliarPaciente" EntityType="Self.TbFamiliarPaciente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TbMedicamento" EntityType="Self.TbMedicamento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TbPaciente" EntityType="Self.TbPaciente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TbPersona" EntityType="Self.TbPersona" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TbPersonalInterno" EntityType="Self.TbPersonalInterno" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_ConsultaMedica_TbChequeoExamanes" Association="Self.FK_ConsultaMedica_TbChequeoExamanes">
@@ -290,6 +303,7 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
             <End Role="TbMedicamento" EntitySet="TbMedicamento" />
             <End Role="TbChequeoMedicamentos" EntitySet="TbChequeoMedicamentos" />
           </AssociationSet>
+          <EntitySet Name="TbPaciente" EntityType="BdCentroMedicoModel.TbPaciente" />
           </EntityContainer>
         <ComplexType Name="f_sp_MostrarPersonal_Result">
           <Property Type="String" Name="Cedula" Nullable="false" MaxLength="10" />
@@ -578,6 +592,18 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="TbPaciente">
+          <Key>
+            <PropertyRef Name="IdPaciente" />
+          </Key>
+          <Property Name="IdPaciente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CedulaPersona" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Peso" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Altura" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TipoSangre" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="Sintomas" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MedicamentoAlergico" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -822,6 +848,19 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
                 <ScalarProperty Name="Departamento" ColumnName="Departamento" />
                 <ScalarProperty Name="Cedula" ColumnName="Cedula" />
                 <ScalarProperty Name="IdPersonalInterno" ColumnName="IdPersonalInterno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TbPaciente">
+            <EntityTypeMapping TypeName="BdCentroMedicoModel.TbPaciente">
+              <MappingFragment StoreEntitySet="TbPaciente">
+                <ScalarProperty Name="MedicamentoAlergico" ColumnName="MedicamentoAlergico" />
+                <ScalarProperty Name="Sintomas" ColumnName="Sintomas" />
+                <ScalarProperty Name="TipoSangre" ColumnName="TipoSangre" />
+                <ScalarProperty Name="Altura" ColumnName="Altura" />
+                <ScalarProperty Name="Peso" ColumnName="Peso" />
+                <ScalarProperty Name="CedulaPersona" ColumnName="CedulaPersona" />
+                <ScalarProperty Name="IdPaciente" ColumnName="IdPaciente" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
