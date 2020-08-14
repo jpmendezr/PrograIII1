@@ -16,11 +16,12 @@
             MsgBox(depa)
             btnRegCita.Enabled = False
             btnRegPaciente.Enabled = False
-            btnReporte.Enabled = False
             BtnConsEnferm.Enabled = False
+            btnAbrir.Enabled = False
         ElseIf depa.Equals("Enfermermeria") Then
 
             MsgBox(depa)
+            btnAbrir.Enabled = False
             btnRegPaciente.Enabled = False
             btnConsMedico.Enabled = False
             btnReporte.Enabled = False
@@ -30,7 +31,7 @@
             BtnConsEnferm.Enabled = False
             btnConsMedico.Enabled = False
             btnReporte.Enabled = False
-            btnAbrir.Enabled = False
+            BtnConsEnferm.Enabled = False
         End If
     End Sub
 
