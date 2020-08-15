@@ -24,6 +24,7 @@ Partial Class FormPaciente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPaciente))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.label = New System.Windows.Forms.Label()
@@ -62,7 +63,6 @@ Partial Class FormPaciente
         Me.ACT = New System.Windows.Forms.Button()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.BtnRegrsar = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -97,6 +97,16 @@ Partial Class FormPaciente
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(793, 194)
         Me.Panel1.TabIndex = 0
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(272, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(233, 25)
+        Me.Label3.TabIndex = 42
+        Me.Label3.Text = "Informacion Paciente"
         '
         'Label6
         '
@@ -441,16 +451,6 @@ Partial Class FormPaciente
         Me.BtnRegrsar.TabIndex = 24
         Me.BtnRegrsar.Text = "Regresar"
         Me.BtnRegrsar.UseVisualStyleBackColor = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(272, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(233, 25)
-        Me.Label3.TabIndex = 42
-        Me.Label3.Text = "Informacion Paciente"
         '
         'FormPaciente
         '
