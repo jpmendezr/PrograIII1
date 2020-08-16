@@ -7,7 +7,11 @@
     Dim formCita As FRMagendar
     Dim formUsuario As FormUsuarios
     Private Sub FormMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
 
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+        End Try
 
     End Sub
 
@@ -16,11 +20,12 @@
             MsgBox(depa)
             btnRegCita.Enabled = False
             btnRegPaciente.Enabled = False
-            btnReporte.Enabled = False
             BtnConsEnferm.Enabled = False
+            btnAbrir.Enabled = False
         ElseIf depa.Equals("Enfermermeria") Then
 
             MsgBox(depa)
+            btnAbrir.Enabled = False
             btnRegPaciente.Enabled = False
             btnConsMedico.Enabled = False
             btnReporte.Enabled = False
@@ -30,13 +35,19 @@
             BtnConsEnferm.Enabled = False
             btnConsMedico.Enabled = False
             btnReporte.Enabled = False
-            btnAbrir.Enabled = False
+            BtnConsEnferm.Enabled = False
         End If
     End Sub
 
     Private Sub btnRegPaciente_Click(sender As Object, e As EventArgs) Handles btnRegPaciente.Click
-        FormPaciente = New FormPaciente
-        FormPaciente.Show()
+        Try
+            FormPaciente = New FormPaciente
+            FormPaciente.Show()
+        Catch ex As Exception
+            'MsgBox(ex.Message.ToString)
+            MsgBox("btnRegPaciente_Click" + ex.InnerException.ToString)
+        End Try
+
     End Sub
 
     Private Sub btnRegCita_Click(sender As Object, e As EventArgs) Handles btnRegCita.Click

@@ -80,7 +80,7 @@
     End Sub
 
     Private Sub BtnMostrar_Click(sender As Object, e As EventArgs) Handles BtnMostrar.Click
-
+        '''''''''''''''''''''''''''
         Try
             Using bd As New BdCentroMedicoEntities
                 Dim mostrar = bd.MostrarPersona.ToList
@@ -89,7 +89,7 @@
                 End If
             End Using
         Catch ex As Exception
-            MsgBox(ex.Message.ToString)
+            MsgBox("BtnMostrar_Click" + ex.InnerException.ToString)
         End Try
 
         Me.txtFamiliar.Enabled = True
@@ -175,7 +175,9 @@
                 End If
             End Using
         Catch ex As Exception
-            MsgBox(ex.Message.ToString)
+            'MsgBox(ex.Message.ToString)
+
+            MsgBox("BtnLupa_Click" + ex.InnerException.ToString)
         End Try
 
     End Sub
@@ -203,6 +205,8 @@
             End Using
         Catch ex As Exception
             MsgBox(ex.Message.ToString)
+
+            MsgBox("FormPaciente_Load" + ex.InnerException.ToString)
         End Try
 
     End Sub
@@ -216,6 +220,7 @@
     Private Sub ComboBoxSexo_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxSexo.TextChanged
         Me.ComboBoxSexo.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
+
 
 
 End Class
