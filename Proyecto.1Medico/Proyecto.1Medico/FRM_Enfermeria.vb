@@ -3,13 +3,17 @@
     Dim registro As New Consultorio()
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BTNactualizar.Click
+        Try
+            registro.Id_paci1 = Me.txtId.Text
+            registro.Peso1 = Me.Txtpeso.Text
+            registro.Altura1 = Me.TXTaltura.Text
+            registro.Mostrar_sintomas1 = Me.TxtSintomas.Text
+            registro.Actualizar_datos()
+            agregar()
 
-        registro.Id_paci1 = Me.txtId.Text
-        registro.Peso1 = Me.Txtpeso.Text
-        registro.Altura1 = Me.Txtaltura.Text
-        registro.Mostrar_sintomas1 = Me.TxtSintomas.Text
-        registro.Actualizar_datos()
-        agregar()
+        Catch ex As Exception
+            MsgBox("Ingrese los valores.")
+        End Try
 
     End Sub
 

@@ -27,6 +27,13 @@ Partial Class FRM_Enfermeria
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ID = New System.Windows.Forms.Label()
+        Me.txtId = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.BtnMostrar = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Btnregresar = New System.Windows.Forms.Button()
         Me.TxtSintomas = New System.Windows.Forms.RichTextBox()
         Me.BTNactualizar = New System.Windows.Forms.Button()
@@ -35,16 +42,9 @@ Partial Class FRM_Enfermeria
         Me.Txtpeso = New System.Windows.Forms.TextBox()
         Me.TXTaltura = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BtnMostrar = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtId = New System.Windows.Forms.TextBox()
-        Me.ID = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -113,6 +113,70 @@ Partial Class FRM_Enfermeria
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(678, 415)
         Me.Panel1.TabIndex = 5
+        '
+        'ID
+        '
+        Me.ID.AutoSize = True
+        Me.ID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ID.Location = New System.Drawing.Point(22, 23)
+        Me.ID.Name = "ID"
+        Me.ID.Size = New System.Drawing.Size(21, 15)
+        Me.ID.TabIndex = 19
+        Me.ID.Text = "ID"
+        '
+        'txtId
+        '
+        Me.txtId.Location = New System.Drawing.Point(21, 52)
+        Me.txtId.Name = "txtId"
+        Me.txtId.Size = New System.Drawing.Size(124, 20)
+        Me.txtId.TabIndex = 18
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(320, 117)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(97, 15)
+        Me.Label8.TabIndex = 17
+        Me.Label8.Text = "Mostrar Datos"
+        '
+        'BtnMostrar
+        '
+        Me.BtnMostrar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMostrar.Location = New System.Drawing.Point(431, 377)
+        Me.BtnMostrar.Name = "BtnMostrar"
+        Me.BtnMostrar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnMostrar.TabIndex = 16
+        Me.BtnMostrar.Text = "Mostrar"
+        Me.BtnMostrar.UseVisualStyleBackColor = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(323, 149)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(332, 222)
+        Me.DataGridView1.TabIndex = 15
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(18, 264)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(184, 15)
+        Me.Label7.TabIndex = 14
+        Me.Label7.Text = "Mostrar Sintmas Agregados"
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(21, 292)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(249, 108)
+        Me.ListBox1.TabIndex = 13
         '
         'Btnregresar
         '
@@ -184,70 +248,6 @@ Partial Class FRM_Enfermeria
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(21, 292)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(249, 108)
-        Me.ListBox1.TabIndex = 13
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(18, 264)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(184, 15)
-        Me.Label7.TabIndex = 14
-        Me.Label7.Text = "Mostrar Sintmas Agregados"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(323, 149)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(332, 222)
-        Me.DataGridView1.TabIndex = 15
-        '
-        'BtnMostrar
-        '
-        Me.BtnMostrar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnMostrar.Location = New System.Drawing.Point(431, 377)
-        Me.BtnMostrar.Name = "BtnMostrar"
-        Me.BtnMostrar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnMostrar.TabIndex = 16
-        Me.BtnMostrar.Text = "Mostrar"
-        Me.BtnMostrar.UseVisualStyleBackColor = False
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(320, 117)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(97, 15)
-        Me.Label8.TabIndex = 17
-        Me.Label8.Text = "Mostrar Datos"
-        '
-        'txtId
-        '
-        Me.txtId.Location = New System.Drawing.Point(21, 52)
-        Me.txtId.Name = "txtId"
-        Me.txtId.Size = New System.Drawing.Size(124, 20)
-        Me.txtId.TabIndex = 18
-        '
-        'ID
-        '
-        Me.ID.AutoSize = True
-        Me.ID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ID.Location = New System.Drawing.Point(22, 23)
-        Me.ID.Name = "ID"
-        Me.ID.Size = New System.Drawing.Size(21, 15)
-        Me.ID.TabIndex = 19
-        Me.ID.Text = "ID"
-        '
         'FRM_Enfermeria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -262,8 +262,8 @@ Partial Class FRM_Enfermeria
         Me.Text = "Enfermeria"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

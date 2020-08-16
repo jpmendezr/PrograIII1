@@ -51,33 +51,51 @@
     End Sub
 
     Private Sub btnRegCita_Click(sender As Object, e As EventArgs) Handles btnRegCita.Click
-        formCita = New FRMagendar()
-        formCita.Show()
+        Try
+            formCita = New FRMagendar()
+            formCita.Show()
+        Catch ex As Exception
+            MsgBox("BtnRegCita_Click" + ex.InnerException.ToString)
+        End Try
+
     End Sub
 
     Private Sub BtnConsEnferm_Click(sender As Object, e As EventArgs) Handles BtnConsEnferm.Click
-        FormEnfermera = New FRM_Enfermeria
-        FormEnfermera.Show()
+        Try
+            FormEnfermera = New FRM_Enfermeria
+            FormEnfermera.Show()
+        Catch ex As Exception
+            MsgBox("BtnConsEnferm_Click" + ex.InnerException.ToString)
+        End Try
+
     End Sub
 
     Private Sub btnConsMedico_Click(sender As Object, e As EventArgs) Handles btnConsMedico.Click
-        FormConsultorio = New FormConsultorio
-        FormConsultorio.Show()
-
+        Try
+            FormConsultorio = New FormConsultorio
+            FormConsultorio.Show()
+        Catch ex As Exception
+            MsgBox("btnConsMedico_Click" + ex.InnerException.ToString)
+        End Try
 
     End Sub
 
     Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
-        FormReporte = New ReporteriaForm
-        FormReporte.Show()
-
-
+        Try
+            FormReporte = New ReporteriaForm
+            FormReporte.Show()
+        Catch ex As Exception
+            MsgBox("btnReporte_Click" + ex.InnerException.ToString)
+        End Try
     End Sub
 
     Private Sub btnAbrir_Click(sender As Object, e As EventArgs) Handles btnAbrir.Click
-        formUsuario = New FormUsuarios
-        FormUsuarios.Show()
-
+        Try
+            formUsuario = New FormUsuarios
+            FormUsuarios.Show()
+        Catch ex As Exception
+            MsgBox("btnAbrir_Click" + ex.InnerException.ToString)
+        End Try
     End Sub
 
 End Class

@@ -234,11 +234,11 @@ Partial Class FRMagendar
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(650, 94)
+        Me.Label7.Location = New System.Drawing.Point(679, 94)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(105, 15)
+        Me.Label7.Size = New System.Drawing.Size(50, 15)
         Me.Label7.TabIndex = 45
-        Me.Label7.Text = "ID del Paciente"
+        Me.Label7.Text = "ID Cita"
         '
         'TextID
         '
@@ -249,12 +249,13 @@ Partial Class FRMagendar
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.Aqua
         Me.Button1.Location = New System.Drawing.Point(702, 145)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 48
         Me.Button1.Text = "Estado cita"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label8
         '

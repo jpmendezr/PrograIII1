@@ -39,9 +39,9 @@ Partial Class FRMChequeoExamen
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(29, 121)
+        Me.DataGridView1.Location = New System.Drawing.Point(54, 122)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(506, 165)
+        Me.DataGridView1.Size = New System.Drawing.Size(443, 165)
         Me.DataGridView1.TabIndex = 2
         '
         'Label3
@@ -173,19 +173,7 @@ Partial Class FRMChequeoExamen
     Dim registro As New Examenes()
     Dim frmConsultorio As New FormConsultorio()
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btnmostrar.Click
-        Try
-            Using mostrar_examen As New BdCentroMedicoEntities
-                Dim mostrar = (From mos In mostrar_examen.TbChequeoExamanes Take (1000) Select mos).ToList
-
-                If (mostrar.count > 0) Then
-                    Me.DataGridView1.DataSource = mostrar
-                    DataGridView1.Columns.Remove("TbConsultaMedica")
-                    'MsgBox("se mostraron los datos")
-                End If
-            End Using
-        Catch ex As Exception
-
-        End Try
+        mostrarvalores()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Btnagregar.Click
@@ -217,5 +205,25 @@ Partial Class FRMChequeoExamen
         Me.Hide()
         frmConsultorio = New FormConsultorio()
         frmConsultorio.Show()
+    End Sub
+
+    Public Sub mostrarvalores()
+        Try
+            Using mostrar_examen As New BdCentroMedicoEntities
+                Dim mostrar = (From mos In mostrar_examen.TbChequeoExamanes Take (1000) Select mos).ToList
+
+                If (mostrar.count > 0) Then
+                    Me.DataGridView1.DataSource = mostrar
+                    DataGridView1.Columns.Remove("TbConsultaMedica")
+                    'MsgBox("se mostraron los datos")
+                End If
+            End Using
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub FRMChequeoExamen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        mostrarvalores()
     End Sub
 End Class

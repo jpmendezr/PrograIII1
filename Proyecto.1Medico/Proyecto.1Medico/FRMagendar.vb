@@ -146,7 +146,7 @@
         Try
             estado()
         Catch ex As Exception
-            MsgBox("inGRESE UN ID.")
+            MsgBox("Ingrese un ID si decea ver el estado o desea eliminar.")
         End Try
 
 
@@ -167,4 +167,6 @@
             MsgBox("Ingrese un Valor de Id valido.")
         End Try
     End Sub
+
+
 End Class

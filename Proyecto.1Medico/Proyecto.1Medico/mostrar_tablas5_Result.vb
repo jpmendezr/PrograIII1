@@ -10,8 +10,8 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class mostrar_tablas1_Result
-    Public Property IdPaciente As Integer
+Partial Public Class mostrar_tablas5_Result
+    Public Property IdConsulta As Integer
     Public Property Cedula As String
     Public Property Diagnostico As String
     Public Property Medicamento_Administrado As String

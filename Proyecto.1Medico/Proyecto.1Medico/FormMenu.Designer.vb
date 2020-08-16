@@ -30,17 +30,23 @@ Partial Class FormMenu
         Me.btnReporte = New System.Windows.Forms.Button()
         Me.btnAbrir = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -81,7 +87,7 @@ Partial Class FormMenu
         Me.btnConsMedico.Name = "btnConsMedico"
         Me.btnConsMedico.Size = New System.Drawing.Size(119, 23)
         Me.btnConsMedico.TabIndex = 3
-        Me.btnConsMedico.Text = "Consultorio Medico"
+        Me.btnConsMedico.Text = "Consultorio Médico"
         Me.btnConsMedico.UseVisualStyleBackColor = False
         '
         'BtnConsEnferm
@@ -118,6 +124,12 @@ Partial Class FormMenu
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label5)
@@ -137,6 +149,24 @@ Partial Class FormMenu
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1366, 713)
         Me.Panel1.TabIndex = 8
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Proyecto._1Medico.My.Resources.Resources.medicine_2_icon_icons_com_66043
+        Me.PictureBox3.Location = New System.Drawing.Point(844, 192)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(515, 519)
+        Me.PictureBox3.TabIndex = 15
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Proyecto._1Medico.My.Resources.Resources.doctorhospital_101095
+        Me.PictureBox1.Location = New System.Drawing.Point(717, 353)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(126, 119)
+        Me.PictureBox1.TabIndex = 14
+        Me.PictureBox1.TabStop = False
         '
         'Label5
         '
@@ -171,6 +201,15 @@ Partial Class FormMenu
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Centro Clínico"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Proyecto._1Medico.My.Resources.Resources.hospital_health_clinic_urban_buildings_medical_icon_134527
+        Me.PictureBox2.Location = New System.Drawing.Point(588, 466)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(255, 245)
+        Me.PictureBox2.TabIndex = 10
+        Me.PictureBox2.TabStop = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -182,32 +221,71 @@ Partial Class FormMenu
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "¡Bienvenidos!"
         '
-        'PictureBox1
+        'Label6
         '
-        Me.PictureBox1.Image = Global.Proyecto._1Medico.My.Resources.Resources.doctorhospital_101095
-        Me.PictureBox1.Location = New System.Drawing.Point(717, 353)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(126, 119)
-        Me.PictureBox1.TabIndex = 14
-        Me.PictureBox1.TabStop = False
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(26, 111)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(307, 31)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Juan Pablo Méndez R."
         '
-        'PictureBox2
+        'Label7
         '
-        Me.PictureBox2.Image = Global.Proyecto._1Medico.My.Resources.Resources.hospital_health_clinic_urban_buildings_medical_icon_134527
-        Me.PictureBox2.Location = New System.Drawing.Point(588, 466)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(255, 245)
-        Me.PictureBox2.TabIndex = 10
-        Me.PictureBox2.TabStop = False
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(26, 158)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(244, 31)
+        Me.Label7.TabIndex = 17
+        Me.Label7.Text = "Dinia Alvarado M."
         '
-        'PictureBox3
+        'Label8
         '
-        Me.PictureBox3.Image = Global.Proyecto._1Medico.My.Resources.Resources.medicine_2_icon_icons_com_66043
-        Me.PictureBox3.Location = New System.Drawing.Point(844, 192)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(515, 519)
-        Me.PictureBox3.TabIndex = 15
-        Me.PictureBox3.TabStop = False
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(26, 203)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(260, 31)
+        Me.Label8.TabIndex = 18
+        Me.Label8.Text = "Adriel Chavarría B."
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(26, 245)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(310, 31)
+        Me.Label9.TabIndex = 19
+        Me.Label9.Text = "María Paula Herrera Z."
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(26, 289)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(277, 31)
+        Me.Label10.TabIndex = 20
+        Me.Label10.Text = "Wilberth Martínez V."
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(84, 62)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(178, 31)
+        Me.Label11.TabIndex = 21
+        Me.Label11.Text = "Fundadores:"
         '
         'FormMenu
         '
@@ -215,16 +293,15 @@ Partial Class FormMenu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1366, 713)
         Me.Controls.Add(Me.Panel1)
-        Me.MaximizeBox = False
         Me.Name = "FormMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Menú"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -244,4 +321,10 @@ Partial Class FormMenu
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
 End Class
