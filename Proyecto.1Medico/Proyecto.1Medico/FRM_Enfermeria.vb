@@ -8,7 +8,6 @@
         registro.Peso1 = Me.Txtpeso.Text
         registro.Altura1 = Me.Txtaltura.Text
         registro.Mostrar_sintomas1 = Me.TxtSintomas.Text
-
         registro.Actualizar_datos()
 
     End Sub
