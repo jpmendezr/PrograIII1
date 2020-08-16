@@ -8,6 +8,7 @@
     Private altura As Double
     Private mostrar_sintomas As String
     Private cedula As String
+    Private Id_paci As String
 
     '' ATRIBUTOS medico ''
 
@@ -64,6 +65,15 @@
         End Get
         Set(value As String)
             cedula = value
+        End Set
+    End Property
+
+    Public Property Id_paci1 As String
+        Get
+            Return Id_paci
+        End Get
+        Set(value As String)
+            Id_paci = value
         End Set
     End Property
 
@@ -141,6 +151,10 @@
     End Property
 
 
+
+
+
+
     ''''''''''''''''''''''''''''''' ACTUALIZAR ENFERMERIA '''''''''''''''''''''''''''''''
 
     Public Sub Actualizar_datos() ' este metodo va a actualizar los datos de tbpaciente 
@@ -148,7 +162,7 @@
         Try
             Using actualizar As New BdCentroMedicoEntities
 
-                Dim actu = (From ac In actualizar.TbPaciente Where ac.CedulaPersona = cedula Select ac).SingleOrDefault
+                Dim actu = (From ac In actualizar.TbPaciente Where ac.IdPaciente = Id_paci Select ac).SingleOrDefault
 
                 If Not IsNothing(actu) Then
                     'actu.Presion = presion
@@ -197,7 +211,7 @@
         Dim resultado As Integer = 0
         Try
             Using actualizar As New BdCentroMedicoEntities
-                Dim actu = (From ac In actualizar.TbConsultaMedica Where ac.IdConsulta = cedulaactualizar Select ac).SingleOrDefault
+                Dim actu = (From ac In actualizar.TbConsultaMedica Where ac.IdConsulta = id Select ac).SingleOrDefault
                 If Not IsNothing(actu) Then
                     actu.Diagnostico = IDiagnostico
                     actualizar.SaveChanges()
@@ -212,27 +226,4 @@
             'MsgBox(ex.Message.ToString)
         End Try
     End Sub
-
-
-
-    '    Public Sub agregar_medi()
-    '        Dim resultado As Integer = 0
-    '        Try
-    '            Using registro_medi As New BdCentroMedicoEntities
-
-    '                Dim registro As New TbChequeoMedicamentos With {.CedulaP = cedulaactualizar, .MedicamentoAdm = IMediacamentosAdministrados, .MedicamentoRecetado = IMedicamentosRecetados}
-    '                registro_medi.TbChequeoMedicamentos.Add(registro)
-    '                resultado = registro_medi.SaveChanges()
-
-    '                If resultado > 0 Then
-    '                    MsgBox(" Los medicamentos se registraron correctamente ")
-    '                Else
-    '                    MsgBox(" Los medicamentos no se registraron correctamente ")
-    '                End If
-
-    '            End Using
-    '        Catch ex As Exception
-    '            resultado = 0
-    '        End Try
-    '    End Sub
 End Class

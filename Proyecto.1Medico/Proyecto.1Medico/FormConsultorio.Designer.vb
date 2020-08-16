@@ -54,7 +54,7 @@ Partial Class FormConsultorio
         '
         Me.Btnregresar.BackColor = System.Drawing.Color.Aqua
         Me.Btnregresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btnregresar.Location = New System.Drawing.Point(521, 473)
+        Me.Btnregresar.Location = New System.Drawing.Point(538, 454)
         Me.Btnregresar.Name = "Btnregresar"
         Me.Btnregresar.Size = New System.Drawing.Size(75, 23)
         Me.Btnregresar.TabIndex = 8
@@ -239,7 +239,7 @@ Partial Class FormConsultorio
         '
         Me.Btnmostrar.BackColor = System.Drawing.Color.Aqua
         Me.Btnmostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btnmostrar.Location = New System.Drawing.Point(411, 473)
+        Me.Btnmostrar.Location = New System.Drawing.Point(436, 455)
         Me.Btnmostrar.Name = "Btnmostrar"
         Me.Btnmostrar.Size = New System.Drawing.Size(75, 23)
         Me.Btnmostrar.TabIndex = 9
@@ -250,7 +250,7 @@ Partial Class FormConsultorio
         '
         Me.BtnActualizar.BackColor = System.Drawing.Color.Aqua
         Me.BtnActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnActualizar.Location = New System.Drawing.Point(55, 473)
+        Me.BtnActualizar.Location = New System.Drawing.Point(118, 455)
         Me.BtnActualizar.Name = "BtnActualizar"
         Me.BtnActualizar.Size = New System.Drawing.Size(75, 23)
         Me.BtnActualizar.TabIndex = 10
@@ -261,7 +261,7 @@ Partial Class FormConsultorio
         '
         Me.BtnMedicamentos.BackColor = System.Drawing.Color.Aqua
         Me.BtnMedicamentos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnMedicamentos.Location = New System.Drawing.Point(165, 473)
+        Me.BtnMedicamentos.Location = New System.Drawing.Point(211, 455)
         Me.BtnMedicamentos.Name = "BtnMedicamentos"
         Me.BtnMedicamentos.Size = New System.Drawing.Size(99, 23)
         Me.BtnMedicamentos.TabIndex = 11
@@ -283,7 +283,7 @@ Partial Class FormConsultorio
         '
         Me.Btnexamen.BackColor = System.Drawing.Color.Aqua
         Me.Btnexamen.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btnexamen.Location = New System.Drawing.Point(292, 473)
+        Me.Btnexamen.Location = New System.Drawing.Point(332, 455)
         Me.Btnexamen.Name = "Btnexamen"
         Me.Btnexamen.Size = New System.Drawing.Size(75, 23)
         Me.Btnexamen.TabIndex = 14
@@ -294,7 +294,7 @@ Partial Class FormConsultorio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(748, 508)
+        Me.ClientSize = New System.Drawing.Size(748, 494)
         Me.Controls.Add(Me.Btnexamen)
         Me.Controls.Add(Me.Btnregresar)
         Me.Controls.Add(Me.Label11)
