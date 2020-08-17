@@ -94,6 +94,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -117,6 +118,11 @@
   <ItemGroup>
     <Compile Include="AgendarCita.vb" />
     <Compile Include="Autenticacion.vb" />
+    <Compile Include="BdCentroMedicoDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BdCentroMedicoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BuscarPersona_Result.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
@@ -237,6 +243,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
+    <Compile Include="Reporte2.Designer.vb">
+      <DependentUpon>Reporte2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ReporteriaForm.Designer.vb">
       <DependentUpon>ReporteriaForm.vb</DependentUpon>
     </Compile>
@@ -317,15 +329,32 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Reporte2.resx">
+      <DependentUpon>Reporte2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteriaForm.resx">
       <DependentUpon>ReporteriaForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="BdCentroMedicoDataSet.xsc">
+      <DependentUpon>BdCentroMedicoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BdCentroMedicoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BdCentroMedicoDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BdCentroMedicoDataSet.xss">
+      <DependentUpon>BdCentroMedicoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\Sp_Reporte_Examenes_Result.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>

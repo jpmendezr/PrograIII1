@@ -35,24 +35,22 @@ Partial Class ReporteriaForm
         Me.ComboBoxAño1 = New System.Windows.Forms.ComboBox()
         Me.ComboBoxMes1 = New System.Windows.Forms.ComboBox()
         Me.ComboBoxDia1 = New System.Windows.Forms.ComboBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtCedula = New System.Windows.Forms.TextBox()
-        Me.BtnMostrar = New System.Windows.Forms.Button()
-        Me.BtnBuscar = New System.Windows.Forms.Button()
-        Me.BtnBuscar2 = New System.Windows.Forms.Button()
-        Me.BtnMostrar2 = New System.Windows.Forms.Button()
+        Me.BtnReporteExamen = New System.Windows.Forms.Button()
+        Me.BtnReporteCita = New System.Windows.Forms.Button()
         Me.BtnRegresar = New System.Windows.Forms.Button()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.ReportViewer1)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label7)
@@ -65,14 +63,13 @@ Partial Class ReporteriaForm
         Me.Panel1.Controls.Add(Me.ComboBoxAño1)
         Me.Panel1.Controls.Add(Me.ComboBoxMes1)
         Me.Panel1.Controls.Add(Me.ComboBoxDia1)
-        Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.TxtCedula)
         Me.Panel1.Location = New System.Drawing.Point(-1, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(759, 307)
+        Me.Panel1.Size = New System.Drawing.Size(853, 383)
         Me.Panel1.TabIndex = 0
         '
         'Label9
@@ -183,14 +180,6 @@ Partial Class ReporteriaForm
         Me.ComboBoxDia1.Size = New System.Drawing.Size(37, 21)
         Me.ComboBoxDia1.TabIndex = 8
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(46, 84)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(642, 193)
-        Me.DataGridView1.TabIndex = 7
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -228,67 +217,52 @@ Partial Class ReporteriaForm
         Me.TxtCedula.Size = New System.Drawing.Size(148, 20)
         Me.TxtCedula.TabIndex = 1
         '
-        'BtnMostrar
+        'BtnReporteExamen
         '
-        Me.BtnMostrar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnMostrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnMostrar.Location = New System.Drawing.Point(622, 308)
-        Me.BtnMostrar.Name = "BtnMostrar"
-        Me.BtnMostrar.Size = New System.Drawing.Size(136, 37)
-        Me.BtnMostrar.TabIndex = 2
-        Me.BtnMostrar.Text = "Mostrar Reporte1"
-        Me.BtnMostrar.UseVisualStyleBackColor = False
+        Me.BtnReporteExamen.BackColor = System.Drawing.Color.Aqua
+        Me.BtnReporteExamen.Location = New System.Drawing.Point(202, 389)
+        Me.BtnReporteExamen.Name = "BtnReporteExamen"
+        Me.BtnReporteExamen.Size = New System.Drawing.Size(156, 37)
+        Me.BtnReporteExamen.TabIndex = 1
+        Me.BtnReporteExamen.Text = "Reporte Examenes"
+        Me.BtnReporteExamen.UseVisualStyleBackColor = False
         '
-        'BtnBuscar
+        'BtnReporteCita
         '
-        Me.BtnBuscar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnBuscar.Location = New System.Drawing.Point(153, 308)
-        Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(156, 37)
-        Me.BtnBuscar.TabIndex = 1
-        Me.BtnBuscar.Text = "    Buscar Reporte1"
-        Me.BtnBuscar.UseVisualStyleBackColor = False
-        '
-        'BtnBuscar2
-        '
-        Me.BtnBuscar2.BackColor = System.Drawing.Color.Aqua
-        Me.BtnBuscar2.Location = New System.Drawing.Point(300, 308)
-        Me.BtnBuscar2.Name = "BtnBuscar2"
-        Me.BtnBuscar2.Size = New System.Drawing.Size(162, 37)
-        Me.BtnBuscar2.TabIndex = 3
-        Me.BtnBuscar2.Text = "Buscar Reporte 2"
-        Me.BtnBuscar2.UseVisualStyleBackColor = False
-        '
-        'BtnMostrar2
-        '
-        Me.BtnMostrar2.BackColor = System.Drawing.Color.Aqua
-        Me.BtnMostrar2.Location = New System.Drawing.Point(461, 308)
-        Me.BtnMostrar2.Name = "BtnMostrar2"
-        Me.BtnMostrar2.Size = New System.Drawing.Size(167, 37)
-        Me.BtnMostrar2.TabIndex = 4
-        Me.BtnMostrar2.Text = "Mostrar Reporte2"
-        Me.BtnMostrar2.UseVisualStyleBackColor = False
+        Me.BtnReporteCita.BackColor = System.Drawing.Color.Aqua
+        Me.BtnReporteCita.Location = New System.Drawing.Point(349, 389)
+        Me.BtnReporteCita.Name = "BtnReporteCita"
+        Me.BtnReporteCita.Size = New System.Drawing.Size(162, 37)
+        Me.BtnReporteCita.TabIndex = 3
+        Me.BtnReporteCita.Text = "Reporte Cita"
+        Me.BtnReporteCita.UseVisualStyleBackColor = False
         '
         'BtnRegresar
         '
         Me.BtnRegresar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnRegresar.Location = New System.Drawing.Point(-1, 308)
+        Me.BtnRegresar.Location = New System.Drawing.Point(48, 389)
         Me.BtnRegresar.Name = "BtnRegresar"
         Me.BtnRegresar.Size = New System.Drawing.Size(158, 37)
         Me.BtnRegresar.TabIndex = 5
         Me.BtnRegresar.Text = "Regresar"
         Me.BtnRegresar.UseVisualStyleBackColor = False
         '
+        'ReportViewer1
+        '
+        Me.ReportViewer1.Location = New System.Drawing.Point(-2, 71)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.Size = New System.Drawing.Size(848, 305)
+        Me.ReportViewer1.TabIndex = 20
+        '
         'ReporteriaForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(756, 345)
+        Me.ClientSize = New System.Drawing.Size(861, 423)
         Me.Controls.Add(Me.BtnRegresar)
-        Me.Controls.Add(Me.BtnMostrar2)
-        Me.Controls.Add(Me.BtnBuscar2)
-        Me.Controls.Add(Me.BtnMostrar)
-        Me.Controls.Add(Me.BtnBuscar)
+        Me.Controls.Add(Me.BtnReporteCita)
+        Me.Controls.Add(Me.BtnReporteExamen)
         Me.Controls.Add(Me.Panel1)
         Me.MaximizeBox = False
         Me.Name = "ReporteriaForm"
@@ -296,19 +270,16 @@ Partial Class ReporteriaForm
         Me.Text = "Reporteria"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtCedula As TextBox
-    Friend WithEvents BtnBuscar As Button
-    Friend WithEvents BtnMostrar As Button
+    Friend WithEvents BtnReporteExamen As Button
     Friend WithEvents ComboBoxAño2 As ComboBox
     Friend WithEvents ComboBoxMes2 As ComboBox
     Friend WithEvents ComboBoxDia2 As ComboBox
@@ -321,7 +292,7 @@ Partial Class ReporteriaForm
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents BtnBuscar2 As Button
-    Friend WithEvents BtnMostrar2 As Button
+    Friend WithEvents BtnReporteCita As Button
     Friend WithEvents BtnRegresar As Button
+    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
 End Class
