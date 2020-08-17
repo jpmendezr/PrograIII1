@@ -100,7 +100,7 @@
           <Property Name="Altura" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="TipoSangre" Type="char" MaxLength="3" Nullable="false" />
           <Property Name="Sintomas" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="MedicamentoAlergico" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="MedicamentoAlergico" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="TbPersona">
           <Key>
@@ -188,6 +188,9 @@ advertencia 6035: La relación 'FK_TbChequeoExamanes_Paciente' tiene columnas qu
           </ReferentialConstraint>
         </Association>
         <!--Errores durante la generación:
+advertencia 6035: La relación 'FK_TbCita_Paciente' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
+        <Association Name="FK_TbCita_Paciente" />-->
+        <!--Errores durante la generación:
 advertencia 6035: La relación 'FK_TbEnfermedad_Paciente' tiene columnas que no forman parte de la clave de la tabla en el lado principal de la relación. Se excluyó la relación.
         <Association Name="FK_TbEnfermedad_Paciente" />-->
         <!--Errores durante la generación:
@@ -261,9 +264,6 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           <Parameter Name="cedulas" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="MostrarPersona" ReturnType="Collection(BdCentroMedicoModel.MostrarPersona_Result)" />
-          <FunctionImport Name="mostrar_tablas">
-          <Parameter Name="cedula" Mode="In" Type="String" />
-          </FunctionImport>
           <FunctionImport Name="f_Sp_Reporte_Cita" ReturnType="Collection(BdCentroMedicoModel.f_Sp_Reporte_Cita_Result)">
             <Parameter Name="Cedula" Mode="In" Type="String" />
             <Parameter Name="FechaInicio" Mode="In" Type="String" />
@@ -304,20 +304,8 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
             <End Role="TbChequeoMedicamentos" EntitySet="TbChequeoMedicamentos" />
           </AssociationSet>
           <EntitySet Name="TbPaciente" EntityType="BdCentroMedicoModel.TbPaciente" />
-          <FunctionImport Name="mostrar_tablas1">
-          <Parameter Name="cedula" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="mostrar_tablas2">
-          <Parameter Name="cedula" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="mostrar_tablas3">
-          <Parameter Name="cedula" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="mostrar_tablas4">
+          <FunctionImport Name="mostrar_tablas6" ReturnType="Collection(BdCentroMedicoModel.mostrar_tablas6_Result)">
             <Parameter Name="cedula" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="mostrar_tablas5" ReturnType="Collection(BdCentroMedicoModel.mostrar_tablas5_Result)">
-          <Parameter Name="cedula" Mode="In" Type="String" />
           </FunctionImport>
           </EntityContainer>
         <ComplexType Name="f_sp_MostrarPersonal_Result">
@@ -609,9 +597,9 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
           <Property Name="Altura" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="TipoSangre" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
           <Property Name="Sintomas" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="MedicamentoAlergico" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MedicamentoAlergico" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <ComplexType Name="mostrar_tablas5_Result">
+        <ComplexType Name="mostrar_tablas6_Result">
           <Property Type="Int32" Name="IdConsulta" Nullable="false" />
           <Property Type="String" Name="Cedula" Nullable="false" MaxLength="10" />
           <Property Type="String" Name="Diagnostico" Nullable="false" MaxLength="100" />
@@ -869,9 +857,9 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="mostrar_tablas5" FunctionName="BdCentroMedicoModel.Store.mostrar_tablas">
+          <FunctionImportMapping FunctionImportName="mostrar_tablas6" FunctionName="BdCentroMedicoModel.Store.mostrar_tablas">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="BdCentroMedicoModel.mostrar_tablas5_Result">
+              <ComplexTypeMapping TypeName="BdCentroMedicoModel.mostrar_tablas6_Result">
                 <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
                 <ScalarProperty Name="Cedula" ColumnName="Cedula" />
                 <ScalarProperty Name="Diagnostico" ColumnName="Diagnostico" />
