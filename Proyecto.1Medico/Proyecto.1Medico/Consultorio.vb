@@ -165,7 +165,7 @@
                 Dim actu = (From ac In actualizar.TbPaciente Where ac.IdPaciente = Id_paci Select ac).SingleOrDefault
 
                 If Not IsNothing(actu) Then
-                    'actu.Presion = presion
+
                     actu.peso = peso
                     actu.Altura = altura
 
