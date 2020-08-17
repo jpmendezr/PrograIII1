@@ -304,18 +304,6 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
             <End Role="TbChequeoMedicamentos" EntitySet="TbChequeoMedicamentos" />
           </AssociationSet>
           <EntitySet Name="TbPaciente" EntityType="BdCentroMedicoModel.TbPaciente" />
-          <FunctionImport Name="mostrar_tablas1">
-          <Parameter Name="cedula" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="mostrar_tablas2">
-          <Parameter Name="cedula" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="mostrar_tablas3">
-          <Parameter Name="cedula" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="mostrar_tablas4">
-            <Parameter Name="cedula" Mode="In" Type="String" />
-          </FunctionImport>
           <FunctionImport Name="mostrar_tablas5" ReturnType="Collection(BdCentroMedicoModel.mostrar_tablas5_Result)">
           <Parameter Name="cedula" Mode="In" Type="String" />
           </FunctionImport>
