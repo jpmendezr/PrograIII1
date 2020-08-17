@@ -1,4 +1,5 @@
-﻿Public Class ReporteriaForm
+﻿Imports Microsoft.Reporting.WinForms
+Public Class ReporteriaForm
     Private Sub ComboBoxDia1_TextChanged(sender As Object, e As EventArgs) Handles ComboBoxDia1.TextChanged
         Me.ComboBoxDia1.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
@@ -23,69 +24,83 @@
         Me.ComboBoxAño2.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 
-    Private Sub BtnMostrar_Click(sender As Object, e As EventArgs) Handles BtnMostrar.Click
-        Try
-            Using bd As New BdCentroMedicoEntities
-                Dim mostrar = bd.Mostrar_ReporteriaPacientePersonal().ToList
-                If (mostrar.Count > 0) Then
-                    Me.DataGridView1.DataSource = mostrar
 
-                End If
-            End Using
-        Catch ex As Exception
-            MsgBox(ex.Message.ToString)
-        End Try
-    End Sub
 
-    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnReporteExamen.Click
         Dim fechaInicio As String = Me.ComboBoxDia1.Text + "/" + Me.ComboBoxMes1.Text + "/" + Me.ComboBoxAño1.Text
         Dim fechaFin As String = Me.ComboBoxDia2.Text + "/" + Me.ComboBoxMes2.Text + "/" + Me.ComboBoxAño2.Text
         Try
-            Using bd As New BdCentroMedicoEntities
-                Dim mostrar = bd.f_Sp_Reporte_Cita(Me.TxtCedula.Text, fechaInicio, fechaFin).ToList
-                If (mostrar.Count > 0) Then
-                    Me.DataGridView1.DataSource = mostrar
+            Using alm As New BdCentroMedicoEntities
+                Dim parametro_1 As New ReportParameter("Cedula", TxtCedula.Text)
+                Dim parametro_2 As New ReportParameter("FechaI", fechaInicio)
+                Dim parametro_3 As New ReportParameter("FechaF", fechaFin)
 
+                Dim a = alm.Sp_Reporte_Examenes(TxtCedula.Text, fechaInicio, fechaFin).ToList
+
+                If (a.Count > 0) Then
+                    Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Proyecto._1Medico.Report1.rdlc"
+
+                    Me.ReportViewer1.LocalReport.SetParameters(parametro_1)
+                    Me.ReportViewer1.LocalReport.SetParameters(parametro_2)
+                    Me.ReportViewer1.LocalReport.SetParameters(parametro_3)
+
+
+                    Dim rds As ReportDataSource = New ReportDataSource("DataSet4", a)
+
+                    Me.ReportViewer1.LocalReport.DataSources.Clear()
+                    Me.ReportViewer1.LocalReport.EnableExternalImages = True
+                    Me.ReportViewer1.LocalReport.DataSources.Add(rds)
+                    Me.ReportViewer1.RefreshReport()
+                Else
+                    MsgBox("No hay articulos cargados")
                 End If
             End Using
         Catch ex As Exception
-            MsgBox(ex.Message.ToString)
+            MsgBox("Error en la carga: " + ex.InnerException.ToString)
         End Try
     End Sub
 
+    Private Sub BtnBuscar2_Click(sender As Object, e As EventArgs) Handles BtnReporteCita.Click
+        Dim fechaInicio As String = Me.ComboBoxDia1.Text + "/" + Me.ComboBoxMes1.Text + "/" + Me.ComboBoxAño1.Text
+        Dim fechaFin As String = Me.ComboBoxDia2.Text + "/" + Me.ComboBoxMes2.Text + "/" + Me.ComboBoxAño2.Text
+        Try
+            Using alm As New BdCentroMedicoEntities
+                Dim parametro_1 As New ReportParameter("Cedula", TxtCedula.Text)
+                Dim parametro_2 As New ReportParameter("FechaInicio", fechaInicio)
+                Dim parametro_3 As New ReportParameter("FechaFinal", fechaFin)
 
+                Dim a = alm.f_Sp_Reporte_Cita(TxtCedula.Text, fechaInicio, fechaFin).ToList
+
+                If (a.Count > 0) Then
+                    Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Proyecto._1Medico.Report2.rdlc"
+
+                    Me.ReportViewer1.LocalReport.SetParameters(parametro_1)
+                    Me.ReportViewer1.LocalReport.SetParameters(parametro_2)
+                    Me.ReportViewer1.LocalReport.SetParameters(parametro_3)
+
+
+                    Dim rds As ReportDataSource = New ReportDataSource("DataSet1", a)
+
+                    Me.ReportViewer1.LocalReport.DataSources.Clear()
+                    Me.ReportViewer1.LocalReport.EnableExternalImages = True
+                    Me.ReportViewer1.LocalReport.DataSources.Add(rds)
+                    Me.ReportViewer1.RefreshReport()
+                Else
+                    MsgBox("No hay articulos cargados")
+                End If
+            End Using
+        Catch ex As Exception
+            MsgBox("Error en la carga: " + ex.InnerException.ToString)
+        End Try
+    End Sub
+
+    Private Sub ReporteriaForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Me.ReportViewer1.RefreshReport()
+    End Sub
     Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
 
         Me.Dispose()
     End Sub
 
-    Private Sub BtnBuscar2_Click(sender As Object, e As EventArgs) Handles BtnBuscar2.Click
-        Dim fechaInicio As String = Me.ComboBoxDia1.Text + "/" + Me.ComboBoxMes1.Text + "/" + Me.ComboBoxAño1.Text
-        Dim fechaFin As String = Me.ComboBoxDia2.Text + "/" + Me.ComboBoxMes2.Text + "/" + Me.ComboBoxAño2.Text
-        Try
-            Using bd As New BdCentroMedicoEntities
-                Dim mostrar = bd.Sp_Reporte_Examenes(Me.TxtCedula.Text, fechaInicio, fechaFin).ToList
-                If (mostrar.Count > 0) Then
-                    Me.DataGridView1.DataSource = mostrar
-
-                End If
-            End Using
-        Catch ex As Exception
-            MsgBox(ex.Message.ToString)
-        End Try
-    End Sub
-
-    Private Sub BtnMostrar2_Click(sender As Object, e As EventArgs) Handles BtnMostrar2.Click
-        Try
-            Using bd As New BdCentroMedicoEntities
-                Dim mostrar = bd.MostrarExamenes.ToList
-                If (mostrar.Count > 0) Then
-                    Me.DataGridView1.DataSource = mostrar
-
-                End If
-            End Using
-        Catch ex As Exception
-            MsgBox(ex.Message.ToString)
-        End Try
-    End Sub
 End Class
