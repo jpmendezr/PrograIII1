@@ -40,7 +40,7 @@
     Public Sub mostrar()
         Try
             Using mostrar_datos As New BdCentroMedicoEntities
-                Dim mostrar = mostrar_datos.mostrar_tablas5(Txtcedula.Text).ToList
+                Dim mostrar = mostrar_datos.mostrar_tablas(Txtcedula.Text).ToList
                 If (mostrar.count > 0) Then
                     Me.DataGridView1.DataSource = mostrar
 
