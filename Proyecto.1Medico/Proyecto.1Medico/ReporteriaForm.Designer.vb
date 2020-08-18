@@ -23,6 +23,7 @@ Partial Class ReporteriaForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -42,7 +43,6 @@ Partial Class ReporteriaForm
         Me.BtnReporteExamen = New System.Windows.Forms.Button()
         Me.BtnReporteCita = New System.Windows.Forms.Button()
         Me.BtnRegresar = New System.Windows.Forms.Button()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -72,10 +72,18 @@ Partial Class ReporteriaForm
         Me.Panel1.Size = New System.Drawing.Size(853, 383)
         Me.Panel1.TabIndex = 0
         '
+        'ReportViewer1
+        '
+        Me.ReportViewer1.Location = New System.Drawing.Point(-2, 71)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.Size = New System.Drawing.Size(848, 305)
+        Me.ReportViewer1.TabIndex = 20
+        '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(361, 28)
+        Me.Label9.Location = New System.Drawing.Point(464, 29)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(26, 13)
         Me.Label9.TabIndex = 19
@@ -84,7 +92,7 @@ Partial Class ReporteriaForm
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(303, 28)
+        Me.Label8.Location = New System.Drawing.Point(406, 29)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(27, 13)
         Me.Label8.TabIndex = 18
@@ -93,7 +101,7 @@ Partial Class ReporteriaForm
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(258, 28)
+        Me.Label7.Location = New System.Drawing.Point(361, 29)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(25, 13)
         Me.Label7.TabIndex = 17
@@ -130,7 +138,7 @@ Partial Class ReporteriaForm
         '
         Me.ComboBoxAño2.FormattingEnabled = True
         Me.ComboBoxAño2.Items.AddRange(New Object() {"2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940"})
-        Me.ComboBoxAño2.Location = New System.Drawing.Point(348, 44)
+        Me.ComboBoxAño2.Location = New System.Drawing.Point(451, 45)
         Me.ComboBoxAño2.Name = "ComboBoxAño2"
         Me.ComboBoxAño2.Size = New System.Drawing.Size(59, 21)
         Me.ComboBoxAño2.TabIndex = 13
@@ -139,7 +147,7 @@ Partial Class ReporteriaForm
         '
         Me.ComboBoxMes2.FormattingEnabled = True
         Me.ComboBoxMes2.Items.AddRange(New Object() {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"})
-        Me.ComboBoxMes2.Location = New System.Drawing.Point(301, 44)
+        Me.ComboBoxMes2.Location = New System.Drawing.Point(404, 45)
         Me.ComboBoxMes2.Name = "ComboBoxMes2"
         Me.ComboBoxMes2.Size = New System.Drawing.Size(41, 21)
         Me.ComboBoxMes2.TabIndex = 12
@@ -148,7 +156,7 @@ Partial Class ReporteriaForm
         '
         Me.ComboBoxDia2.FormattingEnabled = True
         Me.ComboBoxDia2.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"})
-        Me.ComboBoxDia2.Location = New System.Drawing.Point(248, 43)
+        Me.ComboBoxDia2.Location = New System.Drawing.Point(351, 44)
         Me.ComboBoxDia2.Name = "ComboBoxDia2"
         Me.ComboBoxDia2.Size = New System.Drawing.Size(47, 21)
         Me.ComboBoxDia2.TabIndex = 11
@@ -194,7 +202,7 @@ Partial Class ReporteriaForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(283, 0)
+        Me.Label2.Location = New System.Drawing.Point(387, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(82, 15)
         Me.Label2.TabIndex = 5
@@ -204,7 +212,7 @@ Partial Class ReporteriaForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(593, 0)
+        Me.Label1.Location = New System.Drawing.Point(731, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(52, 15)
         Me.Label1.TabIndex = 4
@@ -212,7 +220,7 @@ Partial Class ReporteriaForm
         '
         'TxtCedula
         '
-        Me.TxtCedula.Location = New System.Drawing.Point(551, 44)
+        Me.TxtCedula.Location = New System.Drawing.Point(688, 45)
         Me.TxtCedula.Name = "TxtCedula"
         Me.TxtCedula.Size = New System.Drawing.Size(148, 20)
         Me.TxtCedula.TabIndex = 1
@@ -220,7 +228,7 @@ Partial Class ReporteriaForm
         'BtnReporteExamen
         '
         Me.BtnReporteExamen.BackColor = System.Drawing.Color.Aqua
-        Me.BtnReporteExamen.Location = New System.Drawing.Point(202, 389)
+        Me.BtnReporteExamen.Location = New System.Drawing.Point(-1, 384)
         Me.BtnReporteExamen.Name = "BtnReporteExamen"
         Me.BtnReporteExamen.Size = New System.Drawing.Size(156, 37)
         Me.BtnReporteExamen.TabIndex = 1
@@ -230,7 +238,7 @@ Partial Class ReporteriaForm
         'BtnReporteCita
         '
         Me.BtnReporteCita.BackColor = System.Drawing.Color.Aqua
-        Me.BtnReporteCita.Location = New System.Drawing.Point(349, 389)
+        Me.BtnReporteCita.Location = New System.Drawing.Point(349, 384)
         Me.BtnReporteCita.Name = "BtnReporteCita"
         Me.BtnReporteCita.Size = New System.Drawing.Size(162, 37)
         Me.BtnReporteCita.TabIndex = 3
@@ -240,20 +248,12 @@ Partial Class ReporteriaForm
         'BtnRegresar
         '
         Me.BtnRegresar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnRegresar.Location = New System.Drawing.Point(48, 389)
+        Me.BtnRegresar.Location = New System.Drawing.Point(689, 384)
         Me.BtnRegresar.Name = "BtnRegresar"
         Me.BtnRegresar.Size = New System.Drawing.Size(158, 37)
         Me.BtnRegresar.TabIndex = 5
         Me.BtnRegresar.Text = "Regresar"
         Me.BtnRegresar.UseVisualStyleBackColor = False
-        '
-        'ReportViewer1
-        '
-        Me.ReportViewer1.Location = New System.Drawing.Point(-2, 71)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(848, 305)
-        Me.ReportViewer1.TabIndex = 20
         '
         'ReporteriaForm
         '
