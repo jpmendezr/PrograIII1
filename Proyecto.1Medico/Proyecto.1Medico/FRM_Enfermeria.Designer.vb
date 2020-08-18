@@ -42,6 +42,10 @@ Partial Class FRM_Enfermeria
         Me.Txtpeso = New System.Windows.Forms.TextBox()
         Me.TXTaltura = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TXTtiposangre = New System.Windows.Forms.TextBox()
+        Me.TXTMedicamentosAler = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,7 +67,7 @@ Partial Class FRM_Enfermeria
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(338, 23)
+        Me.Label3.Location = New System.Drawing.Point(373, 10)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 15)
         Me.Label3.TabIndex = 2
@@ -73,7 +77,7 @@ Partial Class FRM_Enfermeria
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(509, 21)
+        Me.Label4.Location = New System.Drawing.Point(572, 10)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(39, 15)
         Me.Label4.TabIndex = 3
@@ -92,6 +96,10 @@ Partial Class FRM_Enfermeria
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.TXTMedicamentosAler)
+        Me.Panel1.Controls.Add(Me.TXTtiposangre)
         Me.Panel1.Controls.Add(Me.ID)
         Me.Panel1.Controls.Add(Me.txtId)
         Me.Panel1.Controls.Add(Me.Label8)
@@ -118,7 +126,7 @@ Partial Class FRM_Enfermeria
         '
         Me.ID.AutoSize = True
         Me.ID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ID.Location = New System.Drawing.Point(22, 23)
+        Me.ID.Location = New System.Drawing.Point(22, 10)
         Me.ID.Name = "ID"
         Me.ID.Size = New System.Drawing.Size(21, 15)
         Me.ID.TabIndex = 19
@@ -126,7 +134,7 @@ Partial Class FRM_Enfermeria
         '
         'txtId
         '
-        Me.txtId.Location = New System.Drawing.Point(21, 52)
+        Me.txtId.Location = New System.Drawing.Point(21, 28)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(124, 20)
         Me.txtId.TabIndex = 18
@@ -210,7 +218,7 @@ Partial Class FRM_Enfermeria
         '
         'txtcedula
         '
-        Me.txtcedula.Location = New System.Drawing.Point(178, 52)
+        Me.txtcedula.Location = New System.Drawing.Point(178, 28)
         Me.txtcedula.Name = "txtcedula"
         Me.txtcedula.Size = New System.Drawing.Size(124, 20)
         Me.txtcedula.TabIndex = 10
@@ -219,7 +227,7 @@ Partial Class FRM_Enfermeria
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(175, 23)
+        Me.Label6.Location = New System.Drawing.Point(175, 10)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(52, 15)
         Me.Label6.TabIndex = 9
@@ -227,14 +235,14 @@ Partial Class FRM_Enfermeria
         '
         'Txtpeso
         '
-        Me.Txtpeso.Location = New System.Drawing.Point(512, 52)
+        Me.Txtpeso.Location = New System.Drawing.Point(531, 28)
         Me.Txtpeso.Name = "Txtpeso"
         Me.Txtpeso.Size = New System.Drawing.Size(124, 20)
         Me.Txtpeso.TabIndex = 7
         '
         'TXTaltura
         '
-        Me.TXTaltura.Location = New System.Drawing.Point(341, 52)
+        Me.TXTaltura.Location = New System.Drawing.Point(348, 28)
         Me.TXTaltura.Name = "TXTaltura"
         Me.TXTaltura.Size = New System.Drawing.Size(124, 20)
         Me.TXTaltura.TabIndex = 6
@@ -247,6 +255,40 @@ Partial Class FRM_Enfermeria
         Me.PictureBox1.Size = New System.Drawing.Size(97, 90)
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
+        '
+        'TXTtiposangre
+        '
+        Me.TXTtiposangre.Location = New System.Drawing.Point(21, 75)
+        Me.TXTtiposangre.Name = "TXTtiposangre"
+        Me.TXTtiposangre.Size = New System.Drawing.Size(57, 20)
+        Me.TXTtiposangre.TabIndex = 20
+        '
+        'TXTMedicamentosAler
+        '
+        Me.TXTMedicamentosAler.Location = New System.Drawing.Point(154, 85)
+        Me.TXTMedicamentosAler.Name = "TXTMedicamentosAler"
+        Me.TXTMedicamentosAler.Size = New System.Drawing.Size(318, 20)
+        Me.TXTMedicamentosAler.TabIndex = 21
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(18, 57)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(85, 15)
+        Me.Label2.TabIndex = 22
+        Me.Label2.Text = "Tipo Sangre"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(233, 57)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(164, 15)
+        Me.Label9.TabIndex = 23
+        Me.Label9.Text = "Medicamentos Alergicos"
         '
         'FRM_Enfermeria
         '
@@ -289,4 +331,8 @@ Partial Class FRM_Enfermeria
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents ID As Label
     Friend WithEvents txtId As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TXTMedicamentosAler As TextBox
+    Friend WithEvents TXTtiposangre As TextBox
 End Class
