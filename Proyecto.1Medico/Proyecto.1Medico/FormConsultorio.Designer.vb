@@ -69,7 +69,7 @@ Partial Class FormConsultorio
         '
         'txtid
         '
-        Me.txtid.Location = New System.Drawing.Point(584, 41)
+        Me.txtid.Location = New System.Drawing.Point(16, 45)
         Me.txtid.Name = "txtid"
         Me.txtid.Size = New System.Drawing.Size(100, 20)
         Me.txtid.TabIndex = 19
@@ -78,7 +78,7 @@ Partial Class FormConsultorio
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(581, 14)
+        Me.Label3.Location = New System.Drawing.Point(13, 14)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(113, 15)
         Me.Label3.TabIndex = 18
@@ -87,14 +87,14 @@ Partial Class FormConsultorio
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 243)
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 268)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(678, 135)
+        Me.DataGridView1.Size = New System.Drawing.Size(649, 110)
         Me.DataGridView1.TabIndex = 16
         '
         'Txtcedula
         '
-        Me.Txtcedula.Location = New System.Drawing.Point(16, 32)
+        Me.Txtcedula.Location = New System.Drawing.Point(193, 45)
         Me.Txtcedula.Name = "Txtcedula"
         Me.Txtcedula.Size = New System.Drawing.Size(130, 20)
         Me.Txtcedula.TabIndex = 11
@@ -103,7 +103,7 @@ Partial Class FormConsultorio
         '
         Me.label.AutoSize = True
         Me.label.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label.Location = New System.Drawing.Point(13, 14)
+        Me.label.Location = New System.Drawing.Point(190, 14)
         Me.label.Name = "label"
         Me.label.Size = New System.Drawing.Size(52, 15)
         Me.label.TabIndex = 10
@@ -111,9 +111,9 @@ Partial Class FormConsultorio
         '
         'TxtDiagnostico
         '
-        Me.TxtDiagnostico.Location = New System.Drawing.Point(16, 123)
+        Me.TxtDiagnostico.Location = New System.Drawing.Point(16, 129)
         Me.TxtDiagnostico.Name = "TxtDiagnostico"
-        Me.TxtDiagnostico.Size = New System.Drawing.Size(678, 95)
+        Me.TxtDiagnostico.Size = New System.Drawing.Size(307, 95)
         Me.TxtDiagnostico.TabIndex = 9
         Me.TxtDiagnostico.Text = ""
         '
@@ -121,7 +121,7 @@ Partial Class FormConsultorio
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(307, 85)
+        Me.Label7.Location = New System.Drawing.Point(13, 99)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(83, 15)
         Me.Label7.TabIndex = 3

@@ -36,6 +36,7 @@ Partial Class FrmMedicamentos
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,6 +45,7 @@ Partial Class FrmMedicamentos
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.Panel1.Controls.Add(Me.BtnActualizar)
         Me.Panel1.Controls.Add(Me.BtnRegresar)
         Me.Panel1.Controls.Add(Me.DataGridView2)
         Me.Panel1.Controls.Add(Me.BtnMostrar)
@@ -66,7 +68,7 @@ Partial Class FrmMedicamentos
         '
         Me.BtnRegresar.BackColor = System.Drawing.Color.Aqua
         Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRegresar.Location = New System.Drawing.Point(597, 297)
+        Me.BtnRegresar.Location = New System.Drawing.Point(638, 297)
         Me.BtnRegresar.Name = "BtnRegresar"
         Me.BtnRegresar.Size = New System.Drawing.Size(75, 23)
         Me.BtnRegresar.TabIndex = 3
@@ -85,7 +87,7 @@ Partial Class FrmMedicamentos
         '
         Me.BtnMostrar.BackColor = System.Drawing.Color.Aqua
         Me.BtnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnMostrar.Location = New System.Drawing.Point(482, 297)
+        Me.BtnMostrar.Location = New System.Drawing.Point(532, 297)
         Me.BtnMostrar.Name = "BtnMostrar"
         Me.BtnMostrar.Size = New System.Drawing.Size(75, 23)
         Me.BtnMostrar.TabIndex = 2
@@ -104,7 +106,7 @@ Partial Class FrmMedicamentos
         '
         Me.BtnAgregar.BackColor = System.Drawing.Color.Aqua
         Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregar.Location = New System.Drawing.Point(365, 297)
+        Me.BtnAgregar.Location = New System.Drawing.Point(311, 298)
         Me.BtnAgregar.Name = "BtnAgregar"
         Me.BtnAgregar.Size = New System.Drawing.Size(75, 23)
         Me.BtnAgregar.TabIndex = 1
@@ -182,6 +184,17 @@ Partial Class FrmMedicamentos
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Cedula"
         '
+        'BtnActualizar
+        '
+        Me.BtnActualizar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnActualizar.Location = New System.Drawing.Point(424, 298)
+        Me.BtnActualizar.Name = "BtnActualizar"
+        Me.BtnActualizar.Size = New System.Drawing.Size(83, 23)
+        Me.BtnActualizar.TabIndex = 10
+        Me.BtnActualizar.Text = "Actualizar"
+        Me.BtnActualizar.UseVisualStyleBackColor = False
+        '
         'FrmMedicamentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -214,4 +227,5 @@ Partial Class FrmMedicamentos
     Friend WithEvents BtnRegresar As Button
     Friend WithEvents BtnMostrar As Button
     Friend WithEvents BtnAgregar As Button
+    Friend WithEvents BtnActualizar As Button
 End Class
