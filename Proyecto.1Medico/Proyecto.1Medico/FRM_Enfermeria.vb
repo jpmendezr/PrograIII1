@@ -8,11 +8,14 @@
             registro.Peso1 = Me.Txtpeso.Text
             registro.Altura1 = Me.TXTaltura.Text
             registro.Mostrar_sintomas1 = Me.TxtSintomas.Text
+            registro.pro_TipoSangre1 = Me.TXTtiposangre.Text
+            registro.pro_Mediacamentos1 = Me.TXTMedicamentosAler.Text
             registro.Actualizar_datos()
             agregar()
 
         Catch ex As Exception
             MsgBox("Ingrese los valores.")
+
         End Try
 
     End Sub

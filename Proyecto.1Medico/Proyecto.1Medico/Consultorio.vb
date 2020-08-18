@@ -9,6 +9,9 @@
     Private mostrar_sintomas As String
     Private cedula As String
     Private Id_paci As String
+    Private TipoSangre As String
+    Private Mediacamentos As String
+
 
     '' ATRIBUTOS medico ''
 
@@ -150,6 +153,24 @@
         End Set
     End Property
 
+    Public Property pro_TipoSangre1 As String
+        Get
+            Return TipoSangre
+        End Get
+        Set(value As String)
+            TipoSangre = value
+        End Set
+    End Property
+
+    Public Property pro_Mediacamentos1 As String
+        Get
+            Return Mediacamentos
+        End Get
+        Set(value As String)
+            Mediacamentos = value
+        End Set
+    End Property
+
 
 
 
@@ -165,10 +186,11 @@
                 Dim actu = (From ac In actualizar.TbPaciente Where ac.IdPaciente = Id_paci Select ac).SingleOrDefault
 
                 If Not IsNothing(actu) Then
-                    'actu.Presion = presion
                     actu.peso = peso
                     actu.Altura = altura
-
+                    actu.Sintomas = mostrar_sintomas
+                    actu.TipoSangre = TipoSangre
+                    actu.MedicamentoAlergico = Mediacamentos
                     actualizar.SaveChanges()
 
                     MessageBox.Show(" Datos actualizados ")
@@ -187,25 +209,7 @@
     End Sub
 
     ''''''''''''''''''''''''''''''  MEDICO  ''''''''''''''''''''''''''''''
-    'Public Sub Actualizar_ISintoma()
-    '    Dim resultado As Integer = 0
-    '    Try
-    '        Using actualizar As New BdCentroMedicoEntities
-    '            Dim actu = (From ac In actualizar.TbPaciente Where ac.CedulaPersona = cedulaactualizar Select ac).SingleOrDefault
-    '            If Not IsNothing(actu) Then
-    '                actu.Sintomas = ISintomasMostrados
-    '                actualizar.SaveChanges()
-    '                MessageBox.Show(" Datos actualizados ")
-    '            Else
-    '                MessageBox.Show(" Error al actualizar ")
-    '            End If
-    '        End Using
-    '    Catch ex As Exception
-    '        resultado = 0
-    '        MessageBox.Show(ex.Message.ToString)
-    '        'MsgBox(ex.Message.ToString)
-    '    End Try
-    'End Sub
+
 
     Public Sub actualizar_Idiagnostico()
         Dim resultado As Integer = 0
