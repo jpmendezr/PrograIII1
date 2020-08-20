@@ -41,10 +41,10 @@
         'Btn de agregar a la base de datos.
         ' Validaciones de la agregacion en la base de datos.
         Dim fechas As String = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
-        If Information.IsNumeric(Me.TextEspecialidad.Text) And Information.IsNumeric(Me.TextNMedico.Text) Then
+        If Information.IsNumeric(Me.TextEspecialidad.Text) Then
             MsgBox(" no puede ingresar numeros")
         Else
-            If Information.IsNumeric(Me.TextCedula.Text) Then
+            If Information.IsNumeric(Me.TextCedula.Text) And Information.IsNumeric(Me.TextNMedico.Text) Then
 
                 ConsultaValores()
                 agenda.registrarMedico()
