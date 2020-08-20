@@ -52,7 +52,7 @@ Public Class ReporteriaForm
                     Me.ReportViewer1.LocalReport.DataSources.Add(rds)
                     Me.ReportViewer1.RefreshReport()
                 Else
-                    MsgBox("No hay articulos cargados")
+                    MsgBox("No hay reportes.")
                 End If
             End Using
         Catch ex As Exception
@@ -86,7 +86,7 @@ Public Class ReporteriaForm
                     Me.ReportViewer1.LocalReport.DataSources.Add(rds)
                     Me.ReportViewer1.RefreshReport()
                 Else
-                    MsgBox("No hay articulos cargados")
+                    MsgBox("No hay reportes.")
                 End If
             End Using
         Catch ex As Exception

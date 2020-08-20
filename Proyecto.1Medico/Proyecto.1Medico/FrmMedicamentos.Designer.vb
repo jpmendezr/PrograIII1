@@ -23,11 +23,11 @@ Partial Class FrmMedicamentos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.BtnRegresar = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.BtnMostrar = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.txtrece = New System.Windows.Forms.TextBox()
         Me.txtadmi = New System.Windows.Forms.TextBox()
         Me.txtcedula = New System.Windows.Forms.TextBox()
@@ -44,11 +44,11 @@ Partial Class FrmMedicamentos
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.Panel1.Controls.Add(Me.BtnActualizar)
         Me.Panel1.Controls.Add(Me.BtnRegresar)
         Me.Panel1.Controls.Add(Me.DataGridView2)
         Me.Panel1.Controls.Add(Me.BtnMostrar)
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.BtnAgregar)
         Me.Panel1.Controls.Add(Me.txtrece)
         Me.Panel1.Controls.Add(Me.txtadmi)
         Me.Panel1.Controls.Add(Me.txtcedula)
@@ -62,11 +62,22 @@ Partial Class FrmMedicamentos
         Me.Panel1.Size = New System.Drawing.Size(740, 340)
         Me.Panel1.TabIndex = 0
         '
+        'BtnActualizar
+        '
+        Me.BtnActualizar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnActualizar.Location = New System.Drawing.Point(310, 297)
+        Me.BtnActualizar.Name = "BtnActualizar"
+        Me.BtnActualizar.Size = New System.Drawing.Size(83, 23)
+        Me.BtnActualizar.TabIndex = 10
+        Me.BtnActualizar.Text = "Actualizar"
+        Me.BtnActualizar.UseVisualStyleBackColor = False
+        '
         'BtnRegresar
         '
         Me.BtnRegresar.BackColor = System.Drawing.Color.Aqua
         Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRegresar.Location = New System.Drawing.Point(597, 297)
+        Me.BtnRegresar.Location = New System.Drawing.Point(638, 297)
         Me.BtnRegresar.Name = "BtnRegresar"
         Me.BtnRegresar.Size = New System.Drawing.Size(75, 23)
         Me.BtnRegresar.TabIndex = 3
@@ -85,7 +96,7 @@ Partial Class FrmMedicamentos
         '
         Me.BtnMostrar.BackColor = System.Drawing.Color.Aqua
         Me.BtnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnMostrar.Location = New System.Drawing.Point(482, 297)
+        Me.BtnMostrar.Location = New System.Drawing.Point(480, 297)
         Me.BtnMostrar.Name = "BtnMostrar"
         Me.BtnMostrar.Size = New System.Drawing.Size(75, 23)
         Me.BtnMostrar.TabIndex = 2
@@ -99,17 +110,6 @@ Partial Class FrmMedicamentos
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
         Me.DataGridView1.TabIndex = 8
-        '
-        'BtnAgregar
-        '
-        Me.BtnAgregar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregar.Location = New System.Drawing.Point(365, 297)
-        Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnAgregar.TabIndex = 1
-        Me.BtnAgregar.Text = "Agregar"
-        Me.BtnAgregar.UseVisualStyleBackColor = False
         '
         'txtrece
         '
@@ -213,5 +213,5 @@ Partial Class FrmMedicamentos
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents BtnRegresar As Button
     Friend WithEvents BtnMostrar As Button
-    Friend WithEvents BtnAgregar As Button
+    Friend WithEvents BtnActualizar As Button
 End Class

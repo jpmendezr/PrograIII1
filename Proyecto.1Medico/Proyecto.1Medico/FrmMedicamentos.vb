@@ -43,7 +43,7 @@
         End Try
     End Sub
 
-    Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
+    Private Sub BtnAgregar_Click(sender As Object, e As EventArgs)
         If Me.txtcedula.Text.Length > 0 And Me.txtadmi.Text.Length > 0 And Me.txtrece.Text.Length > 0 Then
             If Information.IsNumeric(Me.txtcedula.Text) And Information.IsNumeric(txtadmi.Text) And Information.IsNumeric(txtrece.Text) Then
                 registro.CedulaPaci1 = Me.txtcedula.Text
