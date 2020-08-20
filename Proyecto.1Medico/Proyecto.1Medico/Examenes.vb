@@ -40,7 +40,7 @@
                 resultado = regitro_exa.SaveChanges()
 
                 If resultado > 0 Then
-                    MsgBox(" Se registraon los datos ")
+                    MsgBox(" Se registraron los datos ")
                 Else
                     MsgBox(" No se registraron los datos ")
                 End If
