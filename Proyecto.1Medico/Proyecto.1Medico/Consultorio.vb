@@ -220,7 +220,9 @@
             Using actualizar As New BdCentroMedicoEntities
                 Dim actu = (From ac In actualizar.TbConsultaMedica Where ac.IdConsulta = id Select ac).SingleOrDefault
                 If Not IsNothing(actu) Then
+
                     actu.Diagnostico = IDiagnostico
+
                     actualizar.SaveChanges()
                     MessageBox.Show(" Datos actualizados ")
                 Else
