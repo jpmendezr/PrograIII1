@@ -4,8 +4,8 @@
         ' Arreglar esta clase
         'registro.Cedulaactualizar1 = Txtcedula.Text
         Try
-            registro.Id1 = txtid.Text
-            registro.IDiagnostico1 = TxtDiagnostico.Text
+            registro.Id1 = Me.txtid.Text
+            registro.IDiagnostico1 = Me.TxtDiagnostico.Text
             registro.actualizar_Idiagnostico()
         Catch ex As Exception
             MsgBox("btn actualizar" + ex.InnerException.ToString)

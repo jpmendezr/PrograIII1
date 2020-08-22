@@ -197,7 +197,7 @@ Partial Class FormConsultorio
         Me.MaximizeBox = False
         Me.Name = "FormConsultorio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormConsultorio"
+        Me.Text = "Consultorio Medico"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

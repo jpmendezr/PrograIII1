@@ -27,6 +27,10 @@ Partial Class FRM_Enfermeria
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TXTMedicamentosAler = New System.Windows.Forms.TextBox()
+        Me.TXTtiposangre = New System.Windows.Forms.TextBox()
         Me.ID = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -42,10 +46,6 @@ Partial Class FRM_Enfermeria
         Me.Txtpeso = New System.Windows.Forms.TextBox()
         Me.TXTaltura = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TXTtiposangre = New System.Windows.Forms.TextBox()
-        Me.TXTMedicamentosAler = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -121,6 +121,40 @@ Partial Class FRM_Enfermeria
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(678, 415)
         Me.Panel1.TabIndex = 5
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(233, 57)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(164, 15)
+        Me.Label9.TabIndex = 23
+        Me.Label9.Text = "Medicamentos Alergicos"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(18, 57)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(85, 15)
+        Me.Label2.TabIndex = 22
+        Me.Label2.Text = "Tipo Sangre"
+        '
+        'TXTMedicamentosAler
+        '
+        Me.TXTMedicamentosAler.Location = New System.Drawing.Point(154, 85)
+        Me.TXTMedicamentosAler.Name = "TXTMedicamentosAler"
+        Me.TXTMedicamentosAler.Size = New System.Drawing.Size(318, 20)
+        Me.TXTMedicamentosAler.TabIndex = 21
+        '
+        'TXTtiposangre
+        '
+        Me.TXTtiposangre.Location = New System.Drawing.Point(21, 75)
+        Me.TXTtiposangre.Name = "TXTtiposangre"
+        Me.TXTtiposangre.Size = New System.Drawing.Size(57, 20)
+        Me.TXTtiposangre.TabIndex = 20
         '
         'ID
         '
@@ -255,40 +289,6 @@ Partial Class FRM_Enfermeria
         Me.PictureBox1.Size = New System.Drawing.Size(97, 90)
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
-        '
-        'TXTtiposangre
-        '
-        Me.TXTtiposangre.Location = New System.Drawing.Point(21, 75)
-        Me.TXTtiposangre.Name = "TXTtiposangre"
-        Me.TXTtiposangre.Size = New System.Drawing.Size(57, 20)
-        Me.TXTtiposangre.TabIndex = 20
-        '
-        'TXTMedicamentosAler
-        '
-        Me.TXTMedicamentosAler.Location = New System.Drawing.Point(154, 85)
-        Me.TXTMedicamentosAler.Name = "TXTMedicamentosAler"
-        Me.TXTMedicamentosAler.Size = New System.Drawing.Size(318, 20)
-        Me.TXTMedicamentosAler.TabIndex = 21
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(18, 57)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(85, 15)
-        Me.Label2.TabIndex = 22
-        Me.Label2.Text = "Tipo Sangre"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(233, 57)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(164, 15)
-        Me.Label9.TabIndex = 23
-        Me.Label9.Text = "Medicamentos Alergicos"
         '
         'FRM_Enfermeria
         '

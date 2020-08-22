@@ -41,13 +41,13 @@
         'Btn de agregar a la base de datos.
         ' Validaciones de la agregacion en la base de datos.
         Dim fechas As String = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
-        If Information.IsNumeric(Me.TextEspecialidad.Text) And Information.IsNumeric(Me.TextNMedico.Text) Then
+        If Information.IsNumeric(Me.TextEspecialidad.Text) Then
             MsgBox(" no puede ingresar numeros")
         Else
-            If Information.IsNumeric(Me.TextCedula.Text) Then
+            If Information.IsNumeric(Me.TextCedula.Text) And Information.IsNumeric(Me.TextNMedico.Text) Then
 
                 ConsultaValores()
-
+                agenda.registrarMedico()
             Else
                 MsgBox("No puede meter letras ")
             End If
@@ -58,12 +58,12 @@
         Dim fechas As String = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
         Try
             Using consulta As New BdCentroMedicoEntities
-                Dim QuerrySelect = (From dato In consulta.TbCita Where dato.Fecha = fechas And dato.Hora = Me.ComboHora.Text And dato.NombreMedico = Me.TextNMedico.Text Take (2000) Select dato).ToList
+                Dim QuerrySelect = (From dato In consulta.TbCita Where dato.Fecha = fechas And dato.Hora = Me.ComboHora.Text And dato.CedulaMedico = Me.TextNMedico.Text Take (2000) Select dato).ToList
                 If (QuerrySelect.Count > 0) Then
                     MsgBox("Si existe este registro.")
                     Return False
                 Else
-                    If Me.ComboHora.Text <> agenda.Hora1 Or Me.TextNMedico.Text <> agenda.NombreM1 Or fechas <> agenda.Fecha1 Then
+                    If Me.ComboHora.Text <> agenda.Hora1 Or Me.TextNMedico.Text <> agenda.CedulaM1 Or fechas <> agenda.Fecha1 Then
                         Llenado()
                         MostrarCitas()
                         'refrescarControladores()
@@ -80,7 +80,7 @@
     End Function
     Public Sub Llenado()
         agenda.EspecialidadM1 = Me.TextEspecialidad.Text
-        agenda.NombreM1 = Me.TextNMedico.Text
+        agenda.CedulaM1 = Me.TextNMedico.Text
         agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
         agenda.CedulaP1 = Me.TextCedula.Text
         agenda.Hora1 = Me.ComboHora.Text
@@ -102,7 +102,7 @@
         Try
             agenda.Id1 = Me.TextID.Text
             agenda.EspecialidadM1 = Me.TextEspecialidad.Text
-            agenda.NombreM1 = Me.TextNMedico.Text
+            agenda.CedulaM1 = Me.TextNMedico.Text
             agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
             agenda.CedulaP1 = Me.TextCedula.Text
             agenda.Hora1 = Me.ComboHora.Text
