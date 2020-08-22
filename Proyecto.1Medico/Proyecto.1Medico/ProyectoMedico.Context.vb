@@ -85,10 +85,16 @@ Partial Public Class BdCentroMedicoEntities
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of MostrarExamenes_Result)("MostrarExamenes")
     End Function
 
-    Public Overridable Function mostrar_tablas(cedula As String) As ObjectResult(Of mostrar_tablas_Result)
+    Public Overridable Function mostrar_tablas(cedula As String) As Integer
         Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
 
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of mostrar_tablas_Result)("mostrar_tablas", cedulaParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction("mostrar_tablas", cedulaParameter)
+    End Function
+
+    Public Overridable Function mostrar_tablas1(cedula As String) As ObjectResult(Of mostrar_tablas1_Result)
+        Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of mostrar_tablas1_Result)("mostrar_tablas1", cedulaParameter)
     End Function
 
 End Class
