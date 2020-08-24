@@ -4,16 +4,20 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
         'Btn eliminar
         'Encargado de eliminar
-        Try
-            If Information.IsNumeric(Me.TextID.Text) Then
-                agenda.Id1 = Me.TextID.Text
-                agenda.eliminarDatos()
+        If (Me.TextID.Text.Length > 0) Then
+            Try
+                If Information.IsNumeric(Me.TextID.Text) Then
+                    agenda.Id1 = Me.TextID.Text
+                    agenda.eliminarDatos()
 
-                MostrarCitas()
-            End If
-        Catch ex As Exception
-            MsgBox("Ingrese un ID para eliminar alguna cita.")
-        End Try
+                    MostrarCitas()
+                End If
+            Catch ex As Exception
+                MsgBox("Ingrese un ID para eliminar alguna cita.")
+            End Try
+        Else
+            MsgBox("No se permiten espacios en Blanco.")
+        End If
 
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BtnCitas.Click
@@ -123,7 +127,7 @@
                 MsgBox("ingrese un valor de Id valido.")
             End Try
         Else
-            MsgBox("No puede ingresar valores en Blanco.")
+            MsgBox("No se permiten espacios en Blanco.")
         End If
     End Sub
 
