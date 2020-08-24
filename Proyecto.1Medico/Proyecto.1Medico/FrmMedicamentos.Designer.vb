@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmMedicamentos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,9 @@ Partial Class FrmMedicamentos
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.BtnRegresar = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.BtnMostrar = New System.Windows.Forms.Button()
@@ -36,6 +35,7 @@ Partial Class FrmMedicamentos
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,17 +61,6 @@ Partial Class FrmMedicamentos
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(740, 340)
         Me.Panel1.TabIndex = 0
-        '
-        'BtnActualizar
-        '
-        Me.BtnActualizar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnActualizar.Location = New System.Drawing.Point(310, 297)
-        Me.BtnActualizar.Name = "BtnActualizar"
-        Me.BtnActualizar.Size = New System.Drawing.Size(83, 23)
-        Me.BtnActualizar.TabIndex = 10
-        Me.BtnActualizar.Text = "Actualizar"
-        Me.BtnActualizar.UseVisualStyleBackColor = False
         '
         'BtnRegresar
         '
@@ -181,6 +170,17 @@ Partial Class FrmMedicamentos
         Me.Label1.Size = New System.Drawing.Size(52, 15)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Cedula"
+        '
+        'BtnActualizar
+        '
+        Me.BtnActualizar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnActualizar.Location = New System.Drawing.Point(310, 297)
+        Me.BtnActualizar.Name = "BtnActualizar"
+        Me.BtnActualizar.Size = New System.Drawing.Size(83, 23)
+        Me.BtnActualizar.TabIndex = 10
+        Me.BtnActualizar.Text = "Agregar"
+        Me.BtnActualizar.UseVisualStyleBackColor = False
         '
         'FrmMedicamentos
         '

@@ -44,19 +44,7 @@
     End Sub
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs)
-        If Me.txtcedula.Text.Length > 0 And Me.txtadmi.Text.Length > 0 And Me.txtrece.Text.Length > 0 Then
-            If Information.IsNumeric(Me.txtcedula.Text) And Information.IsNumeric(txtadmi.Text) And Information.IsNumeric(txtrece.Text) Then
-                registro.CedulaPaci1 = Me.txtcedula.Text
-                registro.Medi_admi1 = Me.txtadmi.Text
-                registro.Medi_rece1 = Me.txtrece.Text
-            Else
-                MsgBox(" No se pueden ingresar letras ")
-            End If
-        Else
 
-            MsgBox(" Tiene que ingresar datos")
-        End If
-        registro.recetar_medi()
     End Sub
 
     Private Sub BtnMostrar_Click(sender As Object, e As EventArgs) Handles BtnMostrar.Click
@@ -72,5 +60,22 @@
 
     Private Sub FrmMedicamentos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrar_medicamentos()
+    End Sub
+
+    Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
+        If Me.txtcedula.Text.Length > 0 And Me.txtadmi.Text.Length > 0 And Me.txtrece.Text.Length > 0 Then
+            If Information.IsNumeric(Me.txtcedula.Text) And Information.IsNumeric(txtadmi.Text) And Information.IsNumeric(txtrece.Text) Then
+                registro.CedulaPaci1 = Me.txtcedula.Text
+                registro.Medi_admi1 = Me.txtadmi.Text
+                registro.Medi_rece1 = Me.txtrece.Text
+            Else
+                MsgBox(" No se pueden ingresar letras ")
+            End If
+        Else
+
+            MsgBox(" Tiene que ingresar datos")
+        End If
+        registro.recetar_medi()
+        registro.InsertarId()
     End Sub
 End Class
