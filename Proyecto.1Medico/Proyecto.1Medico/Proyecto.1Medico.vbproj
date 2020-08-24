@@ -208,7 +208,7 @@
     <Compile Include="Mostrar_ReporteriaPacientePersonal_Result.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
-    <Compile Include="mostrar_tablas_Result.vb">
+    <Compile Include="mostrar_tablas1_Result.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
