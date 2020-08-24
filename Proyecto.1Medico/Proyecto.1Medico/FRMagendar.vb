@@ -40,18 +40,26 @@
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
         'Btn de agregar a la base de datos.
         ' Validaciones de la agregacion en la base de datos.
-        Dim fechas As String = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
-        If Information.IsNumeric(Me.TextEspecialidad.Text) Then
-            MsgBox(" no puede ingresar numeros")
-        Else
-            If Information.IsNumeric(Me.TextCedula.Text) And Information.IsNumeric(Me.TextNMedico.Text) Then
 
-                ConsultaValores()
-                agenda.registrarMedico()
+        Try
+            Dim fechas As String = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
+            If (Me.TextEspecialidad.Text.Length > 0 And Me.ComboHora.Text.Length > 0 And Me.ComboBoxDia.Text.Length > 0 And Me.ComboBoxMes.Text.Length > 0 And Me.ComboBoxAño.Text.Length > 0) Then
+                If Information.IsNumeric(Me.TextEspecialidad.Text) Then
+                    MsgBox(" no puede ingresar numeros")
+                Else
+                    If Information.IsNumeric(Me.TextCedula.Text) And Information.IsNumeric(Me.TextNMedico.Text) Then
+                        ConsultaValores()
+                        agenda.registrarMedico()
+                    Else
+                        MsgBox("No puede meter letras ")
+                    End If
+                End If
             Else
-                MsgBox("No puede meter letras ")
+                MsgBox("Espacios en Blanco")
             End If
-        End If
+        Catch ex As Exception
+            MsgBox("Error al almacenar.")
+        End Try
     End Sub
 
     Function ConsultaValores() As Boolean
@@ -100,14 +108,20 @@
     Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
         'Btn de actualizar las citas por numero de cedula.
         Try
-            agenda.Id1 = Me.TextID.Text
-            agenda.EspecialidadM1 = Me.TextEspecialidad.Text
-            agenda.CedulaM1 = Me.TextNMedico.Text
-            agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
-            agenda.CedulaP1 = Me.TextCedula.Text
-            agenda.Hora1 = Me.ComboHora.Text
-            agenda.ActualizarCita()
-            MostrarCitas()
+            Dim fechas As String = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
+            If (Me.TextID.Text.Length > 0 And Me.TextEspecialidad.Text.Length > 0 And fechas.Length > 0 And Me.TextNMedico.Text.Length > 0 And Me.TextCedula.Text.Length > 0 And Me.ComboHora.Text.Length > 0) Then
+                agenda.Id1 = Me.TextID.Text
+                agenda.EspecialidadM1 = Me.TextEspecialidad.Text
+                agenda.CedulaM1 = Me.TextNMedico.Text
+                agenda.Fecha1 = Me.ComboBoxDia.Text + "/" + Me.ComboBoxMes.Text + "/" + Me.ComboBoxAño.Text
+                agenda.CedulaP1 = Me.TextCedula.Text
+                agenda.Hora1 = Me.ComboHora.Text
+                agenda.ActualizarCita()
+                MostrarCitas()
+            Else
+                MsgBox("No se pueden actualizar por que los espacios estan en blanco.")
+            End If
+
         Catch ex As Exception
             MsgBox("ingrese un valor de Id valido.")
         End Try
@@ -148,8 +162,6 @@
         Catch ex As Exception
             MsgBox("Ingrese un ID si decea ver el estado o desea eliminar.")
         End Try
-
-
     End Sub
 
     Public Sub estado()
