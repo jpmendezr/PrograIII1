@@ -270,7 +270,7 @@ advertencia 6035: La relación 'FK_TbPersonalInterno_TbPersona' tiene columnas q
             <Parameter Name="FechaFinal" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="mostrar_tablas" ReturnType="Collection(BdCentroMedicoModel.mostrar_tablas_Result)">
-            <Parameter Name="cedula" Mode="In" Type="String" />
+          <Parameter Name="cedula" Mode="In" Type="String" />
           </FunctionImport>
           </EntityContainer>
         <ComplexType Name="f_sp_MostrarPersonal_Result">
