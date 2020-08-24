@@ -19,4 +19,7 @@ Partial Public Class TbConsultaMedica
     Public Property IdCheqMedicamento As Integer
     Public Property IdCheqExamenes As Integer
 
+    Public Overridable Property TbChequeoExamanes As TbChequeoExamanes
+    Public Overridable Property TbChequeoMedicamentos As TbChequeoMedicamentos
+
 End Class

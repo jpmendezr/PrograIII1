@@ -88,7 +88,7 @@
                     'act.CedulaPaciente = cedulaP
                     act.Fecha = Fecha
                     act.Hora = Hora
-                    act.NombreMedico = cedulaM
+                    act.CedulaMedico = cedulaM
                     act.Especialidad = EspecialidadM
                     actualizar.SaveChanges()
                     MessageBox.Show("Datos actualizados ")
