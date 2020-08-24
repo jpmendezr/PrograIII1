@@ -88,7 +88,7 @@
                     'act.CedulaPaciente = cedulaP
                     act.Fecha = Fecha
                     act.Hora = Hora
-                    act.NombreMedico = cedulaM
+                    act.CedulaMedico = cedulaM
                     act.Especialidad = EspecialidadM
                     actualizar.SaveChanges()
                     MessageBox.Show("Datos actualizados ")
@@ -122,23 +122,6 @@
 
     End Sub
 
-
-    Public Sub ReservarCita()
-
-        'Select de verificar valores.
-        Try
-            Using consulta As New BdCentroMedicoEntities
-                Dim QuerrySelect = (From dato In consulta.TbCita Take (20) Select dato).ToList
-                If (QuerrySelect.Count > 0) Then
-                    'Me.DataGridView1.DataSource = QuerrySelect
-                End If
-            End Using
-        Catch ex As Exception
-            MsgBox("No se pueden verificar. ")
-        End Try
-
-    End Sub
-
     Function ConsultaFechaHora() As Boolean
         Try
             Using consulta As New BdCentroMedicoEntities
@@ -150,7 +133,6 @@
                     MsgBox("Fecha Valida.")
                     Return True
                 End If
-
             End Using
         Catch ex As Exception
             MsgBox("No se pueden verificar. ")
@@ -167,7 +149,7 @@
                     Dim NRegistro As New TbConsultaMedica With {.IdCita = seleccion.idCita.ToString, .CedulaP = cedulaP, .CedulaM = cedulaM, .Diagnostico = "na", .IdCheqExamenes = 0, .IdCheqMedicamento = 0}
                     registro.TbConsultaMedica.Add(NRegistro)
                     resultado = registro.SaveChanges
-                    If resultado > 0 Then
+                    If (resultado > 0) Then
                         MsgBox(" se registraron los datos ")
                     Else
                         MsgBox(" no se registraron ")
@@ -175,11 +157,8 @@
                 End Using
             End Using
         Catch ex As Exception
-            MsgBox("No se pueden verificar. ")
-
+            MsgBox("No se pueden verificar el id de tbconsultaMedica. ")
         End Try
     End Sub
-
-
 
 End Class
