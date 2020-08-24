@@ -16,6 +16,4 @@ Partial Public Class TbChequeoExamanes
     Public Property Sangre As String
     Public Property Orina As String
 
-    Public Overridable Property TbConsultaMedica As ICollection(Of TbConsultaMedica) = New HashSet(Of TbConsultaMedica)
-
 End Class

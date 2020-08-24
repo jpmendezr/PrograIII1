@@ -52,6 +52,8 @@
                 MsgBox("No puede meter letras ")
             End If
         End If
+
+
     End Sub
 
     Function ConsultaValores() As Boolean
