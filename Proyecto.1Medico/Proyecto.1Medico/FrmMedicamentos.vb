@@ -73,4 +73,8 @@
     Private Sub FrmMedicamentos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrar_medicamentos()
     End Sub
+
+    Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
+
+    End Sub
 End Class
