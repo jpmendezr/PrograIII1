@@ -15,7 +15,7 @@ Partial Public Class TbCita
     Public Property CedulaPaciente As String
     Public Property Fecha As String
     Public Property Hora As String
-    Public Property NombreMedico As String
+    Public Property CedulaMedico As String
     Public Property Especialidad As String
     Public Property Estado As String
 

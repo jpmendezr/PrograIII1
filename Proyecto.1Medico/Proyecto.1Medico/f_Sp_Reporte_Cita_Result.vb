@@ -21,7 +21,7 @@ Partial Public Class f_Sp_Reporte_Cita_Result
     Public Property Correo As String
     Public Property Fecha As String
     Public Property Hora As String
-    Public Property NombreMedico As String
+    Public Property CedulaMedico As String
     Public Property Razón_Consulta As String
     Public Property Diagnostico As String
 

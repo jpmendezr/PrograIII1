@@ -193,6 +193,7 @@ Partial Class FRMChequeoExamen
 
             End If
             registro.enviar_exa()
+            registro.InsertarId()
         Else
             MsgBox("Se debe ingresar los datos")
         End If

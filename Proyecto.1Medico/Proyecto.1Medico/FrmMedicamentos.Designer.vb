@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmMedicamentos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,13 @@ Partial Class FrmMedicamentos
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BtnRegresar = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.BtnMostrar = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.txtrece = New System.Windows.Forms.TextBox()
         Me.txtadmi = New System.Windows.Forms.TextBox()
         Me.txtcedula = New System.Windows.Forms.TextBox()
@@ -36,6 +35,7 @@ Partial Class FrmMedicamentos
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,11 +44,11 @@ Partial Class FrmMedicamentos
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.Panel1.Controls.Add(Me.BtnActualizar)
         Me.Panel1.Controls.Add(Me.BtnRegresar)
         Me.Panel1.Controls.Add(Me.DataGridView2)
         Me.Panel1.Controls.Add(Me.BtnMostrar)
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.BtnAgregar)
         Me.Panel1.Controls.Add(Me.txtrece)
         Me.Panel1.Controls.Add(Me.txtadmi)
         Me.Panel1.Controls.Add(Me.txtcedula)
@@ -66,7 +66,7 @@ Partial Class FrmMedicamentos
         '
         Me.BtnRegresar.BackColor = System.Drawing.Color.Aqua
         Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRegresar.Location = New System.Drawing.Point(597, 297)
+        Me.BtnRegresar.Location = New System.Drawing.Point(638, 297)
         Me.BtnRegresar.Name = "BtnRegresar"
         Me.BtnRegresar.Size = New System.Drawing.Size(75, 23)
         Me.BtnRegresar.TabIndex = 3
@@ -85,7 +85,7 @@ Partial Class FrmMedicamentos
         '
         Me.BtnMostrar.BackColor = System.Drawing.Color.Aqua
         Me.BtnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnMostrar.Location = New System.Drawing.Point(482, 297)
+        Me.BtnMostrar.Location = New System.Drawing.Point(480, 297)
         Me.BtnMostrar.Name = "BtnMostrar"
         Me.BtnMostrar.Size = New System.Drawing.Size(75, 23)
         Me.BtnMostrar.TabIndex = 2
@@ -99,17 +99,6 @@ Partial Class FrmMedicamentos
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
         Me.DataGridView1.TabIndex = 8
-        '
-        'BtnAgregar
-        '
-        Me.BtnAgregar.BackColor = System.Drawing.Color.Aqua
-        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregar.Location = New System.Drawing.Point(365, 297)
-        Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnAgregar.TabIndex = 1
-        Me.BtnAgregar.Text = "Agregar"
-        Me.BtnAgregar.UseVisualStyleBackColor = False
         '
         'txtrece
         '
@@ -182,6 +171,17 @@ Partial Class FrmMedicamentos
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Cedula"
         '
+        'BtnActualizar
+        '
+        Me.BtnActualizar.BackColor = System.Drawing.Color.Aqua
+        Me.BtnActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnActualizar.Location = New System.Drawing.Point(310, 297)
+        Me.BtnActualizar.Name = "BtnActualizar"
+        Me.BtnActualizar.Size = New System.Drawing.Size(83, 23)
+        Me.BtnActualizar.TabIndex = 10
+        Me.BtnActualizar.Text = "Agregar"
+        Me.BtnActualizar.UseVisualStyleBackColor = False
+        '
         'FrmMedicamentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -213,5 +213,5 @@ Partial Class FrmMedicamentos
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents BtnRegresar As Button
     Friend WithEvents BtnMostrar As Button
-    Friend WithEvents BtnAgregar As Button
+    Friend WithEvents BtnActualizar As Button
 End Class

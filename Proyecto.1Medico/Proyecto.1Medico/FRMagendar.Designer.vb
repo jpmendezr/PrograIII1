@@ -96,9 +96,9 @@ Partial Class FRMagendar
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(429, 22)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(133, 15)
+        Me.Label4.Size = New System.Drawing.Size(127, 15)
         Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Nombre del Medico"
+        Me.Label4.Text = "Cedula del Medico"
         '
         'Label5
         '

@@ -3,7 +3,7 @@
     Private Fecha As String
     Private Hora As String
     Private EspecialidadM As String
-    Private NombreM As String 'nombre medico
+    Private cedulaM As String 'nombre medico
     Private cedulaP As String 'cedula paciente 
     Private Id As Integer 'Id de la persona
 
@@ -17,14 +17,6 @@
         End Set
     End Property
 
-    Public Property NombreM1 As String
-        Get
-            Return NombreM
-        End Get
-        Set(value As String)
-            NombreM = value
-        End Set
-    End Property
 
     Public Property CedulaP1 As String
         Get
@@ -62,6 +54,15 @@
         End Set
     End Property
 
+    Public Property CedulaM1 As String
+        Get
+            Return cedulaM
+        End Get
+        Set(value As String)
+            cedulaM = value
+        End Set
+    End Property
+
     Public Sub eliminarDatos()
         'Eliminar
         Try
@@ -87,7 +88,7 @@
                     'act.CedulaPaciente = cedulaP
                     act.Fecha = Fecha
                     act.Hora = Hora
-                    act.NombreMedico = NombreM
+                    act.CedulaMedico = cedulaM
                     act.Especialidad = EspecialidadM
                     actualizar.SaveChanges()
                     MessageBox.Show("Datos actualizados ")
@@ -105,7 +106,7 @@
         Dim resultado As Integer = 0
         Try
             Using registro As New BdCentroMedicoEntities
-                Dim NuevoRegistro As New TbCita With {.CedulaPaciente = cedulaP, .Fecha = Fecha, .Hora = Hora, .NombreMedico = NombreM, .Especialidad = EspecialidadM}
+                Dim NuevoRegistro As New TbCita With {.CedulaPaciente = cedulaP, .Fecha = Fecha, .Hora = Hora, .CedulaMedico = cedulaM, .Especialidad = EspecialidadM}
                 registro.TbCita.Add(NuevoRegistro)
                 resultado = registro.SaveChanges
                 If resultado > 0 Then
@@ -121,23 +122,6 @@
 
     End Sub
 
-
-    Public Sub ReservarCita()
-
-        'Select de verificar valores.
-        Try
-            Using consulta As New BdCentroMedicoEntities
-                Dim QuerrySelect = (From dato In consulta.TbCita Take (20) Select dato).ToList
-                If (QuerrySelect.Count > 0) Then
-                    'Me.DataGridView1.DataSource = QuerrySelect
-                End If
-            End Using
-        Catch ex As Exception
-            MsgBox("No se pueden verificar. ")
-        End Try
-
-    End Sub
-
     Function ConsultaFechaHora() As Boolean
         Try
             Using consulta As New BdCentroMedicoEntities
@@ -149,7 +133,6 @@
                     MsgBox("Fecha Valida.")
                     Return True
                 End If
-
             End Using
         Catch ex As Exception
             MsgBox("No se pueden verificar. ")
@@ -157,5 +140,25 @@
         End Try
     End Function
 
+    Public Sub registrarMedico()
+        Dim resultado As Integer = 0
+        Try
+            Using consulta As New BdCentroMedicoEntities
+                Using registro As New BdCentroMedicoEntities
+                    Dim seleccion = (From dato In consulta.TbCita Where dato.CedulaPaciente = CedulaP1 And dato.Fecha = Fecha1 And dato.Hora = Hora1 And dato.CedulaMedico = cedulaM And dato.Especialidad = EspecialidadM1 Take (2000)).SingleOrDefault
+                    Dim NRegistro As New TbConsultaMedica With {.IdCita = seleccion.idCita.ToString, .CedulaP = cedulaP, .CedulaM = cedulaM, .Diagnostico = "na", .IdCheqExamenes = 0, .IdCheqMedicamento = 0}
+                    registro.TbConsultaMedica.Add(NRegistro)
+                    resultado = registro.SaveChanges
+                    If (resultado > 0) Then
+                        MsgBox(" se registraron los datos ")
+                    Else
+                        MsgBox(" no se registraron ")
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            MsgBox("No se pueden verificar el id de tbconsultaMedica. ")
+        End Try
+    End Sub
 
 End Class

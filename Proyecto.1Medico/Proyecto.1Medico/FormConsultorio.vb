@@ -4,8 +4,8 @@
         ' Arreglar esta clase
         'registro.Cedulaactualizar1 = Txtcedula.Text
         Try
-            registro.Id1 = txtid.Text
-            registro.IDiagnostico1 = TxtDiagnostico.Text
+            registro.Id1 = Me.txtid.Text
+            registro.IDiagnostico1 = Me.TxtDiagnostico.Text
             registro.actualizar_Idiagnostico()
         Catch ex As Exception
             MsgBox("btn actualizar" + ex.InnerException.ToString)
@@ -40,7 +40,7 @@
     Public Sub mostrar()
         Try
             Using mostrar_datos As New BdCentroMedicoEntities
-                Dim mostrar = mostrar_datos.mostrar_tablas6(Txtcedula.Text).ToList
+                Dim mostrar = mostrar_datos.mostrar_tablas6(Me.Txtcedula.Text).ToList
                 If (mostrar.count > 0) Then
                     Me.DataGridView1.DataSource = mostrar
 

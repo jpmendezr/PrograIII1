@@ -8,21 +8,28 @@
             registro.Peso1 = Me.Txtpeso.Text
             registro.Altura1 = Me.TXTaltura.Text
             registro.Mostrar_sintomas1 = Me.TxtSintomas.Text
+            registro.TipoSangre1 = Me.TXTtiposangre.Text
+            registro.Medicamentos1 = Me.TXTMedicamentosAler.Text
             registro.Actualizar_datos()
             agregar()
 
         Catch ex As Exception
             MsgBox("Ingrese los valores.")
+
         End Try
 
     End Sub
 
     Private Sub Btnregresar_Click(sender As Object, e As EventArgs) Handles Btnregresar.Click
-        FormMenu.Show()
+
         Me.Hide()
     End Sub
 
     Private Sub BtnMostrar_Click(sender As Object, e As EventArgs) Handles BtnMostrar.Click
+        mostrar()
+    End Sub
+
+    Public Sub mostrar()
         Try
             Using mostrar_paciente As New BdCentroMedicoEntities
                 Dim mostrar = (From mos In mostrar_paciente.TbPaciente Select mos).ToList
@@ -38,7 +45,6 @@
             MsgBox(ex.Message.ToString)
         End Try
     End Sub
-
     Public Sub agregar()
 
         Dim lista_sintomas As New List(Of String)
@@ -51,6 +57,11 @@
             Me.ListBox1.Items.Add(itemregistro)
 
         Next
+    End Sub
+
+    Private Sub FRM_Enfermeria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        mostrar()
+
     End Sub
 
     'msgbox()

@@ -52,4 +52,27 @@
             resultado = 0
         End Try
     End Sub
+    Public Sub InsertarId()
+        Try
+            Using bd As New BdCentroMedicoEntities
+                'Dim id = (From a In bd.TbChequeoMedicamentos Where a.CedulaP = CedulaPaci1 And a.MedicamentoAdm = Medi_admi1 And a.MedicamentoRecetado = medi_admi Select a.IdChequeoMed).SingleOrDefault
+                Dim id = (From a In bd.TbChequeoMedicamentos Take (1) Order By a.IdChequeoMed Descending Select a.IdChequeoMed).SingleOrDefault
+                'Dim sen = (From a In bd.TbConsultaMedica Where a.CedulaP = CedulaPaci1 Take (1) Order By a.IdConsulta Descending Select a).SingleOrDefault
+                Dim sen = (From a In bd.TbConsultaMedica Take (1) Order By a.IdConsulta Descending Select a).SingleOrDefault
+                MsgBox(id.ToString)
+                MsgBox(sen.idConsulta.ToString)
+                MsgBox(sen.CedulaP.ToString)
+                If Not IsNothing(id) Then
+                    'senr.Contrasena = Contra1
+                    sen.IdCheqMedicamento = id.ToString
+                    bd.SaveChanges()
+                    MsgBox("Ingreso Medicamento en Consulta")
+                Else
+                    MsgBox("No existe registro")
+                End If
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.InnerException.ToString)
+        End Try
+    End Sub
 End Class
