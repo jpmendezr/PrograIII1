@@ -24,7 +24,6 @@ Partial Public Class BdCentroMedicoEntities
         Throw New UnintentionalCodeFirstException()
     End Sub
 
-    Public Overridable Property sysdiagrams() As DbSet(Of sysdiagrams)
     Public Overridable Property TbChequeoExamanes() As DbSet(Of TbChequeoExamanes)
     Public Overridable Property TbChequeoMedicamentos() As DbSet(Of TbChequeoMedicamentos)
     Public Overridable Property TbConsultaMedica() As DbSet(Of TbConsultaMedica)
@@ -81,14 +80,18 @@ Partial Public Class BdCentroMedicoEntities
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of mostrar_tablas_Result)("mostrar_tablas", cedulaParameter)
     End Function
 
-    Public Overridable Function f_Sp_Reporte_Cita(cedula As String, fechaInicio As String, fechaFinal As String) As ObjectResult(Of f_Sp_Reporte_Cita_Result)
+    Public Overridable Function f_Sp_Reporte_Cita(cedula As String, fechaInicio As String, fechaFinal As String) As ObjectResult(Of f_Sp_Reporte_Cita_Result2)
         Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("Cedula", cedula), New ObjectParameter("Cedula", GetType(String)))
 
         Dim fechaInicioParameter As ObjectParameter = If(fechaInicio IsNot Nothing, New ObjectParameter("FechaInicio", fechaInicio), New ObjectParameter("FechaInicio", GetType(String)))
 
         Dim fechaFinalParameter As ObjectParameter = If(fechaFinal IsNot Nothing, New ObjectParameter("FechaFinal", fechaFinal), New ObjectParameter("FechaFinal", GetType(String)))
 
-        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of f_Sp_Reporte_Cita_Result)("f_Sp_Reporte_Cita", cedulaParameter, fechaInicioParameter, fechaFinalParameter)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of f_Sp_Reporte_Cita_Result2)("f_Sp_Reporte_Cita", cedulaParameter, fechaInicioParameter, fechaFinalParameter)
+    End Function
+
+    Public Overridable Function Mostrar_ReporteriaPacientePersonal1() As ObjectResult(Of Mostrar_ReporteriaPacientePersonal1_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Mostrar_ReporteriaPacientePersonal1_Result)("Mostrar_ReporteriaPacientePersonal1")
     End Function
 
 End Class
