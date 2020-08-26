@@ -10,11 +10,14 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class sysdiagrams
-    Public Property name As String
-    Public Property principal_id As Integer
-    Public Property diagram_id As Integer
-    Public Property version As Nullable(Of Integer)
-    Public Property definition As Byte()
+Partial Public Class mostrar_tablas6_Result
+    Public Property IdConsulta As Integer
+    Public Property Cedula As String
+    Public Property Diagnostico As String
+    Public Property Medicamento_Administrado As String
+    Public Property Medicamento_Recetado As String
+    Public Property Sangre As String
+    Public Property Orina As String
+    Public Property Sintomas As String
 
 End Class

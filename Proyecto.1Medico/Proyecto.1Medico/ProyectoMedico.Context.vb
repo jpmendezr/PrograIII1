@@ -24,7 +24,6 @@ Partial Public Class BdCentroMedicoEntities
         Throw New UnintentionalCodeFirstException()
     End Sub
 
-    Public Overridable Property sysdiagrams() As DbSet(Of sysdiagrams)
     Public Overridable Property TbChequeoExamanes() As DbSet(Of TbChequeoExamanes)
     Public Overridable Property TbChequeoMedicamentos() As DbSet(Of TbChequeoMedicamentos)
     Public Overridable Property TbCita() As DbSet(Of TbCita)
@@ -89,6 +88,10 @@ Partial Public Class BdCentroMedicoEntities
         Dim cedulaParameter As ObjectParameter = If(cedula IsNot Nothing, New ObjectParameter("cedula", cedula), New ObjectParameter("cedula", GetType(String)))
 
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of mostrar_tablas6_Result)("mostrar_tablas6", cedulaParameter)
+    End Function
+
+    Public Overridable Function Mostrar_ReporteriaPacientePersonal1() As ObjectResult(Of Mostrar_ReporteriaPacientePersonal1_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Mostrar_ReporteriaPacientePersonal1_Result)("Mostrar_ReporteriaPacientePersonal1")
     End Function
 
 End Class

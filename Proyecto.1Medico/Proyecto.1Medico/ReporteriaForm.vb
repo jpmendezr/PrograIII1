@@ -56,7 +56,7 @@ Public Class ReporteriaForm
                 End If
             End Using
         Catch ex As Exception
-            MsgBox("Error en la carga: " + ex.InnerException.ToString)
+            MsgBox("Error en la carga")
         End Try
     End Sub
 
@@ -90,7 +90,8 @@ Public Class ReporteriaForm
                 End If
             End Using
         Catch ex As Exception
-            MsgBox("Error en la carga: " + ex.InnerException.ToString)
+            MsgBox("Error en la carga")
+            ' MsgBox("Error en la carga: " + ex.InnerException.ToString)
         End Try
     End Sub
 

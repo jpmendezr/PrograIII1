@@ -11,7 +11,7 @@
         
         
         
-        <EntityTypeShape EntityType="BdCentroMedicoModel.sysdiagrams" Width="1.5" PointX="11.125" PointY="3.5" />
+        
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbChequeoExamanes" Width="1.5" PointX="3.25" PointY="0.5" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbChequeoMedicamentos" Width="1.5" PointX="2.875" PointY="3.625" />
         <EntityTypeShape EntityType="BdCentroMedicoModel.TbCita" Width="1.5" PointX="11.125" PointY="0.5" />
