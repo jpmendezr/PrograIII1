@@ -10,16 +10,14 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class TbConsultaMedica
+Partial Public Class mostrar_tablas_Result
     Public Property IdConsulta As Integer
-    Public Property IdCita As Integer
-    Public Property CedulaP As String
-    Public Property CedulaM As String
+    Public Property Cedula As String
     Public Property Diagnostico As String
-    Public Property IdCheqMedicamento As Integer
-    Public Property IdCheqExamenes As Integer
-
-    Public Overridable Property TbChequeoExamanes As TbChequeoExamanes
-    Public Overridable Property TbChequeoMedicamentos As TbChequeoMedicamentos
+    Public Property Medicamento_Administrado As String
+    Public Property Medicamento_Recetado As String
+    Public Property Sangre As String
+    Public Property Orina As String
+    Public Property Sintomas As String
 
 End Class
