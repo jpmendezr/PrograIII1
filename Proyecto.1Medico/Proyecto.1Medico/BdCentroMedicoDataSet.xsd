@@ -2,9 +2,10 @@
 <xs:schema id="BdCentroMedicoDataSet" targetNamespace="http://tempuri.org/BdCentroMedicoDataSet.xsd" xmlns:mstns="http://tempuri.org/BdCentroMedicoDataSet.xsd" xmlns="http://tempuri.org/BdCentroMedicoDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="BdCentroMedicoConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BdCentroMedicoConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Proyecto._1Medico.My.MySettings.GlobalReference.Default.BdCentroMedicoConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="BdCentroMedicoConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BdCentroMedicoConnectionString2 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Proyecto._1Medico.My.MySettings.GlobalReference.Default.BdCentroMedicoConnectionString2" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Sp_Reporte_ExamenesTableAdapter" GeneratorDataComponentClassName="Sp_Reporte_ExamenesTableAdapter" Name="Sp_Reporte_Examenes" UserDataComponentName="Sp_Reporte_ExamenesTableAdapter">
@@ -35,7 +36,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="_Sp_Reporte_CitaTableAdapter" GeneratorDataComponentClassName="_Sp_Reporte_CitaTableAdapter" Name="_Sp_Reporte_Cita" UserDataComponentName="_Sp_Reporte_CitaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BdCentroMedicoConnectionString1 (MySettings)" DbObjectName="BdCentroMedico.dbo.[_Sp_Reporte_Cita]" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BdCentroMedicoConnectionString2 (MySettings)" DbObjectName="BdCentroMedico.dbo.[_Sp_Reporte_Cita]" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.[_Sp_Reporte_Cita]</CommandText>
@@ -60,8 +61,8 @@
               <Mapping SourceColumn="Correo" DataSetColumn="Correo" />
               <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
               <Mapping SourceColumn="Hora" DataSetColumn="Hora" />
-              <Mapping SourceColumn="NombreMedico" DataSetColumn="NombreMedico" />
-              <Mapping SourceColumn="Razón Consulta" DataSetColumn="Razón Consulta" />
+              <Mapping SourceColumn="CedulaMedico" DataSetColumn="CedulaMedico" />
+              <Mapping SourceColumn="Sintomas" DataSetColumn="Sintomas" />
               <Mapping SourceColumn="Diagnostico" DataSetColumn="Diagnostico" />
             </Mappings>
             <Sources />
@@ -161,7 +162,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_UserColumnName="Telefono">
+              <xs:element name="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_UserColumnName="Telefono" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
@@ -189,14 +190,14 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="NombreMedico" msprop:Generator_ColumnVarNameInTable="columnNombreMedico" msprop:Generator_ColumnPropNameInRow="NombreMedico" msprop:Generator_ColumnPropNameInTable="NombreMedicoColumn" msprop:Generator_UserColumnName="NombreMedico">
+              <xs:element name="CedulaMedico" msprop:Generator_ColumnVarNameInTable="columnCedulaMedico" msprop:Generator_ColumnPropNameInRow="CedulaMedico" msprop:Generator_ColumnPropNameInTable="CedulaMedicoColumn" msprop:Generator_UserColumnName="CedulaMedico">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Razón_x0020_Consulta" msprop:Generator_ColumnVarNameInTable="columnRazón_Consulta" msprop:Generator_ColumnPropNameInRow="Razón_Consulta" msprop:Generator_ColumnPropNameInTable="Razón_ConsultaColumn" msprop:Generator_UserColumnName="Razón Consulta">
+              <xs:element name="Sintomas" msprop:Generator_ColumnVarNameInTable="columnSintomas" msprop:Generator_ColumnPropNameInRow="Sintomas" msprop:Generator_ColumnPropNameInTable="SintomasColumn" msprop:Generator_UserColumnName="Sintomas">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
