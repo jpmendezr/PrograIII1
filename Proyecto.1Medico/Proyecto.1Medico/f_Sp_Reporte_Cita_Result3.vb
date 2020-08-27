@@ -10,7 +10,7 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class Mostrar_ReporteriaPacientePersonal1_Result
+Partial Public Class f_Sp_Reporte_Cita_Result3
     Public Property IdPersona As Integer
     Public Property Cedula As String
     Public Property Nombre As String
@@ -21,8 +21,8 @@ Partial Public Class Mostrar_ReporteriaPacientePersonal1_Result
     Public Property Correo As String
     Public Property Fecha As String
     Public Property Hora As String
-    Public Property NombreMedico As String
-    Public Property Razón_Consulta As String
+    Public Property CedulaMedico As String
+    Public Property Sintomas As String
     Public Property Diagnostico As String
 
 End Class
