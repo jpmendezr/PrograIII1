@@ -211,9 +211,6 @@
     <Compile Include="MostrarPersona_Result.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mostrar_ReporteriaPacientePersonal1_Result.vb">
-      <DependentUpon>ProyectoMedico.tt</DependentUpon>
-    </Compile>
     <Compile Include="Mostrar_ReporteriaPacientePersonal_Result.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
@@ -265,6 +262,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sp_Reporte_Examenes_Result.vb">
+      <DependentUpon>ProyectoMedico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.vb">
       <DependentUpon>ProyectoMedico.tt</DependentUpon>
     </Compile>
     <Compile Include="TbChequeoExamanes.vb">
