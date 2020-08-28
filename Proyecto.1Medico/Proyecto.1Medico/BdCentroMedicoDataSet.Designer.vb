@@ -667,9 +667,9 @@ Partial Public Class BdCentroMedicoDataSet
         
         Private columnHora As Global.System.Data.DataColumn
         
-        Private columnNombreMedico As Global.System.Data.DataColumn
+        Private columnCedulaMedico As Global.System.Data.DataColumn
         
-        Private columnRazón_Consulta As Global.System.Data.DataColumn
+        Private columnSintomas As Global.System.Data.DataColumn
         
         Private columnDiagnostico As Global.System.Data.DataColumn
         
@@ -790,17 +790,17 @@ Partial Public Class BdCentroMedicoDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property NombreMedicoColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property CedulaMedicoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnNombreMedico
+                Return Me.columnCedulaMedico
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Razón_ConsultaColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SintomasColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnRazón_Consulta
+                Return Me.columnSintomas
             End Get
         End Property
         
@@ -849,9 +849,9 @@ Partial Public Class BdCentroMedicoDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Add_Sp_Reporte_CitaRow(ByVal Cedula As String, ByVal Nombre As String, ByVal Apellido As String, ByVal Sexo As String, ByVal FechaNacimiento As String, ByVal Telefono As String, ByVal Correo As String, ByVal Fecha As String, ByVal Hora As String, ByVal NombreMedico As String, ByVal Razón_Consulta As String, ByVal Diagnostico As String) As _Sp_Reporte_CitaRow
+        Public Overloads Function Add_Sp_Reporte_CitaRow(ByVal Cedula As String, ByVal Nombre As String, ByVal Apellido As String, ByVal Sexo As String, ByVal FechaNacimiento As String, ByVal Telefono As String, ByVal Correo As String, ByVal Fecha As String, ByVal Hora As String, ByVal CedulaMedico As String, ByVal Sintomas As String, ByVal Diagnostico As String) As _Sp_Reporte_CitaRow
             Dim row_Sp_Reporte_CitaRow As _Sp_Reporte_CitaRow = CType(Me.NewRow,_Sp_Reporte_CitaRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Cedula, Nombre, Apellido, Sexo, FechaNacimiento, Telefono, Correo, Fecha, Hora, NombreMedico, Razón_Consulta, Diagnostico}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Cedula, Nombre, Apellido, Sexo, FechaNacimiento, Telefono, Correo, Fecha, Hora, CedulaMedico, Sintomas, Diagnostico}
             row_Sp_Reporte_CitaRow.ItemArray = columnValuesArray
             Me.Rows.Add(row_Sp_Reporte_CitaRow)
             Return row_Sp_Reporte_CitaRow
@@ -890,8 +890,8 @@ Partial Public Class BdCentroMedicoDataSet
             Me.columnCorreo = MyBase.Columns("Correo")
             Me.columnFecha = MyBase.Columns("Fecha")
             Me.columnHora = MyBase.Columns("Hora")
-            Me.columnNombreMedico = MyBase.Columns("NombreMedico")
-            Me.columnRazón_Consulta = MyBase.Columns("Razón Consulta")
+            Me.columnCedulaMedico = MyBase.Columns("CedulaMedico")
+            Me.columnSintomas = MyBase.Columns("Sintomas")
             Me.columnDiagnostico = MyBase.Columns("Diagnostico")
         End Sub
         
@@ -918,10 +918,10 @@ Partial Public Class BdCentroMedicoDataSet
             MyBase.Columns.Add(Me.columnFecha)
             Me.columnHora = New Global.System.Data.DataColumn("Hora", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnHora)
-            Me.columnNombreMedico = New Global.System.Data.DataColumn("NombreMedico", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnNombreMedico)
-            Me.columnRazón_Consulta = New Global.System.Data.DataColumn("Razón Consulta", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnRazón_Consulta)
+            Me.columnCedulaMedico = New Global.System.Data.DataColumn("CedulaMedico", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCedulaMedico)
+            Me.columnSintomas = New Global.System.Data.DataColumn("Sintomas", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSintomas)
             Me.columnDiagnostico = New Global.System.Data.DataColumn("Diagnostico", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDiagnostico)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIdPersona}, true))
@@ -941,7 +941,6 @@ Partial Public Class BdCentroMedicoDataSet
             Me.columnSexo.MaxLength = 1
             Me.columnFechaNacimiento.AllowDBNull = false
             Me.columnFechaNacimiento.MaxLength = 50
-            Me.columnTelefono.AllowDBNull = false
             Me.columnTelefono.MaxLength = 15
             Me.columnCorreo.AllowDBNull = false
             Me.columnCorreo.MaxLength = 50
@@ -949,10 +948,10 @@ Partial Public Class BdCentroMedicoDataSet
             Me.columnFecha.MaxLength = 50
             Me.columnHora.AllowDBNull = false
             Me.columnHora.MaxLength = 5
-            Me.columnNombreMedico.AllowDBNull = false
-            Me.columnNombreMedico.MaxLength = 50
-            Me.columnRazón_Consulta.AllowDBNull = false
-            Me.columnRazón_Consulta.MaxLength = 100
+            Me.columnCedulaMedico.AllowDBNull = false
+            Me.columnCedulaMedico.MaxLength = 50
+            Me.columnSintomas.AllowDBNull = false
+            Me.columnSintomas.MaxLength = 100
             Me.columnDiagnostico.AllowDBNull = false
             Me.columnDiagnostico.MaxLength = 100
         End Sub
@@ -1251,7 +1250,11 @@ Partial Public Class BdCentroMedicoDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property Telefono() As String
             Get
-                Return CType(Me(Me.table_Sp_Reporte_Cita.TelefonoColumn),String)
+                Try 
+                    Return CType(Me(Me.table_Sp_Reporte_Cita.TelefonoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Telefono' de la tabla '_Sp_Reporte_Cita' es DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.table_Sp_Reporte_Cita.TelefonoColumn) = value
@@ -1293,23 +1296,23 @@ Partial Public Class BdCentroMedicoDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property NombreMedico() As String
+        Public Property CedulaMedico() As String
             Get
-                Return CType(Me(Me.table_Sp_Reporte_Cita.NombreMedicoColumn),String)
+                Return CType(Me(Me.table_Sp_Reporte_Cita.CedulaMedicoColumn),String)
             End Get
             Set
-                Me(Me.table_Sp_Reporte_Cita.NombreMedicoColumn) = value
+                Me(Me.table_Sp_Reporte_Cita.CedulaMedicoColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Razón_Consulta() As String
+        Public Property Sintomas() As String
             Get
-                Return CType(Me(Me.table_Sp_Reporte_Cita.Razón_ConsultaColumn),String)
+                Return CType(Me(Me.table_Sp_Reporte_Cita.SintomasColumn),String)
             End Get
             Set
-                Me(Me.table_Sp_Reporte_Cita.Razón_ConsultaColumn) = value
+                Me(Me.table_Sp_Reporte_Cita.SintomasColumn) = value
             End Set
         End Property
         
@@ -1323,6 +1326,18 @@ Partial Public Class BdCentroMedicoDataSet
                 Me(Me.table_Sp_Reporte_Cita.DiagnosticoColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsTelefonoNull() As Boolean
+            Return Me.IsNull(Me.table_Sp_Reporte_Cita.TelefonoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetTelefonoNull()
+            Me(Me.table_Sp_Reporte_Cita.TelefonoColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -1749,8 +1764,8 @@ Namespace BdCentroMedicoDataSetTableAdapters
             tableMapping.ColumnMappings.Add("Correo", "Correo")
             tableMapping.ColumnMappings.Add("Fecha", "Fecha")
             tableMapping.ColumnMappings.Add("Hora", "Hora")
-            tableMapping.ColumnMappings.Add("NombreMedico", "NombreMedico")
-            tableMapping.ColumnMappings.Add("Razón Consulta", "Razón Consulta")
+            tableMapping.ColumnMappings.Add("CedulaMedico", "CedulaMedico")
+            tableMapping.ColumnMappings.Add("Sintomas", "Sintomas")
             tableMapping.ColumnMappings.Add("Diagnostico", "Diagnostico")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -1759,7 +1774,7 @@ Namespace BdCentroMedicoDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Proyecto._1Medico.My.MySettings.Default.BdCentroMedicoConnectionString1
+            Me._connection.ConnectionString = Global.Proyecto._1Medico.My.MySettings.Default.BdCentroMedicoConnectionString2
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
