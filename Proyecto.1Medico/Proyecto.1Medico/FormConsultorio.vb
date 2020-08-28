@@ -3,13 +3,18 @@
     Private Sub BtnActualizar_Click(sender As Object, e As EventArgs) Handles BtnActualizar.Click
         ' Arreglar esta clase
         'registro.Cedulaactualizar1 = Txtcedula.Text
-        Try
-            registro.Id1 = Me.txtid.Text
-            registro.IDiagnostico1 = Me.TxtDiagnostico.Text
-            registro.actualizar_Idiagnostico()
-        Catch ex As Exception
-            MsgBox("btn actualizar" + ex.InnerException.ToString)
-        End Try
+        If Me.TxtDiagnostico.Text.Length > 0 Then
+            Try
+                registro.Id1 = Me.txtid.Text
+                registro.IDiagnostico1 = Me.TxtDiagnostico.Text
+                registro.actualizar_Idiagnostico()
+            Catch ex As Exception
+                MsgBox("btn actualizar" + ex.InnerException.ToString)
+            End Try
+        Else
+            MessageBox.Show("debe ingresar datos")
+        End If
+
 
 
     End Sub
@@ -40,7 +45,7 @@
     Public Sub mostrar()
         Try
             Using mostrar_datos As New BdCentroMedicoEntities
-                Dim mostrar = mostrar_datos.mostrar_tablas(Me.Txtcedula.Text).ToList
+                Dim mostrar = mostrar_datos.mostrar_tablas.ToList
                 If (mostrar.count > 0) Then
                     Me.DataGridView1.DataSource = mostrar
 

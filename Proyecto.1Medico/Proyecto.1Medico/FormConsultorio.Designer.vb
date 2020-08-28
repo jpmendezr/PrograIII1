@@ -27,8 +27,6 @@ Partial Class FormConsultorio
         Me.txtid = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Txtcedula = New System.Windows.Forms.TextBox()
-        Me.label = New System.Windows.Forms.Label()
         Me.TxtDiagnostico = New System.Windows.Forms.RichTextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Btnmostrar = New System.Windows.Forms.Button()
@@ -58,8 +56,6 @@ Partial Class FormConsultorio
         Me.Panel2.Controls.Add(Me.txtid)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.DataGridView1)
-        Me.Panel2.Controls.Add(Me.Txtcedula)
-        Me.Panel2.Controls.Add(Me.label)
         Me.Panel2.Controls.Add(Me.TxtDiagnostico)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Location = New System.Drawing.Point(12, 47)
@@ -91,23 +87,6 @@ Partial Class FormConsultorio
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(649, 110)
         Me.DataGridView1.TabIndex = 16
-        '
-        'Txtcedula
-        '
-        Me.Txtcedula.Location = New System.Drawing.Point(587, 29)
-        Me.Txtcedula.Name = "Txtcedula"
-        Me.Txtcedula.Size = New System.Drawing.Size(130, 20)
-        Me.Txtcedula.TabIndex = 11
-        '
-        'label
-        '
-        Me.label.AutoSize = True
-        Me.label.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label.Location = New System.Drawing.Point(635, 11)
-        Me.label.Name = "label"
-        Me.label.Size = New System.Drawing.Size(52, 15)
-        Me.label.TabIndex = 10
-        Me.label.Text = "Cedula"
         '
         'TxtDiagnostico
         '
@@ -213,8 +192,6 @@ Partial Class FormConsultorio
     Friend WithEvents BtnActualizar As Button
     Friend WithEvents BtnMedicamentos As Button
     Friend WithEvents Label11 As Label
-    Friend WithEvents Txtcedula As TextBox
-    Friend WithEvents label As Label
     Friend WithEvents Btnexamen As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents txtid As TextBox
