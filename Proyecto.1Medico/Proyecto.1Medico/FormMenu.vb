@@ -22,7 +22,7 @@
             btnRegPaciente.Enabled = False
             BtnConsEnferm.Enabled = False
             btnAbrir.Enabled = False
-        ElseIf depa.Equals("Enfermermeria") Then
+        ElseIf depa.Equals("Enfermeria") Then
 
             MsgBox(depa)
             btnAbrir.Enabled = False
