@@ -265,13 +265,13 @@ Public Class Paciente
                 If Not IsNothing(delete) Then
                     eleminar.TbPaciente.Remove(delete)
                     eleminar.SaveChanges()
-
+                    MessageBox.Show("Se elimino  Paciente")
 
                 End If
 
             End Using
         Catch ex As Exception
-            '' MessageBox.Show("Error Elimimar Paciente")
+            MessageBox.Show("Error Elimimar Paciente", ex.ToString)
         End Try
     End Sub
 
