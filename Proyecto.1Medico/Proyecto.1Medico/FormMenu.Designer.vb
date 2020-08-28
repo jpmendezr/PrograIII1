@@ -30,6 +30,12 @@ Partial Class FormMenu
         Me.btnReporte = New System.Windows.Forms.Button()
         Me.btnAbrir = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -37,12 +43,7 @@ Partial Class FormMenu
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -124,6 +125,7 @@ Partial Class FormMenu
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.Label9)
@@ -149,6 +151,72 @@ Partial Class FormMenu
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1366, 713)
         Me.Panel1.TabIndex = 8
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(84, 62)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(178, 31)
+        Me.Label11.TabIndex = 21
+        Me.Label11.Text = "Fundadores:"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(26, 289)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(277, 31)
+        Me.Label10.TabIndex = 20
+        Me.Label10.Text = "Wilberth Martínez V."
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(26, 245)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(310, 31)
+        Me.Label9.TabIndex = 19
+        Me.Label9.Text = "María Paula Herrera Z."
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(26, 203)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(260, 31)
+        Me.Label8.TabIndex = 18
+        Me.Label8.Text = "Adriel Chavarría B."
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(26, 158)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(244, 31)
+        Me.Label7.TabIndex = 17
+        Me.Label7.Text = "Dinia Alvarado M."
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(26, 111)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(307, 31)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Juan Pablo Méndez R."
         '
         'PictureBox3
         '
@@ -221,71 +289,15 @@ Partial Class FormMenu
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "¡Bienvenidos!"
         '
-        'Label6
+        'Button1
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(26, 111)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(307, 31)
-        Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Juan Pablo Méndez R."
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(26, 158)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(244, 31)
-        Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Dinia Alvarado M."
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(26, 203)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(260, 31)
-        Me.Label8.TabIndex = 18
-        Me.Label8.Text = "Adriel Chavarría B."
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(26, 245)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(310, 31)
-        Me.Label9.TabIndex = 19
-        Me.Label9.Text = "María Paula Herrera Z."
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(26, 289)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(277, 31)
-        Me.Label10.TabIndex = 20
-        Me.Label10.Text = "Wilberth Martínez V."
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(84, 62)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(178, 31)
-        Me.Label11.TabIndex = 21
-        Me.Label11.Text = "Fundadores:"
+        Me.Button1.BackColor = System.Drawing.Color.Aqua
+        Me.Button1.Location = New System.Drawing.Point(463, 659)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(119, 23)
+        Me.Button1.TabIndex = 22
+        Me.Button1.Text = "Regresar"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'FormMenu
         '
@@ -327,4 +339,5 @@ Partial Class FormMenu
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents Button1 As Button
 End Class

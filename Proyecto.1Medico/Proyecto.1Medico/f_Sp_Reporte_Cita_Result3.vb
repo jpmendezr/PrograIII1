@@ -10,7 +10,7 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class f_Sp_Reporte_Cita_Result
+Partial Public Class f_Sp_Reporte_Cita_Result3
     Public Property IdPersona As Integer
     Public Property Cedula As String
     Public Property Nombre As String
@@ -22,7 +22,7 @@ Partial Public Class f_Sp_Reporte_Cita_Result
     Public Property Fecha As String
     Public Property Hora As String
     Public Property CedulaMedico As String
-    Public Property Razón_Consulta As String
+    Public Property Sintomas As String
     Public Property Diagnostico As String
 
 End Class
